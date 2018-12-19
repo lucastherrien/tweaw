@@ -1,0 +1,112 @@
+﻿division_template = {
+	name = "Kveitta Ganq’opileba"
+	division_names_group = GEO_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Kveitta Ganq’opileba II"
+	division_names_group = GEO_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+units = {
+
+	division = {
+		name = "1. Kveitta Ganq’opileba"
+		location = 1599
+		division_template = "Kveitta Ganq’opileba II"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "5. Kveitta Ganq’opileba"
+		location = 1599
+		division_template = "Kveitta Ganq’opileba"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "3. Kveitta Ganq’opileba"
+		location = 1599
+		division_template = "Kveitta Ganq’opileba"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "2. Kveitta Ganq’opileba"
+		location = 3653
+		division_template = "Kveitta Ganq’opileba"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "4. Kveitta Ganq’opileba"
+		location = 3653
+		division_template = "Kveitta Ganq’opileba"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "6. Kveitta Ganq’opileba"
+		location = 3653
+		division_template = "Kveitta Ganq’opileba"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+
+	navy = {
+		name = "Pirveli popularuli flotilla"
+		base = 3653
+		location = 3653
+		ship = { name = "Gadzhibey" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = RUS version_name = "Fidonisi Class" } } }
+		ship = { name = "Fidonisi" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = RUS version_name = "Fidonisi Class" } } }
+		ship = { name = "Kerch" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = RUS version_name = "Fidonisi Class" } } }
+
+		ship = { name = "Batumi" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GEO version_name = "Batumi Class" } } }
+		ship = { name = "Tbilisi" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GEO version_name = "Batumi Class" } } }
+		ship = { name = "Ayety" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GEO version_name = "Batumi Class" } } }
+		ship = { name = "Dioskuria " definition = submarine equipment = { submarine_4 = { amount = 1 owner = GEO version_name = "Batumi Class" } } }
+		ship = { name = "Ochamchire" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GEO version_name = "Batumi Class" } } }
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+		}
+		requested_factories = 1
+		progress = 0.82
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.83
+		efficiency = 100
+	}
+}

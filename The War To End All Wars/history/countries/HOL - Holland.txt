@@ -1,0 +1,609 @@
+﻿capital = 7
+OOB = "HOL"
+set_convoys = 400
+set_research_slots = 3
+
+country_event = { id = holflavor.12 days = 242 }
+
+# Starting tech
+set_technology = {
+	### MOD ###
+	### General ###
+	electronic_mechanical_engineering = 1
+	### Navy ###
+	destroyer_one = 1
+	destroyer_two = 1
+	destroyer_three = 1
+	destroyer_four = 1
+	destroyer_five = 1
+	light_cruiser_one = 1
+	light_cruiser_two = 1
+	light_cruiser_three = 1
+	light_cruiser_four = 1
+	light_cruiser_five = 1
+	heavy_cruiser_one = 1
+	heavy_cruiser_two = 1
+	battleship_one = 1
+	battleship_two = 1
+	battleship_three = 1
+	battleship_four = 1
+	battleship_five = 1
+	dreadnought_one = 1
+	carrier_one = 1
+	carrier_two = 1
+	submarine_one = 1
+	submarine_two = 1
+	submarine_three = 1
+	submarine_four = 1
+	submarine_five = 1
+	nav_infra_one = 1
+	nav_infra_two = 1
+#	nav_infra_three = 1
+	nav_av_one = 1
+	nav_av_two = 1
+	transport = 1
+
+	### Tanks ###
+	gwtank = 1
+	### INF ###
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	marines = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	### AIR ###
+	early_fighter = 1
+	naval_bomber1 = 1
+	early_bomber = 1
+	cv_early_fighter = 1
+	cv_naval_bomber1 = 1
+}
+
+add_ideas = {
+	HOL_idea_ambtenarenverbod
+	HOL_Hendrikus_Colijn_hog_sco
+	HOL_Jacob_Patijn_for_mli
+	HOL_Pieter_Oud_eco_sli
+	HOL_Jan_Andriessen_sec_mli
+	limited_conscription
+	free_trade
+	#ZO_idea
+}
+
+set_politics = {
+
+	parties = {
+		totalist = {
+			popularity = 2
+		}
+		radical_socialist = {
+			popularity = 6
+		}
+		syndicalist = {
+			popularity = 1
+		}
+		social_democrat = {
+			popularity = 20
+		}
+		social_liberal = {
+			popularity = 6
+		}
+		market_liberal = {
+			popularity = 4
+		}
+		social_conservative = {
+			popularity = 54
+		}
+		authoritarian_democrat = {
+			popularity = 2
+		}
+		paternal_autocrat = {
+			popularity = 5
+		}
+		national_populist = {
+			popularity = 0
+		}
+	}
+
+	ruling_party = social_conservative
+	last_election = "1933.05.24"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+create_country_leader = {
+	name = "Wilhelmina"
+	desc = "POLITICS_WILHELMINA_DESC"
+	picture = "Portrait_Holland_Wilhelmina.tga"
+	expire = "1965.1.1"
+	ideology = market_liberal_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Wilhelmina"
+	desc = "POLITICS_WILHELMINA_DESC"
+	picture = "Portrait_Holland_Wilhelmina.tga"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Wilhelmina"
+	desc = "POLITICS_WILHELMINA_DESC"
+	picture = "Portrait_Holland_Wilhelmina.tga"
+	expire = "1965.1.1"
+	ideology = social_conservative_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Wilhelmina"
+	desc = "POLITICS_WILHELMINA_DESC"
+	picture = "Portrait_Holland_Wilhelmina.tga"
+	expire = "1965.1.1"
+	ideology = social_democrat_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Wilhelmina"
+	desc = "POLITICS_WILHELMINA_DESC"
+	picture = "Portrait_Holland_Wilhelmina.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Wilhelmina"
+	desc = "POLITICS_WILHELMINA_DESC"
+	picture = "Portrait_Holland_Wilhelmina.tga"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Henk Sneevliet"
+	desc = ""
+	picture = "Portrait_HOL_Sneevliet.tga"
+	expire = "1965.1.1"
+	ideology = radical_socialist_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Harm Kolthek"
+	desc = ""
+	picture = "Portrait_HOL_Kolthek.tga"
+	expire = "1965.1.1"
+	ideology = syndicalist_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "David Wijnkoop"
+	desc = ""
+	picture = "Portrait_Holland_Wijnkoop.tga"
+	expire = "1965.1.1"
+	ideology = totalist_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Wilhelmina"
+	desc = "POLITICS_WILHELMINA_DESC"
+	picture = "Portrait_Holland_Wilhelmina.tga"
+	expire = "1965.1.1"
+	ideology = national_populist_subtype
+	traits = {
+	}
+}
+
+### Field Marshal
+### Corps Commander
+create_corps_commander = {
+	name = "Gerardus Johannes Berenschot"
+	portrait_path = "gfx/leaders/HOL/Portrait_HOL_Berenschot.tga"
+	traits = {
+		career_officer
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Petrus Wilhelmus Best"
+	portrait_path = "gfx/leaders/HOL/Portrait_HOL_Best.tga"
+	traits = {
+		infantry_officer
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Murk Boerstra"
+	portrait_path = "gfx/leaders/HOL/Portrait_HOL_Boerstra.tga"
+	traits = {
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Willem Hackstroh"
+	portrait_path = "gfx/leaders/HOL/Portrait_HOL_Hackstroh.tga"
+	traits = {
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Jakob Harberts"
+	portrait_path = "gfx/leaders/HOL/Portrait_HOL_Harberts.tga"
+	traits = {
+		old_guard
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Gustav Adolf Ilgen"
+	portrait_path = "gfx/leaders/HOL/Portrait_HOL_Ilgen.tga"
+	traits = {
+		trickster
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Jacob Pesman"
+	portrait_path = "gfx/leaders/HOL/Portrait_HOL_Pesman.tga"
+	traits = {
+		panzer_leader
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_field_marshal = {
+	name = "Izaäk Reijnders"
+	portrait_path = "gfx/leaders/HOL/Portrait_HOL_Reynders.tga"
+	traits = {
+		trait_reckless
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Hendrik Seyffardt"
+	portrait_path = "gfx/leaders/HOL/Portrait_HOL_Seyffardt.tga"
+	traits = {
+		old_guard
+		politically_connected
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Gustave Statius-Muller"
+	portrait_path = "gfx/leaders/HOL/Portrait_HOL_Statius_Muller.tga"
+	traits = {
+		trait_engineer
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Hein ter Poorten"
+	portrait_path = "gfx/leaders/HOL/Portrait_HOL_ter_Poorten.tga"
+	traits = {
+		jungle_rat
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "H. van Voorst tot Voorst"
+	portrait_path = "gfx/leaders/HOL/Portrait_HOL_van_Voorst_tot_Voorst_H_.tga"
+	traits = {
+		trait_engineer
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "G. van Voorst tot Voorst"
+	portrait_path = "gfx/leaders/HOL/Portrait_HOL_van_Voorst_tot_Voorst_J_.tga"
+	traits = {
+		trickster
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Jan van Andel"
+	portrait_path = "gfx/leaders/HOL/Portrait_HOL_van_Andel.tga"
+	traits = {
+		fortress_buster
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_field_marshal = {
+	name = "Henri Winkelman"
+	portrait_path = "gfx/leaders/HOL/Portrait_HOL_Winkelman.tga"
+	traits = {
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+### Navy Leader
+create_navy_leader = { #Auto-Generated
+	name = "Jan van Dulm"
+	portrait_path = "gfx/leaders/HOL/Portrait_HOL_Jan_van_Dulm.tga"
+	traits = { seawolf }
+	skill = 2 #naval guy, don't patch
+}
+
+create_navy_leader = { #Auto-Generated
+	name = "Maarten van Dulm"
+	portrait_path = "gfx/leaders/HOL/Portrait_HOL_Maarten_van_Dulm.tga"
+	traits = {
+		spotter
+	}
+	skill = 1 #naval guy, don't patch
+}
+
+create_navy_leader = { #Auto-Generated
+	name = "Willem Jan Kruys"
+	portrait_path = "gfx/leaders/HOL/Portrait_HOL_Willem_Jan_Kruys.tga"
+	traits = {
+		spotter
+	}
+	skill = 1
+}
+
+create_navy_leader = { #Auto-Generated
+	name = "Albertus Samuel Pinke"
+	portrait_path = "gfx/leaders/HOL/Portrait_HOL_Albertus_Samuel_Pinke.tga"
+	traits = {
+		blockade_runner
+	}
+	skill = 1 #naval guy, don't patch
+}
+
+create_navy_leader = { #Auto-Generated
+	name = "Alfred de Booy"
+	portrait_path = "gfx/leaders/HOL/Portrait_HOL_Alfred_de_Booy.tga"
+	traits = {
+		fly_swatter
+	}
+	skill = 2 #naval guy, don't patch
+}
+
+### Ship Variants
+create_equipment_variant = {
+	name = "Aemalia Class"
+	type = battleship_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Willem van Oranje Class"
+	type = battleship_5
+	parent_version = 0
+	upgrades = {
+		ship_engine_upgrade = 1
+	}
+}
+
+create_equipment_variant = {
+	name = "Gouden Leeuw Class"
+	type = carrier_2
+	upgrades = {
+		ship_deckspace_upgrade = 1
+	}
+}
+
+create_equipment_variant = {
+	name = "Jakob van Heemskerck Class"
+	type = heavy_cruiser_1
+	parent_version = 0
+	upgrades = {
+		h_u_relia_ten = 1
+		h_u_attack_ten = 1
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Soerabaja Class"
+	type = heavy_cruiser_2
+	parent_version = 0
+	upgrades = {
+		h_u_relia_ten = 1
+		h_u_armor_ten = 1
+		h_u_attack_ten = 2
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Van Galen Class"
+	type = destroyer_4
+	parent_version = 0
+	upgrades = {
+		h_u_torp_ten = 1
+		h_u_speed_ten = 2
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Flores Class"
+	type = destroyer_4
+	parent_version = 0
+	upgrades = {
+		ship_ASW_upgrade = 1
+	}
+}
+
+create_equipment_variant = {
+	name = "O-9 Class"
+	type = submarine_3
+	upgrades = {
+		h_u_relia_ten = 1
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "O-12 Class"
+	type = submarine_4
+	upgrades = {
+		h_u_relia_ten = 2
+		h_u_speed_ten = 2
+		h_u_torp_ten = 1
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "O-16 Class"
+	type = submarine_5
+	upgrades = {
+		h_u_relia_ten = 2
+		h_u_speed_ten = 2
+		h_u_torp_ten = 1
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "O-21 Class"
+	type = submarine_5
+	upgrades = {
+		h_u_speed_ten = 1
+		h_u_torp_ten = 1
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "K-V Class"
+	type = submarine_2
+	upgrades = {
+		h_u_relia_ten = 1
+		h_u_speed_ten = 2
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "K-VIII Class"
+	type = submarine_3
+	upgrades = {
+		h_u_relia_ten = 1
+		h_u_speed_ten = 2
+		h_u_torp_ten = 1
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "K-XI Class"
+	type = submarine_4
+	upgrades = {
+		h_u_relia_ten = 2
+		h_u_speed_ten = 2
+		h_u_torp_ten = 1
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "O-8 Class"
+	type = submarine_1
+	upgrades = {	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "K-XIV Class"
+	type = submarine_5
+	upgrades = {
+		h_u_relia_ten = 2
+		h_u_speed_ten = 2
+		h_u_torp_ten = 2
+	}
+	obsolete = yes
+}

@@ -1,0 +1,143 @@
+﻿capital = 459
+OOB = "empty"
+
+set_technology = {
+	### MOD ###
+	### Navy ###
+	destroyer_one = 1
+	destroyer_two = 1
+	destroyer_three = 1
+	destroyer_four = 1
+	light_cruiser_one = 1
+	light_cruiser_two = 1
+	light_cruiser_three = 1
+	light_cruiser_four = 1
+	heavy_cruiser_one = 1
+	heavy_cruiser_two = 1
+	heavy_cruiser_three = 1
+	### Tanks ###
+	### INF ###
+	infantry_weapons = 1
+	### AIR ###
+}
+set_research_slots = 2
+
+set_politics = {
+
+	parties = {
+		totalist = {
+			popularity = 0
+		}
+		radical_socialist = {
+			popularity = 0
+		}
+		syndicalist = {
+			popularity = 0
+		}
+		social_democrat = {
+			popularity = 2
+		}
+		social_liberal = {
+			popularity = 6
+		}
+		market_liberal = {
+			popularity = 6
+		}
+		social_conservative = {
+			popularity = 12
+		}
+		authoritarian_democrat = {
+			popularity = 15
+		}
+		paternal_autocrat = {
+			popularity = 47
+		}
+		national_populist = {
+			popularity = 12
+		}
+	}
+
+	ruling_party = paternal_autocrat
+	last_election = "1888.15.6"
+	election_frequency = 48
+	elections_allowed = no
+
+}
+
+### Leaders
+create_field_marshal = {
+	name = "Ferhat Abbas"
+	portrait_path = "gfx/leaders/ALG/Portrait_ALG_al_Ghani.tga"
+	traits = {
+		offensive_doctrine
+		media_personality
+	}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Mostefa Ben Boulaïd"
+	portrait_path = "gfx/leaders/ALG/Portrait_ALG_Amerzaine.tga"
+	traits = {
+		career_officer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Larbi Ben M'hidi"
+	portrait_path = "gfx/leaders/ALG/Portrait_ALG_Bouali.tga"
+	traits = {
+		commando
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Youcef Zighoud"
+	portrait_path = "gfx/leaders/ALG/Portrait_ALG_Farès.tga"
+	traits = {
+		trait_reckless
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Krim Belkacem"
+	portrait_path = "gfx/leaders/ALG/Portrait_ALG_Mohammedi.tga"
+	traits = {
+		politically_connected
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+### Navy Leader
+
+create_navy_leader = {
+	name = "Ahmed Francis"
+	portrait_path = "gfx/leaders/ALG/Portrait_ALG_Ouafi.tga"
+	traits = {
+		superior_tactician
+	}
+	skill = 1
+}

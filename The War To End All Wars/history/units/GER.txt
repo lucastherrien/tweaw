@@ -1,0 +1,1313 @@
+﻿division_template = {
+	name = "Miliztruppe" # Miliztruppe
+	division_names_group = GER_MILINF_01
+
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+		militia = { x = 1 y = 2 }
+		militia = { x = 2 y = 0 }
+		militia = { x = 2 y = 1 }
+		militia = { x = 2 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Infanterie-Division"
+	division_names_group = GER_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Panzer-Division"
+	division_names_group = GER_TNK_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Infanterie-Division mit Artillerie"
+	division_names_group = GER_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Infanterie-Division mit Panzerunterstützung"
+	division_names_group = GER_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		light_armor = { x = 3 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Garde Infanterie-Division"
+	division_names_group = GER_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Motorisierte Division mit Panzerunterstützung"
+	division_names_group = GER_MOT_02
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		light_armor = { x = 2 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Kavallerie-Division"
+	division_names_group = GER_MOB_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		light_armor = { x = 2 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Auslands-Festungskommando"
+	division_names_group = GER_GAR_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+
+division_template = {
+	name = "Marine-Sturmdivision"
+	division_names_group = GER_INF_01
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Gebirgsjäger"
+	division_names_group = GER_MTNINF_01
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+	priority = 2
+}
+
+
+
+units = {
+
+	division = {
+		name = "1. Infanterie-Division"
+		location = 6332
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "2. Infanterie-Division"
+		location = 6332
+		division_template = "Infanterie-Division mit Panzerunterstützung"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "32. Infanterie-Division"
+		location = 6332
+		division_template = "Infanterie-Division mit Panzerunterstützung"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "27. Infanterie-Division"
+		location = 6375
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "28. Infanterie-Division"
+		location = 6375
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "1. Preußische Infanterie-Division"
+		location = 389
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "2. Preußische Infanterie-Division"
+		location = 389
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "9. Infanterie-Division"
+		location = 6558
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "10. Infanterie-Division"
+		location = 6558
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "36. Infanterie-Division"
+		location = 6558
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "11. Infanterie-Division"
+		location = 9570
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "12. Infanterie-Division"
+		location = 9570
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "37. Infanterie-Division"
+		location = 9570
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "3. Infanterie-Division"
+		location = 6282
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "4. Infanterie-Division"
+		location = 6282
+		division_template = "Infanterie-Division mit Panzerunterstützung"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "33. Infanterie-Division"
+		location = 6282
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "1. Motorisierte Division"
+		location = 6521
+		division_template = "Motorisierte Division mit Panzerunterstützung"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "2. Motorisierte Division"
+		location = 6521
+		division_template = "Motorisierte Division mit Panzerunterstützung"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "3. Motorisierte Division"
+		location = 6521
+		division_template = "Motorisierte Division mit Panzerunterstützung"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "1. Garde Infanterie-Division"
+		location = 6521
+		division_template = "Garde Infanterie-Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "2. Garde Infanterie-Division"
+		location = 6521
+		division_template = "Garde Infanterie-Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "3. Garde Infanterie-Division"
+		location = 6521
+		division_template = "Garde Infanterie-Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "5. Infanterie-Division"
+		location = 6521
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "6. Infanterie-Division"
+		location = 6521
+		division_template = "Infanterie-Division mit Panzerunterstützung"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "34. Infanterie-Division"
+		location = 6521
+		division_template = "Infanterie-Division mit Panzerunterstützung"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "1. Mecklenburgische Infanterie-Division"
+		location = 6389
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "17. Infanterie-Division"
+		location = 6389
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "7. Infanterie-Division"
+		location = 3522
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "8. Infanterie-Division"
+		location = 3522
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "35. Infanterie-Division"
+		location = 3522
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "3. Königlich Sächsische Infanterie-Division"
+		location = 3535
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "4. Königlich Sächsische Infanterie-Division"
+		location = 3535
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "1. Königlich Sächsische Infanterie-Division"
+		location = 514
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "2. Königlich Sächsische Infanterie-Division"
+		location = 514
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "18. Infanterie-Division"
+		location = 6377
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "19. Infanterie-Division"
+		location = 6377
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "20. Infanterie-Division"
+		location = 6524
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "21. Infanterie-Division"
+		location = 6524
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "13. Infanterie-Division"
+		location = 6622
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "14. Infanterie-Division"
+		location = 6622
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "38. Infanterie-Division"
+		location = 6622
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "15. Infanterie-Division"
+		location = 9522
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "16. Infanterie-Division"
+		location = 9522
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "1. Motorisierte Garde Kavallerie-Division"
+		location = 6488
+		division_template = "Kavallerie-Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "2. Motorisierte Kavallerie-Division"
+		location = 6488
+		division_template = "Kavallerie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "3. Motorisierte Kavallerie-Division"
+		location = 6488
+		division_template = "Kavallerie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "29. Infanterie-Division"
+		location = 9575
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "30. Infanterie-Division"
+		location = 9575
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "1. Wallonische Infanterie-Division"
+		location = 11407
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "31. Infanterie-Division"
+		location = 11407
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "1. Bayrische Infanterie-Division"
+		location = 9418
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "2. Bayrische Infanterie-Division"
+		location = 9418
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "3. Bayrische Infanterie-Division"
+		location = 9418
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "24. Infanterie-Division"
+		location = 9559
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "25. Infanterie-Division"
+		location = 9559
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "40. Infanterie-Division"
+		location = 9559
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "22. Infanterie-Division"
+		location = 11516
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "23. Infanterie-Division"
+		location = 11516
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "39. Infanterie-Division"
+		location = 11516
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Feld Artillerie-Division Großherzog"
+		location = 678
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "1. Badische Leib-Grenadier-Division"
+		location = 678
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "41. Infanterie-Division"
+		location = 678
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "101. Infanterie-Division"
+		location = 9503
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "102. Infanterie-Division"
+		location = 9503
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "103. Infanterie-Division"
+		location = 9517
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "104. Infanterie-Division"
+		location = 9517
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "1. Bayerische Kavallerie-Division"
+		location = 11544
+		division_template = "Kavallerie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "2. Bayerische Kavallerie-Division"
+		location = 11544
+		division_template = "Kavallerie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "1. Sächsische Kavallerie-Division"
+		location = 11544
+		division_template = "Kavallerie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "5. Bayerische Infanterie-Division"
+		location = 692
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "6. Bayerische Infanterie-Division"
+		location = 692
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "3. Bayerische Infanterie-Division"
+		location = 6693
+		division_template = "Infanterie-Division mit Artillerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "4. Bayerische Infanterie-Division"
+		location = 6693
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Auslands Festungs Komando"
+		location = 4073
+		division_template = "Auslands-Festungskommando"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Auslands Festungs Komando"
+		location = 9940
+		division_template = "Auslands-Festungskommando"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Auslands Festungs Komando"
+		location = 12003
+		division_template = "Auslands-Festungskommando"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Auslands Festungs Komando"
+		location = 7069
+		division_template = "Auslands-Festungskommando"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Auslands Komando Äthiopien"
+		location = 8124
+		division_template = "Auslands-Festungskommando"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Auslands Festungs Komando"
+		location = 7260
+		division_template = "Auslands-Festungskommando"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "1. Schutztuppen Division"
+		location = 5222
+		division_template = "Marine-Sturmdivision"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+
+
+
+	navy = {
+		name = "Hochseeflotte"
+		base = 6389
+		location = 11360
+		ship = { name = "SMS Oldenburg" definition = SH_battleship equipment = { SH_battleship_5 = { amount = 1 owner = GER version_name = "Preußen Class" } } }
+		ship = { name = "SMS Siegfried" definition = SH_battleship equipment = { SH_battleship_5 = { amount = 1 owner = XXA version_name = "Siegfried Class" } } }
+		ship = { name = "SMS Beowulf" definition = SH_battleship equipment = { SH_battleship_5 = { amount = 1 owner = XXA version_name = "Siegfried Class" } } }
+		ship = { name = "SMS Frithjof" definition = SH_battleship equipment = { SH_battleship_5 = { amount = 1 owner = XXA version_name = "Siegfried Class" } } }
+		ship = { name = "SMS Heimdall" definition = SH_battleship equipment = { SH_battleship_5 = { amount = 1 owner = XXA version_name = "Siegfried Class" } } }
+		ship = { name = "SMS Hildebrand" definition = SH_battleship equipment = { SH_battleship_5 = { amount = 1 owner = XXA version_name = "Siegfried Class" } } }
+		ship = { name = "SMS Hagen" definition = SH_battleship equipment = { SH_battleship_5 = { amount = 1 owner = XXA version_name = "Siegfried Class" } } }
+		ship = { name = "SMS Schlesien" definition = SH_battleship equipment = { SH_battleship_6 = { amount = 1 owner = GER version_name = "Deutschland Class Dreadnought" } } }
+		ship = { name = "SMS Kaiser Wilhelm" definition = SH_battleship equipment = { SH_battleship_7 = { amount = 1 owner = GER version_name = "Kaiser Wilhelm Class" } } }
+
+		ship = { name = "SMS Friedrich Carl" definition = battleship equipment = { battleship_4 = { amount = 1 owner = GER version_name = "Prinz Adalbert Class" } } }
+		ship = { name = "SMS Blücher" definition = battleship equipment = { battleship_5 = { amount = 1 owner = GER version_name = "Blücher Class" } } }
+		ship = { name = "SMS Admiral Scheer" definition = battleship equipment = { battleship_5 = { amount = 1 owner = GER version_name = "Blücher Class" } } }
+
+		ship = { name = "SMS Maas" definition = carrier equipment = { carrier_3 = { amount = 1 owner = GER version_name = "Maas Class" } }
+			air_wings = {
+				cv_fighter_equipment_0 =  { owner = "GER" amount = 19 }
+			}
+		}
+
+		ship = { name = "SMS Graudenz" definition = light_cruiser equipment = { light_cruiser_5 = { amount = 1 owner = GER version_name = "Aachen Class" } } }
+		ship = { name = "SMS Herne" definition = light_cruiser equipment = { light_cruiser_5 = { amount = 1 owner = GER version_name = "Aachen Class" } } }
+		ship = { name = "SMS Bayreuth" definition = light_cruiser equipment = { light_cruiser_5 = { amount = 1 owner = GER version_name = "Aachen Class" } } }
+		ship = { name = "SMS Zieten" definition = light_cruiser equipment = { light_cruiser_5 = { amount = 1 owner = GER version_name = "Aachen Class" } } }
+		ship = { name = "SMS Hutier" definition = light_cruiser equipment = { light_cruiser_5 = { amount = 1 owner = GER version_name = "Aachen Class" } } }
+		ship = { name = "SMS Straßburg" definition = light_cruiser equipment = { light_cruiser_5 = { amount = 1 owner = GER version_name = "Osnabrück Class" } } }
+		ship = { name = "SMS Frauenlob" definition = light_cruiser equipment = { light_cruiser_5 = { amount = 1 owner = GER version_name = "Osnabrück Class" } } }
+
+		ship = { name = "SMS H 245" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 246" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 247" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 248" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 249" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 250" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 251" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 252" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 253" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 254" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 255" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 256" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 257" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 258" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 259" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 260" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 261" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 262" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 263" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 264" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 265" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 266" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 267" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 268" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 269" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 270" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 271" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 272" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS G 273" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS G 274" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS G 275" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 276" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 277" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 278" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 279" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 280" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 281" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 282" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 283" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 284" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 285" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS B 286" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS B 287" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS B 288" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS B 289" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS B 310" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS B 311" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 312" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 313" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 314" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 315" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 316" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 322" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 323" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 324" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 325" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 326" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+	}
+	navy = {
+		name = "Reservegeschwader"
+		base = 362
+		location = 362
+		ship = { name = "SMS Preußen" definition = SH_battleship equipment = { SH_battleship_5 = { amount = 1 owner = GER version_name = "Preußen Class" } } }
+		ship = { name = "SMS Hessen" definition = SH_battleship equipment = { SH_battleship_5 = { amount = 1 owner = GER version_name = "Preußen Class" } } }
+		ship = { name = "SMS Mecklenburg-Schwerin" definition = SH_battleship equipment = { SH_battleship_5 = { amount = 1 owner = GER version_name = "Preußen Class" } } }
+
+		ship = { name = "SMS Gneisenau" definition = battleship equipment = { battleship_3 = { amount = 1 owner = GER version_name = "Yorck Class" } } }
+		ship = { name = "SMS Scharnhorst" definition = battleship equipment = { battleship_3 = { amount = 1 owner = GER version_name = "Yorck Class" } } }
+
+		ship = { name = "SMS Leipzig" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER version_name = "Cöln Class" } } }
+		ship = { name = "SMS Rostock" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER version_name = "Cöln Class" } } }
+		ship = { name = "SMS Frauenlob" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER version_name = "Cöln Class" } } }
+		ship = { name = "SMS Bremen" definition = light_cruiser equipment = { light_cruiser_4 = { amount = 1 owner = GER version_name = "Bremen Class" } } }
+		ship = { name = "SMS Stralsund" definition = light_cruiser equipment = { light_cruiser_4 = { amount = 1 owner = GER version_name = "Bremen Class" } } }
+		ship = { name = "SMS Schlieffen" definition = light_cruiser equipment = { light_cruiser_5 = { amount = 1 owner = GER version_name = "Aachen Class" } } }
+		ship = { name = "SMS H 214" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 215" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 216" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 217" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 218" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 219" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 220" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 221" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 222" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 223" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 224" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 225" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 226" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 227" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 228" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 229" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 230" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 231" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 232" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 233" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 234" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 235" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 236" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 237" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 238" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 239" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 240" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 241" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 242" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 243" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 244" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+	}
+
+	navy = {
+		name = "Mittelmeerflotte"
+		base = 12003
+		location = 12003
+		ship = { name = "SMS Kronprinz" definition = SH_battleship equipment = { SH_battleship_3 = { amount = 1 owner = GER version_name = "König Class" } } }
+		ship = { name = "SMS Bayern" definition = SH_battleship equipment = { SH_battleship_4 = { amount = 1 owner = GER version_name = "Bayern Class" } } }
+		ship = { name = "SMS Baden" definition = SH_battleship equipment = { SH_battleship_4 = { amount = 1 owner = GER version_name = "Bayern Class" } } }
+		ship = { name = "SMS Sachsen" definition = SH_battleship equipment = { SH_battleship_4 = { amount = 1 owner = GER version_name = "Bayern Class" } } }
+		ship = { name = "SMS Deutschland" definition = SH_battleship equipment = { SH_battleship_6 = { amount = 1 owner = GER version_name = "Deutschland Class Dreadnought" } } }
+
+		ship = { name = "SMS Fürst Bismarck" definition = battleship equipment = { battleship_3 = { amount = 1 owner = GER version_name = "Mackensen Class" } } }
+		ship = { name = "SMS Yorck" definition = battleship equipment = { battleship_3 = { amount = 1 owner = GER version_name = "Yorck Class" } } }
+		ship = { name = "SMS Prinz Adalbert" definition = battleship equipment = { battleship_4 = { amount = 1 owner = GER version_name = "Prinz Adalbert Class" } } }
+		ship = { name = "SMS York" definition = battleship equipment = { battleship_4 = { amount = 1 owner = GER version_name = "York Class" } } }
+		ship = { name = "SMS Goeben" definition = battleship equipment = { battleship_4 = { amount = 1 owner = GER version_name = "York Class" } } }
+
+		ship = { name = "SMS Mainz" definition = carrier equipment = { carrier_2 = { amount = 1 owner = GER version_name = "Mainz Class" } }
+			air_wings = {
+				cv_fighter_equipment_0 =  { owner = "GER" amount = 10 }
+			}
+		}
+		ship = { name = "SMS Rhein" definition = carrier equipment = { carrier_2 = { amount = 1 owner = GER version_name = "Mainz Class" } }
+			air_wings = {
+				cv_fighter_equipment_0 =  { owner = "GER" amount = 10 }
+			}
+		}
+		ship = { name = "SMS Peter Strasser" definition = carrier equipment = { carrier_3 = { amount = 1 owner = GER version_name = "Maas Class" } }
+			air_wings = {
+				cv_fighter_equipment_0 =  { owner = "GER" amount = 19 }
+			}
+		}
+
+		ship = { name = "SMS Emden" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER version_name = "Königsberg Class" } } }
+		ship = { name = "SMS Cöln" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER version_name = "Cöln Class" } } } #Yes, is Cöln, not Köln
+		ship = { name = "SMS Wiesbaden" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER version_name = "Cöln Class" } } }
+		ship = { name = "SMS Magdeburg" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER version_name = "Cöln Class" } } }
+		ship = { name = "SMS Osnabrück" definition = light_cruiser equipment = { light_cruiser_5 = { amount = 1 owner = GER version_name = "Osnabrück Class" } } }
+		ship = { name = "SMS Augsburg" definition = light_cruiser equipment = { light_cruiser_5 = { amount = 1 owner = GER version_name = "Osnabrück Class" } } }
+
+		ship = { name = "SMS V 170" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 171" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 172" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 173" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 174" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 175" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 176" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 177" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 178" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 179" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 180" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 181" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 182" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 183" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 184" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 185" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 186" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 187" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 188" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 189" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 190" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 191" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 192" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 193" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 194" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 195" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 196" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 197" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 198" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 199" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 200" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 201" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 202" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 203" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 204" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 205" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 206" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 207" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 208" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 209" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 210" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 178" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 179" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 180" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 317" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 318" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 319" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 320" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 321" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = GER } } }
+	}
+	navy = {
+		name = "Westafrikageschwader"
+		base = 6039
+		location = 6039
+		ship = { name = "SMS Großer Kurfürst" definition = SH_battleship equipment = { SH_battleship_3 = { amount = 1 owner = GER version_name = "König Class" } } }
+
+		ship = { name = "SMS Seydlitz" definition = battleship equipment = { battleship_2 = { amount = 1 owner = XXA version_name = "Seydlitz Class" } } }
+		ship = { name = "SMS Mackensen" definition = battleship equipment = { battleship_3 = { amount = 1 owner = GER version_name = "Mackensen Class" } } }
+
+		ship = { name = "SMS Graudenz" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER version_name = "Graudenz Class" } } }
+		ship = { name = "SMS Brummer" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER version_name = "Brummer Class" } } }
+
+		ship = { name = "SMS B 97" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS B 98" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 99" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 100" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS G 101" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS G 102" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 125" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 126" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 127" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 128" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 129" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 130" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 131" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 132" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 133" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 134" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 145" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 146" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 147" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 158" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 159" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 160" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 161" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 162" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+	}
+	navy = {
+		name = "Ostafrikageschwader"
+		base = 2196
+		location = 8124
+		ship = { name = "SMS Friedrich der Große" definition = SH_battleship equipment = { SH_battleship_2 = { amount = 1 owner = GER version_name = "Kaiser Class" } } }
+		ship = { name = "SMS König" definition = SH_battleship equipment = { SH_battleship_3 = { amount = 1 owner = GER version_name = "König Class" } } }
+
+		ship = { name = "SMS Derfflinger" definition = battleship equipment = { battleship_2 = { amount = 1 owner = XXB version_name = "Derfflinger Class" } } }
+		ship = { name = "SMS Prinz Eitel Friedrich" definition = battleship equipment = { battleship_3 = { amount = 1 owner = GER version_name = "Mackensen Class" } } }
+
+		ship = { name = "SMS Bremse" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER version_name = "Brummer Class" } } }
+		ship = { name = "SMS Nürnberg" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER version_name = "Königsberg Class" } } }
+
+		ship = { name = "SMS B 109" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS B 110" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS B 111" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS B 112" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS G 103" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS G 104" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 135" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 136" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 137" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 138" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS S 139" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 140" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 141" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 142" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 143" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 144" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 163" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 164" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS V 165" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 166" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 167" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 168" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS H 169" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+	}
+	navy = {
+		name = "U-Boot-Nordseeflotte"
+		base = 6389
+		location = 6389
+		ship = { name = "SMS U 223" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 224" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 225" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 226" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 227" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 228" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 229" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 230" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 239" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 240" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 241" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 242" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 243" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 244" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 245" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 246" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 247" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 248" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 249" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 250" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 251" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 252" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 253" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 254" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 255" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 256" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 257" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 258" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 259" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 260" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 264" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 265" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 266" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 267" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 268" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 269" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+	}
+	navy = {
+		name = "U-Boot-Ostseeflotte"
+		base = 6282
+		location = 6282
+		ship = { name = "SMS U 196" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 197" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 198" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 199" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 200" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 201" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 202" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 203" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 204" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 205" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 206" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 207" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 208" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 209" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 210" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 211" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 212" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 213" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 214" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 215" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 216" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 217" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 218" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 219" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 220" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 221" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 222" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+	}
+	navy = {
+		name = "I. U-Boot-Mittelmeerflotte"
+		base = 9940
+		location = 9940
+		ship = { name = "SMS U 175" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 176" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 177" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 178" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 179" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 180" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 181" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 182" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 183" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 184" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 185" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 186" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 187" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 189" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 190" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 191" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 192" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 193" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 194" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 195" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 233" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 234" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 235" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 236" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 237" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 238" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 261" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 262" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 263" definition = submarine equipment = { submarine_5 = { amount = 1 owner = GER } } }
+	}
+	navy = {
+		name = "II. U-Boot-Mittelmeerflotte"
+		base = 4170
+		location = 4170
+		ship = { name = "SMS U 142" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 143" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 144" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 145" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 146" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 147" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 148" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 149" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 150" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 173" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 174" definition = submarine equipment = { submarine_3 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 231" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+		ship = { name = "SMS U 232" definition = submarine equipment = { submarine_4 = { amount = 1 owner = GER } } }
+	}
+}
+
+air_wings = {
+
+	64 = {
+		fighter_equipment_0 = {
+			owner = "GER"
+			amount = 50
+		}
+		tac_bomber_equipment_0 = {
+			owner = "GER"
+			amount = 75
+		}
+	}
+
+	66 = {
+		tac_bomber_equipment_0 = {
+			owner = "GER"
+			amount = 75
+		}
+	}
+
+	57 = {
+		fighter_equipment_0 = {
+			owner = "GER"
+			amount = 25
+		}
+		tac_bomber_equipment_0 = {
+			owner = "GER"
+			amount = 25
+		}
+	}
+
+	52 = {
+		tac_bomber_equipment_0 = {
+			owner = "GER"
+			amount = 25
+		}
+	}
+
+	753 = {
+		tac_bomber_equipment_0 = {
+			owner = "GER"
+			amount = 25
+		}
+	}
+
+	5 = {
+		fighter_equipment_0 = {
+			owner = "GER"
+			amount = 50
+		}
+		tac_bomber_equipment_0 = {
+			owner = "GER"
+			amount = 50
+		}
+	}
+}
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+		}
+		requested_factories = 12
+		progress = 0.82
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+		}
+		requested_factories = 3
+		progress = 0.83
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.44
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_1
+		}
+		requested_factories = 4
+		progress = 0.29
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.12
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = light_tank_equipment_1
+		}
+		requested_factories = 2
+		progress = 0.59
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = CAS_equipment_1
+		}
+		requested_factories = 2
+		progress = 0.42
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = tac_bomber_equipment_1
+		}
+		requested_factories = 2
+		progress = 0.48
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = nav_bomber_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.88
+		efficiency = 100
+	}
+}

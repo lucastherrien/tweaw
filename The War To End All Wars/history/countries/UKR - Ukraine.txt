@@ -1,0 +1,355 @@
+﻿capital = 202
+set_convoys = 30
+set_stability = 0.5
+set_war_support = 0.3
+oob = "UKR"
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	gwtank = 1
+	### AIR ###
+	early_fighter = 1
+	early_bomber = 1
+	fighter1 = 1
+	naval_bomber1 = 1
+	tactical_bomber1 = 1
+	CAS1 = 1
+	cv_early_fighter = 1
+	cv_naval_bomber1 = 1
+	cv_CAS1 = 1
+	### Navy ###
+	destroyer_one = 1
+	destroyer_two = 1
+	destroyer_three = 1
+	destroyer_four = 1
+	light_cruiser_one = 1
+	light_cruiser_two = 1
+	light_cruiser_three = 1
+	light_cruiser_four = 1
+	light_cruiser_five = 1
+	heavy_cruiser_one = 1
+	heavy_cruiser_two = 1
+	heavy_cruiser_three = 1
+	heavy_cruiser_four = 1
+	battleship_one = 1
+	battleship_two = 1
+	battleship_three = 1
+	battleship_four = 1
+	battleship_five = 1
+	dreadnought_one = 1
+	dreadnought_two = 1
+	dreadnought_three = 1
+	carrier_one = 1
+	carrier_two = 1
+	submarine_one = 1
+	submarine_two = 1
+	submarine_three = 1
+	submarine_four = 1
+	submarine_five = 1
+	nav_infra_one = 1
+	nav_infra_two = 1
+	nav_infra_three = 1
+	nav_av_one = 1
+	transport = 1
+}
+
+set_research_slots = 3
+
+add_opinion_modifier = { target = FRA modifier = embargo }
+add_opinion_modifier = { target = ENG modifier = embargo }
+add_opinion_modifier = { target = SRI modifier = embargo }
+
+set_politics = {
+
+	parties = {
+		totalist = {
+			popularity = 0
+		}
+		radical_socialist = {
+			popularity = 0
+		}
+		syndicalist = {
+			popularity = 19
+		}
+		social_democrat = {
+			popularity = 1
+		}
+		social_liberal = {
+			popularity = 0
+		}
+		market_liberal = {
+			popularity = 1
+		}
+		social_conservative = {
+			popularity = 13
+		}
+		authoritarian_democrat = {
+			popularity = 36
+		}
+		paternal_autocrat = {
+			popularity = 15
+		}
+		national_populist = {
+			popularity = 15
+		}
+	}
+
+	ruling_party = authoritarian_democrat
+	last_election = "1930.11.9"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+add_ideas = {
+	#medium_economy
+	Hetman_Army
+	language_issue
+}
+
+add_ideas = {
+	#medium_economy
+	#ZO_idea
+	UKR_Pavlo_Skoropadsky_hog_pau
+	UKR_Dmitri_Doroshenko_for_npo
+	UKR_Andrey_Livytskyi_eco_ade
+	UKR_Igor_Kistyakovsky_sec_ade
+}
+### Ship Variants ###
+create_equipment_variant = {
+	name = "Almaz Class"
+	type = carrier_1
+	parent_version = 0
+	upgrades = {
+		ship_deckspace_upgrade = 1
+	}
+}
+
+create_equipment_variant = {
+	name = "131 Class"
+	type = submarine_5
+	parent_version = 0
+	upgrades = {
+		sub_engine_upgrade = 1
+	}
+}
+
+create_equipment_variant = {
+	name = "Mikhail Sablin Class"
+	type = light_cruiser_4
+	parent_version = 0
+	upgrades = {
+		ship_reliability_upgrade = 1
+	}
+}
+
+create_equipment_variant = {
+	name = "Luzk Class"
+	type = destroyer_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Winnyzja Class"
+	type = destroyer_4
+	parent_version = 0
+	upgrades = {
+		ship_torpedo_upgrade = 1
+	}
+}
+
+create_country_leader = {
+	name = "Vasyl I von Habsburg-Lothringen"
+	desc = "POLITICS_VASYL_DESC"
+	picture = "Portrait_Ukraine_Vasyl.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Nikita Kruschev"
+	desc = "POLITICS_NIKITA_KRUSCHEV_DESC"
+	picture = "Portrait_UKR_Nikita_Kruschev.tga"
+	expire = "1965.1.1"
+	ideology = totalist_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Nikita Kruschev"
+	desc = "POLITICS_NIKITA_KRUSCHEV_DESC"
+	picture = "Portrait_UKR_Nikita_Kruschev.tga"
+	expire = "1965.1.1"
+	ideology = syndicalist_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Nikita Kruschev"
+	desc = "POLITICS_NIKITA_KRUSCHEV_DESC"
+	picture = "Portrait_UKR_Nikita_Kruschev.tga"
+	expire = "1965.1.1"
+	ideology = radical_socialist_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Vladimir Vynnychenko"
+	desc = "POLITICS_VLADIMIR_VYNNYCHENKO_DESC"
+	picture = "Portrait_Ukraine_Vladimir_Vynnychenko.tga"
+	expire = "1965.1.1"
+	ideology = social_democrat_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Boris Martos"
+	desc = "POLITICS_BORIS_MARTOS_DESC"
+	picture = "Portrait_Ukraine_Boris_Martos.tga"
+	expire = "1965.1.1"
+	ideology = market_liberal_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Dmitri Doroshenko"
+	desc = "POLITICS_DMITRI_DOROSHENKO_DESC"
+	picture = "Portrait_Ukraine_Dmitri_Doroshenko.tga"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Mikhail Bulgakov"
+	desc = "POLITICS_MIKHAIL_BULGAKOV_DESC"
+	picture = "Portrait_Ukraine_Mikhail_Bulgakov.tga"
+	expire = "1965.1.1"
+	ideology = social_conservative_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Vasyl I von Habsburg-Lothringen"
+	desc = "POLITICS_VASYL_DESC"
+	picture = "Portrait_Ukraine_Vasyl.tga"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Dmitri Dontsov"
+	desc = "POLITICS_DMITRI_DONTSOV_DESC"
+	picture = "Portrait_Ukraine_Dmitri_Dontsov.tga"
+	expire = "1965.1.1"
+	ideology = national_populist_subtype
+	traits = {}
+}
+
+create_field_marshal = {
+	name = "Pavlo Skoropadsky"
+	picture = "Portrait_Ukraine_Pavlo_Skoropadsky.tga"
+	traits = { organizer thorough_planner old_guard cavalry_officer }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+
+}
+
+create_corps_commander = {
+	name = "Symon Petliura"
+	picture = "Portrait_Ukraine_Symon_Petliura.tga"
+	traits = { trickster defensive_doctrine politically_connected }
+	skill = 3
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 4
+
+}
+
+create_corps_commander = {
+	name = "Yevhen Konovalets"
+	picture = "Portrait_Ukraine_Yevhen_Konovalets.tga"
+	traits = { winter_specialist hill_fighter politically_connected }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 3
+
+}
+
+create_corps_commander = {
+	name = "Hnat Stefaniv"
+	picture = "Portrait_Ukraine_Hnat_Stefaniv.tga"
+	traits = { commando organizer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+
+}
+
+create_corps_commander = {
+	name = "Andriy Melnyk"
+	picture = "Portrait_Ukraine_Andriy_Melnyk.tga"
+	traits = { trait_engineer organizer thorough_planner }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+
+}
+
+create_corps_commander = {
+	name = "Dmytro Vitovsky"
+	picture = "Portrait_Ukraine_Dmytro_Vitovsky.tga"
+	traits = { old_guard trait_engineer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+
+}
+
+create_corps_commander = {
+	name = "Mykhailo Omelianovych-Pavlenko"
+	picture = "Portrait_Ukraine_Mykhailo_Omelianovych_Pavlenko.tga"
+	traits = { old_guard fortress_buster thorough_planner }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 1
+
+}
+
+create_navy_leader = {
+	name = "Andriy Pokrovsky"
+	picture = "Portrait_Ukraine_Andriy_Pokrovsky.tga"
+	traits = { old_guard_navy superior_tactician }
+	skill = 3 #naval guy, don't patch
+}
+
+create_navy_leader = {
+	name = "Sviatoslav Shramchenko"
+	picture = "Portrait_Ukraine_Sviatoslav_Shramchenko.tga"
+	traits = { spotter }
+	skill = 2 #naval guy, don't patch
+}

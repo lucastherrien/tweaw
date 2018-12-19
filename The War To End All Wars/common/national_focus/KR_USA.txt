@@ -1,0 +1,4618 @@
+###########################
+# USA Focus Tree
+# By herkles
+###########################
+focus_tree = {
+	id = USA
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = USA
+		}
+	}
+	default = no
+### Post Civil War ###	
+	focus = {# Constitutional Convention
+		id = USA_constitutional_convention
+		icon = GFX_goal_government_icon
+		cost = 6.00
+		available = { has_global_flag = USA_civil_war_over_flag }
+		x = 13
+		y = 0
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_constitutional_convention"
+			if = {
+				limit = { has_government = paternal_autocrat }
+				country_event = { id = ustates.116 days = 1 }
+			}
+			if = {
+				limit = { not = { has_government = paternal_autocrat } }
+				country_event = { id = ustates.117 days = 1 }
+			}
+		}
+
+	}
+###Post Civil War - democracy ###
+	focus = {# Democracy Triumphs
+		id = USA_democracy_triumphs
+		icon = GFX_goal_support_democracy
+		cost = 6.00
+		available = {
+			OR = {
+				has_country_flag = macarthur_gives_up_power
+				has_country_flag = USA_democracy_triumphs_flag
+			}
+		}
+		bypass = {
+			OR = {
+				has_country_flag = macarthur_gives_up_power
+				has_country_flag = USA_democracy_triumphs_flag
+			}
+		}
+		prerequisite = {
+			focus = USA_constitutional_convention
+		}
+		x = 4
+		y = 1
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_democracy_triumphs"
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+	focus = {# Education Reforms
+		id = USA_democratic_education
+		icon = GFX_goal_KTG_Bookstack
+		cost = 6.00
+		prerequisite = {
+			focus = USA_democracy_triumphs
+		}
+		x = 2
+		y = 2
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_democratic_education"
+			add_research_slot = 1
+		}
+	}
+	focus = {# Defend Democracy
+		id = USA_defend_democracy
+		icon = GFX_goal_ideology_social_liberal
+		cost = 6.00
+		prerequisite = {
+			focus = USA_democratic_education
+		}
+		x = 1
+		y = 3
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_defend_democracy"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea
+					add_idea = USA_civil_war_aftermath_idea2
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea2 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea2
+					add_idea = USA_civil_war_aftermath_idea3
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea3 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea3
+					add_idea = USA_civil_war_aftermath_idea4
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea4 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea4
+					add_idea = USA_civil_war_aftermath_idea5
+				}
+			}
+		}
+	}
+	focus = {# Bill of Rights
+		id = USA_bill_of_rights
+		icon = GFX_goal_constitutional_guarantees
+		cost = 6.00
+		prerequisite = {
+			focus = USA_defend_democracy
+		}
+		x = 1
+		y = 4
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_bill_of_rights"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea
+					add_idea = USA_civil_war_aftermath_idea2
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea2 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea2
+					add_idea = USA_civil_war_aftermath_idea3
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea3 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea3
+					add_idea = USA_civil_war_aftermath_idea4
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea4 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea4
+					add_idea = USA_civil_war_aftermath_idea5
+				}
+			}
+		}
+	}
+	focus = {# American Values
+		id = USA_american_values1
+		icon = GFX_goal_ideology_market_liberal
+		cost = 6.00
+		prerequisite = {
+			focus = USA_bill_of_rights
+		}
+		x = 1
+		y = 5
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_american_values1"
+			add_ideas = USA_american_values_ideas
+		}
+	}
+	focus = {# Restore Legitimacy
+		id = USA_restore_legitimacy
+		icon = GFX_goal_liberty
+		cost = 6.00
+		prerequisite = {
+			focus = USA_democracy_triumphs
+		}
+		x = 4
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_restore_legitimacy"
+			add_political_power = 100
+			add_stability = 0.10
+			increase_ruling_party_popularity_by_5 = yes
+		}
+	}
+	focus = {# Malice and Charity
+		id = USA_malice_and_charity
+		icon = GFX_goal_ideology_social_conservative
+		cost = 6.00
+		prerequisite = {
+			focus = USA_restore_legitimacy
+		}
+		x = 3
+		y = 3
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_malice_and_charity"
+			country_event = { id = ustates.118 days = 1 }
+		}
+	}
+	focus = {# Destroy Radicalism
+		id = USA_destroy_radicalism
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 6.00
+		prerequisite = {
+			focus = USA_restore_legitimacy
+		}
+		x = 5
+		y = 3
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_destroy_radicalism"
+			custom_effect_tooltip = USA_fight_terorists_flag
+		}
+	}
+	focus = {# Ensure Political Stability
+		id = USA_ensure_political_stability
+		icon = GFX_goal_USA_eagle
+		cost = 6.00
+		prerequisite = {
+			focus = USA_malice_and_charity
+			focus = USA_destroy_radicalism
+		}
+		x = 4
+		y = 4
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_ensure_political_stability"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea
+					add_idea = USA_civil_war_aftermath_idea2
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea2 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea2
+					add_idea = USA_civil_war_aftermath_idea3
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea3 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea3
+					add_idea = USA_civil_war_aftermath_idea4
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea4 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea4
+					add_idea = USA_civil_war_aftermath_idea5
+				}
+			}
+		}
+	}
+	focus = {# Loyalty to America
+		id = USA_strengthen_democracy
+		icon = GFX_goal_Centralised_Government
+		cost = 6.00
+		prerequisite = {
+			focus = USA_malice_and_charity
+		}
+		prerequisite = {
+			focus = USA_ensure_political_stability
+		}
+		x = 3
+		y = 5
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_strengthen_democracy"
+			country_event = { id = ustates.119 days = 1 }
+			add_war_support = 0.05
+		}
+	}
+	focus = {# Strengthen Democracy
+		id = USA_civil_liberties
+		icon = GFX_goal_liberty
+		cost = 6.00
+		prerequisite = {
+			focus = USA_destroy_radicalism
+		}
+		prerequisite = {
+			focus = USA_ensure_political_stability
+		}
+		x = 5
+		y = 5
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_civil_liberties"
+			increase_ruling_party_popularity_by_5 = yes
+			add_war_support = 0.05
+		}
+	}
+	focus = {# Protect Democracy
+		id = USA_protect_democracy
+		icon = GFX_goal_usa
+		cost = 6.00
+		prerequisite = {
+			focus = USA_democracy_triumphs
+		}
+		x = 6
+		y = 2
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_protect_democracy"
+			add_war_support = 0.1
+		}
+	}
+	focus = {# Land of the Free
+		id = USA_land_of_the_free
+		icon = GFX_goal_generic_national_unity
+		cost = 6.00
+		prerequisite = {
+			focus = USA_protect_democracy
+		}
+		x = 7
+		y = 3
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_land_of_the_free"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea
+					add_idea = USA_civil_war_aftermath_idea2
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea2 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea2
+					add_idea = USA_civil_war_aftermath_idea3
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea3 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea3
+					add_idea = USA_civil_war_aftermath_idea4
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea4 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea4
+					add_idea = USA_civil_war_aftermath_idea5
+				}
+			}
+		}
+	}
+	focus = {# For the People
+		id = USA_for_the_people
+		icon = GFX_america_goal_eagle_deal
+		cost = 6.00
+		prerequisite = {
+			focus = USA_land_of_the_free
+		}
+		x = 7
+		y = 4
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_for_the_people"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea
+					add_idea = USA_civil_war_aftermath_idea2
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea2 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea2
+					add_idea = USA_civil_war_aftermath_idea3
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea3 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea3
+					add_idea = USA_civil_war_aftermath_idea4
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea4 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea4
+					add_idea = USA_civil_war_aftermath_idea5
+				}
+			}
+		}
+	}
+	focus = {# Home of the Brave
+		id = USA_home_of_the_brave
+		icon = GFX_goal_generic_major_alliance
+		cost = 6.00
+		prerequisite = {
+			focus = USA_for_the_people
+		}
+		x = 7
+		y = 5
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_home_of_the_brave"
+			add_ideas = USA_home_of_the_brave_idea
+		}
+	}
+	focus = {# A more Perfect Union
+		id = USA_a_more_perfect_union
+		icon = GFX_america_goal_champagn
+		cost = 6.00
+		prerequisite = {
+			focus = USA_american_values1
+		}
+		prerequisite = {
+			focus = USA_civil_liberties
+		}
+		prerequisite = {
+			focus = USA_strengthen_democracy
+		}
+		prerequisite = {
+			focus = USA_home_of_the_brave
+		}
+		x = 4
+		y = 6
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_a_more_perfect_union"
+			remove_ideas = USA_civil_war_aftermath_idea5
+		}
+	}
+### Post Civil War - Reconstruction ###
+	focus = {# Begin Reconstruction
+		id = USA_begin_reconstruction
+		icon = GFX_goal_construction_engineering
+		cost = 6.00
+		prerequisite = {
+			focus = USA_democracy_triumphs
+			focus = USA_american_caeser
+		}
+		x = 13
+		y = 2
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_begin_reconstruction"
+			add_ideas = USA_civil_reconstruction_idea
+		}
+	}
+	focus = {# Rebuild Railroads
+		id = USA_rebuild_railroads
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 6.00
+		available = {
+			357 = { is_owned_by = USA }
+			934 = { is_owned_by = USA }
+			796 = { is_owned_by = USA }
+			932 = { is_owned_by = USA }
+			931 = { is_owned_by = USA }
+			935 = { is_owned_by = USA }
+		}
+		prerequisite = {
+			focus = USA_begin_reconstruction
+		}
+		x = 9
+		y = 3
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_rebuild_railroads"
+			random_owned_state = {
+				limit = { is_in_home_area = yes	}
+				add_building_construction = { type = infrastructure	level = 1 instant_build = yes }
+			}
+			random_owned_state = {
+				limit = { is_in_home_area = yes	}
+				add_building_construction = { type = infrastructure	level = 1 instant_build = yes }
+			}
+			random_owned_state = {
+				limit = { is_in_home_area = yes	}
+				add_building_construction = { type = infrastructure	level = 1 instant_build = yes }
+			}
+			random_owned_state = {
+				limit = { is_in_home_area = yes	}
+				add_building_construction = { type = infrastructure	level = 1 instant_build = yes }
+			}
+			random_owned_state = {
+				limit = { is_in_home_area = yes	}
+				add_building_construction = { type = infrastructure	level = 1 instant_build = yes }
+			}
+		}
+	}
+	focus = {# Electrification
+		id = USA_electrification
+		icon = GFX_goal_Schelle
+		cost = 6.00
+		prerequisite = {
+			focus = USA_rebuild_railroads
+		}
+		x = 9
+		y = 5
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_electrification"
+			add_tech_bonus = {
+				name = electronics_bonus
+				bonus = 0.5
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+	focus = {# Business Subsidies
+		id = USA_business_subsidies
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 6.00
+		prerequisite = {
+			focus = USA_begin_reconstruction
+		}
+		x = 11
+		y = 3
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_business_subsidies"
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {# Rebuild Americas Industry
+		id = USA_rebuild_americas_industry
+		icon = GFX_goal_USA_american_industry
+		cost = 6.00
+		prerequisite = {
+			focus = USA_business_subsidies
+		}
+		x = 10
+		y = 4
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_rebuild_americas_industry"
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	focus = {# Economic Investments
+		id = USA_economic_investments
+		icon = GFX_goal_bag_of_money
+		cost = 6.00
+		prerequisite = {
+			focus = USA_business_subsidies
+		}
+		x = 12
+		y = 4
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_economic_investments"
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {# American Industry
+		id = USA_american_industry
+		icon = GFX_goal_production
+		cost = 6.00
+		prerequisite = {
+			focus = USA_rebuild_americas_industry
+		}
+		prerequisite = {
+			focus = USA_economic_investments
+		}
+		x = 11
+		y = 5
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_american_industry"
+			custom_effect_tooltip = USA_economic_recovery_tooltip
+			if = {
+				limit = { has_idea = USA_civil_war_depression_idea }
+				swap_ideas = {
+					remove_idea = USA_civil_war_depression_idea
+					add_idea = USA_economic_recovery_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_economic_recovery_idea }
+				remove_ideas = USA_economic_recovery_idea
+			}
+		}
+	}
+	focus = {# Trial of American Companies
+		id = USA_trial_of_american_companies
+		icon = GFX_goal_DOM_The_Trial
+		cost = 6.00
+		available = {
+			373 = { is_owned_by = USA }
+			372 = { is_owned_by = USA }
+			371 = { is_owned_by = USA }
+			368 = { is_owned_by = USA }
+			370 = { is_owned_by = USA }
+			367 = { is_owned_by = USA }
+			361 = { is_owned_by = USA }
+			930 = { is_owned_by = USA }
+			362 = { is_owned_by = USA }
+			363 = { is_owned_by = USA }
+			364 = { is_owned_by = USA }
+			365 = { is_owned_by = USA }
+			366 = { is_owned_by = USA }
+		}
+		prerequisite = {
+			focus = USA_begin_reconstruction
+		}
+		x = 13
+		y = 3
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_trial_of_american_companies"
+			custom_effect_tooltip = USA_trial_of_american_companies_tooltip
+		}
+	}
+	focus = {# Fate of the Unions
+		id = USA_esmwt
+		icon = GFX_HOL_red_scare
+		cost = 6.00
+		prerequisite = {
+			focus = USA_trial_of_american_companies
+		}
+		x = 13
+		y = 5
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_esmwt"
+			country_event = { id = ustates.125 days = 1 }
+		}
+	}
+	focus = {# Rebuild The roads
+		id = USA_rebuild_the_roads
+		icon = GFX_goal_construction_engineering
+		cost = 6.00
+		prerequisite = {
+			focus = USA_begin_reconstruction
+		}
+		x = 15
+		y = 3
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_rebuild_the_roads"
+			random_owned_state = {
+				limit = { is_in_home_area = yes	}
+				add_building_construction = { type = infrastructure	level = 1 instant_build = yes }
+			}
+			random_owned_state = {
+				limit = { is_in_home_area = yes	}
+				add_building_construction = { type = infrastructure	level = 1 instant_build = yes }
+			}
+			random_owned_state = {
+				limit = { is_in_home_area = yes	}
+				add_building_construction = { type = infrastructure	level = 1 instant_build = yes }
+			}
+			random_owned_state = {
+				limit = { is_in_home_area = yes	}
+				add_building_construction = { type = infrastructure	level = 1 instant_build = yes }
+			}
+			random_owned_state = {
+				limit = { is_in_home_area = yes	}
+				add_building_construction = { type = infrastructure	level = 1 instant_build = yes }
+			}
+		}
+	}
+	focus = {# rebuild agriculture
+		id = USA_rebuild_agriculture
+		icon = GFX_focus_AUS_agriculture
+		cost = 6.00
+		prerequisite = {
+			focus = USA_rebuild_the_roads
+		}
+		x = 14
+		y = 4
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_rebuild_agriculture"
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	focus = {# Aviation Industry
+		id = USA_aviation_industry
+		icon = GFX_goal_USA_freedom_fighters
+		cost = 6.00
+		prerequisite = {
+			focus = USA_rebuild_the_roads
+		}
+		x = 16
+		y = 4
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_aviation_industry"
+			384 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = air_base
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			381 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = air_base
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			362 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = air_base
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			363 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = air_base
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			375 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = air_base
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			833 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = air_base
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			374 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = air_base
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {# Farming Subsidies
+		id = USA_farming_subsidies
+		icon = GFX_goal_agrarian_reform
+		cost = 6.00
+		prerequisite = {
+			focus = USA_rebuild_agriculture
+		}
+		prerequisite = {
+			focus = USA_aviation_industry
+		}
+		x = 15
+		y = 5
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_farming_subsidies"
+			custom_effect_tooltip = USA_economic_recovery_tooltip
+			if = {
+				limit = { has_idea = USA_civil_war_depression_idea }
+				swap_ideas = {
+					remove_idea = USA_civil_war_depression_idea
+					add_idea = USA_economic_recovery_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_economic_recovery_idea }
+				remove_ideas = USA_economic_recovery_idea
+			}
+		}
+	}
+	focus = {# Maritime Industry
+		id = USA_maritime_industry
+		icon = GFX_goal_navy_decision
+		cost = 6.00
+		prerequisite = {
+			focus = USA_begin_reconstruction
+		}
+		x = 17
+		y = 3
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_maritime_industry"
+			362 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			359 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			360 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			375 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			833 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {# Synthetic Oil
+		id = USA_synthetic_oil
+		icon = GFX_goal_further_oil
+		cost = 6.00
+		prerequisite = {
+			focus = USA_maritime_industry
+		}
+		x = 17
+		y = 5
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_synthetic_oil"
+			add_tech_bonus = {
+				name = synth_resources
+				bonus = 0.5
+				uses = 2
+				category = synth_resources
+			}
+		}
+	}
+	focus = {# Reconstruction Finished
+		id = USA_reconstruction_finished
+		icon = GFX_goal_USA_america_economic_miracle
+		cost = 6.00
+		prerequisite = {
+			focus = USA_farming_subsidies
+		}
+		prerequisite = {
+			focus = USA_esmwt
+		}
+		prerequisite = {
+			focus = USA_american_industry
+		}
+		prerequisite = {
+			focus = USA_synthetic_oil
+		}
+		prerequisite = {
+			focus = USA_electrification
+		}
+		x = 13
+		y = 6
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_reconstruction_finished"
+			remove_ideas = USA_civil_reconstruction_idea
+		}
+	}
+### Post Civil War - Mac Arthur ###
+	focus = {# American Caesar
+		id = USA_american_caeser
+		icon = GFX_goal_USA_general_macarthur
+		cost = 6.00
+		available = { has_country_flag = macarthur_keeps_power_flag }
+		bypass = { has_country_flag = macarthur_keeps_power_flag }
+		prerequisite = {
+			focus = USA_constitutional_convention
+		}
+		x = 22
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_american_caeser"
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+	focus = {# Army Education
+		id = USA_army_education
+		icon = GFX_focus_generic_military_academy
+		cost = 6.00
+		prerequisite = {
+			focus = USA_american_caeser
+		}
+		x = 20
+		y = 2
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_army_education"
+			add_research_slot = 1
+		}
+	}
+	focus = {# Nationalize the Boy Scouts
+		id = USA_nationalize_boy_scouts
+		icon = GFX_goal_KTG_Belgian_Officers2
+		cost = 6.00
+		prerequisite = {
+			focus = USA_army_education
+		}
+		x = 19
+		y = 3
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_nationalize_boy_scouts"
+			add_war_support = 0.1
+		}
+	}
+	focus = {# The American Legion
+		id = USA_the_american_legion
+		icon = GFX_goal_LEC_armsUSA
+		cost = 6.00
+		prerequisite = {
+			focus = USA_nationalize_boy_scouts
+		}
+		x = 19
+		y = 4
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_the_american_legion"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea
+					add_idea = USA_civil_war_aftermath_idea2
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea2 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea2
+					add_idea = USA_civil_war_aftermath_idea3
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea3 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea3
+					add_idea = USA_civil_war_aftermath_idea4
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea4 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea4
+					add_idea = USA_civil_war_aftermath_idea5
+				}
+			}
+		}
+	}
+	focus = {# Americanism
+		id = USA_americanism
+		icon = GFX_goal_usa
+		cost = 6.00
+		prerequisite = {
+			focus = USA_the_american_legion
+		}
+		x = 19
+		y = 5
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_americanism"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea
+					add_idea = USA_civil_war_aftermath_idea2
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea2 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea2
+					add_idea = USA_civil_war_aftermath_idea3
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea3 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea3
+					add_idea = USA_civil_war_aftermath_idea4
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea4 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea4
+					add_idea = USA_civil_war_aftermath_idea5
+				}
+			}
+		}
+	}
+	focus = {# Martial Law
+		id = USA_martial_law
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 6.00
+		prerequisite = {
+			focus = USA_american_caeser
+		}
+		x = 22
+		y = 2
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_martial_law"
+			add_stability = 0.1
+		}
+	}
+	focus = {# FBI's COINTELPRO
+		id = USA_fbi_cointelpro
+		icon = GFX_goal_secret_agents
+		cost = 6.00
+		prerequisite = {
+			focus = USA_martial_law
+		}
+		x = 21
+		y = 3
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_fbi_cointelpro"
+			add_ideas = USA_cointelpro_idea
+		}
+	}
+	focus = {# Control Congress
+		id = USA_control_congress
+		icon = GFX_goal_Centralised_Government
+		cost = 6.00
+		prerequisite = {
+			focus = USA_martial_law
+		}
+		x = 23
+		y = 3
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_control_congress"
+			add_political_power = 100
+			increase_ruling_party_popularity_by_5 = yes
+		}
+	}
+	focus = {# National Rehabilitation
+		id = USA_national_rehabilition
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 6.00
+		prerequisite = {
+			focus = USA_fbi_cointelpro
+			focus = USA_control_congress
+		}
+		x = 22
+		y = 4
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_national_rehabilition"
+			country_event = { id = ustates.120 days = 1 }
+		}
+	}
+	focus = {# Office of War Information
+		id = USA_office_of_war_information
+		icon = GFX_goal_HOL_progressive_tax
+		cost = 6.00
+		prerequisite = {
+			focus = USA_fbi_cointelpro
+		}
+		prerequisite = {
+			focus = USA_national_rehabilition
+		}
+		x = 21
+		y = 5
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_office_of_war_information"
+			swap_ideas = {
+				remove_idea = USA_cointelpro_idea
+				add_idea = USA_black_chamber_idea
+			}
+		}
+	}
+	focus = {# Alien and Sedition Acts
+		id = USA_allien_sedition_acts
+		icon = GFX_goal_HOL_crackdown_radsoc
+		cost = 6.00
+		prerequisite = {
+			focus = USA_control_congress
+		}
+		prerequisite = {
+			focus = USA_national_rehabilition
+		}
+		x = 23
+		y = 5
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_allien_sedition_acts"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea
+					add_idea = USA_civil_war_aftermath_idea2
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea2 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea2
+					add_idea = USA_civil_war_aftermath_idea3
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea3 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea3
+					add_idea = USA_civil_war_aftermath_idea4
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea4 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea4
+					add_idea = USA_civil_war_aftermath_idea5
+				}
+			}
+		}
+	}
+	focus = {# Root out Traitors
+		id = USA_root_out_traitors
+		icon = GFX_goal_purge_opposition
+		cost = 6.00
+		prerequisite = {
+			focus = USA_american_caeser
+		}
+		x = 24
+		y = 2
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_root_out_traitors"
+			custom_effect_tooltip = TEX_fight_terrorists_tooltip
+		}
+	}
+	focus = {# Empower the Army
+		id = USA_empower_the_army
+		icon = GFX_goal_military_academy
+		cost = 6.00
+		prerequisite = {
+			focus = USA_root_out_traitors
+		}
+		x = 25
+		y = 3
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_empower_the_army"
+			add_ideas = USA_empowered_army_idea
+		}
+	}
+	focus = {# Loyal Officers
+		id = USA_loyal_officers
+		icon = GFX_focus_generic_military_mission
+		cost = 6.00
+		prerequisite = {
+			focus = USA_empower_the_army
+		}
+		x = 25
+		y = 4
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_loyal_officers"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea
+					add_idea = USA_civil_war_aftermath_idea2
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea2 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea2
+					add_idea = USA_civil_war_aftermath_idea3
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea3 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea3
+					add_idea = USA_civil_war_aftermath_idea4
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea4 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea4
+					add_idea = USA_civil_war_aftermath_idea5
+				}
+			}
+		}
+	}
+	focus = {# Loyalty to MacArthur
+		id = USA_loyalty_to_macarthur
+		icon = GFX_goal_USA_police_state
+		cost = 6.00
+		prerequisite = {
+			focus = USA_loyal_officers
+		}
+		x = 25
+		y = 5
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_loyalty_to_macarthur"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea
+					add_idea = USA_civil_war_aftermath_idea2
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea2 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea2
+					add_idea = USA_civil_war_aftermath_idea3
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea3 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea3
+					add_idea = USA_civil_war_aftermath_idea4
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea4 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea4
+					add_idea = USA_civil_war_aftermath_idea5
+				}
+			}
+		}
+	}
+	focus = {# American Stratocracy
+		id = USA_american_stratocracy
+		icon = GFX_goal_USA_macarthur_military
+		cost = 6.00
+		prerequisite = {
+			focus = USA_americanism
+		}
+		prerequisite = {
+			focus = USA_office_of_war_information
+		}
+		prerequisite = {
+			focus = USA_allien_sedition_acts
+		}
+		prerequisite = {
+			focus = USA_loyalty_to_macarthur
+		}
+		x = 22
+		y = 6
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_american_stratocracy"
+			remove_ideas = USA_civil_war_aftermath_idea5
+		}
+	}
+### Fair Deal - Economics ###
+	focus = {# Fair Deal
+		id = USA_fair_deal
+		icon = GFX_goal_USA_new_deal
+		cost = 6.00
+		available = { has_global_flag = USA_civil_war_avoided_flag }
+		x = 32
+		y = 0
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_fair_deal"
+			swap_ideas = {
+				remove_idea = USA_black_monday
+				add_idea = USA_recovering_economy_idea
+			}
+		}
+	}
+	focus = {# Brain Trust
+		id = USA_brain_trust
+		icon = GFX_goal_KTG_Bookstack
+		cost = 6.00
+		prerequisite = {
+			focus = USA_fair_deal
+		}
+		x = 28
+		y = 1
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_brain_trust"
+			add_research_slot = 1
+		}
+	}
+	focus = {# Federal Project One
+		id = USA_federal_project_one
+		icon = GFX_goal_KTG_Certificate_Focus
+		cost = 6.00
+		prerequisite = {
+			focus = USA_brain_trust
+		}
+		x = 28
+		y = 4
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_federal_project_one"
+			add_ideas = USA_federal_project_one_idea
+		}
+	}
+	focus = {# National Recovery Act
+		id = USA_national_recovery_act
+		icon = GFX_goal_USA_nra
+		cost = 6.00
+		prerequisite = {
+			focus = USA_fair_deal
+		}
+		x = 32
+		y = 1
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_national_recovery_act"
+			swap_ideas = {
+				remove_idea = USA_recovering_economy_idea
+				add_idea = USA_national_recovery_act_idea
+			}
+		}
+	}
+	focus = {# Expand ERA
+		id = USA_expand_era
+		icon = GFX_focus_generic_concessions
+		cost = 6.00
+		prerequisite = {
+			focus = USA_national_recovery_act
+		}
+		x = 30
+		y = 2
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_expand_era"
+			797 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			386 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			385 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			378 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			829 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			798 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {# Civil Works Administration
+		id = USA_civil_works_adminstration
+		icon = GFX_goal_production
+		cost = 6.00
+		prerequisite = {
+			focus = USA_expand_era
+		}
+		x = 29
+		y = 3
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_civil_works_adminstration"
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	focus = {# Create the CCC
+		id = USA_create_the_ccc
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 6.00
+		prerequisite = {
+			focus = USA_expand_era
+		}
+		x = 31
+		y = 3
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_create_the_ccc"
+			add_ideas = USA_ccc_idea
+		}
+	}
+	focus = {# Industrial Recovery Act
+		id = USA_industrial_recovery_act
+		icon = GFX_goal_USA_american_industry
+		cost = 6.00
+		prerequisite = {
+			focus = USA_civil_works_adminstration
+		}
+		prerequisite = {
+			focus = USA_create_the_ccc
+		}
+		x = 30
+		y = 4
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_industrial_recovery_act"
+			833 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			375 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			372 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			368 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			362 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			363 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {# Workers Management Act
+		id = USA_workers_management_act
+		icon = GFX_goal_socialist_infrastructure
+		cost = 6.00
+		prerequisite = {
+			focus = USA_national_recovery_act
+		}
+		x = 32
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_workers_management_act"
+			add_ideas = USA_workers_management_act_idea
+		}
+	}
+	focus = {# Social Security
+		id = USA_social_security
+		icon = GFX_goal_KTG_Certificate_Focus
+		cost = 6.00
+		prerequisite = {
+			focus = USA_workers_management_act
+		}
+		x = 32
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_social_security"
+			swap_ideas = {
+				remove_idea = USA_workers_management_act_idea
+				add_idea = USA_social_security_idea
+			}
+		}
+	}
+	focus = {# Farmer Relief
+		id = USA_farmer_relief
+		icon = GFX_focus_AUS_agriculture
+		cost = 6.00
+		prerequisite = {
+			focus = USA_national_recovery_act
+		}
+		x = 34
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_farmer_relief"
+			388 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			381 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			382 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			384 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			383 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			374 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			375 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			833 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			391 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			392 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			373 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			369 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			362 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			361 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			368 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {# Rural Electrification
+		id = USA_rural_electrification
+		icon = GFX_goal_Schelle
+		cost = 6.00
+		prerequisite = {
+			focus = USA_farmer_relief
+		}
+		x = 33
+		y = 3
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_rural_electrification"
+			add_tech_bonus = {
+				name = electronics_bonus
+				bonus = 0.5
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+	focus = {# Agricultural Adjustment Act
+		id = USA_agricultural_adjustment_act
+		icon = GFX_goal_agriculture
+		cost = 6.00
+		prerequisite = {
+			focus = USA_farmer_relief
+		}
+		x = 35
+		y = 3
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_agricultural_adjustment_act"
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	focus = {# Public Works
+		id = USA_public_works
+		icon = GFX_goal_factory_complex
+		cost = 6.00
+		prerequisite = {
+			focus = USA_rural_electrification
+		}
+		prerequisite = {
+			focus = USA_agricultural_adjustment_act
+		}
+		x = 34
+		y = 4
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_public_works"
+			395 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			396 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			393 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			261 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			360 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			358 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {# create the FCC
+		id = USA_create_the_fcc
+		icon = GFX_goal_generic_radar
+		cost = 6.00
+		prerequisite = {
+			focus = USA_fair_deal
+		}
+		x = 36
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_create_the_fcc"
+			797 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = air_base
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			374 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = air_base
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			395 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = air_base
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			359 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = air_base
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {# Maritime Commission
+		id = USA_maritime_commision
+		icon = GFX_SIA_maritmesilkroad
+		cost = 6.00
+		prerequisite = {
+			focus = USA_create_the_fcc
+		}
+		x = 36
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_maritime_commision"
+			navy_experience = 10
+			360 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			358 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			797 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			375 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {# Revitalized Economy
+		id = USA_revitalized_economy
+		icon = GFX_goal_USA_america_economic_miracle
+		cost = 6.00
+		prerequisite = {
+			focus = USA_social_security
+		}
+		prerequisite = {
+			focus = USA_federal_project_one
+		}
+		prerequisite = {
+			focus = USA_industrial_recovery_act
+		}
+		prerequisite = {
+			focus = USA_public_works
+		}
+		prerequisite = {
+			focus = USA_maritime_commision
+		}
+		x = 32
+		y = 5
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_revitalized_economy"
+			remove_ideas = USA_national_recovery_act_idea
+		}
+	}
+### Fair Deal - Politics ###
+	focus = {# Democracy Prevails!
+		id = USA_politics
+		icon = GFX_goal_ideology_social_liberal
+		cost = 6.00
+		available = { has_global_flag = USA_civil_war_avoided_flag }
+		x = 42
+		y = 0
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_politics"
+			remove_ideas = USA_political_crisis
+		}
+	}
+	focus = {# Popular Democracy
+		id = USA_popular_democracy
+		icon = GFX_goal_DOM_End_Judicial_Corruption
+		cost = 6.00
+		prerequisite = {
+			focus = USA_politics
+		}
+		x = 40
+		y = 1
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_popular_democracy"
+			add_political_power = 100
+			increase_ruling_party_popularity_by_5 = yes
+		}
+	}
+	focus = {# Press Freedoms
+		id = USA_press_freedoms
+		icon = GFX_goal_big_news
+		cost = 6.00
+		prerequisite = {
+			focus = USA_popular_democracy
+		}
+		x = 38
+		y = 2
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_press_freedoms"
+			add_stability = 0.1
+		}
+	}
+	focus = {# Strengthen Congress
+		id = USA_strengthen_congress
+		icon = GFX_goal_Centralised_Government
+		cost = 6.00
+		prerequisite = {
+			focus = USA_press_freedoms
+		}
+		x = 38
+		y = 3
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_strengthen_congress"
+			add_stability = 0.1
+		}
+	}
+	focus = {# Compact with the People
+		id = USA_compact_with_the_people
+		icon = GFX_goal_tripartite_pact
+		cost = 6.00
+		prerequisite = {
+			focus = USA_popular_democracy
+		}
+		x = 40
+		y = 2
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_compact_with_the_people"
+			add_political_power = 100
+			increase_ruling_party_popularity_by_5 = yes
+		}
+	}
+	focus = {# the 20th Amendment
+		id = USA_20th_amedment
+		icon = GFX_goal_constitutional_guarantees
+		cost = 6.00
+		prerequisite = {
+			focus = USA_compact_with_the_people
+		}
+		x = 40
+		y = 3
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_20th_amedment"
+			country_event = { id = ustates.150 days = 1 }
+		}
+	}
+	focus = {# Bastion of Liberty
+		id = USA_bastion_of_liberty
+		icon = GFX_goal_liberty
+		cost = 6.00
+		prerequisite = {
+			focus = USA_strengthen_congress
+		}
+		prerequisite = {
+			focus = USA_press_freedoms
+		}
+		x = 39
+		y = 4
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_bastion_of_liberty"
+			add_ideas = USA_bastion_of_liberty_idea
+		}
+	}
+	focus = {# Restore Confidence
+		id = USA_restore_confidence
+		icon = GFX_america_goal_eagle_deal
+		cost = 6.00
+		prerequisite = {
+			focus = USA_politics
+		}
+		x = 42
+		y = 1
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_restore_confidence"
+			add_timed_idea = { idea = USA_restoring_confidence days = 180 }
+		}
+	}
+	focus = {# Charity for All
+		id = USA_charity_for_all
+		icon = GFX_goal_usa
+		cost = 6.00
+		prerequisite = {
+			focus = USA_restore_confidence
+		}
+		x = 42
+		y = 2
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_charity_for_all"
+			add_stability = 0.05
+		}
+	}
+	focus = {# Contain Extremism
+		id = USA_contain_extremism
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 6.00
+		prerequisite = {
+			focus = USA_charity_for_all
+		}
+		x = 42
+		y = 3
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_contain_extremism"
+			add_popularity = { ideology = totalist popularity = -0.03 }
+			add_popularity = { ideology = syndicalist popularity = -0.03 }
+			add_popularity = { ideology = radical_socialist popularity = -0.03 }
+
+			add_popularity = { ideology = authoritarian_democrat popularity = -0.03 }
+			add_popularity = { ideology = paternal_autocrat popularity = -0.03 }
+			add_popularity = { ideology = national_populist popularity = -0.03 }
+
+		}
+
+	}
+	focus = {# Business Relations
+		id = USA_business_relations
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 6.00
+		prerequisite = {
+			focus = USA_politics
+		}
+		x = 44
+		y = 1
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_business_relations"
+			add_political_power = 100
+		}
+	}
+	focus = {# Union Ties
+		id = USA_union_ties
+		icon = GFX_goal_economic_control
+		cost = 6.00
+		prerequisite = {
+			focus = USA_business_relations
+		}
+		x = 44
+		y = 2
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_union_ties"
+			add_political_power = 50
+			increase_ruling_party_popularity_by_5 = yes
+		}
+	}
+	focus = {# Second Bill of Rights
+		id = USA_second_bill_of_rights
+		icon = GFX_goal_socialist_infrastructure
+		cost = 6.00
+		available = {
+			has_completed_focus = USA_revitalized_economy
+			OR = {
+				has_government = social_democrat
+				has_government = social_liberal
+			}
+		}
+		prerequisite = {
+			focus = USA_union_ties
+		}
+		x = 44
+		y = 3
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_second_bill_of_rights"
+			swap_ideas = {
+				remove_idea = USA_social_security_idea
+				add_idea = USA_second_bill_of_rights_idea
+			}
+		}
+	}
+	focus = {# American Capitalism
+		id = USA_american_capitalism
+		icon = GFX_goal_USA_american_industry
+		cost = 6.00
+		prerequisite = {
+			focus = USA_business_relations
+		}
+		x = 46
+		y = 2
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_american_capitalism"
+			add_ideas = USA_american_capitalism_idea
+		}
+	}
+	focus = {# Public Spending Increase
+		id = USA_public_spending_increase
+		icon = GFX_goal_gold_reserve
+		cost = 6.00
+		prerequisite = {
+			focus = USA_american_capitalism
+		}
+		x = 46
+		y = 3
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_public_spending_increase"
+			add_stability = 0.05
+		}
+	}
+	focus = {# Improve our Trade
+		id = USA_renegotate_trade
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 6.00
+		prerequisite = {
+			focus = USA_public_spending_increase
+		}
+		prerequisite = {
+			focus = USA_american_capitalism
+		}
+		x = 45
+		y = 4
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_renegotate_trade"
+			add_political_power = 100
+			custom_effect_tooltip = USA_trade_contracts_tooltip
+		}
+	}
+	focus = {# American Values
+		id = USA_american_values
+		icon = GFX_goal_support_democracy
+		cost = 6.00
+		prerequisite = {
+			focus = USA_strengthen_congress
+		}
+		prerequisite = {
+			focus = USA_contain_extremism
+		}
+		prerequisite = {
+			focus = USA_public_spending_increase
+		}
+		x = 41
+		y = 4
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_american_values"
+			add_political_power = 100
+		}
+	}
+	focus = {# American Creed
+		id = USA_american_creed
+		icon = GFX_focus_chi_mission_to_the_us
+		cost = 6.00
+		prerequisite = {
+			focus = USA_public_spending_increase
+		}
+		prerequisite = {
+			focus = USA_contain_extremism
+		}
+		prerequisite = {
+			focus = USA_strengthen_congress
+		}
+		x = 43
+		y = 4
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_american_creed"
+			add_ideas = USA_american_creed_idea
+		}
+	}
+	focus = {# New Day in America
+		id = USA_new_day_in_america
+		icon = GFX_america_goal_champagn
+		cost = 6.00
+		prerequisite = {
+			focus = USA_american_values
+		}
+		prerequisite = {
+			focus = USA_american_creed
+		}
+		x = 42
+		y = 5
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_new_day_in_america"
+			swap_ideas = {
+				remove_idea = USA_american_creed_idea
+				add_idea = USA_americanism_idea
+			}
+		}
+	}
+### Military - Army ###
+	focus = {# Defend America
+		id = USA_defend_america
+		icon = GFX_goal_usa
+		cost = 6.00
+		available = {
+			or = {
+				has_global_flag = USA_civil_war_avoided_flag
+				has_global_flag = USA_civil_war_begun_flag
+			}
+		}
+		x = 52
+		y = 0
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_defend_america"
+			add_war_support = 0.05
+			army_experience = 25
+		}
+	}
+	focus = {# Defense Contractors
+		id = USA_defense_contractors
+		icon = GFX_goal_production
+		cost = 6.00
+		prerequisite = {
+			focus = USA_defend_america
+		}
+		x = 50
+		y = 2
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_defense_contractors"
+			add_ideas = USA_small_arms_industry_idea
+		}
+	}
+	focus = {# Military Industrial Complex
+		id = USA_military_industrial_complex
+		icon = GFX_goal_factory_complex
+		cost = 6.00
+		prerequisite = {
+			focus = USA_defense_contractors
+		}
+		x = 49
+		y = 3
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_military_industrial_complex"
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {# New Army Doctrines
+		id = USA_new_army_doctrines
+		icon = GFX_goal_generic_army_doctrines
+		cost = 6.00
+		prerequisite = {
+			focus = USA_defend_america
+		}
+		x = 52
+		y = 1
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_new_army_doctrines"
+			army_experience = 25
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {# National Guard
+		id = USA_national_guards
+		icon = GFX_goal_USA_national_guard
+		cost = 6.00
+		prerequisite = {
+			focus = USA_new_army_doctrines
+		}
+		x = 52
+		y = 2
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_national_guards"
+			add_ideas = USA_national_guards_idea
+		}
+	}
+	focus = {# New Officers
+		id = USA_new_officers
+		icon = GFX_focus_generic_military_mission
+		cost = 6.00
+		prerequisite = {
+			focus = USA_new_army_doctrines
+		}
+		x = 51
+		y = 3
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_new_officers"
+			add_war_support = 0.05
+			army_experience = 25
+		}
+	}
+	focus = {# Joint Chiefs of Staff
+		id = USA_joint_chief_of_staff
+		icon = GFX_goal_planning_bonus
+		cost = 6.00
+		prerequisite = {
+			focus = USA_new_army_doctrines
+		}
+		x = 53
+		y = 3
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_joint_chief_of_staff"
+			army_experience = 25
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {# Modernize our Guns
+		id = USA_army_training
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 6.00
+		prerequisite = {
+			focus = USA_defend_america
+		}
+		x = 54
+		y = 2
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_army_training"
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	focus = {# Engineering Corps
+		id = USA_engineering_corps
+		icon = GFX_goal_generic_build_tank
+		cost = 6.00
+		prerequisite = {
+			focus = USA_army_training
+		}
+		x = 55
+		y = 3
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_engineering_corps"
+			add_tech_bonus = {
+				name = support_bonus
+				bonus = 0.5
+				uses = 2
+				category = support_tech
+			}
+		}
+	}
+	focus = {# Auto Industry
+		id = USA_auto_industry
+		icon = GFX_goal_Automobile_Production
+		cost = 6.00
+		prerequisite = {
+			focus = USA_military_industrial_complex
+		}
+		x = 48
+		y = 4
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_auto_industry"
+			add_ideas = USA_auto_industry_idea
+		}
+	}
+	focus = {# Shock and Awe
+		id = USA_shock_and_awe
+		icon = GFX_goal_generic_army_artillery
+		cost = 6.00
+		prerequisite = {
+			focus = USA_auto_industry
+		}
+		x = 48
+		y = 5
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_shock_and_awe"
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+	focus = {# Military Research
+		id = USA_military_research
+		icon = GFX_focus_generic_combined_arms
+		cost = 6.00
+		prerequisite = {
+			focus = USA_military_industrial_complex
+		}
+		prerequisite = {
+			focus = USA_new_officers
+		}
+		x = 50
+		y = 4
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_military_research"
+			country_event = { id = ustates.300 days = 1 }
+		}
+	}
+	focus = {# We Can Do It
+		id = USA_we_can_do_it
+		icon = GFX_goal_American_Service
+		cost = 6.00
+		prerequisite = {
+			focus = USA_new_officers
+		}
+		prerequisite = {
+			focus = USA_joint_chief_of_staff
+		}
+		x = 52
+		y = 4
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_we_can_do_it"
+			add_war_support = 0.05
+			add_stability = 0.1
+		}
+	}
+	focus = {# Liberty Bonds
+		id = USA_liberty_bonds
+		icon = GFX_goal_ideology_market_liberal
+		cost = 6.00
+		prerequisite = {
+			focus = USA_we_can_do_it
+		}
+		x = 51
+		y = 5
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_liberty_bonds"
+			add_war_support = 0.05
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+	focus = {# Women's Land Army
+		id = USA_womens_land_army
+		icon = GFX_focus_AUS_agriculture
+		cost = 6.00
+		prerequisite = {
+			focus = USA_we_can_do_it
+		}
+		x = 53
+		y = 5
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_womens_land_army"
+			add_ideas = USA_womens_land_army_idea
+		}
+	}
+	focus = {# Defense Logistics Agency
+		id = USA_defense_logistics_agency
+		icon = GFX_goal_rhineland
+		cost = 6.00
+		prerequisite = {
+			focus = USA_joint_chief_of_staff
+		}
+		prerequisite = {
+			focus = USA_engineering_corps
+		}
+		x = 54
+		y = 4
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_defense_logistics_agency"
+			add_ideas = USA_defense_logistics_agency_idea
+		}
+	}
+	focus = {# Walkie Talkies
+		id = USA_walkie_talkies
+		icon = GFX_goal_generic_radar
+		cost = 6.00
+		prerequisite = {
+			focus = USA_engineering_corps
+		}
+		x = 56
+		y = 4
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_walkie_talkies"
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.25
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+	focus = {# Army Rangers
+		id = USA_army_rangers
+		icon = GFX_goal_generic_special_forces
+		cost = 6.00
+		prerequisite = {
+			focus = USA_walkie_talkies
+		}
+		x = 56
+		y = 5
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_army_rangers"
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				technology = tech_special_forces
+			}
+		}
+	}
+	focus = {# Armored Cavalry
+		id = USA_armored_cavalry
+		icon = GFX_goal_American_Armor
+		cost = 6.00
+		prerequisite = {
+			focus = USA_military_research
+		}
+		prerequisite = {
+			focus = USA_shock_and_awe
+		}
+		x = 50
+		y = 6
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_armored_cavalry"
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+		}
+	}
+	focus = {# Women's Army Corps
+		id = USA_womens_army_corps
+		icon = GFX_ITA_female_soldiers
+		cost = 6.00
+		prerequisite = {
+			focus = USA_shock_and_awe
+		}
+		prerequisite = {
+			focus = USA_army_rangers
+		}
+		prerequisite = {
+			focus = USA_liberty_bonds
+		}
+		prerequisite = {
+			focus = USA_womens_land_army
+		}
+		x = 52
+		y = 6
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_womens_army_corps"
+			add_stability = -0.01
+			add_political_power = -50
+			swap_ideas = {
+				remove_idea = USA_womens_land_army_idea
+				add_idea = USA_womens_army_corps_idea
+			}
+		}
+	}
+	focus = {# GI Bill
+		id = USA_gi_bill
+		icon = GFX_goal_constitutional_guarantees
+		cost = 6.00
+		prerequisite = {
+			focus = USA_defense_logistics_agency
+		}
+		prerequisite = {
+			focus = USA_army_rangers
+		}
+		x = 54
+		y = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_gi_bill"
+			add_ideas = USA_gi_bill_idea
+			increase_ruling_party_popularity_by_5 = yes
+		}
+	}
+	focus = {# Fight for America
+		id = USA_fight_for_america
+		icon = GFX_goal_LEC_armsUSA
+		cost = 6.00
+		prerequisite = {
+			focus = USA_armored_cavalry
+		}
+		prerequisite = {
+			focus = USA_womens_army_corps
+		}
+		prerequisite = {
+			focus = USA_gi_bill
+		}
+		x = 52
+		y = 7
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_fight_for_america"
+			add_war_support = 0.05
+			army_experience = 25
+		}
+	}
+### Military - Air Force ###
+	focus = {# Air Force
+		id = USA_air_force
+		icon = GFX_goal_USA_usaaf
+		cost = 6.00
+		x = 60
+		y = 0
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_air_force"
+			air_experience = 25
+		}
+	}
+	focus = {# Air Ports
+		id = USA_air_ports
+		icon = GFX_goal_expand_the_luftwaffe
+		cost = 6.00
+		prerequisite = {
+			focus = USA_air_force
+		}
+		x = 58
+		y = 1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_air_ports"
+			382 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = air_base
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			383 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = air_base
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {# Pilot Training
+		id = USA_pilot_training
+		icon = GFX_goal_generic_air_doctrine
+		cost = 6.00
+		prerequisite = {
+			focus = USA_air_force
+		}
+		x = 60
+		y = 1
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_pilot_training"
+			air_experience = 25
+			add_tech_bonus = {
+				name = USA_pilot_training
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+	focus = {# Female Pilots
+		id = USA_expand_wasps
+		icon = GFX_ITA_female_soldiers
+		cost = 6.00
+		prerequisite = {
+			focus = USA_air_force
+		}
+		x = 62
+		y = 1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_expand_wasps"
+			air_experience = 25
+			set_rule = {
+				can_generate_female_aces = yes
+			}
+		}
+	}
+	focus = {# Battlefield Support
+		id = USA_battlefield_support
+		icon = GFX_goal_generic_occupy_start_war
+		cost = 6.00
+		prerequisite = {
+			focus = USA_air_ports
+		}
+		prerequisite = {
+			focus = USA_pilot_training
+		}
+		prerequisite = {
+			focus = USA_expand_wasps
+		}
+		mutually_exclusive = {
+			focus = USA_air_supremcy
+		}
+		x = 59
+		y = 2
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_battlefield_support"
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cat_battlefield_support
+			}
+		}
+	}
+	focus = {# Bombers
+		id = USA_bombers
+		icon = GFX_goal_generic_air_fighter
+		cost = 6.00
+		prerequisite = {
+			focus = USA_battlefield_support
+		}
+		x = 59
+		y = 3
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_bombers"
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = tactical_bomber
+				category = cat_strategic_bomber
+			}
+		}
+	}
+	focus = {# Air Supremacy
+		id = USA_air_supremcy
+		icon = GFX_goal_generic_air_fighter2
+		cost = 6.00
+		prerequisite = {
+			focus = USA_expand_wasps
+		}
+		prerequisite = {
+			focus = USA_pilot_training
+		}
+		prerequisite = {
+			focus = USA_air_ports
+		}
+		mutually_exclusive = {
+			focus = USA_battlefield_support
+		}
+		x = 61
+		y = 2
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_air_supremcy"
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cat_strategic_destruction
+			}
+		}
+	}
+	focus = {# Fighter efforts
+		id = USA_fighters
+		icon = GFX_goal_generic_air_fighter
+		cost = 6.00
+		prerequisite = {
+			focus = USA_air_supremcy
+		}
+		x = 61
+		y = 3
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_fighters"
+			add_tech_bonus = {
+				bonus = 0.50
+				uses = 1
+				category = fighter_techs
+			}
+		}
+	}
+	focus = {# Screaming Eagles
+		id = USA_screaming_eagles
+		icon = GFX_goal_USA_screaming_eagles
+		cost = 6.00
+		prerequisite = {
+			focus = USA_bombers
+			focus = USA_fighters
+		}
+		x = 58
+		y = 4
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_screaming_eagles"
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.5
+				uses = 1
+				category = para_tech
+			}
+		}
+	}
+	focus = {# Radar
+		id = USA_radar_development
+		icon = GFX_goal_generic_radar
+		cost = 6.00
+		prerequisite = {
+			focus = USA_bombers
+			focus = USA_fighters
+		}
+		x = 60
+		y = 4
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_radar_development"
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 2
+				category = radar_tech
+			}
+		}
+	}
+	focus = {# Air Defense Corps
+		id = USA_air_defense_corps
+		icon = GFX_focus_generic_air_defense
+		cost = 6.00
+		prerequisite = {
+			focus = USA_bombers
+			focus = USA_fighters
+		}
+		x = 62
+		y = 4
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_air_defense_corps"
+			if = {
+				limit = { NOT = { has_tech = interwar_antiair } }
+				set_technology = { interwar_antiair = 1 }
+			}
+			if = {# Chicago
+				limit = { owns_state = 383 }
+				383 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {# New York
+				limit = { owns_state = 382 }
+				382 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				technology = antiair1
+				technology = antiair2
+				technology = antiair3
+				technology = antiair4
+				technology = antiair5
+			}
+		}
+	}
+	focus = {# American Jets
+		id = USA_american_jets
+		icon = GFX_focus_rocketry
+		cost = 6.00
+		prerequisite = {
+			focus = USA_radar_development
+		}
+		prerequisite = {
+			focus = USA_air_defense_corps
+		}
+		prerequisite = {
+			focus = USA_screaming_eagles
+		}
+		x = 60
+		y = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_american_jets"
+			air_experience = 10
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				bonus = 0.5
+				uses = 1
+				category = rocketry
+				category = jet_technology
+			}
+		}
+	}
+### Military - Navy ###
+	focus = {# US Navy
+		id = USA_navy
+		icon = GFX_goal_USA_navy
+		cost = 6.00
+		x = 68
+		y = 0
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_navy"
+			navy_experience = 10
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+	}
+	focus = {# Grand Navy
+		id = USA_grand_navy
+		icon = GFX_goal_generic_navy_battleship
+		cost = 6.00
+		prerequisite = {
+			focus = USA_navy
+		}
+		mutually_exclusive = {
+			focus = USA_defend_our_trade
+			focus = USA_carriers
+		}
+		x = 65
+		y = 1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_grand_navy"
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cat_fleet_in_being
+			}
+		}
+	}
+	focus = {# Defend our Trade
+		id = USA_defend_our_trade
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 6.00
+		prerequisite = {
+			focus = USA_navy
+		}
+		mutually_exclusive = {
+			focus = USA_grand_navy
+			focus = USA_carriers
+		}
+		x = 68
+		y = 1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_defend_our_trade"
+			add_tech_bonus = {
+				name = navdoctrine_bonus
+				bonus = 0.5
+				uses = 2
+				category = cat_trade_interdiction
+			}
+		}
+	}
+	focus = {# Carriers
+		id = USA_carriers
+		icon = GFX_goal_generic_navy_carrier
+		cost = 6.00
+		prerequisite = {
+			focus = USA_navy
+		}
+		mutually_exclusive = {
+			focus = USA_grand_navy
+			focus = USA_defend_our_trade
+		}
+		x = 71
+		y = 1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_carriers"
+			add_tech_bonus = {
+				bonus = 0.50
+				uses = 2
+				category = cat_base_strike
+			}
+		}
+	}
+	focus = {# Battleships
+		id = USA_battleships
+		icon = GFX_focus_generic_navy_battleship2
+		cost = 6.00
+		prerequisite = {
+			focus = USA_grand_navy
+		}
+		x = 64
+		y = 2
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_battleships"
+			add_tech_bonus = {
+				name = navy_bonus
+				bonus = 0.5
+				uses = 2
+				category = shbb_tech
+			}
+		}
+	}
+	focus = {# Battle Cruisers
+		id = USA_battle_cruisers
+		icon = GFX_focus_generic_cruiser2
+		cost = 6.00
+		prerequisite = {
+			focus = USA_grand_navy
+			focus = USA_defend_our_trade
+			focus = USA_carriers
+		}
+		x = 66
+		y = 2
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_battle_cruisers"
+			add_tech_bonus = {
+				name = navy_bonus
+				bonus = 0.5
+				uses = 2
+				category = ca_tech
+			}
+		}
+	}
+	focus = {# Coast Guard
+		id = USA_coast_guard
+		icon = GFX_goal_USA_coast_guard
+		cost = 6.00
+		prerequisite = {
+			focus = USA_defend_our_trade
+		}
+		x = 68
+		y = 2
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_coast_guard"
+			add_tech_bonus = {
+				name = navy_bonus
+				bonus = 0.5
+				uses = 2
+				category = dd_tech
+			}
+		}
+	}
+	focus = {# Light Cruisers
+		id = USA_light_cruisers
+		icon = GFX_focus_generic_destroyer
+		cost = 6.00
+		prerequisite = {
+			focus = USA_carriers
+			focus = USA_defend_our_trade
+			focus = USA_grand_navy
+		}
+		x = 70
+		y = 2
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_light_cruisers"
+			add_tech_bonus = {
+				name = navy_bonus
+				bonus = 0.5
+				uses = 2
+				category = cl_tech
+			}
+		}
+	}
+	focus = {# Naval Aviation
+		id = USA_naval_aviation
+		icon = GFX_goal_generic_air_fighter2
+		cost = 6.00
+		prerequisite = {
+			focus = USA_carriers
+		}
+		x = 72
+		y = 2
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_naval_aviation"
+			add_tech_bonus = {
+				name = navy_air_bonus
+				bonus = 0.5
+				uses = 1
+				category = naval_air
+			}
+		}
+	}
+	focus = {# Expand Dockyards
+		id = USA_expand_dockyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 6.00
+		prerequisite = {
+			focus = USA_battleships
+			focus = USA_coast_guard
+			focus = USA_naval_aviation
+		}
+		prerequisite = {
+			focus = USA_battle_cruisers
+		}
+		prerequisite = {
+			focus = USA_light_cruisers
+		}
+		x = 66
+		y = 3
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_expand_dockyards"
+			navy_experience = 10
+			362 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			361 = {
+				if = {
+					limit = { is_owned_by = USA }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {# Submarines
+		id = USA_submarines
+		icon = GFX_goal_generic_navy_submarine
+		cost = 6.00
+		prerequisite = {
+			focus = USA_expand_dockyards
+		}
+		x = 65
+		y = 4
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_submarines"
+			add_tech_bonus = {
+				name = navy_bonus
+				bonus = 0.5
+				uses = 2
+				category = ss_tech
+			}
+		}
+	}
+	focus = {# Liberty Ships
+		id = USA_liberty_ships
+		icon = GFX_goal_USA_liberty_ships
+		cost = 6.00
+		prerequisite = {
+			focus = USA_expand_dockyards
+		}
+		x = 67
+		y = 4
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_liberty_ships"
+			add_ideas = USA_liberty_ships_idea
+		}
+	}
+	focus = {# maritime industry
+		id = USA_new_ship_buildings
+		icon = GFX_goal_generic_build_navy
+		cost = 6.00
+		prerequisite = {
+			focus = USA_submarines
+		}
+		prerequisite = {
+			focus = USA_liberty_ships
+		}
+		x = 66
+		y = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_new_ship_buildings"
+			add_ideas = USA_maritime_industry_idea
+		}
+	}
+	focus = {# New Admirals
+		id = USA_new_admirals
+		icon = GFX_TRM_kolchak_cap
+		cost = 6.00
+		prerequisite = {
+			focus = USA_battleships
+			focus = USA_coast_guard
+			focus = USA_naval_aviation
+		}
+		prerequisite = {
+			focus = USA_battle_cruisers
+		}
+		prerequisite = {
+			focus = USA_light_cruisers
+		}
+		x = 68
+		y = 3
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_new_admirals"
+			navy_experience = 10
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+	}
+	focus = {# Expand WAVEs
+		id = USA_expand_waves
+		icon = GFX_ITA_female_soldiers
+		cost = 6.00
+		prerequisite = {
+			focus = USA_new_admirals
+		}
+		x = 68
+		y = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_expand_waves"
+			navy_experience = 10
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+	}
+	focus = {# Marine Corps
+		id = USA_marine_corps
+		icon = GFX_goal_USA_usmc
+		cost = 6.00
+		prerequisite = {
+			focus = USA_naval_aviation
+			focus = USA_battleships
+			focus = USA_coast_guard
+		}
+		prerequisite = {
+			focus = USA_light_cruisers
+		}
+		prerequisite = {
+			focus = USA_battle_cruisers
+		}
+		x = 70
+		y = 3
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_marine_corps"
+			add_tech_bonus = {
+				name = marines_bonus
+				bonus = 0.5
+				uses = 1
+				category = marine_tech
+			}
+		}
+	}
+	focus = {# Urban Warfare
+		id = USA_urban_warfare
+		icon = GFX_goal_conscription
+		cost = 6.00
+		prerequisite = {
+			focus = USA_marine_corps
+		}
+		mutually_exclusive = {
+			focus = USA_naval_training
+		}
+		x = 69
+		y = 4
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_urban_warfare"
+			add_ideas = USA_large_marine_corps
+		}
+	}
+	focus = {# Naval Training
+		id = USA_naval_training
+		icon = GFX_focus_secret_rearmament
+		cost = 6.00
+		prerequisite = {
+			focus = USA_marine_corps
+		}
+		mutually_exclusive = {
+			focus = USA_urban_warfare
+		}
+		x = 71
+		y = 4
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_naval_training"
+			add_ideas = USA_naval_training_idea
+		}
+	}
+	focus = {# semper fi
+		id = USA_semper_fi
+		icon = GFX_goal_USA_usmc
+		cost = 6.00
+		prerequisite = {
+			focus = USA_urban_warfare
+			focus = USA_naval_training
+		}
+		x = 70
+		y = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_semper_fi"
+			add_tech_bonus = {
+				name = marines_bonus
+				bonus = 0.5
+				uses = 1
+				category = marine_tech
+			}
+		}
+
+	}
+	focus = {# America Rules the waves
+		id = USA_america_rules_the_waves
+		icon = GFX_goal_generic_navy_battleship
+		cost = 6.00
+		prerequisite = {
+			focus = USA_new_ship_buildings
+		}
+		prerequisite = {
+			focus = USA_semper_fi
+		}
+		prerequisite = {
+			focus = USA_expand_waves
+		}
+		x = 68
+		y = 6
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_america_rules_the_waves"
+			navy_experience = 10
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+	}
+### Monroe Doctrine ###
+	focus = {# Monroe Doctrine
+		id = USA_monroe_doctrine
+		icon = GFX_goal_usa
+		cost = 6.00
+		available = {
+			has_war_support > 0.6
+			or = {
+				has_global_flag = USA_civil_war_avoided_flag
+				has_global_flag = USA_civil_war_over_flag
+			}
+		}
+		x = 81
+		y = 0
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_monroe_doctrine"
+			add_political_power = 100
+		}
+	}
+### League of American States ###
+	focus = {# Reaffirm the Monroe Doctrine
+		id = USA_re_affirm_monroe_doctrine
+		icon = GFX_goal_support_democracy
+		cost = 6.00
+		available = { NOT = { has_global_flag = PSA_rockies_ceasefire } }
+		prerequisite = {
+			focus = USA_monroe_doctrine
+		}
+		mutually_exclusive = {
+			focus = USA_reform_monroe_doctrine
+		}
+		x = 77
+		y = 1
+		ai_will_do = {
+			factor = 40
+			modifier = { factor = 2 has_global_flag = USA_civil_war_avoided_flag }
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_re_affirm_monroe_doctrine"
+			create_faction = "league_of_american_states"
+		}
+	}
+	focus = {# Military Cooperation
+		id = USA_military_cooperation
+		icon = GFX_goal_military_academy
+		cost = 6.00
+		prerequisite = {
+			focus = USA_re_affirm_monroe_doctrine
+		}
+		available = { USA = { is_faction_leader = yes } }
+		x = 74
+		y = 2
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_military_cooperation"
+			custom_effect_tooltip = USA_military_cooperation_tooltip
+			every_country = {
+				limit = { is_in_faction_with = USA }
+				army_experience = 25
+				add_war_support = 0.05
+			}
+		}
+	}
+	focus = {# Defending the Americas
+		id = USA_defending_the_americas
+		icon = GFX_focus_secret_rearmament
+		cost = 6.00
+		prerequisite = {
+			focus = USA_military_cooperation
+		}
+		available = { USA = { is_faction_leader = yes } }
+		x = 74
+		y = 4
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_defending_the_americas"
+			unlock_decision_category_tooltip = USA_defending_the_americas_decisions
+		}
+	}
+	focus = {# Arsenal of Democracy
+		id = USA_arsenal_of_democracy
+		icon = GFX_goal_munitions_factories
+		cost = 6.00
+		prerequisite = {
+			focus = USA_re_affirm_monroe_doctrine
+		}
+		available = { USA = { is_faction_leader = yes } }
+		x = 77
+		y = 2
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_arsenal_of_democracy"
+			custom_effect_tooltip = USA_arsenal_of_democracy_tooltip
+			every_country = {
+				limit = { is_in_faction_with = USA }
+				add_opinion_modifier = { target = USA modifier = USA_american_trade }
+				reverse_add_opinion_modifier = { target = USA modifier = USA_american_trade }
+			}
+		}
+	}
+	focus = {# Good neighbor Policy
+		id = USA_good_neighboor_policy
+		icon = GFX_focus_chi_mission_to_the_us
+		cost = 6.00
+		prerequisite = {
+			focus = USA_re_affirm_monroe_doctrine
+		}
+		available = { USA = { is_faction_leader = yes } }
+		x = 80
+		y = 2
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_good_neighboor_policy"
+			every_country = {
+				limit = {
+					OR = {
+						is_in_north_america = yes
+						is_in_south_america = yes
+					}
+					NOT = {
+						is_in_faction_with = CAN
+						is_in_faction_with = GER
+						is_in_faction_with = FRA
+
+					}
+					not_has_socialist_government = yes
+					not = { tag = USA }
+				}
+				add_opinion_modifier = { target = USA modifier = ITA_likes_govt }
+				reverse_add_opinion_modifier = { target = USA modifier = ITA_likes_govt }
+			}
+		}
+	}
+	focus = {# Inter-American Defense Board
+		id = USA_military_defense
+		icon = GFX_goal_national_arsenal
+		cost = 6.00
+		prerequisite = {
+			focus = USA_military_cooperation
+		}
+		prerequisite = {
+			focus = USA_arsenal_of_democracy
+		}
+		prerequisite = {
+			focus = USA_good_neighboor_policy
+		}
+		available = { USA = { is_faction_leader = yes } }
+		x = 75
+		y = 3
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_military_defense"
+			custom_effect_tooltip = USA_military_defense_tooltip
+			every_country = {
+				limit = { is_in_faction_with = USA }
+				add_ideas = USA_military_defense_idea
+			}
+		}
+	}
+	focus = {# Pan-American Development Board
+		id = USA_economic_aide
+		icon = GFX_america_goal_eagle_deal
+		cost = 6.00
+		prerequisite = {
+			focus = USA_military_cooperation
+		}
+		prerequisite = {
+			focus = USA_arsenal_of_democracy
+		}
+		prerequisite = {
+			focus = USA_good_neighboor_policy
+		}
+		available = { USA = { is_faction_leader = yes } }
+		x = 77
+		y = 3
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_economic_aide"
+			unlock_decision_category_tooltip = USA_Pan_American_Development_Foundation
+			set_global_flag = USA_development_board
+		}
+	}
+	focus = {# Inter-American Defense College
+		id = USA_technological_cooperation
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 6.00
+		prerequisite = {
+			focus = USA_good_neighboor_policy
+		}
+		prerequisite = {
+			focus = USA_arsenal_of_democracy
+		}
+		prerequisite = {
+			focus = USA_military_cooperation
+		}
+		available = { USA = { is_faction_leader = yes } }
+		x = 79
+		y = 3
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_technological_cooperation"
+			custom_effect_tooltip = USA_technological_cooperation_tooltip
+			every_country = {
+				limit = { is_in_faction_with = USA }
+				add_to_tech_sharing_group = us_research
+			}
+			set_global_flag = USA_development_board
+		}
+	}
+	focus = {# Joint Intelligence Operations
+		id = USA_pan_american_confrence
+		icon = GFX_goal_government_icon
+		cost = 6.00
+		available = { USA = { is_faction_leader = yes } }
+		prerequisite = {
+			focus = USA_military_defense
+		}
+		prerequisite = {
+			focus = USA_economic_aide
+		}
+		prerequisite = {
+			focus = USA_technological_cooperation
+		}
+		x = 77
+		y = 4
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_pan_american_confrence"
+			custom_effect_tooltip = USA_intel_sharing_tooltip
+			every_country = {
+				limit = { is_in_faction_with = USA }
+				add_ideas = USA_intelligence_sharing_idea
+			}
+		}
+	}
+	focus = {# Allies in the Americas
+		id = USA_allies_in_the_americas
+		icon = GFX_goal_USA_mexican_friendship
+		cost = 6.00
+		prerequisite = {
+			focus = USA_good_neighboor_policy
+		}
+		available = { USA = { is_faction_leader = yes } }
+		x = 80
+		y = 4
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_allies_in_the_americas"
+			unlock_decision_category_tooltip = USA_expanding_the_league
+		}
+	}
+	focus = {# Pax Americana
+		id = USA_pax_americana
+		icon = GFX_goal_USA_eagle
+		cost = 6.00
+		available = { USA = { is_faction_leader = yes } }
+		prerequisite = {
+			focus = USA_pan_american_confrence
+		}
+		prerequisite = {
+			focus = USA_allies_in_the_americas
+		}
+		prerequisite = {
+			focus = USA_defending_the_americas
+		}
+		x = 77
+		y = 5
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_pax_americana"
+			custom_effect_tooltip = USA_pax_americana_tooltip
+			every_country = {
+				limit = { is_in_faction_with = USA }
+				add_political_power = 150
+			}
+		}
+	}
+### joining another faction ###
+	focus = {# Reform the Monroe Doctrine
+		id = USA_reform_monroe_doctrine
+		icon = GFX_goal_ideology_social_liberal
+		cost = 6.00
+		prerequisite = {
+			focus = USA_monroe_doctrine
+		}
+		mutually_exclusive = {
+			focus = USA_re_affirm_monroe_doctrine
+		}
+		x = 85
+		y = 1
+		ai_will_do = {
+			factor = 40
+			modifier = { factor = 2 has_global_flag = USA_civil_war_over_flag }
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_reform_monroe_doctrine"
+			unlock_decision_category_tooltip = USA_new_monroe_doctrine
+		}
+	}
+	focus = {# Dollar Diplomacy
+		id = USA_dollar_diplomacy
+		icon = GFX_goal_HOL_progressive_tax
+		cost = 6.00
+		available = { USA = { is_in_faction = yes } }
+		prerequisite = {
+			focus = USA_reform_monroe_doctrine
+		}
+		x = 82
+		y = 2
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_dollar_diplomacy"
+			custom_effect_tooltip = USA_dollar_diplomacy_tooltip
+			every_country = {
+				limit = { is_in_faction_with = USA }
+				add_opinion_modifier = { target = USA modifier = ITA_likes_govt }
+				reverse_add_opinion_modifier = { target = USA modifier = ITA_likes_govt }
+			}
+		}
+	}
+	focus = {# Business Ties
+		id = USA_business_ties
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 6.00
+		available = { USA = { is_in_faction = yes } }
+		prerequisite = {
+			focus = USA_dollar_diplomacy
+		}
+		x = 82
+		y = 4
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_business_ties"
+			custom_effect_tooltip = USA_dollar_diplomacy_tooltip
+			every_country = {
+				limit = { is_in_faction_with = USA }
+				add_opinion_modifier = { target = USA modifier = USA_american_trade }
+				reverse_add_opinion_modifier = { target = USA modifier = USA_american_trade }
+			}
+		}
+	}
+	focus = {# Arsenal of Freedom
+		id = USA_arsenal_of_freedom
+		icon = GFX_goal_production
+		cost = 6.00
+		prerequisite = {
+			focus = USA_reform_monroe_doctrine
+		}
+		x = 85
+		y = 2
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_arsenal_of_freedom"
+			add_war_support = 0.1
+			add_stability = 0.1
+		}
+	}
+	focus = {# New Diplomatic Corps
+		id = USA_new_diplomatic_corps
+		icon = GFX_focus_chi_mission_to_the_us
+		cost = 6.00
+		prerequisite = {
+			focus = USA_reform_monroe_doctrine
+		}
+		x = 88
+		y = 2
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_new_diplomatic_corps"
+			add_political_power = 100
+			add_war_support = 0.1
+			every_country = {
+				limit = {
+					OR = {
+						is_in_north_america = yes
+						is_in_europe = yes
+						is_in_faction_with = CAN
+						is_in_faction_with = GER
+					}
+					NOT = { is_in_faction_with = FRA }
+					not_has_socialist_government = yes
+					not = { tag = TEX }
+				}
+				add_opinion_modifier = { target = USA modifier = ITA_likes_govt }
+				reverse_add_opinion_modifier = { target = USA modifier = ITA_likes_govt }
+				}		}
+	}
+	focus = {# Technological Cooperation
+		id = USA_tech_sharing2
+		icon = GFX_goal_great_science
+		cost = 6.00
+		available = { USA = { is_in_faction = yes } }
+		prerequisite = {
+			focus = USA_dollar_diplomacy
+		}
+		prerequisite = {
+			focus = USA_new_diplomatic_corps
+		}
+		prerequisite = {
+			focus = USA_arsenal_of_freedom
+		}
+		x = 83
+		y = 3
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_tech_sharing2"
+			custom_effect_tooltip = USA_join_tech_sharing_tooltip
+		}
+	}
+	focus = {# The Rainbow War Plans
+		id = USA_color_war_plans
+		icon = GFX_goal_generic_position_armies
+		cost = 6.00
+		available = { USA = { is_in_faction = yes } }
+		prerequisite = {
+			focus = USA_dollar_diplomacy
+		}
+		prerequisite = {
+			focus = USA_arsenal_of_freedom
+		}
+		prerequisite = {
+			focus = USA_new_diplomatic_corps
+		}
+		x = 85
+		y = 3
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_color_war_plans"
+			custom_effect_tooltip = USA_color_war_plans_tooltip
+		}
+	}
+	focus = {# Joint Military Training
+		id = USA_joint_military_training
+		icon = GFX_goal_national_arsenal
+		cost = 6.00
+		available = { USA = { is_in_faction = yes } }
+		prerequisite = {
+			focus = USA_new_diplomatic_corps
+		}
+		prerequisite = {
+			focus = USA_arsenal_of_freedom
+		}
+		prerequisite = {
+			focus = USA_dollar_diplomacy
+		}
+		x = 87
+		y = 3
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_joint_military_training"
+			custom_effect_tooltip = USA_military_cooperation_tooltip
+			every_country = {
+				limit = { is_in_faction_with = USA }
+				add_ideas = USA_military_defense_idea
+			}
+		}
+	}
+	focus = {# Economic Muscle
+		id = USA_economic_muscle
+		icon = GFX_goal_gold_reserve
+		cost = 6.00
+		available = { USA = { is_in_faction = yes } }
+		prerequisite = {
+			focus = USA_tech_sharing2
+		}
+		prerequisite = {
+			focus = USA_color_war_plans
+		}
+		prerequisite = {
+			focus = USA_joint_military_training
+		}
+		x = 85
+		y = 4
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_economic_muscle"
+			add_political_power = 80
+			add_stability = 0.05
+		}
+	}
+	focus = {# United Together
+		id = USA_united_together
+		icon = GFX_goal_generic_national_unity
+		cost = 6.00
+		available = { USA = { is_in_faction = yes } }
+		prerequisite = {
+			focus = USA_new_diplomatic_corps
+		}
+		x = 88
+		y = 4
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_united_together"
+			custom_effect_tooltip = USA_military_cooperation_tooltip
+			every_country = {
+				limit = { is_in_faction_with = USA }
+				army_experience = 25
+				add_war_support = 0.05
+			}
+		}
+	}
+	focus = {# The Empire of Liberty
+		id = USA_the_american_century
+		icon = GFX_goal_liberty
+		cost = 6.00
+		prerequisite = {
+			focus = USA_economic_muscle
+		}
+		prerequisite = {
+			focus = USA_united_together
+		}
+		prerequisite = {
+			focus = USA_business_ties
+		}
+		x = 85
+		y = 5
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus USA_the_american_century"
+			add_political_power = 100
+			add_war_support = 0.1
+			add_stability = 0.1
+		}
+	}
+}

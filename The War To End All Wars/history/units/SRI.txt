@@ -1,0 +1,400 @@
+﻿division_template = {
+	name = "Divisione Garibaldi"
+	division_names_group = SRI_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Mechanized Guard"
+	division_names_group = SRI_MOT_01
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+		militia = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Guardia Rosse"
+	division_names_group = SRI_GAR_01
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+		militia = { x = 1 y = 2 }
+		militia = { x = 2 y = 0 }
+		militia = { x = 2 y = 1 }
+		militia = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Motorized-Division"
+	division_names_group = SRI_MOT_01
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Armored-Division"
+	division_names_group = SRI_ARM_01
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+}
+
+units = {
+### Red Guard Militia Units ###
+	division = {# Brigate Fiamme Verdi
+		name = "Brigate Fiamme Verdi"
+		location = 925
+		division_template = "Guardia Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {# "Red Star" Brigata
+		name = "'Stella Rossa' Brigata"
+		location = 925
+		division_template = "Guardia Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {# Justice and Freedom Brigata
+		name = "Justice and Freedom Brigata"
+		location = 925
+		division_template = "Guardia Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {# 'Parma' Brigata
+		name = "'Parma' Brigata"
+		location = 925
+		division_template = "Guardia Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {# 'Bologna' Brigata
+		name = "'Bologna' Brigata"
+		location = 6606
+		division_template = "Guardia Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {# Brigate del popolo
+		name = "Brigate del popolo"
+		location = 6606
+		division_template = "Guardia Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {# 3rd Garibaldi "Firenze" Brigata
+		name = "3rd Garibaldi 'Firenze' Brigata"
+		location = 6606
+		division_template = "Guardia Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {# 'Black Flag' Brigata
+		name = "'Black Flag' Brigata"
+		location = 6606
+		division_template = "Guardia Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {# Italia Pianura Brigata
+		name = "Italia Pianura Brigata"
+		location = 6606
+		division_template = "Guardia Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {# Piave Brigata
+		name = "Piave Brigata"
+		location = 6780
+		division_template = "Guardia Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {# 'Genoa' Brigata
+		name = "'Genoa' Brigata"
+		location = 6780
+		division_template = "Guardia Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {# 'Parma' Brigata
+		name = "Brigate Mazzini"
+		location = 6780
+		division_template = "Guardia Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {# Proletarian Brigata 'Filippo Turati'
+		name = "Proletarian Brigata 'Filippo Turati'"
+		location = 6780
+		division_template = "Guardia Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {# 'Red Flag' Brigata
+		name = "'Red Flag' Brigata"
+		location = 6780
+		division_template = "Guardia Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {# 'Ancona' Brigata
+		name = "'Ancona' Brigata"
+		location = 6780
+		division_template = "Guardia Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {# 'Livorno' Brigata
+		name = "'Livorno' Brigata"
+		location = 6780
+		division_template = "Guardia Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+### Mechanized ###
+	division = {# 10th Divisione Garibaldi 'Cichero'
+		#name = "10th Divisione Garibaldi 'Cichero'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 10
+		}
+		location = 9907
+		division_template = "Mechanized Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {# 12th Divisione Garibaldi 'Mingo'
+		#name = "12th Divisione Garibaldi 'Mingo'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 9907
+		division_template = "Mechanized Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {# 13th Divisione Garibaldi 'Pinan-Cichero'
+		#name = "13th Divisione Garibaldi 'Pinan-Cichero'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 13
+		}
+		location = 9907
+		division_template = "Mechanized Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {# 14th Divisione Garibaldi 'Nino Nannetti'
+		#name = "14th Divisione Garibaldi 'Nino Nannetti'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 14
+		}
+		location = 9907
+		division_template = "Mechanized Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {# 15th Garibaldi Brigade 'Mario Gordini'
+		#name = "15th Garibaldi Brigade 'Mario Gordini'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 15
+		}
+		location = 9907
+		division_template = "Mechanized Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+### Proletaria Brigata
+	division = {# 1st Brigata Garibaldi 'Romagna'
+		#name = "1st Brigata Garibaldi 'Romagna'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6780
+		division_template = "Divisione Garibaldi"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {# 2nd Brigata Garibaldi 'Luigi Clerici'
+		#name = "2nd Brigata Garibaldi 'Luigi Clerici'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 6780
+		division_template = "Divisione Garibaldi"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {# 3rd GAP Brigade 'Gastone Sozzi'
+		#name = "3rd GAP Brigade 'Gastone Sozzi'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 6780
+		division_template = "Divisione Garibaldi"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {# 4th SAP 'Oreste Garati' Brigade
+		#name = "4th SAP 'Oreste Garati' Brigade"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 6780
+		division_template = "Divisione Garibaldi"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {# 5th Garibaldi Brigade 'Gramsci'
+		#name = "5th Garibaldi Brigade 'Gramsci'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 6780
+		division_template = "Divisione Garibaldi"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+
+	navy = {
+		name = "Flotta Genovese"
+		base = 6788
+		location = 6788
+		ship = { name = "Spartaco" definition = SH_battleship equipment = { SH_battleship_3 = { amount = 1 owner = ITA version_name = "Francesco Caracciolo Class" } } }
+		ship = { name = "Italia" definition = SH_battleship equipment = { SH_battleship_3 = { amount = 1 owner = ITA version_name = "Francesco Caracciolo Class" } } }
+		ship = { name = "Risorgimento" definition = SH_battleship equipment = { SH_battleship_3 = { amount = 1 owner = ITA version_name = "Francesco Caracciolo Class" } } }
+
+		ship = { name = "X" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Indomito Class" } } }
+		ship = { name = "X" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Indomito Class" } } }
+		ship = { name = "X" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Indomito Class" } } }
+		ship = { name = "X" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ITA version_name = "Giuseppe La Masa Class" } } }
+		ship = { name = "X" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ITA version_name = "Giuseppe La Masa Class" } } }
+		ship = { name = "X" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ITA version_name = "Giuseppe La Masa Class" } } }
+		ship = { name = "X" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ITA version_name = "Giuseppe La Masa Class" } } }
+		ship = { name = "X" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ITA version_name = "Giuseppe La Masa Class" } } }
+		ship = { name = "X" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ITA version_name = "Giuseppe La Masa Class" } } }
+		ship = { name = "X" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ITA version_name = "Giuseppe La Masa Class" } } }
+		ship = { name = "X" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ITA version_name = "Palestro Class" } } }
+		ship = { name = "X" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ITA version_name = "Palestro Class" } } }
+		ship = { name = "X" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ITA version_name = "Palestro Class" } } }
+		ship = { name = "X" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ITA version_name = "Palestro Class" } } }
+		ship = { name = "X" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = ITA version_name = "Carlo Mirabello Class" } } }
+		ship = { name = "X" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = ITA version_name = "Carlo Mirabello Class" } } }
+		ship = { name = "X" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = ITA version_name = "Carlo Mirabello Class" } } }
+
+#		ship = { name = "S12" definition = submarine equipment = { heavy_submarine_1 = { amount = 1 owner = ITA version_name = "Pietro Micca Class" } } }
+#		ship = { name = "S13" definition = submarine equipment = { heavy_submarine_1 = { amount = 1 owner = ITA version_name = "Pietro Micca Class" } } }
+#		ship = { name = "S14" definition = submarine equipment = { heavy_submarine_1 = { amount = 1 owner = ITA version_name = "Pietro Micca Class" } } }
+
+		ship = { name = "S4" definition = submarine equipment = { submarine_2 = { amount = 1 owner = ITA version_name = "Giacinto Pullinom Class" } } }
+		ship = { name = "S5" definition = submarine equipment = { submarine_2 = { amount = 1 owner = ITA version_name = "Giacinto Pullinom Class" } } }
+		ship = { name = "S1" definition = submarine equipment = { submarine_2 = { amount = 1 owner = ITA version_name = "S1 Class" } } }
+		ship = { name = "S2" definition = submarine equipment = { submarine_2 = { amount = 1 owner = ITA version_name = "S1 Class" } } }
+		ship = { name = "S3" definition = submarine equipment = { submarine_2 = { amount = 1 owner = ITA version_name = "S1 Class" } } }
+		ship = { name = "S6" definition = submarine equipment = { submarine_3 = { amount = 1 owner = ITA version_name = "Andrea Provana Class" } } }
+		ship = { name = "S7" definition = submarine equipment = { submarine_3 = { amount = 1 owner = ITA version_name = "Andrea Provana Class" } } }
+		ship = { name = "S8" definition = submarine equipment = { submarine_3 = { amount = 1 owner = ITA version_name = "Andrea Provana Class" } } }
+		ship = { name = "S9" definition = submarine equipment = { submarine_3 = { amount = 1 owner = ITA version_name = "Andrea Provana Class" } } }
+		ship = { name = "S10" definition = submarine equipment = { submarine_3 = { amount = 1 owner = ITA version_name = "Andrea Provana Class" } } }
+		ship = { name = "S11" definition = submarine equipment = { submarine_3 = { amount = 1 owner = ITA version_name = "Andrea Provana Class" } } }
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+		}
+		requested_factories = 4
+		progress = 0.82
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+		}
+		requested_factories = 2
+		progress = 0.83
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.44
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_0
+		}
+		requested_factories = 1
+		progress = 0.29
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+		}
+		requested_factories = 2
+		progress = 0.12
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = tac_bomber_equipment_0
+		}
+		requested_factories = 1
+		progress = 0.48
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = heavy_cruiser_3
+			creator = "SRI"
+		}
+		requested_factories = 4
+		progress = 0.65
+		amount = 2
+	}
+}

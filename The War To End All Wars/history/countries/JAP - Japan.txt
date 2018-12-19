@@ -1,0 +1,1143 @@
+﻿capital = 282
+OOB = "JAP"
+set_stability = 0.4
+add_political_power = -200
+set_research_slots = 4
+
+set_technology = {
+
+	### General ###
+	electronic_mechanical_engineering = 1
+
+	### Navy ###
+	destroyer_one = 1
+	destroyer_two = 1
+	destroyer_three = 1
+	destroyer_four = 1
+	light_cruiser_one = 1
+	light_cruiser_two = 1
+	light_cruiser_three = 1
+	light_cruiser_four = 1
+	light_cruiser_five = 1
+	heavy_cruiser_one = 1
+	heavy_cruiser_two = 1
+	heavy_cruiser_three = 1
+	heavy_cruiser_four = 1
+	battleship_one = 1
+	battleship_two = 1
+	battleship_three = 1
+	battleship_four = 1
+	battleship_five = 1
+	dreadnought_one = 1
+	dreadnought_two = 1
+	dreadnought_three = 1
+	dreadnought_four = 1
+	dreadnought_five = 1
+	dreadnought_six = 1
+	dreadnought_seven = 1
+	carrier_one = 1
+	carrier_two = 1
+	carrier_three = 1
+	heavy_carrier_one = 1
+	heavy_carrier_two = 1
+	submarine_one = 1
+	submarine_two = 1
+	submarine_three = 1
+	submarine_four = 1
+	submarine_five = 1
+	nav_infra_one = 1
+	nav_infra_two = 1
+	nav_infra_three = 1
+	nav_av_one = 1
+	nav_av_two = 1
+	nav_av_three = 1
+	transport = 1
+
+	### Tanks ###
+	gwtank = 1
+	basic_light_tank = 1
+
+	### Infantry ###
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+
+	tech_recon = 1
+	tech_engineers = 1
+	tech_mountaineers = 1
+	tech_military_police = 1
+	marines = 1
+	gw_artillery = 1
+
+	### Air ###
+	early_fighter = 1
+	cv_early_fighter = 1
+	early_bomber = 1
+
+	naval_bomber1 = 1
+	cv_naval_bomber1 = 1
+	fighter1 = 1
+	tactical_bomber1 = 1
+	CAS1 = 1
+	heavy_fighter1 = 1
+}
+
+set_convoys = 300
+
+set_autonomy = {
+	target = FNG
+	autonomous_state = kr_special_autonomous_dependency
+}
+set_autonomy = {
+	target = TRM
+	autonomous_state = kr_default_puppet
+}
+
+country_event = { id = japdom.1 days = 1 }
+country_event = { id = japdom.6 days = 135 }
+
+add_ideas = {
+	#medium_economy
+	JAP_Inukai_Tsuyoshi_hog_sco
+	JAP_Yoshizawa_Kenkichi_for_sco
+	JAP_Mitsuchi_Chuzo_eco_sco
+	JAP_Suzuki_Kisaburo_sec_sco
+	JAP_bad_start
+	JAP_no_army_focus
+	JAP_narrow_rail
+	JAP_bad_land
+	PROFF_LEG_CITIES
+	civilian_economy
+	free_trade
+	limited_conscription
+}
+
+add_opinion_modifier = { target = SQI modifier = embargo }
+add_opinion_modifier = { target = TRM modifier = vladivostok_puppet }
+add_opinion_modifier = { target = LEC modifier = LEC_member }
+give_military_access = LEC
+give_guarantee = LEC
+# diplomatic_relation = { country = LEC relation = non_aggression_pact }
+set_country_flag = LEC_profit_for_you
+
+set_politics = {
+
+	parties = {
+		totalist = {
+			popularity = 0
+			banned = yes
+		}
+		radical_socialist = {
+			popularity = 0
+			banned = yes
+		}
+		syndicalist = {
+			popularity = 2
+		}
+		social_democrat = {
+			popularity = 3
+		}
+		social_liberal = {
+			popularity = 5
+		}
+		authoritarian_democrat = {
+			popularity = 8
+		}
+		market_liberal = {
+			popularity = 27
+		}
+		social_conservative = {
+			popularity = 51
+		}
+		paternal_autocrat = {
+			popularity = 3
+		}
+		national_populist = {
+			popularity = 1
+		}
+	}
+
+	ruling_party = social_conservative
+	last_election = "1932.2.20"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+### Head of States ###
+create_country_leader = {
+	name = "Hirohito"
+	desc = "POLITICS_HIROHITO_DESC"
+	picture = "Portrait_Japan_Hirohito_kr.tga"
+	expire = "1965.1.1"
+	ideology = social_conservative_subtype
+	traits = {}
+}
+
+### Leaders ###
+
+if = { #JAP_samurai_lineage GFX doesn't show up without Waking the Tiger, hence the IF statement used here
+	limit = { has_dlc = "Waking the Tiger" }
+
+	create_field_marshal = {
+		name = "Hisaichi Terauchi"
+		picture = "Portrait_Japan_Hisaichi_Terauchi.dds"
+		traits = {
+			offensive_doctrine
+			JAP_samurai_lineage   # hakushaku
+			politically_connected
+		}
+		skill = 4
+		attack_skill = 4
+		defense_skill = 4
+		planning_skill = 3
+		logistics_skill = 2
+	}
+
+	create_field_marshal = {
+		name = "Shunroku Hata"
+		picture = "Portrait_Japan_Shunroku_Hata.dds"
+		traits = { offensive_doctrine JAP_samurai_lineage }
+		skill = 4
+		attack_skill = 3
+		defense_skill = 4
+		planning_skill = 2
+		logistics_skill = 4
+	}
+
+	create_corps_commander = {
+		name = "Kanji Ishiwara"
+		picture = "Portrait_Japan_Kanji_Ishiwara.dds"
+		traits = { JAP_samurai_lineage }
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Naruhiko Higashikuni"
+		picture = "Portrait_Japan_Naruhiko_Higashikuni.dds"
+		traits = { JAP_samurai_lineage politically_connected }
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Seishiro Itagaki"
+		picture = "Portrait_Japan_Seishiro_Itagaki.dds"
+		traits = { JAP_samurai_lineage inflexible_strategist trait_reckless }
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Hatazo Adachi"
+		picture = "Portrait_Japan_Hatazo_Adachi.dds"
+		traits = { trickster JAP_samurai_lineage trait_reckless infantry_officer }
+		skill = 2
+		attack_skill = 1
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Sadao Araki"
+		picture = "Portrait_Japan_Sadao_Araki.dds"
+		traits = { JAP_samurai_lineage }
+		skill = 2
+		attack_skill = 1
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Kuniaki Koiso"
+		picture = "Portrait_Japan_Kuniaki_Koiso.dds"
+		traits = { JAP_samurai_lineage old_guard politically_connected }
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 1
+	}
+
+	else = {
+
+		create_field_marshal = {
+			name = "Hisaichi Terauchi"
+			picture = "Portrait_Japan_Hisaichi_Terauchi.dds"
+			traits = {
+				offensive_doctrine
+				politically_connected
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+		}
+
+		create_field_marshal = {
+			name = "Shunroku Hata"
+			picture = "Portrait_Japan_Shunroku_Hata.dds"
+			traits = { offensive_doctrine }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 4
+		}
+
+		create_corps_commander = {
+			name = "Kanji Ishiwara"
+			picture = "Portrait_Japan_Kanji_Ishiwara.dds"
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+		create_corps_commander = {
+			name = "Naruhiko Higashikuni"
+			picture = "Portrait_Japan_Naruhiko_Higashikuni.dds"
+			traits = { politically_connected }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+
+		create_corps_commander = {
+			name = "Seishiro Itagaki"
+			picture = "Portrait_Japan_Seishiro_Itagaki.dds"
+			traits = { inflexible_strategist trait_reckless }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+
+		create_corps_commander = {
+			name = "Hatazo Adachi"
+			picture = "Portrait_Japan_Hatazo_Adachi.dds"
+			traits = { trickster trait_reckless infantry_officer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+
+		create_corps_commander = {
+			name = "Sadao Araki"
+			picture = "Portrait_Japan_Sadao_Araki.dds"
+			traits = { }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+
+		create_corps_commander = {
+			name = "Kuniaki Koiso"
+			picture = "Portrait_Japan_Kuniaki_Koiso.dds"
+			traits = { old_guard politically_connected }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+
+	}
+}
+
+create_corps_commander = {
+	name = "Tomoyuki Yamashita"
+	picture = "Portrait_Japan_Tomoyuki_Yamashita.dds"
+	traits = { trickster trait_engineer brilliant_strategist politically_connected }
+	skill = 5
+	attack_skill = 4
+	defense_skill = 5
+	planning_skill = 3
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Akira Muto"
+	picture = "Portrait_Japan_Akira_Muto.dds"
+	traits = { career_officer  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Shizuichi Tanaka"
+	picture = "Portrait_Japan_Shizuichi_Tanaka.dds"
+	traits = { trickster career_officer infantry_officer }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Yasuji Okamura"
+	picture = "Portrait_Japan_Yasuji_Okamura.dds"
+	traits = { trait_reckless }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Toshizo Nishio" #Toshizo
+	picture = "Portrait_Japan_Toshizo_Nishio.dds"
+	traits = { brilliant_strategist infantry_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Rikichi Ando" #Ando
+	picture = "Portrait_Japan_Rikichi_Ando.dds"
+	traits = { career_officer }
+	skill = 3
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Takashi Sakai"
+	picture = "Portrait_Japan_Takashi_Sakai.dds"
+	traits = { infantry_officer trait_reckless }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Kenji Doihara"
+	picture = "Portrait_Japan_Kenji_Doihara.dds"
+	traits = { career_officer substance_abuser }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Kenkichi Ueda"
+	picture = "Portrait_Japan_Kenkichi_Ueda.dds"
+	traits = { old_guard cavalry_officer trait_reckless }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Shigeru Honjo"
+	picture = "Portrait_Japan_Shigeru_Honjo.dds"
+	traits = { old_guard war_hero }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Yoshijiro Umezu"
+	picture = "Portrait_Japan_Yoshijiro_Umezu.dds"
+	traits = { trait_cautious politically_connected }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Otozo Yamada"
+	picture = "Portrait_Japan_Otozo_Yamada.dds"
+	traits = { cavalry_officer career_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Iwane Matsui"
+	picture = "Portrait_Japan_Iwane_Matsui.dds"
+	traits = { old_guard trait_reckless }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Keisuke Fujie"
+	picture = "Portrait_Japan_Keisuke_Fujie.dds"
+	traits = { fortress_buster career_officer politically_connected }
+	skill = 3
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Kiichiro Higuchi"
+	picture = "Portrait_Japan_Kiichiro_Higuchi.dds"
+	traits = { career_officer trait_cautious }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Masaharu Homma"
+	picture = "Portrait_Japan_Masaharu_Homma.dds"
+	traits = { media_personality trait_cautious }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Harukichi Hyakutake"
+	picture = "Portrait_Japan_Harukichi_Hyakutake.dds"
+	traits = { infantry_officer  }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Jo Iimura"
+	picture = "Portrait_Japan_Jo_Iimura.dds"
+	traits = { career_officer }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Hitoshi Imamura"
+	picture = "Portrait_Japan_Hitoshi_Imamura.dds"
+	traits = {  commando career_officer infantry_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Masatane Kanda"
+	picture = "Portrait_Japan_Masatane_Kanda.dds"
+	traits = { trait_cautious }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+### Navy Leader
+create_navy_leader = {
+	name = "Isoroku Yamamoto"
+	picture = "Portrait_Japan_Isoroku_Yamamoto.dds"
+	traits = { superior_tactician spotter }
+	skill = 5 #naval guy, don't patch
+}
+
+create_navy_leader = {
+	name = "Mineichi Koga"
+	picture = "Portrait_Japan_Mineichi_Koga.dds"
+	traits = { superior_tactician spotter }
+	skill = 4 #naval guy, don't patch
+}
+
+create_navy_leader = {
+	name = "Kiyoshi Hasegawa"
+	picture = "Portrait_Japan_Hasegawa_Kiyoshi.dds"
+	traits = { }
+	skill = 2 #naval guy, don't patch
+}
+
+# Keen on planes
+create_navy_leader = {
+	name = "Shigeyoshi Inoue"
+	picture = "Portrait_Japan_Shigeyoshi_Inoue.dds"
+	traits = { air_controller }
+	skill = 1 #naval guy, don't patch
+}
+
+create_navy_leader = {
+	name = "Nobutake Kondo"
+	picture = "Portrait_Japan_Nobutake_Kondo.dds"
+	traits = { fly_swatter }
+	skill = 3 #naval guy, don't patch
+}
+
+create_navy_leader = {
+	name = "Takeo Takagi"
+	picture = "Portrait_Japan_Takeo_Takagi.dds"
+	traits = { }
+	skill = 2 #naval guy, don't patch
+}
+
+create_navy_leader = {
+	name = "Soemu Toyoda"
+	picture = "Portrait_Japan_Soemu_Toyoda.dds"
+	traits = { old_guard_navy }
+	skill = 1 #naval guy, don't patch
+}
+
+create_navy_leader = {
+	name = "Jisaburo Ozawa"
+	picture = "Portrait_Japan_Jisaburo_Ozawa.dds"
+	traits = { blockade_runner superior_tactician }
+	skill = 5 #naval guy, don't patch
+}
+
+create_navy_leader = {
+	name = "Zengo Yoshida"
+	picture = "Portrait_Japan_Zengo_Yoshida.dds"
+	traits = { }
+	skill = 2 #naval guy, don't patch
+}
+
+create_navy_leader = {
+	name = "Hiroaki Abe"
+	picture = "Portrait_Japan_Hiroaki_Abe.dds"
+	traits = { }
+	skill = 1 #naval guy, don't patch
+}
+
+create_navy_leader = {
+	name = "Tadashige Daigo"
+	picture = "Portrait_Japan_Tadashige_Daigo.dds"
+	traits = { seawolf }
+	skill = 1 #naval guy, don't patch
+}
+
+create_navy_leader = {
+	name = "Gengo Hyakutake"
+	picture = "Portrait_Japan_Gengo_Hyakutake.dds"
+	traits = { }
+	skill = 3 #naval guy, don't patch
+}
+
+### Ship Variants ###
+create_equipment_variant = {
+	name = "Satsuma Class" #in service with TRM
+	type = SH_battleship_1
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Kawachi Class"
+	type = SH_battleship_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Fuso Class"
+	type = SH_battleship_3
+	parent_version = 0
+	upgrades = {
+		h_u_attack_ten = 2
+		h_u_attack_one = 5
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Ise Class"
+	type = SH_battleship_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Nagato Class"
+	type = SH_battleship_5
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Tosa Class"
+	type = SH_battleship_5
+	parent_version = 0
+	upgrades = {
+		h_u_attack_ten = 2
+		h_u_attack_one = 5
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Kii Class"
+	type = SH_battleship_6
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Aki Class"
+	type = SH_battleship_7
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Kaga Class"
+	type = heavy_carrier_1
+	parent_version = 0
+	upgrades = {
+		h_u_air_ten = 2
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Atago Class"
+	type = heavy_carrier_1
+	parent_version = 0
+	upgrades = {
+		h_u_air_ten = 1
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Soryu Class"
+	type = heavy_carrier_2
+	parent_version = 0
+	upgrades = {
+		h_u_air_one = 5
+		h_u_cost_one = 10
+	}
+}
+
+create_equipment_variant = {
+	name = "Hosho Class"
+	type = carrier_2
+	parent_version = 0
+	upgrades = {
+		h_u_air_ten = 2
+		h_u_air_one = 5
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Shokaku Class"
+	type = carrier_2
+	parent_version = 0
+	upgrades = {
+		h_u_air_ten = 5
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Ryujo Class"
+	type = carrier_3
+	parent_version = 0
+	upgrades = {
+		h_u_air_ten = 7
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Kongo Class"
+	type = battleship_3
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Amagi Class"
+	type = battleship_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Omi Class"
+	type = battleship_5
+	parent_version = 0
+	upgrades = {
+		h_u_ap_one = 5
+		h_u_frange_ten = 1
+		h_u_frange_one = 4
+		h_u_shoreb_ten = 1
+		h_u_shoreb_one = 2
+		h_u_armor_ten = 2
+		h_u_armor_one = 5
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Yakumo Class" #in service with TRM
+	type = heavy_cruiser_1
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Adzuma Class" #in service with TRM
+	type = heavy_cruiser_1
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Izumo Class"
+	type = heavy_cruiser_1
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Ibuki Class" #in service with SIA
+	type = heavy_cruiser_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Furataka Class"
+	type = heavy_cruiser_3
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Aoba Class"
+	type = heavy_cruiser_4
+	parent_version = 0
+	upgrades = {
+		ship_reliability_upgrade = 1
+	}
+}
+
+create_equipment_variant = {
+	name = "Tenryu Class"
+	type = light_cruiser_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Kuma Class"
+	type = light_cruiser_3
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Nagara Class"
+	type = light_cruiser_3
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Yubari Class"
+	type = light_cruiser_3
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Sendai Class"
+	type = light_cruiser_3
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Tokachi Class"
+	type = light_cruiser_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Monobe Class"
+	type = light_cruiser_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Suea Tayarnchol Class" #in service with SIA
+	type = destroyer_1
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Momo Class"
+	type = destroyer_1
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Harusame Class" #in service with TRM
+	type = destroyer_1
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Enoki Class"
+	type = destroyer_1
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Kawakaze Class" #in service with TRM
+	type = destroyer_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Amatsukaze Class" #in service with TRM, SIA
+	type = destroyer_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Momi Class"
+	type = destroyer_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Minekaze Class"
+	type = destroyer_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Mutsuki Class"
+	type = destroyer_3
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Fubuki Class"
+	type = destroyer_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Akatsuki Class"
+	type = destroyer_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Hatsuharu Class"
+	type = destroyer_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Shiratsuyu Class"
+	type = destroyer_4
+	parent_version = 0
+	upgrades = {
+		ship_ASW_upgrade = 1
+	}
+}
+
+create_equipment_variant = {
+	name = "Junsen I Class"
+	type = submarine_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Junsen IM Class"
+	type = submarine_5
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Junsen II Class"
+	type = submarine_5
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Type L Class" #in service with SIA
+	type = submarine_3
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Kaidai I Class"
+	type = submarine_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Kaidai II Class"
+	type = submarine_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Kaidai III Class"
+	type = submarine_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Kiraisen Type"
+	type = submarine_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Kaidai IV Class"
+	type = submarine_5
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Kaidai V Class"
+	type = submarine_5
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Kaidai VI Class"
+	type = submarine_5
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Kaichū VI Class"
+	type = submarine_5
+	parent_version = 0
+	upgrades = {
+		sub_engine_upgrade = 1
+	}
+}

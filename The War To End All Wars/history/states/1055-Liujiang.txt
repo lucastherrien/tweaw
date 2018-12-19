@@ -1,0 +1,19 @@
+state = {
+	id = 1055
+	name = "STATE_1055"
+	manpower = 1470000
+	state_category = rural
+	history = {
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = QIE
+		add_core_of = PRC
+		add_core_of = QIE
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = {
+		1597 4134 7095 10039 10431 12436
+	}
+}

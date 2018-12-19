@@ -1,0 +1,19 @@
+state = {
+	id = 228
+	name = "STATE_228" # Lugansk
+	manpower = 2600893
+
+	state_category = town
+
+	history = {
+		owner = UKR # SOV
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = UKR # SOV
+	}
+
+	provinces = {
+		523 547 570 6519 11487 11513
+	}
+}

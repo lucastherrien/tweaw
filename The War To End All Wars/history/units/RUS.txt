@@ -1,0 +1,1167 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Pekhotnaya Diviziya"			# Rifle Division
+	division_names_group = RUS_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }		# Recon bn had 16 L tanks, 10 ACs, 1x mot inf co
+		artillery = { x = 0 y = 1 }	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	}
+}
+
+division_template = {
+	name = "Kavaleriyskaya Diviziya"	# Kavaleriyskaya Diviziya
+	division_names_group = RUS_CAV_01
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Armored-Division"
+	division_names_group = RUS_ARM_01
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+##### OOB #####
+
+units = {
+
+	division = {
+		name = "27. Murmanskaya Pekhot.Div"
+		location = 3134
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "29. Murmanskaya Pekhot.Div"
+		location = 3134
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "30. Kemskaya Pekhot.Div."
+		location = 3134
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "44. Pekhotnaya Diviziya."
+		location = 3134
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "41. Pekhotnaya Diviziya."
+		location = 3134
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "75. Pekhotnaya Diviziya."
+		location = 3134
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "42. Pekhotnaya Diviziya."
+		location = 3134
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "88. Pekhotnaya Diviziya."
+		location = 3338
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "76. Kazanskya Pekhot.Div."
+		location = 3338
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "52. Pekhotnaya Diviziya."
+		location = 3338
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "53. Pekhotnaya Diviziya."
+		location = 3338
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "48. Pekhotnaya Diviziya."
+		location = 11159
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "50. Pekhotnaya Diviziya."
+		location = 11159
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "51. Pekhotnaya Diviziya."
+		location = 11159
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "47. Pekhotnaya Diviziya."
+		location = 11159
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "45. Pekhotnaya Pekhot.Div."
+		location = 11159
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "56. Pekhotnaya Diviziya"
+		location = 3151
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "9. Novgorotskaya Pekhot.Div."
+		location = 3151
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "10. Tulskaya Pekhot.Div."
+		location = 3151
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "34. Pekhotnaya Diviziya"
+		location = 3151
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "35. Pekhotnaya Diviziya"
+		location = 3151
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "1. Pekhotnaya Diviziya"
+		location = 117
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "2. Pekhotnaya Diviziya"
+		location = 117
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "3. Permskaya Pekhot.Div."
+		location = 117
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "7. Pekhotnaya Diviziya"
+		location = 117
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "7. Pskovskaya Pekhot.Div."
+		location = 117
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "8. Novgordskaya Pekhot.Div."
+		location = 117
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "16. Pekhotnaya Diviziya"
+		location = 117
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "95. Pekhotnaya Diviziya"
+		location = 117
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "98. Pekhotnaya Diviziya"
+		location = 117
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "100. Pekhotnaya Diviziya."
+		location = 117
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "24. Pekhotnaya Diviziya"
+		location = 11202
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "11. Ryazanskaya Pekhot.Div."
+		location = 11202
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "39. Pekhotnaya Diviziya"
+		location = 11202
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "36. Pekhotnaya Diviziya"
+		location = 11202
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "12. Moskovskaya Pekhot.Div."
+		location = 11202
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "33. Pekhotnaya Diviziya"
+		location = 11202
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "13. Ekaterinburgskaya Pekhot. Div."
+		location = 306
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "54. Pekhotnaya Diviziya"
+		location = 306
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "14. Pekhotnaya Diviziya"
+		location = 306
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "15. Pekhotnaya Diviziya"
+		location = 306
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "20. Pekhotnaya Diviziya"
+		location = 306
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "19. Pekhotnaya Diviziya"
+		location = 306
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "17. Pekhotnaya Diviziya"
+		location = 306
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "37. Pekhotnaya Diviziya"
+		location = 306
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "18. Pekhotnaya Diviziya"
+		location = 3335
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "80. Pekhotnaya Diviziya"
+		location = 3335
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "81. Pekhotnaya Diviziya"
+		location = 3335
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "57. Pekhotnaya Diviziya"
+		location = 3335
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "20. Pekhotnaya Diviziya"
+		location = 3335
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "21. Pekhotnaya Diviziya"
+		location = 3335
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "38. Smolenskaya Pekhot. Div."
+		location = 3335
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "43. Pekhotnaya Diviziya"
+		location = 3335
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "118. Pekhotnaya Diviziya"
+		location = 9355
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "120. Pekhotnaya Diviziya"
+		location = 9355
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "119. Pekhotnaya Diviziya"
+		location = 9355
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "121. Pekhotnaya Diviziya"
+		location = 9355
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "25. Pekhotnaya Diviziya"
+		location = 9355
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "26. Pekhotnaya Diviziya"
+		location = 9355
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "28. Pekhotnaya Diviziya"
+		location = 9355
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "46. Pekhotnaya Diviziya"
+		location = 9355
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "86. Pekhotnaya Diviziya"
+		location = 413
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "61. Pekhotnaya Diviziya"
+		location = 413
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "64. Pekhotnaya Diviziya"
+		location = 413
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "63. Pekhotnaya Diviziya"
+		location = 413
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "66. Pekhotnaya Diviziya"
+		location = 413
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "84. Pekhotnaya Diviziya"
+		location = 413
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "62. Pekhotnaya Diviziya"
+		location = 413
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "59. Saratovskaya Pekhot. Div."
+		location = 413
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "92. Pekhotnaya Diviziya"
+		location = 413
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "4. Pekhotnaya Diviziya"
+		location = 6380
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "5. Kamishinskaya Diviziya"
+		location = 6380
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "6. Bryanskaya Diviziya"
+		location = 6380
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "60. Tagilskaya Diviziya"
+		location = 3578
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "67. Ufimskaya Diviziya"
+		location = 3578
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "68. Vladimirskaya Diviziya"
+		location = 3578
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "79. Novo-Nikolaevskaya Diviziya"
+		location = 3578
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "83. Vologodskaya Diviziya"
+		location = 3578
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "90. Kostromskaya Diviziya"
+		location = 3578
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "1.Kavaleriiskaya Diviziya"
+		location = 518
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "2.Kavaleriiskaya Diviziya"
+		location = 518
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "70. Pekhotnaya Diviziya"
+		location = 3529
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "85. Pekhotnaya Diviziya"
+		location = 3529
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "93. Pekhotnaya Diviziya"
+		location = 3529
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "97. Pekhotnaya Diviziya"
+		location = 3529
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "96. Pekhotnaya Diviziya"
+		location = 3529
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "69. Pekhotnaya Diviziya"
+		location = 3529
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "99. Pekhotnaya Diviziya"
+		location = 9292
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "94. Pekhotnaya Diviziya"
+		location = 9292
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "93. Pekhotnaya Diviziya"
+		location = 9292
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "91. Pekhotnaya Diviziya"
+		location = 9292
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "110. Pekhotnaya Diviziya"
+		location = 10696
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "32. Pekhotnaya Diviziya"
+		location = 10696
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "97. Kemerovskaya Pekhot.Div."
+		location = 10696
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "49. Pekhotnaya Diviziya"
+		location = 10696
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "97. Kemerovskaya Pekhot.Div."
+		location = 10696
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "102. Irkutskaya Pekhot. Div."
+		location = 7890
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "104. Pekhotnaya Diviziya"
+		location = 1779
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "106. Omskaya Pekhot. Div."
+		location = 7822
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "107. Pekhotnaya Diviziya"
+		location = 10712
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "108. Pekhotnaya Diviziya"
+		location = 4724
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "109. Pekhotnaya Diviziya"
+		location = 10562
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "111. Orskaya Pekhot.Div."
+		location = 1810
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "112. Pekhotnaya Diviziya"
+		location = 10543
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "115. Pekhotnaya Diviziya"
+		location = 4797
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "105. Orskaya Pekhit.Div."
+		location = 4797
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "103. Pekhotnaya Diviziya"
+		location = 4797
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "22. Smolenskaya Pekhot.Div."
+		location = 4797
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "40. Ryazansaya Pekhot.Div."
+		location = 4797
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "31. Pekhotnaya Diviziya"
+		location = 4797
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "112. Pekhotnaya Diviziya"
+		location = 4797
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "113. Novosibirskaya Pekhot.Div."
+		location = 10583
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "114. Blagoveshchenskaya Pekhot.Div."
+		location = 12660
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "115. Pekhotnaya Diviziya"
+		location = 12657
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "116. Pekhotnaya Diviziya"
+		location = 4725
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "101. Novosibirskaya Pekhot.Div."
+		location = 12678
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "58. Pekhotnaya Diviziya"
+		location = 12678
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "89. Pekhotnaya Diviziya"
+		location = 12678
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "73. Orenburgskaya Pekhot.Div."
+		location = 675
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "74. Sibirskaya Pekhot.Div"
+		location = 675
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "78. Pekhotnaya Diviziya"
+		location = 675
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "87. Pekhotnaya Diviziya"
+		location = 675
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "71. Pekhotnaya Diviziya"
+		location = 9659
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "72. Pekhotnaya Diviziya"
+		location = 9659
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "77. Pekhotnaya Diviziya"
+		location = 9659
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "82. Pekhotnaya Diviziya"
+		location = 9659
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "177. Pekhotnaya Diviziya"
+		location = 10577
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "55. Slobodskaya Pekhot.Div."
+		location = 10577
+		division_template = "Pekhotnaya Diviziya"
+		start_equipment_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+
+
+
+	navy = {
+		name = "Severnyy Flot"
+		base = 3134
+		location = 3134 # Murmansk
+		ship = { name = "Ryurik" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = RUS version_name = "Ryurik Class" } } }
+
+		ship = { name = "Novik" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = RUS version_name = "Novik Class" } } }
+		ship = { name = "Zabiyaka" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = RUS version_name = "Novik Class" } } }
+		ship = { name = "Desna" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = RUS version_name = "Novik Class" } } }
+		ship = { name = "Azard" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = RUS version_name = "Novik Class" } } }
+		ship = { name = "Samson" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = RUS version_name = "Novik Class" } } }
+		ship = { name = "Kapitan Izylmetyev" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = RUS version_name = "Novik Class" } } }
+		ship = { name = "Leytenant Dubasov" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = RUS version_name = "Novik Class" } } }
+		ship = { name = "Kapitan Konon Zotov" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = RUS version_name = "Novik Class" } } }
+	}
+	navy = {
+		name = "Severnyy Podvodniy Flot"
+		base = 3134
+		location = 3134 # Murmansk
+		# 5iy Podvodniy Flot
+		ship = { name = "Vepr" definition = submarine equipment = { submarine_2 = { amount = 1 owner = RUS version_name = "Bars Class" } } }
+		ship = { name = "Tigr" definition = submarine equipment = { submarine_2 = { amount = 1 owner = RUS version_name = "Bars Class" } } }
+		ship = { name = "Volk" definition = submarine equipment = { submarine_2 = { amount = 1 owner = RUS version_name = "Bars Class" } } }
+		ship = { name = "Pantera" definition = submarine equipment = { submarine_2 = { amount = 1 owner = RUS version_name = "Bars Class" } } }
+		ship = { name = "Rys" definition = submarine equipment = { submarine_2 = { amount = 1 owner = RUS version_name = "Bars Class" } } }
+		ship = { name = "Leopard" definition = submarine equipment = { submarine_2 = { amount = 1 owner = RUS version_name = "Bars Class" } } }
+		ship = { name = "Zmeya" definition = submarine equipment = { submarine_2 = { amount = 1 owner = RUS version_name = "Bars Class" } } }
+		ship = { name = "Ugor" definition = submarine equipment = { submarine_2 = { amount = 1 owner = RUS version_name = "Bars Class" } } }
+		ship = { name = "Tur" definition = submarine equipment = { submarine_2 = { amount = 1 owner = RUS version_name = "Bars Class" } } }
+		ship = { name = "Yorsh" definition = submarine equipment = { submarine_2 = { amount = 1 owner = RUS version_name = "Bars Class" } } }
+	}
+
+	### Baltic Fleet -- Leningrad
+	navy = {
+		name = "Baltiyskiy Flot"
+		base = 3151
+		location = 3151 # Leningrad
+		ship = { name = "Gangut" definition = SH_battleship equipment = { SH_battleship_3 = { amount = 1 owner = RUS version_name = "Gangut Class" } } }
+		ship = { name = "Petropavlovsk" definition = SH_battleship equipment = { SH_battleship_3 = { amount = 1 owner = RUS version_name = "Gangut Class" } } }
+		ship = { name = "Sevastopol" definition = SH_battleship equipment = { SH_battleship_3 = { amount = 1 owner = RUS version_name = "Gangut Class" } } }
+		ship = { name = "Poltava" definition = SH_battleship equipment = { SH_battleship_3 = { amount = 1 owner = RUS version_name = "Gangut Class" } } }
+
+		ship = { name = "Andrey Pervozvannyy" definition = SH_battleship equipment = { SH_battleship_1 = { amount = 1 owner = RUS version_name = "Andrey Pervozvannyy Class" } } }
+		ship = { name = "Imperator Pavel I" definition = SH_battleship equipment = { SH_battleship_1 = { amount = 1 owner = RUS version_name = "Andrey Pervozvannyy Class" } } }
+
+		ship = { name = "Izmail" definition = battleship equipment = { battleship_3 = { amount = 1 owner = RUS version_name = "Izmail Class" } } }
+		ship = { name = "Borodino" definition = battleship equipment = { battleship_3 = { amount = 1 owner = RUS version_name = "Izmail Class" } } }
+
+		ship = { name = "Askold" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RUS version_name = "Askold Class" } } }
+		ship = { name = "Bogatyr" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RUS version_name = "Bogatyr Class" } } }
+		ship = { name = "Oleg" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RUS version_name = "Bogatyr Class" } } }
+		ship = { name = "Svetlana" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = RUS version_name = "Svetlana Class" } } }
+		ship = { name = "Admiral Butakov" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = RUS version_name = "Svetlana Class" } } }
+
+		ship = { name = "Kapitan Saken" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RUS version_name = "Leytenant Shestakov Class" } } }
+		ship = { name = "Pobeditel" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = RUS version_name = "Novik Class" } } }
+		ship = { name = "Leytenant Ilyin" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = RUS version_name = "Novik Class" } } }
+		ship = { name = "Rykov" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = RUS version_name = "Novik Class" } } }
+		ship = { name = "Karl Libknekht" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = RUS version_name = "Novik Class" } } }
+		ship = { name = "Gogland" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = RUS version_name = "Gogland Class" } } }
+		ship = { name = "Kulm" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = RUS version_name = "Gogland Class" } } }
+		ship = { name = "Grengamn" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = RUS version_name = "Gogland Class" } } }
+		ship = { name = "Patras" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = RUS version_name = "Gogland Class" } } }
+		ship = { name = "Forel" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = RUS version_name = "Forel Class" } } }
+		ship = { name = "Osiostr" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = RUS version_name = "Forel Class" } } }
+		ship = { name = "Kefal" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = RUS version_name = "Forel Class" } } }
+		ship = { name = "Losos" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = RUS version_name = "Forel Class" } } }
+
+		ship = { name = "Osetr" definition = submarine equipment = { submarine_4 = { amount = 1 owner = RUS version_name = "Osetr Class" } } }
+		ship = { name = "Kefal" definition = submarine equipment = { submarine_4 = { amount = 1 owner = RUS version_name = "Osetr Class" } } }
+		ship = { name = "Akula" definition = submarine equipment = { submarine_5 = { amount = 1 owner = RUS version_name = "Akula Class" } } }
+		ship = { name = "Osetr" definition = submarine equipment = { submarine_5 = { amount = 1 owner = RUS version_name = "Akula Class" } } }
+		ship = { name = "Plotva" definition = submarine equipment = { submarine_5 = { amount = 1 owner = RUS version_name = "Akula Class" } } }
+		ship = { name = "Sig" definition = submarine equipment = { submarine_5 = { amount = 1 owner = RUS version_name = "Akula Class" } } }
+		ship = { name = "Som" definition = submarine equipment = { submarine_5 = { amount = 1 owner = RUS version_name = "Akula Class" } } }
+		ship = { name = "Beluga" definition = submarine equipment = { submarine_5 = { amount = 1 owner = RUS version_name = "Akula Class" } } }
+		ship = { name = "Schluka" definition = submarine equipment = { submarine_5 = { amount = 1 owner = RUS version_name = "Akula Class" } } }
+		ship = { name = "Sudak" definition = submarine equipment = { submarine_5 = { amount = 1 owner = RUS version_name = "Akula Class" } } }
+	}
+	### Pacific Fleet -- Okhotsk
+	navy = {
+		name = "Tikhookeanskiy Flot"
+		base = 4810
+		location = 4810 #Okhotsk
+		ship = { name = "Rossiya" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = RUS version_name = "Rossiya Class" } } }
+		ship = { name = "Gromoboi" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = RUS version_name = "Gromoboi Class" } } }
+
+		ship = { name = "Kapitan Kroun" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = RUS version_name = "Novik Class" } } }
+		ship = { name = "Gavriil" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = RUS version_name = "Novik Class" } } }
+		ship = { name = "Konstantin" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = RUS version_name = "Novik Class" } } }
+		ship = { name = "Svoboda" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = RUS version_name = "Novik Class" } } }
+		ship = { name = "Izyaslav" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = RUS version_name = "Novik Class" } } }
+		ship = { name = "Prymyslav" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = RUS version_name = "Novik Class" } } }
+		ship = { name = "Bryachislav" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = RUS version_name = "Novik Class" } } }
+		ship = { name = "Fedor Stratilat" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = RUS version_name = "Novik Class" } } }
+	}
+}
+
+instant_effect = {
+
+	add_equipment_production = { #7. Flotiliya Esmintsev
+		equipment = {
+			type = destroyer_4
+			creator = "RUS"
+		}
+		requested_factories = 1
+		progress = 0.7
+		amount = 1
+	}
+
+	add_equipment_production = { #12. Flotiliya Podlodok
+		equipment = {
+			type = submarine_5
+			creator = "RUS"
+		}
+		requested_factories = 1
+		progress = 0.92
+		amount = 1
+	}
+
+	add_equipment_production = { #13. Flotiliya Podlodok
+		equipment = {
+			type = submarine_5
+			creator = "RUS"
+		}
+		requested_factories = 1
+		progress = 0.84
+		amount = 1
+	}
+}
+
+### Air Wings
+air_wings = {
+	195 = {
+		fighter_equipment_0 = {
+			owner = "RUS"
+			amount = 50
+		}
+	}
+	209 = {
+		fighter_equipment_0 = {
+			owner = "RUS"
+			amount = 25
+		}
+	}
+	219 = {
+		fighter_equipment_0 = {
+			owner = "RUS"
+			amount = 25
+		}
+		tac_bomber_equipment_0 = {
+			owner = "RUS"
+			amount = 25
+		}
+	}
+	657 = {
+		fighter_equipment_0 = {
+			owner = "RUS"
+			amount = 25
+		}
+		tac_bomber_equipment_0 = {
+			owner = "RUS"
+			amount = 25
+		}
+	}
+}
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+		}
+		requested_factories = 5
+		progress = 0.82
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+		}
+		requested_factories = 2
+		progress = 0.83
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.44
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_0
+		}
+		requested_factories = 1
+		progress = 0.29
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = gw_tank_equipment
+		}
+		requested_factories = 2
+		progress = 0.59
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = tac_bomber_equipment_0
+		}
+		requested_factories = 1
+		progress = 0.48
+		efficiency = 100
+	}
+}

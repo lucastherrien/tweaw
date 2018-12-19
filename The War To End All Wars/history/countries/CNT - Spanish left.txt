@@ -1,0 +1,263 @@
+﻿capital = 165
+oob = "empty"
+
+set_technology = {
+	### MOD ###
+	### Navy ###
+	destroyer_one = 1
+	destroyer_two = 1
+	destroyer_three = 1
+	destroyer_four = 1
+	light_cruiser_one = 1
+	light_cruiser_two = 1
+	light_cruiser_three = 1
+	light_cruiser_four = 1
+	heavy_cruiser_one = 1
+	heavy_cruiser_two = 1
+	heavy_cruiser_three = 1
+	dreadnought_one = 1
+	dreadnought_two = 1
+	submarine_one = 1
+	submarine_two = 1
+	submarine_three = 1
+	carrier_one = 1
+	nav_infra_one = 1
+	nav_infra_two = 1
+	transport = 1
+	### Tanks ###
+	### INF ###
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	### AIR ###
+	early_fighter = 1
+	early_bomber = 1
+	naval_bomber1 = 1
+}
+
+set_research_slots = 3
+
+add_opinion_modifier = { target = POR modifier = embargo }
+add_opinion_modifier = { target = GER modifier = embargo }
+add_opinion_modifier = { target = GBR modifier = embargo }
+
+set_politics = {
+
+	parties = {
+		totalist = {
+			popularity = 8
+		}
+		radical_socialist = {
+			popularity = 55
+		}
+		syndicalist = {
+			popularity = 12
+		}
+		social_democrat = {
+			popularity = 3
+		}
+		social_liberal = {
+			popularity = 3
+		}
+		market_liberal = {
+			popularity = 7
+		}
+		social_conservative = {
+			popularity = 0
+		}
+		authoritarian_democrat = {
+			popularity = 10
+		}
+		paternal_autocrat = {
+			popularity = 0
+		}
+		national_populist = {
+			popularity = 2
+		}
+	}
+
+	ruling_party = radical_socialist
+	last_election = "1888.15.6"
+	election_frequency = 48
+	elections_allowed = no
+
+}
+
+create_country_leader = {
+	name = "Comité Central de la C.N.T.-F.A.I."
+	picture = "Portrait_Switzerland_Council.tga"
+	expire = "1965.1.1"
+	ideology = radical_socialist_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Manuel Azaña Díaz"
+	picture = "Portrait_CNT_Manuel_Azana_Diaz.tga"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Augusto Barcia Trelles"
+	picture = "Portrait_CNT_Augusto_Barcia_Trelles.tga"
+	expire = "1965.1.1"
+	ideology = social_democrat_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Niceto Alcalá-Zamora"
+	picture = "Portrait_CNT_Niceto_Alcala_Zamora.tga"
+	expire = "1965.1.1"
+	ideology = social_conservative_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Julián Besteiro Fernández"
+	picture = "Portrait_CNT_Julian_Besteiro_Fernandez.tga"
+	expire = "1965.1.1"
+	ideology = syndicalist_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Dolores Ibáurri Gómez"
+	picture = "Portrait_CNT_Dolores_Ibaurri_Gomez.tga"
+	expire = "1965.1.1"
+	ideology = totalist_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Josep Tarradellas"
+	picture = "Portrait_CNT_Josep_Tarradellas.tga"
+	expire = "1965.1.1"
+	ideology = market_liberal_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Juan III"
+	picture = "Portrait_SPR_Juan_III.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Francesc Sureda i Blanes"
+	picture = "Portrait_CNT_Francesc_Sureda_i_Blanes.tga"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+	traits = {}
+}
+
+add_ideas = {
+	#medium_economy
+
+	### Minister
+	CNT_Juan_Garcia_Oliver_hog_rso
+	CNT_Angel_Pestana_for_rso
+	CNT_Juan_Peiro_Belis_eco_syn
+	CNT_Joaquin_Ascaso_Budria_sec_rso
+	volunteer_only
+
+}
+
+### Field Marshal
+create_field_marshal = { #Auto-Generated
+	name = "Fernández Osorio y Tafall"
+	portrait_path = "gfx/leaders/CNT/Portrait_CNT_Fernandez_Osorio_y_Tafall.tga"
+	traits = {
+		politically_connected
+		organisational_leader
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+	id = 320
+}
+
+### Corps Commander
+create_corps_commander = { #Auto-Generated
+	name = "Domènec Batet"
+	portrait_path = "gfx/leaders/CNT/Portrait_CNT_Domenec_Batet.tga"
+	traits = {
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+	id = 319
+}
+create_corps_commander = { #Auto-Generated
+	name = "Buenaventura Durruti"
+	portrait_path = "gfx/leaders/CNT/Portrait_CNT_Durruti_Dumange.tga"
+	traits = {
+		guerilla_fighter
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+	id = 321
+}
+create_corps_commander = { #Auto-Generated
+	name = "Jose Riquelme y López Bago"
+	portrait_path = "gfx/leaders/CNT/Portrait_CNT_Riquelme_y_Lopez_Bago.tga"
+	traits = {
+		career_officer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+	id = 322
+}
+create_corps_commander = { #Auto-Generated
+	name = "Emilio Herrera Linares"
+	portrait_path = "gfx/leaders/CNT/Portrait_CNT_Herrera_Linares.tga"
+	traits = {
+		trait_engineer
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	id = 323
+}
+create_corps_commander = { #Auto-Generated
+	name = "Vicente Rojo Lluch"
+	portrait_path = "gfx/leaders/CNT/Portrait_CNT_Rojo_Lluch.tga"
+	traits = {
+		organizer
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	id = 324
+}
+
+### Navy Leader
+create_navy_leader = { #Auto-Generated
+	name = "André Marty"
+	portrait_path = "gfx/leaders/CNT/Portrait_CNT_Andre_Marty.tga"
+	traits = {
+	}
+	skill = 2
+	id = 325
+}

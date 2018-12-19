@@ -1,0 +1,170 @@
+﻿capital = 319
+OOB = "DOM"
+
+set_technology = {
+	### Navy ###
+	destroyer_one = 1
+	destroyer_two = 1
+	destroyer_three = 1
+	light_cruiser_one = 1
+	light_cruiser_two = 1
+	light_cruiser_three = 1
+	transport = 1
+	####Tanks ###
+	### INF ###
+	infantry_weapons = 1
+	gw_artillery = 1
+	### AIR ###
+}
+add_opinion_modifier = { target = HAI modifier = HAI_border_dispute }
+add_opinion_modifier = { target = HAI modifier = DOM_anti_haitian_1 }
+
+set_stability = 0.5
+set_war_support = 0.3
+
+set_politics = {
+
+	parties = {
+		totalist = {
+			popularity = 0
+		}
+		radical_socialist = {
+			popularity = 0
+		}
+		syndicalist = {
+			popularity = 2
+		}
+		social_democrat = {
+			popularity = 7
+		}
+		social_liberal = {
+			popularity = 3
+		}
+		market_liberal = {
+			popularity = 22
+		}
+		social_conservative = {
+			popularity = 51
+		}
+		authoritarian_democrat = {
+			popularity = 10
+		}
+		paternal_autocrat = {
+			popularity = 5
+		}
+		national_populist = {
+			popularity = 0
+		}
+	}
+
+	ruling_party = social_conservative
+	last_election = "1888.15.6"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_convoys = 20
+set_research_slots = 2
+
+add_ideas = {
+	#medium_economy
+	volunteer_only
+	DOM_Virgilio_Martinez_Reyna_hog_sco
+	DOM_Emilio_de_los_Santos_for_sco
+	DOM_Joaquin_Balaguer_Ricardo_eco_sco
+	DOM_Rafael_Espaillat_Mota_sec_sco
+}
+create_country_leader = {
+	name = "Heinrich Goldberg"
+	desc = "POLITICS_HEINRICH_GOLDBERG_DESC"
+	picture = "Portrait_Heinrich_Goldberg.tga"
+	expire = "1965.1.1"
+	ideology = syndicalist_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Pedro Henríquez Ureña"
+	desc = "POLITICS_PERDRO_HENRIQUEZ_URENA_DESC"
+	picture = "Portrait_Pedro_Henriquez_Urena.tga"
+	expire = "1965.1.1"
+	ideology = social_democrat_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Juan Jimenes Grullón"
+	desc = "POLITICS_JUAN_JIMENES_GRULLON_DESC"
+	picture = "Portrait_Juan_Jimenes_Grullon.tga"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Rafael Estrella Ureña"
+	desc = "POLITICS_ESTRELLA_URENA_DESC"
+	picture = "Portrait_Rafael_Estrella_Urena.tga"
+	expire = "1965.1.1"
+	ideology = market_liberal_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Virgilio Martínez Reyna"
+	desc = "POLITICS_MARTINEZ_REYNA_DESC"
+	picture = "Portrait_Virgilio_Martinez_Reyna.tga"
+	expire = "1965.1.1"
+	ideology = social_conservative_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Manuel Troncoso Concha"
+	desc = "POLITICS_MANUEL_CONCHA_DESC"
+	picture = "Portrait_Manuel_Troncoso_Concha.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Rafael Trujillo Molina"
+	desc = "POLITICS_RAFAEL_TRUJILLO_DESC"
+	picture = "Portrait_Dominican_Rafael_Trujillo.tga"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+	traits = {}
+}
+
+### Field Marshal
+create_field_marshal = { #Auto-Generated
+	name = "Rafael Trujillo Molina"
+	picture = "Portrait_Dominican_Rafael_Trujillo.tga"
+	id = 1470
+	traits = {
+		politically_connected
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+### Corps Commander ###
+create_corps_commander = { #Auto-Generated
+	name = "Ramón Vásquez Rivera"
+	picture = "Portrait_Ramon_Vasquez_Rivera.tga"
+	id = 1471
+	traits = {
+		organizer
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+### Navy Leader

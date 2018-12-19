@@ -1,0 +1,20 @@
+state = {
+	id = 990
+	name = "STATE_990"
+	manpower = 68189
+
+	state_category = wasteland
+
+	history = {
+		owner = ARB
+		add_core_of = ARB
+		add_claim_by = ARB
+		buildings = {
+			infrastructure = 2
+		}
+	}
+
+	provinces = {
+		4974 5058 8101 10815 10901
+	}
+}

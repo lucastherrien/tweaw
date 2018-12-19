@@ -1,0 +1,137 @@
+﻿capital = 525 #South Korea - Seoul or Busan
+OOB = "empty"
+
+set_technology = {
+	#### MOD ####
+	### General ###
+	electronic_mechanical_engineering = 1
+
+	### Navy ###
+	destroyer_one = 1
+	destroyer_two = 1
+	destroyer_three = 1
+	light_cruiser_one = 1
+	light_cruiser_two = 1
+	light_cruiser_three = 1
+	heavy_cruiser_one = 1
+	heavy_cruiser_two = 1
+	dreadnought_one = 1
+	dreadnought_two = 1
+	dreadnought_three = 1
+	carrier_one = 1
+	carrier_two = 1
+	submarine_one = 1
+	submarine_two = 1
+	submarine_three = 1
+	submarine_four = 1
+	nav_infra_one = 1
+	nav_infra_two = 1
+	nav_av_one = 1
+	nav_av_two = 1
+	transport = 1
+	#### Tanks ####
+	#### INF ####
+	infantry_weapons = 1
+	tech_support = 1
+	gw_artillery = 1
+	#### AIR ####
+	early_fighter = 1
+}
+set_research_slots = 2
+set_politics = {
+
+	parties = {
+		totalist = {
+			popularity = 3
+		}
+		radical_socialist = {
+			popularity = 10
+		}
+		syndicalist = {
+			popularity = 15
+		}
+		social_democrat = {
+			popularity = 47
+		}
+		social_liberal = {
+			popularity = 11
+		}
+		market_liberal = {
+			popularity = 6
+		}
+		social_conservative = {
+			popularity = 5
+		}
+		authoritarian_democrat = {
+			popularity = 2
+		}
+		paternal_autocrat = {
+			popularity = 1
+		}
+		national_populist = {
+			popularity = 0
+		}
+	}
+
+	ruling_party = social_democrat
+	last_election = "1888.15.6"
+	election_frequency = 48
+	elections_allowed = no
+
+}
+
+### Field Marshal
+### Corps Commander
+create_corps_commander = { #Auto-Generated
+	name = "Chae Byong Duk"
+	portrait_path = "gfx/leaders/KOR/Portrait_KOR_Chae_Byong_Duk.tga"
+	traits = {
+		career_officer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = { #Auto-Generated
+	name = "Chi Chun Chung"
+	portrait_path = "gfx/leaders/KOR/Portrait_KOR_Chi_Chun_Chung.tga"
+	traits = {
+		skilled_staffer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = { #Auto-Generated
+	name = "Kim Won Bong"
+	portrait_path = "gfx/leaders/KOR/Portrait_KOR_Kim_Won_Bong.tga"
+	traits = {
+		trickster
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = { #Auto-Generated
+	name = "Lee Chung Chun"
+	portrait_path = "gfx/leaders/KOR/Portrait_KOR_Lee_Chung_Chun.tga"
+	traits = {
+		inflexible_strategist
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+### Navy Leader

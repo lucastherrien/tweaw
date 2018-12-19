@@ -1,0 +1,27 @@
+state = {		#Damascus
+	id = 554
+	name = "STATE_554"
+
+	history = {
+		owner = ARB
+		add_core_of = TUR
+		add_core_of = ARB
+		victory_points = {
+			4111 20
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 2
+
+		}
+	}
+
+	provinces = {
+		1056 1074 4111 4486 4550 7001 7151 7170 7184 10383
+	}
+	manpower = 1220691
+	buildings_max_level_factor = 1
+	state_category = town
+}

@@ -1,0 +1,255 @@
+﻿capital = 16
+
+oob = "empty"
+
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	### MOD ###
+	electronic_mechanical_engineering = 1
+
+	### Navy ###
+	destroyer_one = 1
+	destroyer_two = 1
+	destroyer_three = 1
+	destroyer_four = 1
+	light_cruiser_one = 1
+	light_cruiser_two = 1
+	light_cruiser_three = 1
+	light_cruiser_four = 1
+	light_cruiser_five = 1
+	heavy_cruiser_one = 1
+	heavy_cruiser_two = 1
+	heavy_cruiser_three = 1
+	heavy_cruiser_four = 1
+	battleship_one = 1
+	battleship_two = 1
+	battleship_three = 1
+	battleship_four = 1
+	battleship_five = 1
+	dreadnought_one = 1
+	dreadnought_two = 1
+	dreadnought_three = 1
+	dreadnought_four = 1
+	dreadnought_five = 1
+	dreadnought_six = 1
+	dreadnought_seven = 1
+	carrier_one = 1
+	carrier_two = 1
+	carrier_three = 1
+	submarine_one = 1
+	submarine_two = 1
+	submarine_three = 1
+	submarine_four = 1
+	submarine_five = 1
+	nav_infra_one = 1
+	nav_infra_two = 1
+	nav_infra_three = 1
+	nav_av_one = 1
+	nav_av_two = 1
+	nav_av_three = 1
+	transport = 1
+	### Tanks ###
+	gwtank = 1
+	basic_light_tank = 1
+	basic_heavy_tank = 1
+	### INF ###
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+
+	tech_engineers = 1
+	tech_recon = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	### AIR ###
+	early_fighter = 1
+	naval_bomber1 = 1
+	early_bomber = 1
+
+	cv_early_fighter = 1
+	cv_naval_bomber1 = 1
+}
+
+
+set_convoys = 60
+set_stability = 0.2
+set_war_support = 0.3
+add_opinion_modifier = { target = SRI modifier = embargo }
+add_opinion_modifier = { target = ENG modifier = embargo }
+add_opinion_modifier = { target = FRA modifier = embargo }
+add_opinion_modifier = { target = CSA modifier = embargo }
+add_opinion_modifier = { target = BHC modifier = embargo }
+add_opinion_modifier = { target = GEO modifier = embargo }
+
+set_politics = {
+
+	parties = {
+		totalist = {
+			popularity = 0
+		}
+		radical_socialist = {
+			popularity = 0
+		}
+		syndicalist = {
+			popularity = 0
+		}
+		social_democrat = {
+			popularity = 5
+		}
+		social_liberal = {
+			popularity = 10
+		}
+		market_liberal = {
+			popularity = 10
+		}
+		social_conservative = {
+			popularity = 20
+		}
+		authoritarian_democrat = {
+			popularity = 50
+		}
+		paternal_autocrat = {
+			popularity = 5
+		}
+		national_populist = {
+			popularity = 0
+		}
+	}
+
+	ruling_party = authoritarian_democrat
+	last_election = "1932.5.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+### Field Marshal
+### Corps Commander
+
+create_corps_commander = { #Auto-Generated
+	name = "Charles-Marie Condé"
+	portrait_path = "gfx/leaders/FRP/Portrait_FRP_Condé.tga"
+	traits = {
+		infantry_officer
+		trickster
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = { #Auto-Generated
+	name = "Paul-André Doyen"
+	portrait_path = "gfx/leaders/FRP/Portrait_FRP_Doyen.tga"
+	traits = {
+		infantry_officer
+		trait_engineer
+		trait_mountaineer
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = { #Auto-Generated
+	name = "Bertrand Fagalde"
+	portrait_path = "gfx/leaders/FRP/Portrait_FRP_Fagalde.tga"
+	traits = {
+		old_guard
+		trickster
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = { #Auto-Generated
+	name = "Alphonse Georges"
+	portrait_path = "gfx/leaders/FRP/Portrait_FRP_Georges.tga"
+	traits = {
+		career_officer
+		old_guard
+		trait_cautious
+		organizer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 4
+	logistics_skill = 2
+}
+
+create_corps_commander = { #Auto-Generated
+	name = "Marcel Ihler"
+	portrait_path = "gfx/leaders/FRP/Portrait_FRP_Ihler.tga"
+	traits = {
+		infantry_officer
+		organizer
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = { #Auto-Generated
+	name = "Pierre de la Font-Chabert"
+	portrait_path = "gfx/leaders/FRP/Portrait_FRP_Lafont_Chabert.tga"
+	traits = {
+		trait_reckless
+		cavalry_officer
+		cavalry_leader
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = { #Auto-Generated
+	name = "Henry Martin"
+	portrait_path = "gfx/leaders/FRP/Portrait_FRP_Martin.tga"
+	traits = {
+		old_guard
+		inflexible_strategist
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = { #Auto-Generated
+	name = "Charles Mast"
+	portrait_path = "gfx/leaders/FRP/Portrait_FRP_Mast.tga"
+	traits = {
+		infantry_officer
+		organizer
+		skilled_staffer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+### Navy Leader
+create_navy_leader = { #Auto-Generated
+	name = "Jean de Laborde"
+	portrait_path = "gfx/leaders/FRP/Portrait_FRP_Labord.tga"
+	traits = {
+		old_guard_navy
+	}
+	skill = 1
+}

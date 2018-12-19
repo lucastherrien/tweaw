@@ -1,0 +1,60 @@
+ideas = {
+
+##############
+# Country ideas
+##############
+
+##############
+# Companies
+##############
+
+#### General ####
+	industrial_concern = {
+	}
+
+#### Weapons Manufacturer ####
+	weapons_manufacturer = {
+		designer = yes
+	}
+
+#### Heavy Equipment Manufacturer ####	
+	tank_manufacturer = {
+		designer = yes
+	}
+
+#### Air and Naval Manufacturer ####
+	air_naval_manufacturer = {
+		designer = yes
+
+		havanashipyard = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea havanashipyard"}
+			allowed = {
+				original_tag = CUB
+			}
+			traits = {
+				small_ship_producer_mass_1
+			}
+			modifier = {}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+		Waco_Aircraft_Company = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea Waco_Aircraft_Company"}
+			allowed = { original_tag = CUB }
+			traits = {
+				fighter_producer_defense_0
+			}
+			modifier = {}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+	}
+
+##############
+# Theorist
+##############
+	theorist = {
+	}
+}

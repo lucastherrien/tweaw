@@ -1,0 +1,42 @@
+state = {
+	id = 160
+	name = "STATE_160"
+	resources = {
+		steel = 32
+		aluminium = 18
+	}
+
+	history = {
+		owner = SRI
+		victory_points = {
+			6626 1
+		}
+		victory_points = {
+			603 3
+		}
+		victory_points = {
+			11584 20
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 4
+			air_base = 3
+			11584 = {
+				naval_base = 6
+				bunker = 1
+			}
+			9582 = {
+				bunker = 3
+			}
+		}
+		add_core_of = SRI
+
+	}
+
+	provinces = {
+		603 3604 9582 11584
+	}
+	manpower = 3349800
+	buildings_max_level_factor = 1
+	state_category = large_city
+}

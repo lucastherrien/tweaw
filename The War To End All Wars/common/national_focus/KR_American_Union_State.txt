@@ -1,0 +1,5043 @@
+###########################
+# American Union State Focus Tree
+# By Herkles
+###########################
+focus_tree = {
+	id = AUS
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = TEX
+		}
+	}
+	default = no
+### Huey Long Path ###
+	focus = {# New Washington
+		id = TEX_new_washington
+		icon = GFX_goal_USA_president_long
+		cost = 7.25
+		available = {
+			has_global_flag = USA_civil_war_over_flag
+			has_government = authoritarian_democrat
+		}
+		bypass = {
+			has_global_flag = USA_civil_war_over_flag
+			has_government = authoritarian_democrat
+		}
+		ai_will_do = { factor = 5 }
+		x = 5
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_new_washington"
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+	focus = {# Root out Traitors
+		id = TEX_root_out_out_traitors
+		icon = GFX_goal_purge_opposition
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_new_washington
+		}
+		available = { has_government = authoritarian_democrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		ai_will_do = { factor = 5 }
+		x = 3
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_root_out_out_traitors"
+			unlock_decision_tooltip = TEX_fight_socialist_terrorists
+			unlock_decision_tooltip = TEX_fight_federalist_terrorists
+		}
+	}
+	focus = {# Expand the Minutemen
+		id = TEX_expand_the_minute_men
+		icon = GFX_goal_USA_national_guard
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_root_out_out_traitors
+		}
+		available = { has_government = authoritarian_democrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		ai_will_do = { factor = 5 }
+		x = 1
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_expand_the_minute_men"
+			add_ideas = TEX_minutemen_idea
+		}
+	}
+	focus = {# Election Monitoring
+		id = TEX_election_monitoring
+		icon = GFX_goal_DOM_Call_Special_Election
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_expand_the_minute_men
+		}
+		available = { has_government = authoritarian_democrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		ai_will_do = { factor = 5 }
+		x = 1
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_election_monitoring"
+			add_popularity = { ideology = authoritarian_democrat popularity = 0.1 }
+			add_stability = 0.05
+		}
+	}
+	focus = {# Destroy the Klan
+		id = TEX_destroy_the_klan
+		icon = GFX_HOL_crackdown_natpop
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_expand_the_minute_men
+		}
+		available = { has_government = authoritarian_democrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 2
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_destroy_the_klan"
+			add_popularity = { ideology = national_populist popularity = -0.2 }
+			add_popularity = { ideology = paternal_autocrat popularity = -0.2 }
+		}
+	}
+	focus = {# Ensure Loyalty
+		id = TEX_ensure_loyalty
+		icon = GFX_goal_ideology_authoritarian_democrat
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_root_out_out_traitors
+		}
+		available = { has_government = authoritarian_democrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 3
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_ensure_loyalty"
+			add_political_power = 80
+			add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
+		}
+	}
+	focus = {# Reward Loyalty
+		id = TEX_reward_loyalty
+		icon = GFX_goal_KTG_Belgian_Officers2
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_ensure_loyalty
+		}
+		available = { has_government = authoritarian_democrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 3
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_reward_loyalty"
+			add_political_power = 80
+			add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
+		}
+	}
+	focus = {# National Political machine
+		id = TEX_national_political_machine
+		icon = GFX_goal_Centralised_Government
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_new_washington
+		}
+		available = { has_government = authoritarian_democrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 5
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_national_political_machine"
+			add_ideas = TEX_national_political_machine_idea
+		}
+	}
+	focus = {# New Democracy
+		id = TEX_new_democracy
+		icon = GFX_goal_volunteer_alliance
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_national_political_machine
+		}
+		available = { has_government = authoritarian_democrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 5
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_new_democracy"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea
+					add_idea = USA_civil_war_aftermath_idea2
+				}
+			}
+		}
+	}
+	focus = {# People's Commission
+		id = TEX_peoples_commission
+		icon = GFX_goal_government_icon
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_new_democracy
+		}
+		available = { has_government = authoritarian_democrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 5
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_peoples_commission"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea2 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea2
+					add_idea = USA_civil_war_aftermath_idea3
+				}
+			}
+		}
+	}
+	focus = {# Every Man a King
+		id = TEX_every_man_a_king
+		icon = GFX_goal_generic_improve_relations
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_new_washington
+		}
+		available = { has_government = authoritarian_democrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 7
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_every_man_a_king"
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {# For the Poor Man
+		id = TEX_for_the_poor_man
+		icon = GFX_goal_generic_national_unity
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_every_man_a_king
+		}
+		available = { has_government = authoritarian_democrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 7
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_for_the_poor_man"
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {# Populist Education
+		id = TEX_populist_education
+		icon = GFX_goal_KTG_Bookstack
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_for_the_poor_man
+		}
+		available = { has_government = authoritarian_democrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 7
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_populist_education"
+			add_ideas = TEX_populist_education_idea
+		}
+	}
+	focus = {# Road map for the Future
+		id = TEX_road_map_for_the_future
+		icon = GFX_goal_constitutional_guarantees
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_every_man_a_king
+		}
+		available = { has_government = authoritarian_democrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 9
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_road_map_for_the_future"
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	focus = {# National Youth Administration
+		id = TEX_national_youth_adminstration
+		icon = GFX_focus_generic_military_academy
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_road_map_for_the_future
+		}
+		available = { has_government = authoritarian_democrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 9
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_national_youth_adminstration"
+			add_ideas = TEX_national_youth_adminstration_idea
+		}
+	}
+	focus = {# Share the Wealth
+		id = TEX_share_the_wealth
+		icon = GFX_goal_gold_reserve
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_road_map_for_the_future
+		}
+		available = { has_government = authoritarian_democrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 8
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_share_the_wealth"
+			add_ideas = TEX_share_the_wealth_idea
+		}
+	}
+	focus = {# Imperial presidency
+		id = TEX_imperial_presidency
+		icon = GFX_goal_generic_political_pressure
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_election_monitoring
+		}
+		prerequisite = {
+			focus = TEX_peoples_commission
+		}
+		available = { has_government = authoritarian_democrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 4
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_imperial_presidency"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea3 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea3
+					add_idea = USA_civil_war_aftermath_idea4
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea4 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea4
+					add_idea = USA_civil_war_aftermath_idea5
+				}
+			}
+		}
+	}
+	focus = {# Fight fire with fire
+		id = TEX_fire_with_fire
+		icon = GFX_goal_generic_demand_territory
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_national_youth_adminstration
+		}
+		prerequisite = {
+			focus = TEX_peoples_commission
+		}
+		available = { has_government = authoritarian_democrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 6
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_fire_with_fire"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea3 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea3
+					add_idea = USA_civil_war_aftermath_idea4
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea4 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea4
+					add_idea = USA_civil_war_aftermath_idea5
+				}
+			}
+		}
+	}
+	focus = {# a Perfect Democracy
+		id = TEX_perfect_democracy
+		icon = GFX_goal_authoritarian
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_imperial_presidency
+		}
+		prerequisite = {
+			focus = TEX_fire_with_fire
+		}
+		available = { has_government = authoritarian_democrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		ai_will_do = { factor = 100 }
+		x = 5
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_perfect_democracy"
+			remove_ideas = USA_civil_war_aftermath_idea5
+		}
+	}
+## Moseley Path ###
+	focus = {# The Business Plot
+		id = TEX_the_business_plot
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 7.25
+		available = {
+			has_global_flag = USA_civil_war_over_flag
+			has_government = paternal_autocrat
+		}
+		bypass = {
+			has_global_flag = USA_civil_war_over_flag
+			has_government = paternal_autocrat
+		}
+		ai_will_do = { factor = 5 }
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 16
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_the_business_plot"
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+	focus = {# Use the FBI
+		id = TEX_use_the_fbi
+		icon = GFX_goal_secret_agents
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_the_business_plot
+		}
+		available = { has_government = paternal_autocrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 14
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_use_the_fbi"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea
+					add_idea = USA_civil_war_aftermath_idea2
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea2 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea2
+					add_idea = USA_civil_war_aftermath_idea3
+				}
+			}
+		}
+	}
+	focus = {# Alien and Sedition act
+		id = TEX_alien_and_sedition_act
+		icon = GFX_goal_constitutional_guarantees
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_use_the_fbi
+		}
+		available = { has_government = paternal_autocrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 12
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_alien_and_sedition_act"
+			add_political_power = 50
+			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+		}
+	}
+	focus = {# COINTELPRO
+		id = TEX_cointelpro
+		icon = GFX_goal_authority
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_alien_and_sedition_act
+		}
+		available = { has_government = paternal_autocrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 12
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_cointelpro"
+			add_ideas = TEX_cointelpro_idea
+			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+		}
+	}
+	focus = {# Purge dissidents
+		id = TEX_purge_dissidents
+		icon = GFX_goal_purge_opposition
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_alien_and_sedition_act
+		}
+		available = { has_government = paternal_autocrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 13
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_purge_dissidents"
+			unlock_decision_tooltip = TEX_fight_socialist_terrorists
+			unlock_decision_tooltip = TEX_fight_federalist_terrorists
+		}
+	}
+	focus = {# Office of Policy Coordination
+		id = TEX_office_of_policy_coordination
+		icon = GFX_goal_HOL_progressive_tax
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_use_the_fbi
+		}
+		available = { has_government = paternal_autocrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 14
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_office_of_policy_coordination"
+			add_war_support = 0.1
+			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+		}
+	}
+	focus = {# The Black Chamber
+		id = TEX_the_black_chamber
+		icon = GFX_goal_authority
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_office_of_policy_coordination
+		}
+		available = { has_government = paternal_autocrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 14
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_the_black_chamber"
+			add_stability = 0.1
+			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
+		}
+	}
+	focus = {# American Nationalism
+		id = TEX_american_nationalism
+		icon = GFX_goal_usa
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_the_business_plot
+		}
+		available = { has_government = paternal_autocrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 16
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_american_nationalism"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea
+					add_idea = USA_civil_war_aftermath_idea2
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea2 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea2
+					add_idea = USA_civil_war_aftermath_idea3
+				}
+			}
+		}
+	}
+	focus = {# The American Legion
+		id = TEX_the_american_legion
+		icon = GFX_america_goal_eagle_deal
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_american_nationalism
+		}
+		available = { has_government = paternal_autocrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 16
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_the_american_legion"
+			add_ideas = TEX_the_american_legion_idea
+		}
+	}
+	focus = {# Nationalize the Boy Scouts
+		id = TEX_nationalize_boy_scouts
+		icon = GFX_focus_generic_military_academy
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_the_american_legion
+		}
+		available = { has_government = paternal_autocrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 16
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_nationalize_boy_scouts"
+			add_ideas = USA_boy_scouts_idea
+		}
+	}
+	focus = {# Fordism
+		id = TEX_fordism
+		icon = GFX_goal_USA_american_industry
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_the_business_plot
+		}
+		available = { has_government = paternal_autocrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 18
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_fordism"
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	focus = {# American Capitalism
+		id = TEX_american_capitalism1
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_fordism
+		}
+		available = { has_government = paternal_autocrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 18
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_american_capitalism1"
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {# Capitalist Education
+		id = TEX_capitalist_education
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_american_capitalism1
+		}
+		available = { has_government = paternal_autocrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 18
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_capitalist_education"
+			add_ideas = TEX_capitalist_education_idea
+		}
+	}
+	focus = {# Captains of Industry
+		id = TEX_captains_of_industry
+		icon = GFX_goal_capitalist_system
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_fordism
+		}
+		available = { has_government = paternal_autocrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 20
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_captains_of_industry"
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {# Industrial Security act
+		id = TEX_industrial_security_act
+		icon = GFX_goal_generic_production2
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_captains_of_industry
+		}
+		available = { has_government = paternal_autocrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 20
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_industrial_security_act"
+			add_ideas = TEX_industrial_security_act_idea
+		}
+	}
+	focus = {# Pass NIRA
+		id = TEX_pass_nira
+		icon = GFX_goal_new_treaty
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_captains_of_industry
+		}
+		available = { has_government = paternal_autocrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 19
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_pass_nira"
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {# Red Scare
+		id = TEX_red_scare
+		icon = GFX_HOL_red_scare
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_nationalize_boy_scouts
+		}
+		prerequisite = {
+			focus = TEX_cointelpro
+		}
+		available = { has_government = paternal_autocrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 15
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_red_scare"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea3 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea3
+					add_idea = USA_civil_war_aftermath_idea4
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea4 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea4
+					add_idea = USA_civil_war_aftermath_idea5
+				}
+			}
+		}
+	}
+	focus = {# Traditional Values
+		id = TEX_traditional_values
+		icon = GFX_goal_support_democracy
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_nationalize_boy_scouts
+		}
+		prerequisite = {
+			focus = TEX_industrial_security_act
+		}
+		available = { has_government = paternal_autocrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 17
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_traditional_values"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea3 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea3
+					add_idea = USA_civil_war_aftermath_idea4
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea4 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea4
+					add_idea = USA_civil_war_aftermath_idea5
+				}
+			}
+		}
+	}
+	focus = {# Republic without Democracy
+		id = TEX_republic_without_democracy
+		icon = GFX_goal_government_icon
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_red_scare
+		}
+		prerequisite = {
+			focus = TEX_traditional_values
+		}
+		available = { has_government = paternal_autocrat}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		ai_will_do = { factor = 100 }
+		x = 16
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_republic_without_democracy"
+			remove_ideas = USA_civil_war_aftermath_idea5
+		}
+	}
+### Pelley Path ###
+	focus = {# Mine Eyes have seen the Glory
+		id = TEX_mine_have_seen_the_glory
+		icon = GFX_goal_ideology_national_populist
+		cost = 7.25
+		available = {
+			has_global_flag = USA_civil_war_over_flag
+			has_government = national_populist
+		}
+		bypass = {
+			has_global_flag = USA_civil_war_over_flag
+			has_government = national_populist
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 27
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_mine_have_seen_the_glory"
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+	focus = {# The Silver Legion
+		id = TEX_the_silver_legion
+		icon = GFX_focus_generic_military_mission
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_mine_have_seen_the_glory
+		}
+		available = { has_government = national_populist}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 25
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_the_silver_legion"
+			add_ideas = TEX_the_silver_legion_idea
+		}
+	}
+	focus = {# Absorb the Klan
+		id = TEX_absorb_the_klan
+		icon = GFX_goal_national_populism
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_the_silver_legion
+		}
+		available = { has_government = national_populist}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 23
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_absorb_the_klan"
+			add_political_power = 100
+			add_popularity = { ideology = national_populist popularity = 0.05 }
+		}
+	}
+	focus = {# Crackdown on traitors
+		id = TEX_crackdown_on_traitors
+		icon = GFX_goal_purge_opposition
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_absorb_the_klan
+		}
+		available = { has_government = national_populist}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 23
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_crackdown_on_traitors"
+			unlock_decision_tooltip = TEX_fight_socialist_terrorists
+			unlock_decision_tooltip = TEX_fight_federalist_terrorists
+		}
+	}
+	focus = {# covenant Sword and Arm
+		id = TEX_covenant_sword_and_arm
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_absorb_the_klan
+		}
+		available = { has_government = national_populist}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 24
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_covenant_sword_and_arm"
+			add_war_support = 0.05
+			add_popularity = { ideology = national_populist popularity = 0.05 }
+		}
+	}
+	focus = {# Camps for Syndies
+		id = TEX_camps_for_syndies
+		icon = GFX_goal_skull_treaty
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_the_silver_legion
+		}
+		available = { has_government = national_populist}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 25
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_camps_for_syndies"
+			add_ideas = TEX_work_camps_idea
+		}
+	}
+	focus = {# Forced Labor
+		id = TEX_forced_labor
+		icon = GFX_goal_skull_fortification
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_camps_for_syndies
+		}
+		available = { has_government = national_populist}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 25
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_forced_labor"
+			add_popularity = { ideology = authoritarian_democrat popularity = -0.2 }
+			add_popularity = { ideology = paternal_autocrat popularity = -0.2 }
+		}
+	}
+	focus = {# Jim Crow's America
+		id = TEX_jim_crows_america
+		icon = GFX_goal_support_fascism
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_mine_have_seen_the_glory
+		}
+		available = { has_government = national_populist}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 27
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_jim_crows_america"
+			add_ideas = TEX_jim_crows_america_idea
+		}
+	}
+	focus = {# Protecting Our Race
+		id = TEX_protecting_our_race
+		icon = GFX_goal_HOL_amend_wapenwet
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_jim_crows_america
+		}
+		available = { has_government = national_populist}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 27
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_protecting_our_race"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea
+					add_idea = USA_civil_war_aftermath_idea2
+				}
+			}
+		}
+	}
+	focus = {# Segregation forever
+		id = TEX_segregation_forever
+		icon = GFX_goal_flames_of_rebellion
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_protecting_our_race
+		}
+		available = { has_government = national_populist}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 27
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_segregation_forever"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea2 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea2
+					add_idea = USA_civil_war_aftermath_idea3
+				}
+			}
+		}
+	}
+	focus = {# Christian Commonwealth
+		id = TEX_christian_commonwealth
+		icon = GFX_BEL_Improve_Catholic_Relations
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_mine_have_seen_the_glory
+		}
+		available = { has_government = national_populist}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 29
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_christian_commonwealth"
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {# White Welfare
+		id = TEX_white_welfare
+		icon = GFX_goal_gold_reserve
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_christian_commonwealth
+		}
+		available = { has_government = national_populist}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 29
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_white_welfare"
+			add_ideas = TEX_white_welfare_idea
+		}
+	}
+	focus = {# Christian education
+		id = TEX_christian_education
+		icon = GFX_BEL_Catholic_Education
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_white_welfare
+		}
+		available = { has_government = national_populist}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 29
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_christian_education"
+			add_ideas = TEX_christian_education_idea
+		}
+	}
+	focus = {# Christian Identity
+		id = TEX_christian_identity
+		icon = GFX_goal_authority
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_christian_commonwealth
+		}
+		available = { has_government = national_populist}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 31
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_christian_identity"
+			add_political_power = 100
+			add_stability = 0.1
+		}
+	}
+	focus = {# Christian Work Ethic
+		id = TEX_christian_work_ethic
+		icon = GFX_goal_production
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_christian_identity
+		}
+		available = { has_government = national_populist}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 31
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_christian_work_ethic"
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	focus = {# Christian Service Brigade
+		id = TEX_christian_service_brigade
+		icon = GFX_focus_generic_military_academy
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_christian_identity
+		}
+		available = { has_government = national_populist}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 30
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_christian_service_brigade"
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {# White Citizens Council
+		id = TEX_citzens_council
+		icon = GFX_focus_generic_self_management
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_segregation_forever
+		}
+		prerequisite = {
+			focus = TEX_crackdown_on_traitors
+		}
+		available = { has_government = national_populist}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 26
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_citzens_council"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea3 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea3
+					add_idea = USA_civil_war_aftermath_idea4
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea4 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea4
+					add_idea = USA_civil_war_aftermath_idea5
+				}
+			}
+		}
+	}
+	focus = {# Church and State
+		id = TEX_church_and_state
+		icon = GFX_goal_faith_and_state
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_segregation_forever
+		}
+		prerequisite = {
+			focus = TEX_christian_work_ethic
+		}
+		available = { has_government = national_populist}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		x = 28
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_church_and_state"
+			custom_effect_tooltip = USA_political_recovery_tooltip
+			if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea3 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea3
+					add_idea = USA_civil_war_aftermath_idea4
+				}
+			}
+			else_if = {
+				limit = { has_idea = USA_civil_war_aftermath_idea4 }
+				swap_ideas = {
+					remove_idea = USA_civil_war_aftermath_idea4
+					add_idea = USA_civil_war_aftermath_idea5
+				}
+			}
+		}
+	}
+	focus = {# America is Born Again
+		id = TEX_america_is_born_again
+		icon = GFX_goal_generic_demand_territory
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_citzens_council
+		}
+		prerequisite = {
+			focus = TEX_church_and_state
+		}
+		available = { has_government = national_populist}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		ai_will_do = { factor = 100 }
+		x = 27
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_america_is_born_again"
+			remove_ideas = USA_civil_war_aftermath_idea5
+		}
+	}
+### Economic Path ###
+	focus = {# rebuilding the country
+		id = TEX_rebuilding_the_country
+		icon = GFX_goal_production
+		cost = 7.25
+		available = { has_global_flag = USA_civil_war_over_flag	}
+		ai_will_do = { factor = 4 }
+		x = 39
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_rebuilding_the_country"
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	focus = {# National Recovery administration
+		id = TEX_national_recovery
+		icon = GFX_goal_USA_nra
+		cost = 7.25
+		available = {
+			OR = {
+				has_government = authoritarian_democrat
+				has_government = national_populist
+			}
+		}
+		prerequisite = {
+			focus = TEX_rebuilding_the_country
+		}
+		mutually_exclusive = {
+			focus = TEX_military_industrial_complex
+		}
+		ai_will_do = { factor = 4 }
+		x = 36
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_national_recovery"
+			swap_ideas = {
+				remove_idea = USA_civil_war_depression_idea
+				add_idea = TEX_national_recovery_idea1
+			}
+		}
+	}
+	focus = {# Public Works Agency
+		id = TEX_public_works
+		icon = GFX_goal_generic_production2
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_national_recovery
+		}
+		ai_will_do = { factor = 4 }
+		available_if_capitulated = no
+		x = 33
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_public_works"
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {# National Research Administration
+		id = TEX_research_projects
+		icon = GFX_goal_great_science
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_public_works
+		}
+		ai_will_do = { factor = 4 }
+		available_if_capitulated = no
+		x = 33
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_research_projects"
+			add_research_slot = 1
+		}
+	}
+	focus = {# Civil Works Administration
+		id = TEX_civil_works_adminstration
+		icon = GFX_goal_production
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_national_recovery
+		}
+		prerequisite = {
+			focus = TEX_national_recovery
+		}
+		ai_will_do = { factor = 4 }
+		x = 35
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_civil_works_adminstration"
+			custom_effect_tooltip = USA_economic_recovery_tooltip
+			swap_ideas = {
+				remove_idea = TEX_national_recovery_idea1
+				add_idea = TEX_national_recovery_idea2
+			}
+		}
+	}
+	focus = {# Civilian Conservation Corps
+		id = TEX_the_ccc
+		icon = GFX_goal_generic_construction2
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_civil_works_adminstration
+		}
+		ai_will_do = { factor = 4 }
+		x = 34
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_the_ccc"
+			custom_effect_tooltip = USA_economic_recovery_tooltip
+			if = {
+				limit = { has_idea = TEX_national_recovery_idea2 }
+				swap_ideas = {
+					remove_idea = TEX_national_recovery_idea2
+					add_idea = TEX_national_recovery_idea3
+				}
+			}
+			else_if = {
+				limit = { has_idea = TEX_national_recovery_idea3 }
+				swap_ideas = {
+					remove_idea = TEX_national_recovery_idea3
+					add_idea = TEX_national_recovery_idea4
+				}
+			}
+		}
+	}
+	focus = {# Rural Electrification
+		id = TEX_rural_electrification
+		icon = GFX_goal_Schelle
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_the_ccc
+		}
+		ai_will_do = { factor = 4 }
+		available_if_capitulated = no
+		x = 35
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_rural_electrification"
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.25
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+	focus = {# Agricultural Adjustment Act
+		id = TEX_the_aaa
+		icon = GFX_focus_AUS_agriculture
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_civil_works_adminstration
+		}
+		ai_will_do = { factor = 4 }
+		x = 36
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_the_aaa"
+			custom_effect_tooltip = USA_economic_recovery_tooltip
+			if = {
+				limit = { has_idea = TEX_national_recovery_idea2 }
+				swap_ideas = {
+					remove_idea = TEX_national_recovery_idea2
+					add_idea = TEX_national_recovery_idea3
+				}
+			}
+			else_if = {
+				limit = { has_idea = TEX_national_recovery_idea3 }
+				swap_ideas = {
+					remove_idea = TEX_national_recovery_idea3
+					add_idea = TEX_national_recovery_idea4
+				}
+			}
+		}
+	}
+	focus = {# Farm Security Administration
+		id = TEX_farm_security_administration
+		icon = GFX_IRE_farms
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_the_aaa
+		}
+		ai_will_do = { factor = 4 }
+		x = 37
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_farm_security_administration"
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			375 = {
+				if = {
+					limit = { is_owned_by = TEX }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			374 = {
+				if = {
+					limit = { is_owned_by = TEX }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			383 = {
+				if = {
+					limit = { is_owned_by = TEX }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			373 = {
+				if = {
+					limit = { is_owned_by = TEX }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			368 = {
+				if = {
+					limit = { is_owned_by = TEX }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			372 = {
+				if = {
+					limit = { is_owned_by = TEX }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			833 = {
+				if = {
+					limit = { is_owned_by = TEX }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			363 = {
+				if = {
+					limit = { is_owned_by = TEX }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {# Begin Reconstruction
+		id = TEX_begin_reconstruction
+		icon = GFX_goal_economic_control
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_national_recovery
+			focus = TEX_military_industrial_complex
+		}
+		ai_will_do = { factor = 4 }
+		available_if_capitulated = no
+		x = 39
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_begin_reconstruction"
+			unlock_decision_category_tooltip = TEX_reconstruction_decisions
+		}
+	}
+	focus = {# Harsh Reconstruction
+		id = TEX_harsh_reconstruction
+		icon = GFX_goal_authoritarian
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_begin_reconstruction
+		}
+		mutually_exclusive = {
+			focus = TEX_reconciliation
+		}
+		ai_will_do = { factor = 4 }
+		x = 38
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_harsh_reconstruction"
+			add_political_power = 100
+		}
+	}
+	focus = {# Reconciliation
+		id = TEX_reconciliation
+		icon = GFX_america_goal_eagle_deal
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_begin_reconstruction
+		}
+		mutually_exclusive = {
+			focus = TEX_harsh_reconstruction
+		}
+		ai_will_do = { factor = 4 }
+		x = 40
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_reconciliation"
+			add_stability = 0.10
+		}
+	}
+	focus = {# Military Industrial Complex
+		id = TEX_military_industrial_complex
+		icon = GFX_goal_factory_complex
+		cost = 7.25
+		available = {
+			OR = {
+				has_government = paternal_autocrat
+				has_government = national_populist
+			}
+		}
+		prerequisite = {
+			focus = TEX_rebuilding_the_country
+		}
+		mutually_exclusive = {
+			focus = TEX_national_recovery
+		}
+		ai_will_do = { factor = 4 }
+		x = 42
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_military_industrial_complex"
+			custom_effect_tooltip = USA_economic_recovery_tooltip
+			swap_ideas = {
+				remove_idea = USA_civil_war_depression_idea
+				add_idea = TEX_military_industrial_complex_idea1
+			}
+		}
+	}
+	focus = {# Corporate Alliance
+		id = TEX_coprotate_militarism
+		icon = GFX_goal_HOL_progressive_tax
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_military_industrial_complex
+		}
+		ai_will_do = { factor = 4 }
+		x = 43
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_coprotate_militarism"
+			custom_effect_tooltip = USA_economic_recovery_tooltip
+			swap_ideas = {
+				remove_idea = TEX_military_industrial_complex_idea1
+				add_idea = TEX_military_industrial_complex_idea2
+			}
+		}
+	}
+	focus = {# loosen regulations
+		id = TEX_business_subsides
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_coprotate_militarism
+		}
+		ai_will_do = { factor = 4 }
+		x = 42
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_business_subsides"
+			custom_effect_tooltip = USA_economic_recovery_tooltip
+			if = {
+				limit = { has_idea = TEX_military_industrial_complex_idea2 }
+				swap_ideas = {
+					remove_idea = TEX_military_industrial_complex_idea2
+					add_idea = TEX_military_industrial_complex_idea3
+				}
+			}
+			else_if = {
+				limit = { has_idea = TEX_military_industrial_complex_idea3 }
+				swap_ideas = {
+					remove_idea = TEX_military_industrial_complex_idea3
+					add_idea = TEX_military_industrial_complex_idea4
+				}
+			}
+		}
+	}
+	focus = {# Building Grants
+		id = TEX_building_grants
+		icon = GFX_goal_construction_engineering
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_business_subsides
+		}
+		ai_will_do = { factor = 4 }
+		x = 41
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_building_grants"
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	focus = {# Corporate Militarism
+		id = TEX_banking_act
+		icon = GFX_goal_munitions_factories
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_coprotate_militarism
+		}
+		ai_will_do = { factor = 4 }
+		x = 44
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_banking_act"
+			custom_effect_tooltip = USA_economic_recovery_tooltip
+			if = {
+				limit = { has_idea = TEX_military_industrial_complex_idea2 }
+				swap_ideas = {
+					remove_idea = TEX_military_industrial_complex_idea2
+					add_idea = TEX_military_industrial_complex_idea3
+				}
+			}
+			else_if = {
+				limit = { has_idea = TEX_military_industrial_complex_idea3 }
+				swap_ideas = {
+					remove_idea = TEX_military_industrial_complex_idea3
+					add_idea = TEX_military_industrial_complex_idea4
+				}
+			}
+		}
+	}
+	focus = {# Military Factories
+		id = TEX_military_factories
+		icon = GFX_focus_generic_tank_production
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_banking_act
+		}
+		ai_will_do = { factor = 4 }
+		x = 43
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_military_factories"
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {# America's Business is Business
+		id = TEX_american_business_is_business
+		icon = GFX_goal_USA_american_industry
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_military_industrial_complex
+		}
+		ai_will_do = { factor = 4 }
+		x = 45
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_american_business_is_business"
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {# Research Investment
+		id = TEX_create_esmwt
+		icon = GFX_goal_great_science
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_american_business_is_business
+		}
+		ai_will_do = { factor = 4 }
+		x = 45
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_create_esmwt"
+			add_research_slot = 1
+		}
+	}
+	focus = {# Reconstruction is over
+		id = TEX_reconstruction_is_over
+		icon = GFX_america_goal_champagn
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_harsh_reconstruction
+			focus = TEX_reconciliation
+		}
+		prerequisite = {
+			focus = TEX_research_projects
+			focus = TEX_rural_electrification
+			focus = TEX_farm_security_administration
+			focus = TEX_building_grants
+			focus = TEX_military_factories
+			focus = TEX_create_esmwt
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TEX_reconstruction_is_over_tooltip
+				OR = {
+					AND = {# National Recovery Administration
+						has_completed_focus = TEX_research_projects
+						has_completed_focus = TEX_rural_electrification
+						has_completed_focus = TEX_farm_security_administration
+						OR = {
+							has_completed_focus = TEX_reconciliation
+							has_completed_focus = TEX_harsh_reconstruction
+						}
+					}
+					AND = {# Military Industrial Complex
+						has_completed_focus = TEX_building_grants
+						has_completed_focus = TEX_military_factories
+						has_completed_focus = TEX_create_esmwt
+						OR = {
+							has_completed_focus = TEX_reconciliation
+							has_completed_focus = TEX_harsh_reconstruction
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = { factor = 4 }
+		x = 39
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_reconstruction_is_over"
+			if = {
+				limit = { has_idea = TEX_national_recovery_idea4 }
+				swap_ideas = {
+					remove_idea = TEX_national_recovery_idea4
+					add_idea = TEX_national_recovery_idea5
+				}
+			}
+			else_if = {
+				limit = { has_idea = TEX_military_industrial_complex_idea4 }
+				swap_ideas = {
+					remove_idea = TEX_military_industrial_complex_idea4
+					add_idea = TEX_military_industrial_complex_idea5
+				}
+			}
+		}
+	}
+### Army Path ###
+	focus = {# Fight for America
+		id = TEX_fight_for_america
+		icon = GFX_goal_LEC_armsUSA
+		cost = 7.25
+		x = 51
+		y = 0
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_fight_for_america"
+			add_war_support = 0.05
+			army_experience = 25
+		}
+	}
+	focus = {# Fire arm Manufactures
+		id = TEX_fire_arm_manufactures
+		icon = GFX_goal_production
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_fight_for_america
+		}
+		x = 49
+		y = 2
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_fire_arm_manufactures"
+			add_ideas = USA_small_arms_industry_idea
+		}
+	}
+	focus = {# Military Industry
+		id = TEX_military_industry
+		icon = GFX_focus_generic_tank_production
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_fire_arm_manufactures
+		}
+		x = 48
+		y = 3
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_military_industry"
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {# New Army Doctrines
+		id = TEX_new_army_doctrines
+		icon = GFX_goal_generic_army_doctrines
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_fight_for_america
+		}
+		x = 51
+		y = 1
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_new_army_doctrines"
+			army_experience = 25
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {# Expand National Guard
+		id = TEX_expand_national_guard
+		icon = GFX_goal_USA_national_guard
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_new_army_doctrines
+		}
+		x = 51
+		y = 2
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_expand_national_guard"
+			add_ideas = USA_national_guards_idea
+		}
+	}
+	focus = {# We Can Do It
+		id = TEX_we_can_do_it
+		icon = GFX_goal_volunteer_alliance
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_new_army_doctrines
+		}
+		x = 50
+		y = 3
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_we_can_do_it"
+			add_war_support = 0.05
+			add_stability = 0.1
+		}
+	}
+	focus = {# Trained Officers
+		id = TEX_trained_officers
+		icon = GFX_focus_generic_military_mission
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_new_army_doctrines
+		}
+		x = 52
+		y = 3
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_trained_officers"
+			add_war_support = 0.05
+			army_experience = 25
+		}
+	}
+	focus = {# New Weapons
+		id = TEX_new_training
+		icon = GFX_goal_national_arsenal
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_fight_for_america
+		}
+		x = 53
+		y = 2
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_new_training"
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	focus = {# Support Brigades
+		id = TEX_support_brigades
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_new_training
+		}
+		x = 54
+		y = 3
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_support_brigades"
+			add_tech_bonus = {
+				name = support_bonus
+				bonus = 0.5
+				uses = 2
+				category = support_tech
+			}
+		}
+	}
+	focus = {# Auto Industry
+		id = TEX_auto_industry
+		icon = GFX_goal_generic_army_motorized
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_military_industry
+		}
+		x = 47
+		y = 4
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_auto_industry"
+			add_ideas = USA_auto_industry_idea
+		}
+	}
+	focus = {# Shock and Awe
+		id = TEX_shock_and_awe
+		icon = GFX_goal_generic_army_artillery2
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_auto_industry
+		}
+		x = 47
+		y = 5
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_shock_and_awe"
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+	focus = {# Military Research
+		id = TEX_military_research
+		icon = GFX_focus_generic_combined_arms
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_military_industry
+		}
+		prerequisite = {
+			focus = TEX_we_can_do_it
+		}
+		x = 49
+		y = 4
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_military_research"
+			country_event = { id = ustates.300 days = 1 }
+		}
+	}
+	focus = {# Joint Chiefs of Staff
+		id = TEX_joint_chiefs_of_staff
+		icon = GFX_goal_planning_bonus
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_we_can_do_it
+		}
+		prerequisite = {
+			focus = TEX_trained_officers
+		}
+		x = 51
+		y = 4
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_joint_chiefs_of_staff"
+			army_experience = 25
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {# The women's Land Army
+		id = TEX_womens_land_army
+		icon = GFX_ITA_female_soldiers
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_joint_chiefs_of_staff
+		}
+		x = 50
+		y = 5
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_womens_land_army"
+			add_ideas = USA_womens_land_army_idea
+		}
+	}
+	focus = {# War Bonds
+		id = TEX_war_bonds
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_joint_chiefs_of_staff
+		}
+		x = 52
+		y = 5
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_war_bonds"
+			add_war_support = 0.05
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+	}
+	focus = {# Increase Weapons Production
+		id = TEX_increased_weapons_production
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_trained_officers
+		}
+		prerequisite = {
+			focus = TEX_support_brigades
+		}
+		x = 53
+		y = 4
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_increased_weapons_production"
+			372 = {
+				if = {
+					limit = { is_owned_by = TEX }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = { type = arms_factory level = 2	instant_build = yes	}
+				}
+			}
+			363 = {
+				if = {
+					limit = { is_owned_by = TEX }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = { type = arms_factory level = 2	instant_build = yes	}
+				}
+			}
+			368 = {
+				if = {
+					limit = { is_owned_by = TEX }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = { type = arms_factory level = 2	instant_build = yes	}
+				}
+			}
+		}
+	}
+	focus = {# Walkie Talkies
+		id = TEX_walkie_talkies
+		icon = GFX_goal_generic_radar
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_support_brigades
+		}
+		x = 55
+		y = 4
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_walkie_talkies"
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.25
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+	focus = {# Army Ranger Corps
+		id = TEX_army_ranger_corps
+		icon = GFX_goal_generic_special_forces
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_walkie_talkies
+		}
+		x = 55
+		y = 5
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_army_ranger_corps"
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				technology = tech_special_forces
+			}
+		}
+	}
+	focus = {# Armored Cavalry
+		id = TEX_armored_cavalry
+		icon = GFX_goal_generic_army_tanks
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_military_research
+		}
+		prerequisite = {
+			focus = TEX_shock_and_awe
+		}
+		x = 49
+		y = 6
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_armored_cavalry"
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+		}
+	}
+	focus = {# Rouse the Masses
+		id = TEX_rouse_the_people
+		icon = GFX_goal_national_mobilization
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_womens_land_army
+		}
+		prerequisite = {
+			focus = TEX_war_bonds
+		}
+		prerequisite = {
+			focus = TEX_army_ranger_corps
+		}
+		prerequisite = {
+			focus = TEX_shock_and_awe
+		}
+		x = 51
+		y = 6
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_rouse_the_people"
+			add_war_support = 0.05
+			add_stability = 0.1
+		}
+	}
+	focus = {# Army Bonus Bill
+		id = TEX_army_bonus_bill
+		icon = GFX_goal_new_treaty
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_army_ranger_corps
+		}
+		prerequisite = {
+			focus = TEX_increased_weapons_production
+		}
+		x = 53
+		y = 6
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_army_bonus_bill"
+			increase_ruling_party_popularity_by_5 = yes
+			add_research_slot = 1
+		}
+	}
+	focus = {# Defend America
+		id = TEX_defend_america
+		icon = GFX_goal_LEC_armsUSA
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_armored_cavalry
+		}
+		prerequisite = {
+			focus = TEX_rouse_the_people
+		}
+		prerequisite = {
+			focus = TEX_army_bonus_bill
+		}
+		x = 51
+		y = 7
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_defend_america"
+			add_war_support = 0.05
+			army_experience = 25
+		}
+	}
+### Air Force Path ###
+	focus = {# Air Force
+		id = TEX_air_force
+		icon = GFX_goal_USA_usaaf
+		cost = 7.25
+		x = 59
+		y = 0
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 1.5 has_war = yes }
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_air_force"
+			air_experience = 25
+		}
+	}
+	focus = {# Aviation Industry
+		id = TEX_wasps
+		icon = GFX_ITA_female_soldiers
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_air_force
+		}
+		x = 57
+		y = 1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_wasps"
+			air_experience = 25
+			set_rule = {
+				can_generate_female_aces = yes
+			}
+		}
+	}
+	focus = {# Pilot Training
+		id = TEX_pilot_training
+		icon = GFX_goal_KTG_Belgian_Officers2
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_air_force
+		}
+		x = 59
+		y = 1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_pilot_training"
+			air_experience = 25
+			add_tech_bonus = {
+				name = USA_pilot_training
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+	focus = {# Air Ports
+		id = TEX_air_ports
+		icon = GFX_goal_generic_construction
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_air_force
+		}
+		x = 61
+		y = 1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_air_ports"
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = air_base
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = air_base
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {# Army Air support
+		id = TEX_army_air_support
+		icon = GFX_goal_generic_occupy_start_war
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_wasps
+		}
+		prerequisite = {
+			focus = TEX_pilot_training
+		}
+		prerequisite = {
+			focus = TEX_air_ports
+		}
+		mutually_exclusive = {
+			focus = TEX_air_supremacy
+		}
+		x = 58
+		y = 2
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_army_air_support"
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = cat_battlefield_support
+			}
+		}
+	}
+	focus = {# Bomber development
+		id = TEX_bombers
+		icon = GFX_goal_generic_air_bomber
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_army_air_support
+		}
+		x = 58
+		y = 3
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_bombers"
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = tactical_bomber
+				category = cat_strategic_bomber
+			}
+		}
+	}
+	focus = {# Air supremacy
+		id = TEX_air_supremacy
+		icon = GFX_goal_generic_air_fighter2
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_wasps
+		}
+		prerequisite = {
+			focus = TEX_pilot_training
+		}
+		prerequisite = {
+			focus = TEX_air_ports
+		}
+		mutually_exclusive = {
+			focus = TEX_army_air_support
+		}
+		x = 60
+		y = 2
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_air_supremacy"
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cat_strategic_destruction
+			}
+		}
+	}
+	focus = {# fighter development
+		id = TEX_fighters
+		icon = GFX_goal_generic_air_fighter
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_air_supremacy
+		}
+		x = 60
+		y = 3
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_fighters"
+			add_tech_bonus = {
+				bonus = 0.50
+				uses = 1
+				category = fighter_techs
+			}
+		}
+	}
+	focus = {# R.A.D.A.R
+		id = TEX_radar
+		icon = GFX_goal_generic_radar
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_bombers
+			focus = TEX_fighters
+		}
+		x = 57
+		y = 4
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_radar"
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 2
+				category = radar_tech
+			}
+		}
+	}
+	focus = {# WASPs
+		id = TEX_anti_air_power
+		icon = GFX_ITA_female_soldiers
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_bombers
+			focus = TEX_fighters
+		}
+		x = 59
+		y = 4
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_anti_air_power"
+			if = {
+				limit = { NOT = { has_tech = interwar_antiair } }
+				set_technology = { interwar_antiair = 1 }
+			}
+			if = {# Louisiana
+				limit = { owns_state = 371 }
+				371 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			if = {# Texas
+				limit = { owns_state = 375 }
+				375 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				technology = antiair1
+				technology = antiair2
+				technology = antiair3
+				technology = antiair4
+				technology = antiair5
+			}
+		}
+	}
+	focus = {# Screaming Eagles
+		id = TEX_screaming_eagles
+		icon = GFX_goal_USA_screaming_eagles
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_bombers
+			focus = TEX_fighters
+		}
+		x = 61
+		y = 4
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_screaming_eagles"
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.5
+				uses = 1
+				category = para_tech
+			}
+		}
+	}
+	focus = {# Rule the Skies
+		id = TEX_rule_the_skies
+		icon = GFX_goal_USA_freedom_fighters
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_radar
+		}
+		prerequisite = {
+			focus = TEX_screaming_eagles
+		}
+		prerequisite = {
+			focus = TEX_anti_air_power
+		}
+		x = 59
+		y = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_rule_the_skies"
+			air_experience = 10
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+### Navy Path ###
+	focus = {# American Navy
+		id = TEX_navy
+		icon = GFX_goal_USA_navy
+		cost = 7.25
+		x = 67
+		y = 0
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_navy"
+			navy_experience = 10
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+	}
+	focus = {# Great White Fleet
+		id = TEX_great_white_fleet
+		icon = GFX_goal_generic_navy_battleship
+		cost = 7.25
+		mutually_exclusive = {
+			focus = TEX_protect_american_trade
+			focus = TEX_carriers
+		}
+		prerequisite = {
+			focus = TEX_navy
+		}
+		x = 64
+		y = 1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_great_white_fleet"
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cat_fleet_in_being
+			}
+		}
+	}
+	focus = {# Protect American Trade
+		id = TEX_protect_american_trade
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 7.25
+		mutually_exclusive = {
+			focus = TEX_great_white_fleet
+			focus = TEX_carriers
+		}
+		prerequisite = {
+			focus = TEX_navy
+		}
+		x = 67
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_protect_american_trade"
+			add_tech_bonus = {
+				name = navdoctrine_bonus
+				bonus = 0.5
+				uses = 2
+				category = cat_trade_interdiction
+			}
+		}
+	}
+	focus = {# Carrier Projects
+		id = TEX_carriers
+		icon = GFX_goal_generic_navy_carrier
+		cost = 7.25
+		mutually_exclusive = {
+			focus = TEX_great_white_fleet
+			focus = TEX_protect_american_trade
+		}
+		prerequisite = {
+			focus = TEX_navy
+		}
+		x = 70
+		y = 1
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_carriers"
+			add_tech_bonus = {
+				bonus = 0.50
+				uses = 2
+				category = cat_base_strike
+			}
+		}
+	}
+	focus = {# Battleship development
+		id = TEX_battleships
+		icon = GFX_focus_generic_navy_battleship2
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_great_white_fleet
+		}
+		x = 63
+		y = 2
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_battleships"
+			add_tech_bonus = {
+				name = navy_bonus
+				bonus = 0.5
+				uses = 2
+				category = shbb_tech
+			}
+		}
+	}
+	focus = {# Battle-Cruisers
+		id = TEX_battle_cruisers
+		icon = GFX_focus_generic_cruiser2
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_great_white_fleet
+			focus = TEX_protect_american_trade
+			focus = TEX_carriers
+		}
+		x = 65
+		y = 2
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_battle_cruisers"
+			add_tech_bonus = {
+				name = navy_bonus
+				bonus = 0.5
+				uses = 2
+				category = ca_tech
+			}
+		}
+	}
+	focus = {# Coast Guard
+		id = TEX_coast_guard
+		icon = GFX_goal_USA_coast_guard
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_protect_american_trade
+		}
+		x = 67
+		y = 2
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_coast_guard"
+			add_tech_bonus = {
+				name = navy_bonus
+				bonus = 0.5
+				uses = 2
+				category = dd_tech
+			}
+		}
+	}
+	focus = {# Light Cruisers
+		id = TEX_light_cruisers
+		icon = GFX_goal_EGY_sultan_fleet
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_protect_american_trade
+			focus = TEX_carriers
+			focus = TEX_great_white_fleet
+		}
+		x = 69
+		y = 2
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_light_cruisers"
+			add_tech_bonus = {
+				name = navy_bonus
+				bonus = 0.5
+				uses = 2
+				category = cl_tech
+			}
+		}
+	}
+	focus = {# Naval Aviation
+		id = TEX_naval_aviation
+		icon = GFX_goal_generic_air_fighter2
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_carriers
+		}
+		x = 71
+		y = 2
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_naval_aviation"
+			add_tech_bonus = {
+				name = navy_air_bonus
+				bonus = 0.5
+				uses = 1
+				category = naval_air
+			}
+		}
+	}
+	focus = {# Expand Dockyards
+		id = TEX_expand_dockyards
+		icon = GFX_SIA_maritmesilkroad
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_battleships
+			focus = TEX_coast_guard
+			focus = TEX_naval_aviation
+		}
+		x = 65
+		y = 3
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_expand_dockyards"
+			navy_experience = 10
+			375 = {
+				if = {
+					limit = { is_owned_by = TEX }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			371 = {
+				if = {
+					limit = { is_owned_by = TEX }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {# Submarine Development
+		id = TEX_submarine_development
+		icon = GFX_goal_generic_navy_submarine
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_expand_dockyards
+		}
+		x = 64
+		y = 4
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_submarine_development"
+			add_tech_bonus = {
+				name = navy_bonus
+				bonus = 0.5
+				uses = 2
+				category = ss_tech
+			}
+		}
+	}
+	focus = {# Liberty Ships
+		id = TEX_liberty_ships
+		icon = GFX_goal_USA_liberty_ships
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_expand_dockyards
+		}
+		x = 66
+		y = 4
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_liberty_ships"
+			add_ideas = USA_liberty_ships_idea
+		}
+	}
+	focus = {# Maritime Industry
+		id = TEX_maritime_industry
+		icon = GFX_goal_navy_decision
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_submarine_development
+		}
+		prerequisite = {
+			focus = TEX_liberty_ships
+		}
+		x = 65
+		y = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_maritime_industry"
+			add_ideas = USA_maritime_industry_idea
+		}
+	}
+	focus = {# New Admirals
+		id = TEX_new_admirals
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_battleships
+			focus = TEX_coast_guard
+			focus = TEX_naval_aviation
+		}
+		x = 67
+		y = 3
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_new_admirals"
+			navy_experience = 10
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+	}
+	focus = {# Life at Sea
+		id = TEX_life_at_sea
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_new_admirals
+		}
+		x = 67
+		y = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_life_at_sea"
+			navy_experience = 10
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+	}
+	focus = {# Marine Corps
+		id = TEX_marine_corps
+		icon = GFX_goal_USA_usmc
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_naval_aviation
+			focus = TEX_battleships
+		}
+		x = 69
+		y = 3
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_marine_corps"
+			add_tech_bonus = {
+				name = marines_bonus
+				bonus = 0.5
+				uses = 1
+				category = marine_tech
+			}
+		}
+	}
+	focus = {# Naval Training
+		id = TEX_naval_training
+		icon = GFX_focus_secret_rearmament
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_marine_corps
+		}
+		mutually_exclusive = {
+			focus = TEX_urban_warfare
+		}
+		x = 68
+		y = 4
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_naval_training"
+			add_ideas = USA_naval_training_idea
+		}
+	}
+	focus = {# Urban Warfare Training
+		id = TEX_urban_warfare
+		icon = GFX_SIA_Urban_Warfare_NF
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_marine_corps
+		}
+		mutually_exclusive = {
+			focus = TEX_naval_training
+		}
+		x = 70
+		y = 4
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_urban_warfare"
+			custom_effect_tooltip = SRI_asymmetrical_warfare_effect
+			hidden_effect = {
+				set_technology = { asymmetrical_warfare = 1 }
+			}
+		}
+	}
+	focus = {# Coastal Bunkers
+		id = TEX_coastal_bunkers
+		icon = GFX_goal_USA_usmc
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_urban_warfare
+			focus = TEX_naval_training
+		}
+		x = 69
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_coastal_bunkers"
+			add_tech_bonus = {
+				name = marines_bonus
+				bonus = 0.5
+				uses = 1
+				category = marine_tech
+			}
+		}
+	}
+	focus = {# America Rules the Waves
+		id = TEX_america_rules_waves
+		icon = GFX_goal_generic_navy_battleship
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_life_at_sea
+		}
+		prerequisite = {
+			focus = TEX_coastal_bunkers
+		}
+		prerequisite = {
+			focus = TEX_maritime_industry
+		}
+		x = 67
+		y = 6
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_america_rules_waves"
+			navy_experience = 10
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+	}
+### Foreign Policy Path ###
+	focus = {# New Monroe Doctrine
+		id = TEX_new_monroe_doctrine
+		icon = GFX_goal_HOL_progressive_tax
+		cost = 7.25
+		available = { has_global_flag = USA_civil_war_over_flag	}
+		x = 80
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_new_monroe_doctrine"
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+	}
+### Long Path ###
+	focus = {# Empire of Liberty
+		id = TEX_league_of_american_states
+		icon = GFX_goal_liberty
+		cost = 7.25
+		available = { has_government = authoritarian_democrat }
+		prerequisite = {
+			focus = TEX_new_monroe_doctrine
+		}
+		mutually_exclusive = {
+			focus = TEX_america_abroad
+		}
+		x = 76
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_league_of_american_states"
+			create_faction = "league_of_american_states"
+		}
+	}
+	focus = {# Long Doctrine
+		id = TEX_long_doctrine
+		icon = GFX_HOL_red_scare
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_league_of_american_states
+		}
+		x = 73
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_long_doctrine"
+			every_country = {
+				limit = {
+					OR = {
+						is_in_north_america = yes
+						is_in_south_america = yes
+					}
+					NOT = {
+						is_in_faction_with = CAN
+						is_in_faction_with = GER
+						is_in_faction_with = FRA
+
+					}
+					not_has_socialist_government = yes
+
+					not = { tag = TEX }
+				}
+				add_opinion_modifier = { target = TEX modifier = ITA_likes_govt }
+				reverse_add_opinion_modifier = { target = TEX modifier = ITA_likes_govt }
+			}
+		}
+	}
+	focus = {# Aggressive Negations
+		id = TEX_agressive_negotions
+		icon = GFX_goal_tripartite_pact
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_long_doctrine
+		}
+		x = 73
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_agressive_negotions"
+			unlock_decision_category_tooltip = TEX_expanding_the_league
+		}
+	}
+	focus = {# Arsenal of Freedom
+		id = TEX_arsenal_of_freedom
+		icon = GFX_goal_USA_american_industry
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_league_of_american_states
+		}
+		x = 76
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_arsenal_of_freedom"
+			custom_effect_tooltip = USA_arsenal_of_democracy_tooltip
+			every_country = {
+				limit = { is_in_faction_with = TEX }
+				add_opinion_modifier = { target = TEX modifier = USA_american_trade }
+				reverse_add_opinion_modifier = { target = TEX modifier = USA_american_trade }
+			}
+		}
+	}
+	focus = {# Carry a Big Stick
+		id = TEX_carry_a_big_stick
+		icon = GFX_goal_generic_political_pressure
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_league_of_american_states
+		}
+		x = 79
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_carry_a_big_stick"
+			custom_effect_tooltip = USA_military_cooperation_tooltip
+			every_country = {
+				limit = { is_in_faction_with = USA }
+				army_experience = 25
+				add_war_support = 0.05
+			}
+		}
+	}
+	focus = {# Pan-American Development Foundation
+		id = TEX_allies_in_the_americas
+		icon = GFX_america_goal_eagle_deal
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_arsenal_of_freedom
+		}
+		prerequisite = {
+			focus = TEX_long_doctrine
+		}
+		prerequisite = {
+			focus = TEX_carry_a_big_stick
+		}
+		x = 74
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_allies_in_the_americas"
+			unlock_decision_category_tooltip = TEX_Pan_American_Development_Foundation
+			set_global_flag = USA_development_board
+		}
+	}
+	focus = {# Inter-American Defense
+		id = TEX_inter_american_defense
+		icon = GFX_goal_generic_small_arms
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_arsenal_of_freedom
+		}
+		prerequisite = {
+			focus = TEX_long_doctrine
+		}
+		prerequisite = {
+			focus = TEX_carry_a_big_stick
+		}
+		x = 76
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_inter_american_defense"
+			custom_effect_tooltip = USA_military_defense_tooltip
+			every_country = {
+				limit = { is_in_faction_with = TEX }
+				add_ideas = USA_military_defense_idea
+			}
+		}
+	}
+	focus = {# American Tech Sharing
+		id = TEX_american_tech_sharing
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_arsenal_of_freedom
+		}
+		prerequisite = {
+			focus = TEX_carry_a_big_stick
+		}
+		prerequisite = {
+			focus = TEX_long_doctrine
+		}
+		x = 78
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_american_tech_sharing"
+			custom_effect_tooltip = USA_technological_cooperation_tooltip
+			every_country = {
+				limit = { is_in_faction_with = TEX }
+				add_to_tech_sharing_group = us_research
+			}
+		}
+	}
+	focus = {# League of American States
+		id = TEX_empire_of_liberty
+		icon = GFX_goal_generic_demand_territory
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_allies_in_the_americas
+		}
+		prerequisite = {
+			focus = TEX_inter_american_defense
+		}
+		prerequisite = {
+			focus = TEX_american_tech_sharing
+		}
+		x = 76
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_empire_of_liberty"
+			custom_effect_tooltip = USA_intel_sharing_tooltip
+			every_country = {
+				limit = { is_in_faction_with = USA }
+				add_ideas = USA_intelligence_sharing_idea
+			}
+		}
+	}
+	focus = {# Destroy Syndicalism
+		id = TEX_destroy_syndicalism
+		icon = GFX_goal_broken_red_star
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_carry_a_big_stick
+		}
+		x = 79
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_destroy_syndicalism"
+			unlock_decision_category_tooltip = TEX_defending_the_americas_decisions
+		}
+	}
+	focus = {# Pax Americana
+		id = TEX_pax_americana
+		icon = GFX_goal_USA_eagle
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_empire_of_liberty
+		}
+		prerequisite = {
+			focus = TEX_destroy_syndicalism
+		}
+		prerequisite = {
+			focus = TEX_agressive_negotions
+		}
+		x = 76
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_pax_americana"
+			add_political_power = 200
+		}
+	}
+### Joining Factions ###	
+	focus = {# America Abroad
+		id = TEX_america_abroad
+		icon = GFX_goal_usa
+		cost = 7.25
+		available = {
+			OR = {
+				has_government = paternal_autocrat
+				has_government = national_populist
+			}
+		}
+		prerequisite = {
+			focus = TEX_new_monroe_doctrine
+		}
+		mutually_exclusive = {
+			focus = TEX_league_of_american_states
+		}
+		x = 84
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_america_abroad"
+			unlock_decision_category_tooltip = USA_new_monroe_doctrine
+		}
+	}
+	focus = {# Dollar Diplomacy
+		id = TEX_dollar_diplomacy
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 7.25
+		available = { TEX = { is_in_faction = yes } }
+		prerequisite = {
+			focus = TEX_america_abroad
+		}
+		x = 81
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_dollar_diplomacy"
+			custom_effect_tooltip = USA_dollar_diplomacy_tooltip
+			every_country = {
+				limit = { is_in_faction_with = TEX }
+				add_opinion_modifier = { target = TEX modifier = ITA_likes_govt }
+				reverse_add_opinion_modifier = { target = TEX modifier = ITA_likes_govt }
+			}
+		}
+	}
+	focus = {# Business Ties
+		id = TEX_business_ties
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 7.25
+		available = { TEX = { is_in_faction = yes } }
+		prerequisite = {
+			focus = TEX_dollar_diplomacy
+		}
+		x = 81
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_business_ties"
+			custom_effect_tooltip = USA_dollar_diplomacy_tooltip
+			every_country = {
+				limit = { is_in_faction_with = TEX }
+				add_opinion_modifier = { target = TEX modifier = USA_american_trade }
+				reverse_add_opinion_modifier = { target = TEX modifier = USA_american_trade }
+			}
+		}
+	}
+	focus = {# New Diplomatic Corps
+		id = TEX_new_diplomatic_corps
+		icon = GFX_focus_chi_mission_to_the_us
+		cost = 7.25
+		prerequisite = {
+			focus = TEX_america_abroad
+		}
+		x = 84
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_new_diplomatic_corps"
+			add_political_power = 100
+			add_war_support = 0.1
+			every_country = {
+				limit = {
+					OR = {
+						is_in_north_america = yes
+						is_in_europe = yes
+						is_in_faction_with = CAN
+						is_in_faction_with = GER
+					}
+					NOT = { is_in_faction_with = FRA }
+					not_has_socialist_government = yes
+					not = { tag = TEX }
+				}
+				add_opinion_modifier = { target = TEX modifier = ITA_likes_govt }
+				reverse_add_opinion_modifier = { target = TEX modifier = ITA_likes_govt }
+			}
+		}
+	}
+	focus = {# Arsenal of America
+		id = TEX_arsneal_of_america
+		icon = GFX_goal_USA_american_industry
+		cost = 7.25
+		available = { TEX = { is_in_faction = yes } }
+		prerequisite = {
+			focus = TEX_america_abroad
+		}
+		x = 87
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_arsneal_of_america"
+			add_war_support = 0.1
+			add_stability = 0.1
+		}
+	}
+	focus = {# Anti-Syndicalist Pact
+		id = TEX_anti_syndicalist_pact
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 7.25
+		available = { TEX = { is_in_faction = yes } }
+		prerequisite = {
+			focus = TEX_dollar_diplomacy
+		}
+		prerequisite = {
+			focus = TEX_new_diplomatic_corps
+		}
+		prerequisite = {
+			focus = TEX_arsneal_of_america
+		}
+		x = 82
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_anti_syndicalist_pact"
+			custom_effect_tooltip = USA_join_tech_sharing_tooltip
+		}
+	}
+	focus = {# Embargo International
+		id = TEX_embargo_international
+		icon = GFX_goal_generic_trade
+		cost = 7.25
+		available = { TEX = { is_in_faction = yes } }
+		prerequisite = {
+			focus = TEX_dollar_diplomacy
+		}
+		prerequisite = {
+			focus = TEX_new_diplomatic_corps
+		}
+		prerequisite = {
+			focus = TEX_arsneal_of_america
+		}
+		x = 84
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_embargo_international"
+			every_country = {
+				limit = {
+					OR = {
+						is_in_faction_with = FRA
+						has_socialist_government = yes
+					}
+				}
+				reverse_add_opinion_modifier = { target = TEX modifier = embargo }
+			}
+		}
+	}
+	focus = {# Joint-Military Training
+		id = TEX_joint_military_training
+		icon = GFX_goal_generic_major_alliance
+		cost = 7.25
+		available = { TEX = { is_in_faction = yes } }
+		prerequisite = {
+			focus = TEX_new_diplomatic_corps
+		}
+		prerequisite = {
+			focus = TEX_dollar_diplomacy
+		}
+		prerequisite = {
+			focus = TEX_arsneal_of_america
+		}
+		x = 86
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_joint_military_training"
+			custom_effect_tooltip = USA_military_cooperation_tooltip
+			every_country = {
+				limit = { is_in_faction_with = TEX }
+				add_ideas = USA_military_defense_idea
+			}
+		}
+	}
+	focus = {# War against Syndicalism
+		id = TEX_crusade_against_syndicalism
+		icon = GFX_goal_broken_red_star
+		cost = 7.25
+		available = { TEX = { is_in_faction = yes } }
+		prerequisite = {
+			focus = TEX_anti_syndicalist_pact
+		}
+		prerequisite = {
+			focus = TEX_embargo_international
+		}
+		prerequisite = {
+			focus = TEX_joint_military_training
+		}
+		will_lead_to_war_with = FRA
+		x = 84
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_crusade_against_syndicalism"
+			declare_war_on = { target = FRA type = annex_everything }
+		}
+	}
+	focus = {# Join Science Sharing
+		id = TEX_join_science_sharing
+		icon = GFX_goal_generic_major_alliance
+		cost = 7.25
+		available = { TEX = { is_in_faction = yes } }
+		prerequisite = {
+			focus = TEX_arsneal_of_america
+		}
+		x = 87
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_join_science_sharing"
+			add_political_power = 100
+			add_war_support = 0.1
+			add_stability = 0.1
+		}
+	}
+	focus = {# The American Century
+		id = TEX_american_century2
+		icon = GFX_goal_USA_eagle
+		cost = 7.25
+		available = { TEX = { is_in_faction = yes } }
+		prerequisite = {
+			focus = TEX_business_ties
+		}
+		prerequisite = {
+			focus = TEX_join_science_sharing
+		}
+		prerequisite = {
+			focus = TEX_crusade_against_syndicalism
+		}
+		x = 84
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TEX_american_century2"
+			add_political_power = 100
+			add_war_support = 0.1
+			add_stability = 0.1
+		}
+	}
+}

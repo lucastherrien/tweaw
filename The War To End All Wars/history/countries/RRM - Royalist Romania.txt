@@ -1,0 +1,281 @@
+﻿capital = 46
+
+oob = "empty"
+
+set_research_slots = 3
+
+add_ideas = {
+	limited_conscription
+	RRM_for_the_king_idea
+}
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	gwtank = 1
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	submarine_one = 1
+	submarine_two = 1
+	submarine_three = 1
+	submarine_four = 1
+	destroyer_one = 1
+	destroyer_two = 1
+	destroyer_three = 1
+	destroyer_four = 1
+	light_cruiser_one = 1
+	light_cruiser_two = 1
+	light_cruiser_three = 1
+	light_cruiser_four = 1
+	heavy_cruiser_one = 1
+	heavy_cruiser_two = 1
+	transport = 1
+}
+
+
+set_convoys = 10
+
+add_opinion_modifier = { target = BUL modifier = embargo }
+add_opinion_modifier = { target = BUL modifier = Balkans_hates_bulgaria }
+
+set_politics = {
+
+	parties = {
+		totalist = {
+			popularity = 0
+		}
+		radical_socialist = {
+			popularity = 0
+		}
+		syndicalist = {
+			popularity = 0
+		}
+		social_democrat = {
+			popularity = 3
+		}
+		social_liberal = {
+			popularity = 5
+		}
+		market_liberal = {
+			popularity = 13
+		}
+		social_conservative = {
+			popularity = 17
+		}
+		authoritarian_democrat = {
+			popularity = 51
+		}
+		paternal_autocrat = {
+			popularity = 8
+		}
+		national_populist = {
+			popularity = 3
+		}
+	}
+
+	ruling_party = authoritarian_democrat
+	last_election = "1930.11.9"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+add_ideas = {
+	RRM_Constantin_Sanatescu_hog_ade
+	RRM_Gheorghe_Tatarescu_for_ade
+	RRM_Nicolae_Stoenescu_eco_ade
+	RRM_Cesare_Vaida_Voievod_sec_ade
+}
+
+create_country_leader = {
+	name = "Carol II"
+	desc = "POLITICS_CAROL_II_DESC"
+	picture = "gfx/leaders/RRM/Portrait_RRM_Carol_II.tga"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+	traits = { }
+}
+
+create_country_leader = {
+	name = "Carol II"
+	desc = "POLITICS_CAROL_II_DESC"
+	picture = "gfx/leaders/RRM/Portrait_RRM_Carol_II.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+	traits = { }
+}
+
+create_country_leader = {
+	name = "Carol II"
+	desc = "POLITICS_CAROL_II_DESC"
+	picture = "gfx/leaders/RRM/Portrait_RRM_Carol_II.tga"
+	expire = "1965.1.1"
+	ideology = social_conservative_subtype
+	traits = { }
+}
+
+create_country_leader = {
+	name = "Carol II"
+	desc = "POLITICS_CAROL_II_DESC"
+	picture = "gfx/leaders/RRM/Portrait_RRM_Carol_II.tga"
+	expire = "1965.1.1"
+	ideology = market_liberal_subtype
+	traits = { }
+}
+
+create_country_leader = {
+	name = "Carol II"
+	desc = "POLITICS_CAROL_II_DESC"
+	picture = "gfx/leaders/RRM/Portrait_RRM_Carol_II.tga"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+	traits = { }
+}
+
+create_country_leader = {
+	name = "Carol II"
+	desc = "POLITICS_CAROL_II_DESC"
+	picture = "gfx/leaders/RRM/Portrait_RRM_Carol_II.tga"
+	expire = "1965.1.1"
+	ideology = social_democrat_subtype
+	traits = { }
+}
+
+### Field Marshal
+### Corps Commander
+create_field_marshal = {
+	name = "Gheorghe Argeseanu"
+	portrait_path = "gfx/leaders/RRM/Portrait_RRM_Gheorghe_Argeseanu.tga"
+	traits = {
+		politically_connected
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+if = {
+	limit = { has_dlc = "Death or Dishonor" }
+	create_corps_commander = {
+		name = "Gheorghe Avramescu"
+		gfx = GFX_Portrait_romania_gheorghe_avramescu
+		traits = { trait_mountaineer }
+		skill = 3
+		attack_skill = 3
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 3
+	}
+	else = {
+		create_corps_commander = {
+			name = "Gheorghe Avramescu"
+			portrait_path = "gfx/leaders/RRM/Portrait_RRM_Gheorghe_Avramescu.tga"
+			traits = { trait_mountaineer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+}
+
+if = {
+	limit = { has_dlc = "Death or Dishonor" }
+	create_corps_commander = {
+		name = "Ioan Racovita"
+		gfx = GFX_Portrait_romania_ioan_mihail_racovita
+		traits = {
+			career_officer
+			cavalry_officer
+			hill_fighter
+		}
+		skill = 3
+		attack_skill = 2
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 2
+	}
+	else = {
+		create_corps_commander = {
+			name = "Ioan Racovita"
+			portrait_path = "gfx/leaders/RRM/Portrait_RRM_Ioan_Racovita.tga"
+			traits = {
+				career_officer
+				cavalry_officer
+				hill_fighter
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+}
+
+create_corps_commander = {
+	name = "Corneliu Dragalina"
+	portrait_path = "gfx/leaders/RRM/Portrait_RRM_Corneliu_Dragalina.tga"
+	traits = {
+		artillery_officer
+		trait_reckless
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Florea Tenescu"
+	portrait_path = "gfx/leaders/RRM/Portrait_RRM_Florea_Tenescu.tga"
+	traits = {
+		career_officer
+		inflexible_strategist
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Barbu Parainu"
+	portrait_path = "gfx/leaders/RRM/Portrait_RRM_Barbu_Parainu.tga"
+	traits = {
+		old_guard
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Nicolae Radescu"
+	portrait_path = "gfx/leaders/RRM/Portrait_RRM_Nicolae_Radescu.tga"
+	traits = {
+		old_guard
+		cavalry_officer
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+### Navy Leader

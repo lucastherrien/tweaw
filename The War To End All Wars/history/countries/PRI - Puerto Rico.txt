@@ -1,0 +1,82 @@
+﻿capital = 686
+OOB = "empty"
+set_research_slots = 2
+set_technology = {
+	### Navy ###
+	destroyer_one = 1
+	destroyer_two = 1
+	destroyer_three = 1
+	destroyer_four = 1
+	light_cruiser_one = 1
+	light_cruiser_two = 1
+	light_cruiser_three = 1
+	dreadnought_one = 1
+	submarine_one = 1
+	submarine_two = 1
+	submarine_three = 1
+	transport = 1
+	####Tanks ###
+	### INF ###
+	infantry_weapons = 1
+	### AIR ###
+	early_fighter = 1
+}
+
+set_politics = {
+
+	parties = {
+		totalist = {
+			popularity = 2
+		}
+		radical_socialist = {
+			popularity = 3
+		}
+		syndicalist = {
+			popularity = 5
+		}
+		social_democrat = {
+			popularity = 13
+		}
+		social_liberal = {
+			popularity = 41
+		}
+		market_liberal = {
+			popularity = 21
+		}
+		social_conservative = {
+			popularity = 10
+		}
+		authoritarian_democrat = {
+			popularity = 3
+		}
+		paternal_autocrat = {
+			popularity = 2
+		}
+		national_populist = {
+			popularity = 0
+		}
+	}
+
+	ruling_party = social_liberal
+	last_election = "1888.15.6"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+### Field Marshal
+### Corps Commander
+create_corps_commander = { #Auto-Generated
+	name = "Mario Villamarzo"
+	portrait_path = "gfx/leaders/PRI/Portrait_PRI_Villamarzo.tga"
+	traits = {
+		infantry_officer
+		organizer
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+### Navy Leader

@@ -1,0 +1,324 @@
+﻿capital = 121
+OOB = "empty"
+set_research_slots = 3
+set_technology = {
+	### MOD ###
+	### General ###
+	electronic_mechanical_engineering = 1
+	### Navy ###
+	destroyer_one = 1
+	destroyer_two = 1
+	destroyer_three = 1
+	destroyer_four = 1
+	light_cruiser_one = 1
+	light_cruiser_two = 1
+	light_cruiser_three = 1
+	light_cruiser_four = 1
+	light_cruiser_five = 1
+	heavy_cruiser_one = 1
+	heavy_cruiser_two = 1
+	heavy_cruiser_three = 1
+	heavy_cruiser_four = 1
+	battleship_one = 1
+	battleship_two = 1
+	battleship_three = 1
+	battleship_four = 1
+	battleship_five = 1
+	dreadnought_one = 1
+	dreadnought_two = 1
+	dreadnought_three = 1
+	dreadnought_four = 1
+	dreadnought_five = 1
+	dreadnought_six = 1
+	dreadnought_seven = 1
+	carrier_one = 1
+	carrier_two = 1
+	carrier_three = 1
+	heavy_carrier_one = 1
+	heavy_carrier_two = 1
+	submarine_one = 1
+	submarine_two = 1
+	submarine_three = 1
+	submarine_four = 1
+	submarine_five = 1
+	nav_infra_one = 1
+	nav_infra_two = 1
+	nav_infra_three = 1
+	nav_av_one = 1
+	nav_av_two = 1
+	nav_av_three = 1
+	transport = 1
+	### Tanks ###
+	gwtank = 1
+	basic_light_tank = 1
+	### INF ###
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	### AIR ###
+	early_fighter = 1
+	naval_bomber1 = 1
+	early_bomber = 1
+	strategic_bomber1 = 1
+	cv_early_fighter = 1
+	cv_naval_bomber1 = 1
+}
+
+set_politics = {
+
+	parties = {
+		totalist = {
+			popularity = 2
+		}
+		radical_socialist = {
+			popularity = 3
+		}
+		syndicalist = {
+			popularity = 5
+		}
+		social_democrat = {
+			popularity = 13
+		}
+		social_liberal = {
+			popularity = 41
+		}
+		market_liberal = {
+			popularity = 21
+		}
+		social_conservative = {
+			popularity = 10
+		}
+		authoritarian_democrat = {
+			popularity = 3
+		}
+		paternal_autocrat = {
+			popularity = 2
+		}
+		national_populist = {
+			popularity = 0
+		}
+	}
+
+	ruling_party = social_liberal
+	last_election = "1888.15.6"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+add_ideas = {
+	#medium_economy
+	### Head of Government
+	SCT_Ignatius_R_Dunnachie_hog_rso
+	### Foreign Minister
+	SCT_Donald_Cardross_Erskine_for_rso
+	### Eco minister
+	SCT_Peter_Drummond_MacDonald_eco_rso
+	### Security Minister
+	SCT_Malcolm_MacDonald_sec_rso
+}
+
+### Field Marshal
+### Corps Commander
+create_corps_commander = { #Auto-Generated
+	name = "Balfour"
+	portrait_path = "gfx/leaders/SCT/Portrait_SCT_Balfour.tga"
+	traits = {
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = { #Auto-Generated
+	name = "Dickinson"
+	portrait_path = "gfx/leaders/SCT/Portrait_SCT_Dickinson.tga"
+	traits = {
+		trait_engineer
+		old_guard
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = { #Auto-Generated
+	name = "Fitzpatrick"
+	portrait_path = "gfx/leaders/SCT/Portrait_SCT_Fitzpatrick.tga"
+	traits = {
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = { #Auto-Generated
+	name = "Franklyn"
+	portrait_path = "gfx/leaders/SCT/Portrait_SCT_Franklyn.tga"
+	traits = {
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = { #Auto-Generated
+	name = "Kavanagh"
+	portrait_path = "gfx/leaders/SCT/Portrait_SCT_Kavanagh.tga"
+	traits = {
+		old_guard
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = { #Auto-Generated
+	name = "Kirke"
+	portrait_path = "gfx/leaders/SCT/Portrait_SCT_Kirke.tga"
+	traits = {
+		fortress_buster
+		old_guard
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = { #Auto-Generated
+	name = "Macdonald"
+	portrait_path = "gfx/leaders/SCT/Portrait_SCT_Macdonald.tga"
+	traits = {
+		old_guard
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = { #Auto-Generated
+	name = "MacKenzie C.J."
+	portrait_path = "gfx/leaders/SCT/Portrait_SCT_MacKenzie_C_J_.tga"
+	traits = {
+		commando
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = { #Auto-Generated
+	name = "McCulloch"
+	portrait_path = "gfx/leaders/SCT/Portrait_SCT_McCulloch.tga"
+	traits = {
+		trait_engineer
+		old_guard
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = { #Auto-Generated
+	name = "Newth"
+	portrait_path = "gfx/leaders/SCT/Portrait_SCT_Newth.tga"
+	traits = {
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = { #Auto-Generated
+	name = "Norrie"
+	portrait_path = "gfx/leaders/SCT/Portrait_SCT_Norrie.tga"
+	traits = {
+		panzer_leader
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = { #Auto-Generated
+	name = "Soames"
+	portrait_path = "gfx/leaders/SCT/Portrait_SCT_Soames.tga"
+	traits = {
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = { #Auto-Generated
+	name = "St.Clair-Morford"
+	portrait_path = "gfx/leaders/SCT/Portrait_SCT_St_Clair_Morford.tga"
+	traits = {
+		commando
+		old_guard
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = { #Auto-Generated
+	name = "Walwyn"
+	portrait_path = "gfx/leaders/SCT/Portrait_SCT_Walwyn.tga"
+	traits = {
+		trickster
+		old_guard
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+### Navy Leader
+create_navy_leader = { #Auto-Generated
+	name = "Boyle of Cork and Orrey"
+	portrait_path = "gfx/leaders/SCT/Portrait_SCT_Boyle_of_Cork_and_Orrey.tga"
+	traits = {
+	}
+	skill = 3 #naval guy, don't patch
+}
+
+create_navy_leader = { #Auto-Generated
+	name = "Layton"
+	portrait_path = "gfx/leaders/SCT/Portrait_SCT_Layton.tga"
+	traits = {
+		spotter
+	}
+	skill = 2 #naval guy, don't patch
+}

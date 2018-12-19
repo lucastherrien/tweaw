@@ -1,0 +1,102 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Guardia Palatina d'Onore"
+	division_names_group = ITAL_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 1 y = 0 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Motorized-Division"
+	division_names_group = ITAL_MOT_01
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Armored-Division"
+	division_names_group = ITAL_ARM_01
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+}
+
+##### OOB #####
+
+units = {
+
+	division = {
+		name = "Guardia Palatina"
+		location = 9904
+		division_template = "Guardia Palatina d'Onore"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+
+	navy = {
+		name = "Marina Pontificia"
+		base = 11751
+		location = 11751
+		ship = { name = "Roma" definition = SH_battleship equipment = { SH_battleship_1 = { amount = 1 owner = ITA version_name = "Regina Elena Class" } } }
+
+		ship = { name = "Strale" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Lamp Class" } } }
+		ship = { name = "Ostro" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Lamp Class" } } }
+		ship = { name = "Giuseppe Sirtori" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ITA version_name = "Giuseppe Sirtori Class" } } }
+		ship = { name = "Vincenzo Giordano Orsini" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ITA version_name = "Giuseppe Sirtori Class" } } }
+		ship = { name = "Ostia" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = PAP version_name = "Ostia Class" } } }
+		ship = { name = "Fiumicino" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = PAP version_name = "Ostia Class" } } }
+		ship = { name = "Civitavecchia" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = PAP version_name = "Ostia Class" } } }
+		ship = { name = "Brachianno" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = PAP version_name = "Ostia Class" } } }
+
+		ship = { name = "Jantina" definition = submarine equipment = { submarine_2 = { amount = 1 owner = ITA version_name = "Medusa Class" } } }
+		ship = { name = "Salpa" definition = submarine equipment = { submarine_2 = { amount = 1 owner = ITA version_name = "Medusa Class" } } }
+		ship = { name = "Velella" definition = submarine equipment = { submarine_2 = { amount = 1 owner = ITA version_name = "Medusa Class" } } }
+		ship = { name = "Zoea" definition = submarine equipment = { submarine_2 = { amount = 1 owner = ITA version_name = "Medusa Class" } } }
+		ship = { name = "Argonauta" definition = submarine equipment = { submarine_2 = { amount = 1 owner = ITA version_name = "Medusa Class" } } }
+		ship = { name = "H1" definition = submarine equipment = { submarine_2 = { amount = 1 owner = ITA version_name = "H Class" } } }
+		ship = { name = "H2" definition = submarine equipment = { submarine_2 = { amount = 1 owner = ITA version_name = "H Class" } } }
+		ship = { name = "H3" definition = submarine equipment = { submarine_2 = { amount = 1 owner = ITA version_name = "H Class" } } }
+		ship = { name = "H4" definition = submarine equipment = { submarine_2 = { amount = 1 owner = ITA version_name = "H Class" } } }
+		ship = { name = "Nicaea" definition = submarine equipment = { submarine_5 = { amount = 1 owner = PAP version_name = "Deus Vult Class" } } }
+		ship = { name = "Arsuf" definition = submarine equipment = { submarine_5 = { amount = 1 owner = PAP version_name = "Deus Vult Class" } } }
+		ship = { name = "Antioch" definition = submarine equipment = { submarine_5 = { amount = 1 owner = PAP version_name = "Deus Vult Class" } } }
+		ship = { name = "Xerigordos" definition = submarine equipment = { submarine_5 = { amount = 1 owner = PAP version_name = "Deus Vult Class" } } }
+	}
+
+}
+
+air_wings = {
+	2 = {
+
+		fighter_equipment_0 =  {
+			owner = "PAP"
+			amount = 100
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.82
+		efficiency = 100
+	}
+}

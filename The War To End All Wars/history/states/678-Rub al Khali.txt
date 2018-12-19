@@ -1,0 +1,23 @@
+state = {
+	id = 678
+	name = "STATE_678"
+
+	history = {
+		owner = ARB
+		add_core_of = ARB
+		add_claim_by = ARB
+		buildings = {
+			infrastructure = 1
+
+		}
+	}
+
+	impassable = yes
+
+	provinces = {
+		5081 8118 10870 12740 12768
+	}
+	manpower = 9376
+	buildings_max_level_factor = 1
+	state_category = wasteland
+}

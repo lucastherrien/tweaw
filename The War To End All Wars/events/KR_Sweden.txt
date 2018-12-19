@@ -1,0 +1,414 @@
+﻿###########################
+# Sweden Events
+###########################
+# By Miinda (Revised by Packard for 0.6)
+###########################
+
+add_namespace = swe
+
+#########################################################
+################ Sweden Intro Events ####################
+#########################################################
+
+country_event = {
+	id = swe.9999
+	immediate = {log = "[GetDateText]: [Root.GetName]: event swe.9999"}
+	title = swe.9999.t
+	desc = swe.9999.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = swe.9999.a
+	}
+}
+
+#########################################################
+#################### 1936 Events ########################
+#########################################################
+
+country_event = {
+	id = swe.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event swe.3"}
+	title = swe.3.t
+	desc = swe.3.d
+	picture = SWE_military_meeting
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SWE
+		date > 1936.02.28
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		name = swe.3.a
+		add_ideas = SWE_black_monday
+		add_stability = -0.05
+		set_country_flag = SWE_flag_black_monday
+	}
+}
+
+#########################################################
+################# Focus Tree Events #####################
+#########################################################
+
+### Air Force Summit ###
+
+country_event = {
+	id = swe.500
+	immediate = {log = "[GetDateText]: [Root.GetName]: event swe.500"}
+	title = swe.500.t
+	desc = swe.500.d
+	picture = SWE_military_meeting
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SWE
+		focus_progress = { focus = SWE_military_summit progress > 0.05 }
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	option = {
+		name = swe.500.a
+		country_event = { id = swe.501 days = 3 }
+	}
+}
+
+country_event = { # Naval Plans
+	id = swe.501
+	immediate = {log = "[GetDateText]: [Root.GetName]: event swe.501"}
+	title = swe.501.t
+	desc = swe.501.d
+	picture = SWE_hms_sweden
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Invest in the navy
+		name = swe.501.a
+		ai_chance = {
+			factor = 30
+		}
+		add_political_power = -25
+		add_timed_idea = {
+			idea = SWE_idea_naval_investments
+			days = 360
+		}
+		set_country_flag = SWE_navy_invest
+		country_event = { id = swe.502 days = 3 }
+	}
+
+	option = { # Don't invest
+		name = swe.501.b
+		ai_chance = {
+			factor = 70
+		}
+		set_country_flag = SWE_not_navy_invest
+		country_event = { id = swe.503 days = 3 }
+	}
+}
+
+country_event = { # Air Force Plans
+	id = swe.502
+	immediate = {log = "[GetDateText]: [Root.GetName]: event swe.502"}
+	title = swe.502.t
+	desc = swe.502.d
+	picture = SWE_aircraft
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Invest in the air force
+		name = swe.502.a
+		ai_chance = {
+			factor = 5
+		}
+		add_political_power = -25
+		add_timed_idea = {
+			idea = SWE_idea_air_investments
+			days = 360
+		}
+		set_country_flag = SWE_air_invest
+	}
+
+	option = { # Don't invest
+		name = swe.502.b
+		ai_chance = {
+			factor = 95
+		}
+		set_country_flag = SWE_not_air_invest
+	}
+}
+
+country_event = { # Air Force Plans
+	id = swe.503
+	immediate = {log = "[GetDateText]: [Root.GetName]: event swe.503"}
+	title = swe.503.t
+	desc = swe.503.d
+	picture = SWE_aircraft
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Invest in the air force
+		name = swe.503.a
+		ai_chance = {
+			factor = 90
+		}
+		add_political_power = -25
+		add_timed_idea = {
+			idea = SWE_idea_air_investments
+			days = 360
+		}
+		set_country_flag = SWE_air_invest
+	}
+
+	option = { # Don't invest
+		name = swe.503.b
+		ai_chance = {
+			factor = 10
+		}
+		set_country_flag = SWE_not_air_invest
+	}
+}
+
+country_event = { # End of the Summit - Navy Victory
+	id = swe.504
+	immediate = {log = "[GetDateText]: [Root.GetName]: event swe.504"}
+	title = swe.504.t
+	desc = swe.504.d
+	picture = SWE_hms_sweden
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # A Strong Navy
+		name = swe.504.a
+		clr_country_flag = SWE_navy_invest
+		clr_country_flag = SWE_not_air_invest
+		set_country_flag = SWE_flag_navy_victory
+	}
+}
+
+country_event = { # End of the Summit - Air Force Victory
+	id = swe.505
+	immediate = {log = "[GetDateText]: [Root.GetName]: event swe.505"}
+	title = swe.505.t
+	desc = swe.505.d
+	picture = SWE_aircraft
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # A Strong Air Force
+		name = swe.505.a
+		clr_country_flag = SWE_not_navy_invest
+		clr_country_flag = SWE_air_invest
+		set_country_flag = SWE_flag_airforce_victory
+	}
+}
+
+country_event = { # End of the Summit - Tie
+	id = swe.506
+	immediate = {log = "[GetDateText]: [Root.GetName]: event swe.506"}
+	title = swe.506.t
+	desc = swe.506.d
+	picture = SWE_military_meeting
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Favour the Navy
+		name = swe.506.a
+		ai_chance = {
+			factor = 30
+		}
+		add_political_power = -50
+		clr_country_flag = SWE_navy_invest
+		clr_country_flag = SWE_not_navy_invest
+		clr_country_flag = SWE_air_invest
+		clr_country_flag = SWE_not_air_invest
+		set_country_flag = SWE_flag_navy_victory
+	}
+
+	option = { # Favour the Air Force
+		name = swe.506.b
+		ai_chance = {
+			factor = 70
+		}
+		add_political_power = -50
+		clr_country_flag = SWE_navy_invest
+		clr_country_flag = SWE_not_navy_invest
+		clr_country_flag = SWE_air_invest
+		clr_country_flag = SWE_not_air_invest
+		set_country_flag = SWE_flag_airforce_victory
+	}
+}
+
+### War and Peace in Scandinavia - Swedish Conquests ###
+
+country_event = { # The Conquests of Norway
+	id = swe.200
+	immediate = {log = "[GetDateText]: [Root.GetName]: event swe.200"}
+	title = swe.200.t
+	desc = swe.200.d
+	picture = NOR_new_government
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SWE
+		is_subject = no
+		owns_state = 110
+		NOR = {
+			exists = no
+		}
+		NOT = {
+			has_war_with = DEN
+			has_war_with = FIN
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = { # Restore Sweden-Norway
+		name = swe.200.a
+		trigger = {
+			OR = {
+				has_government = social_conservative
+				has_government = authoritarian_democrat
+				has_government = paternal_autocrat
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = -100
+		every_state = {
+			limit = {
+				is_core_of = NOR
+				is_owned_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			NOR = {
+				transfer_state = PREV
+			}
+		}
+		puppet = NOR
+		NOR = {
+			country_event = { id = swe.201 }
+		}
+	}
+
+	option = { # Puppet Norway
+		name = swe.200.b
+		trigger = {
+			OR = {
+				has_government = social_conservative
+				has_government = authoritarian_democrat
+				has_government = paternal_autocrat
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+		every_state = {
+			limit = {
+				is_core_of = NOR
+				is_owned_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			NOR = {
+				transfer_state = PREV
+			}
+		}
+		puppet = NOR
+	}
+
+	option = { # Independent Norway
+		name = swe.200.c
+		trigger = {
+			OR = {
+				has_government = social_democrat
+				has_government = social_liberal
+				has_government = market_liberal
+				has_government = social_conservative
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+		every_state = {
+			limit = {
+				is_core_of = NOR
+				is_owned_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			NOR = {
+				transfer_state = PREV
+			}
+		}
+	}
+
+	option = { # Continue Military Occupation
+		name = swe.200.e
+		ai_chance = {
+			factor = 0
+		}
+		add_political_power = -250
+	}
+}
+
+country_event = {
+	id = swe.201
+	immediate = {log = "[GetDateText]: [Root.GetName]: event swe.201"}
+	title = swe.201.t
+	desc = swe.201.d
+	picture = coronation
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = swe.201.a
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "Prince Carl of Sweden"
+			desc = "NOR_PRINCE_CARL_DESC"
+			picture = "Portrait_Norway_Carl_of_Sweden.tga"
+			expire = "1965.1.1"
+			ideology = authoritarian_democrat_subtype
+			traits = {}
+		}
+		set_cosmetic_tag = NOU #Norway in Union with Sweden
+	}
+}

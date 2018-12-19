@@ -1,0 +1,313 @@
+﻿division_template = {
+	name = "Divisione Fanteria"
+	division_names_group = SIC_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Divisione Milizia"
+	division_names_group = SIC_MIL_01
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+		militia = { x = 1 y = 2 }
+		militia = { x = 2 y = 0 }
+		militia = { x = 2 y = 1 }
+		militia = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Motorized-Division"
+	division_names_group = SIC_MOT_01
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Armored-Division"
+	division_names_group = SIC_ARM_01
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		#name = "1a Divisione 'Briganti'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 819
+		division_template = "Divisione Fanteria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		#name = "2a Divisione 'Napoli'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 819
+		division_template = "Divisione Fanteria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		#name = "3a Divisione 'Siciliana'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4159
+		division_template = "Divisione Fanteria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		#name = "4a Divisione 'Palermo'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10074
+		division_template = "Divisione Fanteria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		#name = "5a Divisione 'Abruzzo'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3910
+		division_template = "Divisione Fanteria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		#name = "6a Divisione 'Lecce'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11837
+		division_template = "Divisione Fanteria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		#name = "7a Divisione 'Archimede'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4014
+		division_template = "Divisione Fanteria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		#name = "8a Divisione 'Altavilla'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 883
+		division_template = "Divisione Fanteria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		#name = "9a Divisione 'Calabresa'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9990
+		division_template = "Divisione Fanteria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+	#	#name = "10a Divisione 'Liberatore'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9784
+		division_template = "Divisione Fanteria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		#name = "11a Divisione 'Taranto'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11837
+		division_template = "Divisione Fanteria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		#name = "12a Divisione 'Capua'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 819
+		division_template = "Divisione Fanteria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		#name = "13a Divisione 'Re Fernando'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 819
+		division_template = "Divisione Fanteria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		#name = "14a Divisione 'Basilicata'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9904
+		division_template = "Divisione Fanteria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+
+	navy = {
+		name = "Regia Marina Siciliana"
+		base = 819
+		location = 819
+		ship = { name = "RN	Francesco Caracciolo" definition = SH_battleship equipment = { SH_battleship_3 = { amount = 1 owner = ITA version_name = "Francesco Caracciolo Class" } } }
+		ship = { name = "RN	Borbone" definition = SH_battleship equipment = { SH_battleship_1 = { amount = 1 owner = ITA version_name = "Saint Bon Class" } } }
+		ship = { name = "RN	Trinicaria" definition = SH_battleship equipment = { SH_battleship_1 = { amount = 1 owner = ITA version_name = "Regina Elena Class" } } }
+
+		ship = { name = "RN	Tancredi" definition = heavy_cruiser equipment = { heavy_cruiser_3 = { amount = 1 owner = SIC version_name = "Altavilla Class" } } }
+		ship = { name = "RN	Roberto Guiscardo" definition = heavy_cruiser equipment = { heavy_cruiser_3 = { amount = 1 owner = SIC version_name = "Altavilla Class" } } }
+		ship = { name = "RN	Ruggero I" definition = heavy_cruiser equipment = { heavy_cruiser_3 = { amount = 1 owner = SIC version_name = "Altavilla Class" } } }
+		ship = { name = "RN	Guglielmo II" definition = heavy_cruiser equipment = { heavy_cruiser_3 = { amount = 1 owner = SIC version_name = "Altavilla Class" } } }
+
+		ship = { name = "RN	Imera" definition = light_cruiser equipment = { light_cruiser_4 = { amount = 1 owner = SIC version_name = "Imera Class" } } }
+		ship = { name = "RN	Gela" definition = light_cruiser equipment = { light_cruiser_4 = { amount = 1 owner = SIC version_name = "Imera Class" } } }
+		ship = { name = "RN	Mozia" definition = light_cruiser equipment = { light_cruiser_4 = { amount = 1 owner = SIC version_name = "Imera Class" } } }
+		ship = { name = "RN	Lilibeo" definition = light_cruiser equipment = { light_cruiser_4 = { amount = 1 owner = SIC version_name = "Imera Class" } } }
+		ship = { name = "RN	Taormina" definition = light_cruiser equipment = { light_cruiser_5 = { amount = 1 owner = SIC version_name = "Crimoso Class" } } }
+		ship = { name = "RN	Crimiso" definition = light_cruiser equipment = { light_cruiser_5 = { amount = 1 owner = SIC version_name = "Crimoso Class" } } }
+
+		ship = { name = "RN	Irrequieto" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Indomito Class" } } }
+		ship = { name = "RN	Ardito" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Indomito Class" } } }
+		ship = { name = "RN	Ardente" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Indomito Class" } } }
+		ship = { name = "RN	Abruzzo" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ITA version_name = "Rosolino Pilo Class" } } }
+		ship = { name = "RN	Capua" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ITA version_name = "Simone Schiaffino Class" } } }
+		ship = { name = "RN	Aquila" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = ITA version_name = "Aquila Class" } } }
+		ship = { name = "RN	Falco" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = ITA version_name = "Aquila Class" } } }
+		ship = { name = "RN	Nibbio" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = ITA version_name = "Aquila Class" } } }
+		ship = { name = "RN	Sparviero" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = ITA version_name = "Aquila Class" } } }
+		ship = { name = "RN	Mondragone" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = SIC version_name = "Otranto Class" } } }
+		ship = { name = "RN	Fioro Ischia" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = SIC version_name = "Otranto Class" } } }
+		ship = { name = "RN	Capri" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = SIC version_name = "Otranto Class" } } }
+		ship = { name = "RN	Benevento" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = SIC version_name = "Otranto Class" } } }
+		ship = { name = "RN	Manfredonia" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = SIC version_name = "Otranto Class" } } }
+		ship = { name = "RN	Senise" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = SIC version_name = "Otranto Class" } } }
+		ship = { name = "RN	Orta Nova" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = SIC version_name = "Otranto Class" } } }
+		ship = { name = "RN	Lago Negro" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = SIC version_name = "Otranto Class" } } }
+		ship = { name = "RN	Otranto" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = SIC version_name = "Otranto Class" } } }
+		ship = { name = "RN	Lioni" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = SIC version_name = "Otranto Class" } } }
+		ship = { name = "RN	Delfino" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = SIC version_name = "Scilla Class" } } }
+		ship = { name = "RN	Centauro" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = SIC version_name = "Scilla Class" } } }
+		ship = { name = "RN	Scilla" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = SIC version_name = "Scilla Class" } } }
+		ship = { name = "RN	Iupiter" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = SIC version_name = "Scilla Class" } } }
+
+		ship = { name = "R.Smg. F13" definition = submarine equipment = { submarine_2 = { amount = 1 owner = ITA version_name = "F Class" } } }
+		ship = { name = "R.Smg. F14" definition = submarine equipment = { submarine_2 = { amount = 1 owner = ITA version_name = "F Class" } } }
+		ship = { name = "R.Smg. F15" definition = submarine equipment = { submarine_2 = { amount = 1 owner = ITA version_name = "F Class" } } }
+		ship = { name = "R.Smg. F16" definition = submarine equipment = { submarine_2 = { amount = 1 owner = ITA version_name = "F Class" } } }
+		ship = { name = "R.Smg. F17" definition = submarine equipment = { submarine_2 = { amount = 1 owner = ITA version_name = "F Class" } } }
+		ship = { name = "R.Smg. F18" definition = submarine equipment = { submarine_2 = { amount = 1 owner = ITA version_name = "F Class" } } }
+		ship = { name = "R.Smg. H8" definition = submarine equipment = { submarine_2 = { amount = 1 owner = ITA version_name = "H Class" } } }
+		ship = { name = "R.Smg. N1" definition = submarine equipment = { submarine_3 = { amount = 1 owner = ITA version_name = "N Class" } } }
+		ship = { name = "R.Smg. N2" definition = submarine equipment = { submarine_3 = { amount = 1 owner = ITA version_name = "N Class" } } }
+		ship = { name = "R.Smg. N3" definition = submarine equipment = { submarine_3 = { amount = 1 owner = ITA version_name = "N Class" } } }
+		ship = { name = "R.Smg. N4" definition = submarine equipment = { submarine_3 = { amount = 1 owner = ITA version_name = "N Class" } } }
+		ship = { name = "R.Smg. N5" definition = submarine equipment = { submarine_3 = { amount = 1 owner = ITA version_name = "N Class" } } }
+		ship = { name = "R.Smg. N6" definition = submarine equipment = { submarine_3 = { amount = 1 owner = ITA version_name = "N Class" } } }
+		ship = { name = "R.Smg. X1" definition = submarine equipment = { submarine_3 = { amount = 1 owner = ITA version_name = "X Class" } } }
+		ship = { name = "R.Smg. X2" definition = submarine equipment = { submarine_3 = { amount = 1 owner = ITA version_name = "X Class" } } }
+		ship = { name = "R.Smg. X3" definition = submarine equipment = { submarine_3 = { amount = 1 owner = ITA version_name = "X Class" } } }
+	}
+
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+		}
+		requested_factories = 3
+		progress = 0.82
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.33
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_0
+		}
+		requested_factories = 2
+		progress = 0.59
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = battleship_5
+			creator = "SIC"
+		}
+		requested_factories = 6
+		progress = 0.8
+		amount = 2
+	}
+}

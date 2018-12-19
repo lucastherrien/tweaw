@@ -1,0 +1,196 @@
+﻿capital = 14
+
+oob = "empty"
+
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	### MOD ###
+	electronic_mechanical_engineering = 1
+
+	### Navy ###
+	destroyer_one = 1
+	destroyer_two = 1
+	destroyer_three = 1
+	destroyer_four = 1
+	light_cruiser_one = 1
+	light_cruiser_two = 1
+	light_cruiser_three = 1
+	light_cruiser_four = 1
+	light_cruiser_five = 1
+	heavy_cruiser_one = 1
+	heavy_cruiser_two = 1
+	heavy_cruiser_three = 1
+	heavy_cruiser_four = 1
+	battleship_one = 1
+	battleship_two = 1
+	battleship_three = 1
+	battleship_four = 1
+	battleship_five = 1
+	dreadnought_one = 1
+	dreadnought_two = 1
+	dreadnought_three = 1
+	dreadnought_four = 1
+	dreadnought_five = 1
+	dreadnought_six = 1
+	dreadnought_seven = 1
+	carrier_one = 1
+	carrier_two = 1
+	carrier_three = 1
+	submarine_one = 1
+	submarine_two = 1
+	submarine_three = 1
+	submarine_four = 1
+	submarine_five = 1
+	nav_infra_one = 1
+	nav_infra_two = 1
+	nav_infra_three = 1
+	nav_av_one = 1
+	nav_av_two = 1
+	nav_av_three = 1
+	transport = 1
+	### Tanks ###
+	gwtank = 1
+	basic_light_tank = 1
+	basic_heavy_tank = 1
+	### INF ###
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+
+	tech_engineers = 1
+	tech_recon = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	### AIR ###
+	early_fighter = 1
+	naval_bomber1 = 1
+	early_bomber = 1
+
+	cv_early_fighter = 1
+	cv_naval_bomber1 = 1
+}
+
+
+set_convoys = 40
+set_stability = 0.5
+set_war_support = 0.4
+
+set_politics = {
+
+	parties = {
+		totalist = {
+			popularity = 0
+		}
+		radical_socialist = {
+			popularity = 0
+		}
+		syndicalist = {
+			popularity = 0
+		}
+		social_democrat = {
+			popularity = 5
+		}
+		social_liberal = {
+			popularity = 10
+		}
+		market_liberal = {
+			popularity = 10
+		}
+		social_conservative = {
+			popularity = 20
+		}
+		authoritarian_democrat = {
+			popularity = 50
+		}
+		paternal_autocrat = {
+			popularity = 5
+		}
+		national_populist = {
+			popularity = 0
+		}
+	}
+
+	ruling_party = authoritarian_democrat
+	last_election = "1932.5.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+### Field Marshal
+### Corps Commander
+
+create_corps_commander = {
+	name = "Pierre Château-Jobert"
+	portrait_path = "gfx/leaders/BRI/Portrait_BRI_Chateau_Jobert.tga"
+	traits = {
+		career_officer
+		commando
+		paratrooper
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_field_marshal = { #Auto-Generated
+	name = "Louis Dio"
+	portrait_path = "gfx/leaders/BRI/Portrait_BRI_Dio.tga"
+	traits = {
+		career_officer
+		infantry_officer
+		hill_fighter
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = { #Auto-Generated
+	name = "Alfred Heurtaux"
+	portrait_path = "gfx/leaders/BRI/Portrait_BRI_Heurtaux.tga"
+	traits = {
+		war_hero
+		media_personality
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = { #Auto-Generated
+	name = "Bertrand Jochaud du Plessix"
+	portrait_path = "gfx/leaders/BRI/Portrait_BRI_Jochaud.tga"
+	traits = {
+	#noble
+		trait_reckless
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Charles Le Goasguen"
+	portrait_path = "gfx/leaders/BRI/Portrait_BRI_Le_Goasguen.tga"
+	traits = {
+		cavalry_officer
+		panzer_leader
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+### Navy Leader

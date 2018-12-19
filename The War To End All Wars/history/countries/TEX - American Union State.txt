@@ -1,0 +1,696 @@
+﻿capital = 371
+OOB = "empty"
+
+set_technology = {
+	### MOD ###
+	### Navy ###
+	destroyer_one = 1
+	destroyer_two = 1
+	destroyer_three = 1
+	destroyer_four = 1
+	light_cruiser_one = 1
+	light_cruiser_two = 1
+	light_cruiser_three = 1
+	light_cruiser_four = 1
+	light_cruiser_five = 1
+	heavy_cruiser_one = 1
+	heavy_cruiser_two = 1
+	heavy_cruiser_three = 1
+	heavy_cruiser_four = 1
+	battleship_one = 1
+	battleship_two = 1
+	battleship_three = 1
+	battleship_four = 1
+	battleship_five = 1
+	dreadnought_one = 1
+	dreadnought_two = 1
+	dreadnought_three = 1
+	dreadnought_four = 1
+	dreadnought_five = 1
+	dreadnought_six = 1
+	dreadnought_seven = 1
+	carrier_one = 1
+	carrier_two = 1
+	carrier_three = 1
+	heavy_carrier_one = 1
+	submarine_one = 1
+	submarine_two = 1
+	submarine_three = 1
+	submarine_four = 1
+	submarine_five = 1
+	nav_infra_one = 1
+	nav_infra_two = 1
+	nav_infra_three = 1
+	nav_av_one = 1
+	nav_av_two = 1
+	nav_av_three = 1
+	transport = 1
+	### Tanks ###
+	gwtank = 1
+	basic_light_tank = 1
+	### INF ###
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	### AIR ###
+	early_fighter = 1
+	naval_bomber1 = 1
+	early_bomber = 1
+	strategic_bomber1 = 1
+	CAS1 = 1
+	cv_early_fighter = 1
+	cv_naval_bomber1 = 1
+	cv_CAS1 = 1
+}
+
+set_research_slots = 3
+set_convoys = 80
+set_stability = 0.5
+set_war_support = 0.5
+
+add_opinion_modifier = { target = CAL modifier = embargo }
+add_opinion_modifier = { target = CSA modifier = embargo }
+add_opinion_modifier = { target = USA modifier = embargo }
+add_opinion_modifier = { target = NEE modifier = embargo }
+add_opinion_modifier = { target = SOV modifier = embargo }
+
+set_politics = {
+
+	parties = {
+		totalist = {
+			popularity = 0
+		}
+		radical_socialist = {
+			popularity = 0
+		}
+		syndicalist = {
+			popularity = 0
+		}
+		social_democrat = {
+			popularity = 0
+		}
+		social_liberal = {
+			popularity = 0
+		}
+		market_liberal = {
+			popularity = 0
+		}
+		social_conservative = {
+			popularity = 5
+		}
+		authoritarian_democrat = {
+			popularity = 60
+		}
+		paternal_autocrat = {
+			popularity = 15
+		}
+		national_populist = {
+			popularity = 20
+		}
+	}
+
+	ruling_party = authoritarian_democrat
+	last_election = "1936.11.08"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+create_country_leader = {
+	name = "Huey Long"
+	desc = "POLITICS_HUEY_LONG_DESC"
+	picture = "Portrait_TEX_Huey_Long.tga"
+	expire = "1965.1.1"
+	ideology = national_populist_subtype
+	traits = {}
+}
+create_country_leader = {
+	name = "Huey Long"
+	desc = "POLITICS_HUEY_LONG_DESC"
+	picture = "Portrait_TEX_Huey_Long.tga"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+	traits = {}
+}
+create_country_leader = {
+	name = "Huey Long"
+	desc = "POLITICS_HUEY_LONG_DESC"
+	picture = "Portrait_TEX_Huey_Long.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+	traits = {}
+}
+create_country_leader = {
+	name = "Huey Long"
+	desc = "POLITICS_HUEY_LONG_DESC"
+	picture = "Portrait_TEX_Huey_Long.tga"
+	expire = "1965.1.1"
+	ideology = social_conservative_subtype
+	traits = {}
+}
+add_ideas = {
+	# Cabinet
+	TEX_Charles_Edward_Coughlin_hog_ade
+	TEX_David_Ignatius_Walsh_for_ade
+	TEX_Francis_Everett_Townsend_eco_ade
+	TEX_Hugo_Lafayette_Black_sec_ade
+	#laws
+}
+
+### Field Marshal
+create_field_marshal = {# George Van Horn Moseley
+	name = "George Van Horn Moseley"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_George_Van_Horn_Moseley.tga"
+	traits = {
+		thorough_planner
+		logistics_wizard
+		politically_connected
+		brilliant_strategist
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+create_field_marshal = {# George S. Patton Jr.
+	name = "George S. Patton"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_george_patton.tga"
+	traits = {
+		trickster
+		armor_officer
+		panzer_leader
+		war_hero
+		trait_reckless
+	}
+	skill = 3
+	attack_skill = 5
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_field_marshal = {# Claire Lee Chennault
+	name = "Claire Lee Chennault"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_claire_chennault.tga"
+	traits = {
+		trait_cautious
+		brilliant_strategist
+		career_officer
+		organisational_leader
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+### Corps Commander
+create_corps_commander = {# Joseph "Lightning Joe" Lawton Collins
+	name = "Joseph Lawton Collins"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_Joseph_Collins.tga"
+	traits = {
+		trickster
+		career_officer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {# Courtney Hodges
+	name = "Courtney Hicks Hodges"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_Cortney_Hodges.dds"
+	traits = {
+		panzer_leader
+		career_officer
+		infantry_officer
+	}
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 4
+}
+create_corps_commander = {# William Hood Simpson
+	name = "William Hood Simpson"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_William_Simpson.tga"
+	traits = { infantry_officer }
+	skill = 3
+
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {# Jacob L. Devers
+	name = "Jacob L. Devers"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_jacob_devers.tga"
+	traits = {
+		trait_reckless
+		armor_officer
+		panzer_leader
+	}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {# Walton Walker
+	name = "Walton Walker"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_walton_walker.tga"
+	traits = {
+		politically_connected
+		career_officer
+		panzer_leader
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {# Matthew Ridgway
+	name = "Matthew Ridgway"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_matthew_ridgway.tga"
+	traits = {
+		inflexible_strategist
+		trait_cautious
+		commando
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 4
+}
+create_corps_commander = {# Bruce C. Clarke
+	name = "Bruce C. Clarke"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_bruce_clarke.tga"
+	traits = {
+		harsh_leader
+		panzer_leader
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {# Henry I. Hodes
+	name = "Henry I. Hodes"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_henry_hodes.tga"
+	traits = {
+		trait_reckless
+		infantry_leader
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {# Clifton B. Cates
+	name = "Clifton B. Cates"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_clifton_cates.tga"
+	traits = {}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {# Lemuel C. Shepherd Jr
+	name = "Lemuel C. Shepherd Jr"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_lemuel_shepherd.tga"
+	traits = {
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {# Chesty Puller
+	name = "Chesty Puller"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_chesty_puller.tga"
+	traits = {
+		harsh_leader
+		career_officer
+		commando
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 4
+	logistics_skill = 2
+}
+### Navy Leader
+create_navy_leader = {# William Halsey Jr.
+	name = "William Halsey Jr."
+	portrait_path = "gfx/leaders/USA/Portrait_USA_William_Halsey_Jr.dds"
+	traits = {
+		superior_tactician
+		spotter
+	}
+	skill = 4 #naval guy, don't patch
+}
+create_navy_leader = {# Samuel Murray Robinson
+	name = "Samuel Murray Robinson"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_samuel_robinson.tga"
+	traits = {
+	}
+	skill = 3 #naval guy, don't patch
+}
+create_navy_leader = {# James O. Richardson
+	name = "James O. Richardson"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_james_richardson.tga"
+	traits = {superior_tactician}
+	skill = 2 #naval guy, don't patch
+}
+create_navy_leader = {# John S. McCain Sr.
+	name = "John S. McCain Sr."
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_john_mccain.tga"
+	traits = {air_controller}
+	skill = 3 #naval guy, don't patch
+}
+create_navy_leader = {# Arthur L. Bristol
+	name = "Arthur L. Bristol"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_arthur_bristol.tga"
+	traits = {air_controller}
+	skill = 2 #naval guy, don't patch
+}
+create_navy_leader = {# David W. Bagley
+	name = "David W. Bagley"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_david_bagley.tga"
+	traits = {
+	}
+	skill = 2 #naval guy, don't patch
+}
+
+### Ship Variants ###
+create_equipment_variant = {
+	name = "Wyoming Class" #in service of GRE
+	type = SH_battleship_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "South Carolina Class" #in service with SWE
+	type = SH_battleship_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "New York Class"
+	type = SH_battleship_3
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Nevada Class"
+	type = SH_battleship_4
+	parent_version = 0
+	upgrades = {
+		h_u_attack_ten = 1
+		h_u_attack_one = 5
+		h_u_ap_one = 5
+		h_u_frange_ten = 1
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Pennsylvania Class"
+	type = SH_battleship_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "New Mexico Class"
+	type = SH_battleship_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Tennessee Class"
+	type = SH_battleship_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Colorado Class"
+	type = SH_battleship_5
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "South Dakota Class"
+	type = SH_battleship_5
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Missouri Class"
+	type = SH_battleship_6
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Nebraska Class"
+	type = SH_battleship_7
+	parent_version = 0
+	upgrades = {
+		h_u_attack_ten = 2
+		h_u_attack_one = 5
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Yorktown Class"
+	type = heavy_carrier_1
+	parent_version = 0
+	upgrades = {
+		h_u_air_ten = 3
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Langley Class"
+	type = carrier_2
+	parent_version = 0
+	upgrades = {
+		h_u_air_ten = 25
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Lexington Class"
+	type = battleship_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Pennsylvania Class Cruiser"
+	type = heavy_cruiser_1
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Tennessee Class Cruiser"
+	type = heavy_cruiser_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Northampton Class"
+	type = heavy_cruiser_3
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Omaha Class"
+	type = light_cruiser_3
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Sampson Class" #in service with GRE
+	type = destroyer_1
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Smith Class" #in service with EGY
+	type = destroyer_1
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Caldwell Class"
+	type = destroyer_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Wickes Class"
+	type = destroyer_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Clemson Class"
+	type = destroyer_3
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Litchfield Class"
+	type = destroyer_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Farragut Class"
+	type = destroyer_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Porter Class"
+	type = destroyer_4
+	parent_version = 0
+	upgrades = {
+		ship_ASW_upgrade = 1
+	}
+}
+
+create_equipment_variant = {
+	name = "Barracuda Class"
+	type = submarine_3
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Argonaut Class"
+	type = submarine_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Narwhal Class"
+	type = submarine_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "O Class"
+	type = submarine_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "R Class"
+	type = submarine_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "S Class"
+	type = submarine_3
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Dolphin Class"
+	type = submarine_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Cachalot Class"
+	type = submarine_5
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Porpoise Class"
+	type = submarine_5
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Shark Class"
+	type = submarine_5
+	parent_version = 0
+	upgrades = {
+		sub_engine_upgrade = 1
+	}
+}

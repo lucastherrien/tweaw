@@ -1,0 +1,19 @@
+state = {
+	id = 1051
+	name = "STATE_1051"
+	manpower = 3429000
+	state_category = pastoral
+	history = {
+		owner = PRC
+		add_core_of = PRC
+		add_core_of = PRC
+		add_core_of = QIE
+		add_core_of = QIE
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = {
+		1884 4192 4504
+	}
+}

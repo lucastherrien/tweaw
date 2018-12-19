@@ -1,0 +1,203 @@
+﻿division_template = {
+	name = "Divisão de Caçadores"
+	division_names_group = POR_CAC_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+}
+division_template = {
+	name = "Divisão de Infantaria"
+	division_names_group = POR_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Batalhão de Guarnição"
+	division_names_group = POR_GAR_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+units = {
+
+	division = {
+		#name = "1. Divisão de Infantaria"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11805
+		division_template = "Divisão de Infantaria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		#name = "2. Divisão de Infantaria"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 11805
+		division_template = "Divisão de Infantaria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		#name = "3. Divisão de Infantaria"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 11805
+		division_template = "Divisão de Infantaria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		#name = "4. Divisão de Infantaria"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 11805
+		division_template = "Divisão de Infantaria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		#name = "5. Divisão de Infantaria"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 11805
+		division_template = "Divisão de Infantaria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+
+	division = {
+		#name = "1. Batalhão Ultramarino"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 8248
+		division_template = "Batalhão de Guarnição"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		#name = "2. Batalhão Ultramarino"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 12891
+		division_template = "Batalhão de Guarnição"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		#name = "3. Batalhão Ultramarino"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 8245
+		division_template = "Batalhão de Guarnição"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+
+	navy = {
+		name = "Frota Ultramarina"
+		base = 12891
+		location = 12891
+		ship = { name = "Tejo" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ENG version_name = "M Class" } } }
+		ship = { name = "Liz" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ENG version_name = "M Class" } } }
+		ship = { name = "Guadiana" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ENG version_name = "M Class" } } }
+		ship = { name = "Montego" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ENG version_name = "Flower Class" } } }
+	}
+	navy = {
+		name = "Frota Continental"
+		base = 11805
+		location = 11805
+		ship = { name = "Afonso Henriques" definition = SH_battleship equipment = { SH_battleship_2 = { amount = 1 owner = ENG version_name = "Bellerophon Class" } } }
+
+		ship = { name = "India" definition = heavy_cruiser equipment = { heavy_cruiser_3 = { amount = 1 owner = POR version_name = "India Class" } } }
+		ship = { name = "Aljubarrota" definition = heavy_cruiser equipment = { heavy_cruiser_3 = { amount = 1 owner = POR version_name = "India Class" } } }
+
+		ship = { name = "São Anacleto" definition = light_cruiser equipment = { light_cruiser_5 = { amount = 1 owner = POR version_name = "São Marcos Class" } } }
+		ship = { name = "São Marcos" definition = light_cruiser equipment = { light_cruiser_5 = { amount = 1 owner = POR version_name = "São Marcos Class" } } }
+
+		ship = { name = "Douro" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ENG version_name = "M Class" } } }
+		ship = { name = "Sado" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ENG version_name = "M Class" } } }
+		ship = { name = "Minho" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ENG version_name = "M Class" } } }
+		ship = { name = "Republica" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ENG version_name = "Flower Class" } } }
+
+		ship = { name = "Delfim" definition = submarine equipment = { submarine_5 = { amount = 1 owner = POR version_name = "Delfim Class" } } }
+		ship = { name = "Espadarte" definition = submarine equipment = { submarine_5 = { amount = 1 owner = POR version_name = "Delfim Class" } } }
+		ship = { name = "Foca" definition = submarine equipment = { submarine_5 = { amount = 1 owner = POR version_name = "Delfim Class" } } }
+		ship = { name = "Golfinho" definition = submarine equipment = { submarine_5 = { amount = 1 owner = POR version_name = "Delfim Class" } } }
+	}
+}
+
+air_wings = {
+	112 = {
+		tac_bomber_equipment_0 = {
+			owner = "POR"
+			amount = 25
+			}}}
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.82
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.33
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_3
+			creator = "POR"
+		}
+		requested_factories = 2
+		progress = 0.35
+		amount = 3
+	}
+}

@@ -1,0 +1,481 @@
+###########################
+# Canada Decisions
+###########################
+
+CAN_american_civil_war_decisions = {
+
+	CAN_recognize_the_USA = {# recognize the USA
+		icon = generic_agreement
+		allowed = {
+			original_tag = CAN
+		}
+		available = {
+			NOT = { has_war_with = USA }
+			USA = {
+				OR = {
+					has_war_with = CSA
+					has_war_with = TEX
+				}
+			}
+		}
+		visible = {
+			is_subject = no
+			country_exists = USA
+			NOT = { has_socialist_government = yes }
+			has_country_flag = CAN_acw_intervention
+			NOT = {
+				has_country_flag = CAN_supports_psa
+				has_country_flag = CAN_supports_aus
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CAN_recognize_the_USA"
+			set_country_flag = CAN_supports_usa
+			CAN = {	give_military_access = USA }
+			every_country = {
+				limit = {
+					OR = {
+						tag = CSA
+						tag = TEX
+						tag = CAL
+					}
+				}
+				country_event = canada.870
+			}
+		}
+	}
+	CAN_recognize_the_PSA = {# recognize the PSA
+		icon = generic_agreement
+		allowed = {
+			original_tag = CAN
+		}
+		available = {
+			NOT = { has_war_with = CAL }
+			CAL = {
+				OR = {
+					has_war_with = CSA
+					has_war_with = TEX
+					has_war_with = USA
+				}
+			}
+		}
+		visible = {
+			is_subject = no
+			country_exists = CAL
+			NOT = { has_socialist_government = yes }
+			has_country_flag = CAN_acw_intervention
+			NOT = {
+				has_country_flag = CAN_supports_usa
+				has_country_flag = CAN_supports_aus
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CAN_recognize_the_PSA"
+			set_country_flag = CAN_supports_psa
+			CAN = {	give_military_access = CAL }
+			every_country = {
+				limit = {
+					OR = {
+						tag = CSA
+						tag = TEX
+						tag = USA
+					}
+				}
+				country_event = canada.871
+			}
+		}
+	}
+	CAN_recognize_the_AUS = {# recognize the AUS
+		icon = generic_agreement
+		allowed = { original_tag = CAN }
+		available = {
+			NOT = { has_war_with = TEX }
+			TEX = {
+				OR = {
+					has_war_with = CSA
+					has_war_with = USA
+					has_war_with = CAL
+				}
+			}
+		}
+		visible = {
+			is_subject = no
+			country_exists = TEX
+			NOT = { has_socialist_government = yes }
+			has_country_flag = CAN_acw_intervention
+			NOT = {
+				has_country_flag = CAN_supports_psa
+				has_country_flag = CAN_supports_usa
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CAN_recognize_the_AUS"
+			set_country_flag = CAN_supports_aus
+			CAN = {	give_military_access = TEX }
+			every_country = {
+				limit = {
+					OR = {
+						tag = CSA
+						tag = USA
+						tag = CAL
+					}
+				}
+				country_event = canada.872
+			}
+		}
+	}
+
+	CAN_intervene_in_ACW_USA = {
+		icon = generic_ignite_civil_war
+		allowed = {
+			original_tag = CAN
+		}
+		available = {
+			USA = {
+				OR = {
+					surrender_progress > 0.50
+					num_of_controlled_states < 5
+				}
+			}
+			CAN = {
+				controls_all_owned_states = yes
+				NOT = { has_idea = CAN_divided_nation }
+			}
+		}
+		visible = {
+			country_exists = USA
+			is_subject = no
+			has_global_flag = USA_civil_war_begun_flag
+			NOT = { has_global_flag = USA_civil_war_over_flag }
+			USA = {
+				is_subject = no
+				has_war_with = CSA
+			}
+			has_country_flag = CAN_acw_intervention
+			has_country_flag = CAN_supports_usa
+			NOT = {
+				has_war_with = USA
+				has_war_with = CSA
+				has_war_with = TEX
+				has_war_with = CAL
+				has_socialist_government = yes
+				has_country_flag = CAN_white_peaced_csa
+			}
+		}
+		fire_only_once = yes
+
+		cost = freedec?0
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 3
+				has_authoritarian_government = yes
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_war_with = AST
+					any_enemy_country = { is_actual_major = yes }
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CAN_intervene_in_ACW_USA"
+			set_country_flag = CAN_joined_the_ACW
+			if = {
+				limit = {
+					USA = { has_war_with = CSA }
+					NOT = { has_war_with = CSA }
+				}
+				add_to_war = { targeted_alliance = USA enemy = CSA }
+			}
+		}
+	}
+	CAN_intervene_in_ACW_PSA = {
+		icon = generic_ignite_civil_war
+		allowed = {
+			original_tag = CAN
+		}
+		available = {
+			CAL = {
+				OR = {
+					surrender_progress > 0.50
+					num_of_controlled_states < 4
+				}
+			}
+			CAN = {
+				controls_all_owned_states = yes
+				NOT = { has_idea = CAN_divided_nation }
+			}
+		}
+		visible = {
+			country_exists = CAL
+			is_subject = no
+			has_global_flag = USA_civil_war_begun_flag
+			NOT = { has_global_flag = USA_civil_war_over_flag }
+			CAL = {
+				is_subject = no
+				has_war_with = CSA
+			}
+			has_country_flag = CAN_acw_intervention
+			has_country_flag = CAN_supports_psa
+			NOT = {
+				has_war_with = USA
+				has_war_with = CSA
+				has_war_with = TEX
+				has_war_with = CAL
+				has_socialist_government = yes
+				has_country_flag = CAN_white_peaced_csa
+			}
+		}
+		fire_only_once = yes
+
+		cost = freedec?0
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 3
+				has_elected_government = yes
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_war_with = AST
+					any_enemy_country = { is_actual_major = yes }
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CAN_intervene_in_ACW_PSA"
+			set_country_flag = CAN_joined_the_ACW
+			if = {
+				limit = {
+					CAL = { has_war_with = CSA }
+					NOT = { has_war_with = CSA }
+				}
+				add_to_war = { targeted_alliance = CAL enemy = CSA }
+			}
+		}
+	}
+	CAN_intervene_in_ACW_AUS = {
+		icon = generic_ignite_civil_war
+		allowed = {
+			original_tag = CAN
+		}
+		available = {
+			TEX = {
+				OR = {
+					surrender_progress > 0.50
+					num_of_controlled_states < 5
+				}
+			}
+			CAN = {
+				controls_all_owned_states = yes
+				NOT = { has_idea = CAN_divided_nation }
+			}
+		}
+		visible = {
+			country_exists = TEX
+			is_subject = no
+			has_global_flag = USA_civil_war_begun_flag
+			NOT = { has_global_flag = USA_civil_war_over_flag }
+			TEX = {
+				is_subject = no
+				has_war_with = CSA
+			}
+			has_country_flag = CAN_acw_intervention
+			has_country_flag = CAN_supports_aus
+			NOT = {
+				has_war_with = USA
+				has_war_with = CSA
+				has_war_with = TEX
+				has_war_with = CAL
+				has_socialist_government = yes
+				has_country_flag = CAN_white_peaced_csa
+			}
+		}
+		fire_only_once = yes
+
+		cost = freedec?0
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_war_with = AST
+					any_enemy_country = { is_actual_major = yes }
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CAN_intervene_in_ACW_AUS"
+			set_country_flag = CAN_joined_the_ACW
+			if = {
+				limit = {
+					TEX = { has_war_with = CSA }
+					NOT = { has_war_with = CSA }
+				}
+				add_to_war = { targeted_alliance = TEX enemy = CSA }
+			}
+		}
+	}
+
+	CAN_declare_war_on_CSA = {
+		icon = generic_ignite_civil_war
+		allowed = {
+			original_tag = CAN
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CAN_CSA_is_winning_ACW
+				CSA = { surrender_progress < 0.10 }
+				OR = {
+					CSA = { num_of_controlled_states > 24 }
+					AND = {
+						NOT = { country_exists = USA }
+						country_exists = TEX
+						TEX = { surrender_progress > 0.20 }
+					}
+					AND = {
+						NOT = { country_exists = USA }
+						country_exists = TEX
+						TEX = { num_of_controlled_states < 8 }
+					}
+					AND = {
+						NOT = { country_exists = TEX }
+						country_exists = USA
+						USA = { surrender_progress > 0.20 }
+					}
+				}
+			}
+			CAN = {
+				controls_all_owned_states = yes
+				NOT = { has_idea = CAN_divided_nation }
+			}
+		}
+		visible = {
+			OR = {
+				NOT = { has_country_flag = CAN_acw_intervention }
+				AND = {
+					has_country_flag = CAN_supports_usa
+					NOT = { country_exists = USA }
+				}
+				AND = {
+					has_country_flag = CAN_supports_psa
+					NOT = { country_exists = CAL }
+				}
+				AND = {
+					has_country_flag = CAN_supports_aus
+					NOT = { country_exists = TEX }
+				}
+			}
+			country_exists = CSA
+			is_subject = no
+			NOT = {
+				has_country_flag = CAN_white_peaced_csa
+				has_socialist_government = yes
+				has_war_with = CSA
+			}
+			CSA = {
+				is_subject = no
+				has_socialist_government = yes
+				OR = {
+					has_war_with = USA
+					has_war_with = TEX
+					has_war_with = CAL
+				}
+			}
+			has_global_flag = USA_civil_war_begun_flag
+			NOT = { has_global_flag = USA_civil_war_over_flag }
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					has_war_with = AST
+					has_war_with = CAL
+					has_war_with = TEX
+					any_enemy_country = { is_actual_major = yes }
+				}
+			}
+			# let's not go to war unless CSA is sufficiently flanked
+			modifier = {
+				factor = 0
+				NOT = {
+					is_in_faction_with = CAL
+					AND = {
+						CSA = { has_war_with = TEX }
+						TEX = { surrender_progress < 0.50 }
+					}
+					AND = {
+						CSA = { has_war_with = USA }
+						USA = { surrender_progress < 0.50 }
+					}
+					AND = {
+						CSA = { has_war_with = CAL }
+						CAL = { surrender_progress < 0.50 }
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CAN_declare_war_on_CSA"
+			set_country_flag = CAN_joined_the_ACW
+			declare_war_on = { target = CSA type = annex_everything	}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

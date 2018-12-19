@@ -1,0 +1,172 @@
+﻿###########################
+# Siam Events
+###########################
+# By DoctorPainkiller (Delhi Demands event) and PPsyrius
+###########################
+
+add_namespace = siam
+
+country_event = { #SIA grabbing Singapore form GER - 3967393
+	id = siam.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event siam.2"}
+	title = siam.2.t
+	desc = siam.2.d
+	picture = GFX_Siam_Cavalry_Troops
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SIA
+		country_exists = GEX
+		NOT = {
+			is_in_faction_with = GEX
+			has_war_with = GEX
+			is_subject_of = GEX
+		}
+		Or = {
+			AND = {
+				336 = { is_controlled_by = GEX } # Singapore
+				846 = { is_controlled_by = GEX } # Malaya
+			}
+			AND = {
+				336 = { is_controlled_by = MLY } # Singapore
+				846 = { is_controlled_by = MLY } # Malaya
+			}
+		}
+		751 = { is_controlled_by = SIA } # Kota Bharu
+		289 = { is_controlled_by = SIA } # Bangkok
+		NOT = { has_global_flag = SIA_singapore }
+	}
+
+	immediate = {
+		set_global_flag = SIA_singapore
+	}
+
+	option = {
+		name = siam.2.a # Seize Singapore!
+		ai_chance = { factor = 100 }
+		SIA = {
+			transfer_state = 336
+			transfer_state = 846
+			add_opinion_modifier = { target = GEX modifier = SIA_seize_singapore } # -100
+		}
+		hidden_effect = {
+			GEX = { country_event = { id = siam.3 days = 3} }
+		}
+	}
+	option = {
+		name = siam.2.b # Rather Not
+		ai_chance = { factor = 0 }
+		SIA = {
+			add_opinion_modifier = { target = GEX modifier = SIA_no_seize_singapore } # 100
+			add_political_power = -100
+		}
+	}
+}
+
+country_event = { #Siam snatch Singapore from us German master race! - 3967394
+	id = siam.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event siam.3"}
+	title = siam.3.t
+	desc = siam.3.d
+	picture = GFX_Siam_Thai_Flag_Over_Kengtung_Shan
+
+	is_triggered_only = yes
+
+	option = {
+		name = siam.3.a # Concede defeat and give Successful[TM] Siam some new lands :v
+		ai_chance = { factor = 100 }
+		SIA = { add_state_core = 336 add_state_core = 846}
+		GEX = { add_political_power = -20 }
+	}
+	option = {
+		name = siam.3.b # We shall fight back!
+		ai_chance = { factor = 0 }
+		GEX = {
+			declare_war_on = {
+				target = SIA
+				type = annex_everything
+			}
+			add_political_power = -100
+		}
+	}
+}
+country_event = { # An event to make sure Kota Bharu is handed back to Malaysia puppet if already liberated - xxxxxxx
+	id = siam.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event siam.4"}
+	hidden = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GEX
+		has_global_flag = fall_of_bangkok_mitteleuropa
+		751 = { is_controlled_by = GEX } # Kota Bharu
+		country_exists = MLY
+	}
+
+	immediate = {
+		MLY = { transfer_state = 751 } # Kota Bharu
+	}
+
+	option = {
+		name = siam.4.a
+	}
+}
+
+### 16 - 24 are moved to world news file ###
+
+
+country_event = { # An event to make sure Chaiyaburi is handed back to Laos/Indochina puppet if already liberated - xxxxxxx
+	id = siam.35
+	immediate = {log = "[GetDateText]: [Root.GetName]: event siam.35"}
+	hidden = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		has_global_flag = fall_of_bangkok_mitteleuropa
+		751 = { is_controlled_by = GER } # Kota Bharu
+		OR = {
+			AND = {
+				country_exists = LAO
+				LAO = { is_in_faction_with = GER }
+			}
+			AND = {
+				country_exists = INC
+				INC = { is_in_faction_with = GER }
+			}
+		}
+	}
+
+	option = {
+		name = siam.35.a
+		trigger = { LAO = { is_in_faction_with = GER } }
+		LAO = { transfer_state = 882 }
+	}
+	option = {
+		name = siam.35.b
+		trigger = { INC = { is_in_faction_with = GER } }
+		INC = { transfer_state = 882 }
+	}
+}
+
+### Events needed to be done ###
+# Siamese Black Mondays
+# Prachapibarn (Decentralization) - xxxxxxx
+# Siamese Civil War (in case Paribatra Sukhumbhand takes the throne: Madidol vs Boripatr)- xxxxxxx
+# Blaming political opponents for Rama VIII death - xxxxxxx
+# Purging of Political opponents post-Rama VIII death- xxxxxxx
+# ------------ 1942 Great Bangkok Flood ----------------- #
+# Northern Region Flood - xxxxxxx
+# Upper Central Region Flooding - xxxxxxx
+# Lower Central Region (+Bangkok) flood - xxxxxxx
+# Flood Crisis Management - xxxxxxx
+# The end of the flood - xxxxxxxx
+# ------------ Lanna States Problems ----------------- #
+# ------------ Southern Muslim State Problems ----------------- #
+# ------------ Cambodian Unrests ----------------- #
+
+# - xxxxxxx
+# An event to make sure Cambodia (from the Siamese partition) is liberated if INC conquer all Indochina - xxxxxxx

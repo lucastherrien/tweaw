@@ -1,0 +1,417 @@
+﻿########
+#Templates
+########
+
+division_template = {
+	name = "Division d'Infanterie Régulière"
+	division_names_group = NFA_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Division d'Infanterie Légère Blindée"
+	division_names_group = NFA_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		light_armor = { x = 3 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Garnison Coloniale"			# Represents: 2xRgt colonial forces and , usually with old equipment
+	division_names_group = NFA_GAR_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+
+division_template = {
+	name = "Division d'Infanterie Motorisée"
+	division_names_group = NFA_MOT_01
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		light_armor = { x = 2 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Troupes de Marine"
+	division_names_group = NFA_MAR_01
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Division d'Elite de Montagne"
+	division_names_group = NFA_MTN_01
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Division de Cavalerie Coloniale"
+	division_names_group = NFA_CAV_01
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Armored-Division"
+	division_names_group = NFA_ARM_01
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+}
+
+units = {
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11969
+		division_template = "Division d'Elite de Montagne"
+		start_experience_factor = 0.1
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11969
+		division_template = "Troupes de Marine"
+		start_experience_factor = 0.1
+	}
+
+	division = {
+		name = "Garnison de Tunis"
+		location = 11969
+		division_template = "Garnison Coloniale"
+		start_experience_factor = 0.1
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		division_template = "Division d'Infanterie Motorisée"
+		start_experience_factor = 0.1
+		location = 1145
+	}
+
+	division = {
+		name = "2ème Division Motorisée"
+		division_template = "Division d'Infanterie Légère Blindée"
+		start_experience_factor = 0.1
+		location = 1145
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		division_template = "Division d'Infanterie Légère Blindée"
+		start_experience_factor = 0.1
+		location = 1145
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		division_template = "Division d'Infanterie Légère Blindée"
+		start_experience_factor = 0.1
+		location = 1145
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		division_template = "Division d'Infanterie Légère Blindée"
+		start_experience_factor = 0.1
+		location = 1145
+	}
+
+	division = {
+		name = "Garnison d'Alger"
+		division_template = "Garnison Coloniale"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+		location = 1145
+	}
+
+	division = {
+		name = "Garnison d'Oran"
+		division_template = "Garnison Coloniale"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+		location = 7132
+	}
+
+	division = {
+		name = "Garnison de Dakar"
+		division_template = "Garnison Coloniale"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+		location = 4948
+	}
+
+	division = {
+		name = "Garnison de Guinée"
+		division_template = "Garnison Coloniale"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+		location = 1909
+	}
+
+	navy = {
+		name = "Flotte de Méditerranée"
+		base = 7132
+		location = 7132
+		ship = { name = "Saint-Louis" definition = SH_battleship equipment = { SH_battleship_1 = { amount = 1 owner = FRA version_name = "Charlemagne Class" } } }
+		ship = { name = "République" definition = SH_battleship equipment = { SH_battleship_1 = { amount = 1 owner = FRA version_name = "République Class" } } }
+		ship = { name = "Patrie" definition = SH_battleship equipment = { SH_battleship_1 = { amount = 1 owner = FRA version_name = "République Class" } } }
+		ship = { name = "Démocratie" definition = SH_battleship equipment = { SH_battleship_1 = { amount = 1 owner = FRA version_name = "Liberté Class" } } }
+		ship = { name = "Verité" definition = SH_battleship equipment = { SH_battleship_1 = { amount = 1 owner = FRA version_name = "Liberté Class" } } }
+		ship = { name = "Condorcet" definition = SH_battleship equipment = { SH_battleship_1 = { amount = 1 owner = FRA version_name = "Danton Class" } } }
+		ship = { name = "Diderot" definition = SH_battleship equipment = { SH_battleship_1 = { amount = 1 owner = FRA version_name = "Danton Class" } } }
+		ship = { name = "Mirabeau" definition = SH_battleship equipment = { SH_battleship_1 = { amount = 1 owner = FRA version_name = "Danton Class" } } }
+		ship = { name = "Voltaire" definition = SH_battleship equipment = { SH_battleship_1 = { amount = 1 owner = FRA version_name = "Danton Class" } } }
+		ship = { name = "Courbet" definition = SH_battleship equipment = { SH_battleship_2 = { amount = 1 owner = FRA version_name = "Courbet Class" } } }
+		ship = { name = "Paris" definition = SH_battleship equipment = { SH_battleship_2 = { amount = 1 owner = FRA version_name = "Courbet Class" } } }
+		ship = { name = "Bretagne" definition = SH_battleship equipment = { SH_battleship_3 = { amount = 1 owner = FRA version_name = "Bretagne Class" } } }
+		ship = { name = "Lorraine" definition = SH_battleship equipment = { SH_battleship_3 = { amount = 1 owner = FRA version_name = "Bretagne Class" } } }
+
+		ship = { name = "Union Sacrée" definition = battleship equipment = { battleship_5 = { amount = 1 owner = NFA version_name = "Union Sacrée Class" } } }
+		ship = { name = "France" definition = battleship equipment = { battleship_5 = { amount = 1 owner = NFA version_name = "Union Sacrée Class" } } }
+
+		ship = { name = "Ernest Renan" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = FRA version_name = "Ernest Renan Class" } } }
+		ship = { name = "Edgar Quinet" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = FRA version_name = "Edgar Quinet Class" } } }
+		ship = { name = "Pothuau" definition = heavy_cruiser equipment = { heavy_cruiser_3 = { amount = 1 owner = NFA version_name = "Pothuau Class" } } }
+		ship = { name = "Nice" definition = heavy_cruiser equipment = { heavy_cruiser_4 = { amount = 1 owner = NFA version_name = "Nice Class" } } }
+		ship = { name = "Bordeaux" definition = heavy_cruiser equipment = { heavy_cruiser_4 = { amount = 1 owner = NFA version_name = "Nice Class" } } }
+		ship = { name = "Lyon" definition = heavy_cruiser equipment = { heavy_cruiser_4 = { amount = 1 owner = NFA version_name = "Nice Class" } } }
+		ship = { name = "Toulouse" definition = heavy_cruiser equipment = { heavy_cruiser_4 = { amount = 1 owner = NFA version_name = "Nice Class" } } }
+
+		ship = { name = "Nantes" definition = light_cruiser equipment = { light_cruiser_4 = { amount = 1 owner = NFA version_name = "Nantes Class" } } }
+		ship = { name = "Bergerac" definition = light_cruiser equipment = { light_cruiser_4 = { amount = 1 owner = NFA version_name = "Nantes Class" } } }
+
+		ship = { name = "Chasseur" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = FRA version_name = "Chasseur Class" } } }
+		ship = { name = "Janissaire" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = FRA version_name = "Chasseur Class" } } }
+		ship = { name = "Voltigeur" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = FRA version_name = "Chasseur Class" } } }
+		ship = { name = "Tirailleur" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = FRA version_name = "Chasseur Class" } } }
+		ship = { name = "Casque" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = FRA version_name = "Bouclier Class" } } }
+		ship = { name = "Cimeterre" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = FRA version_name = "Bouclier Class" } } }
+		ship = { name = "Capitaine Mehl" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = FRA version_name = "Bouclier Class" } } }
+		ship = { name = "Commandant Bory" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = FRA version_name = "Bouclier Class" } } }
+		ship = { name = "Commandant Rivière" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = FRA version_name = "Bouclier Class" } } }
+		ship = { name = "Dehorter" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = FRA version_name = "Bouclier Class" } } }
+		ship = { name = "Bisson" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = FRA version_name = "Bisson Class" } } }
+		ship = { name = "Renaudin" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = FRA version_name = "Bisson Class" } } }
+		ship = { name = "Commandant Lucas" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = FRA version_name = "Bisson Class" } } }
+		ship = { name = "Protet" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = FRA version_name = "Bisson Class" } } }
+		ship = { name = "Mangini" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = FRA version_name = "Bisson Class" } } }
+		ship = { name = "Aventurier" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = FRA version_name = "Aventurier Class" } } }
+		ship = { name = "Intrépide" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = FRA version_name = "Aventurier Class" } } }
+		ship = { name = "Opiniâtre" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = FRA version_name = "Aventurier Class" } } }
+		ship = { name = "Téméraire" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = FRA version_name = "Aventurier Class" } } }
+		ship = { name = "Arabe" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = FRA version_name = "Arabe Class" } } }
+		ship = { name = "Algérien" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = FRA version_name = "Arabe Class" } } }
+		ship = { name = "Annamite" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = FRA version_name = "Arabe Class" } } }
+		ship = { name = "Bambara" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = FRA version_name = "Arabe Class" } } }
+		ship = { name = "Hova" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = FRA version_name = "Arabe Class" } } }
+		ship = { name = "Kabyle" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = FRA version_name = "Arabe Class" } } }
+		ship = { name = "Marocain" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = FRA version_name = "Arabe Class" } } }
+		ship = { name = "Sakalave" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = FRA version_name = "Arabe Class" } } }
+		ship = { name = "Sénégalais" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = FRA version_name = "Arabe Class" } } }
+		ship = { name = "Somali" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = FRA version_name = "Arabe Class" } } }
+		ship = { name = "Tonkinois" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = FRA version_name = "Arabe Class" } } }
+		ship = { name = "Touareg" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = FRA version_name = "Arabe Class" } } }
+		ship = { name = "Jaguar" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = NFA version_name = "Jaguar Class" } } }
+		ship = { name = "Chacal" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = NFA version_name = "Jaguar Class" } } }
+		ship = { name = "Lynx" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = NFA version_name = "Jaguar Class" } } }
+		ship = { name = "Tigre" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = NFA version_name = "Jaguar Class" } } }
+		ship = { name = "Panthère" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = NFA version_name = "Jaguar Class" } } }
+		ship = { name = "Léopard" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = NFA version_name = "Jaguar Class" } } }
+		ship = { name = "Lion" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = NFA version_name = "Lion Class" } } }
+		ship = { name = "Guépard" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = NFA version_name = "Lion Class" } } }
+		ship = { name = "Valmy" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = NFA version_name = "Lion Class" } } }
+		ship = { name = "Bison" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = NFA version_name = "Lion Class" } } }
+		ship = { name = "Verdun" definition = destroyer equipment = { destroyer_4 = { amount = 1 owner = NFA version_name = "Lion Class" } } }
+	}
+
+	navy = {
+		name = "Flotte de Sous-Marins"
+		base = 4948
+		location = 4948
+		ship = { name = "Aréthuse" definition = submarine equipment = { submarine_4 = { amount = 1 owner = NFA version_name = "Argonaute Class" } } }
+		ship = { name = "Argonaute" definition = submarine equipment = { submarine_4 = { amount = 1 owner = NFA version_name = "Argonaute Class" } } }
+		ship = { name = "Atalante" definition = submarine equipment = { submarine_4 = { amount = 1 owner = NFA version_name = "Argonaute Class" } } }
+		ship = { name = "Amazone" definition = submarine equipment = { submarine_5 = { amount = 1 owner = NFA version_name = "Amazone Class" } } }
+		ship = { name = "Amphitrite" definition = submarine equipment = { submarine_5 = { amount = 1 owner = NFA version_name = "Amazone Class" } } }
+		ship = { name = "Antiope" definition = submarine equipment = { submarine_5 = { amount = 1 owner = NFA version_name = "Amazone Class" } } }
+		ship = { name = "Diane" definition = submarine equipment = { submarine_5 = { amount = 1 owner = NFA version_name = "Amazone Class" } } }
+		ship = { name = "Méduse" definition = submarine equipment = { submarine_5 = { amount = 1 owner = NFA version_name = "Amazone Class" } } }
+
+		ship = { name = "Galatée" definition = submarine equipment = { submarine_3 = { amount = 1 owner = NFA version_name = "Galatée Class" } } }
+		ship = { name = "Naïade" definition = submarine equipment = { submarine_3 = { amount = 1 owner = NFA version_name = "Galatée Class" } } }
+		ship = { name = "Ondine" definition = submarine equipment = { submarine_3 = { amount = 1 owner = NFA version_name = "Galatée Class" } } }
+		ship = { name = "Sirène" definition = submarine equipment = { submarine_3 = { amount = 1 owner = NFA version_name = "Galatée Class" } } }
+		ship = { name = "Ariane" definition = submarine equipment = { submarine_4 = { amount = 1 owner = NFA version_name = "Ariane Class" } } }
+		ship = { name = "Danaé" definition = submarine equipment = { submarine_4 = { amount = 1 owner = NFA version_name = "Ariane Class" } } }
+		ship = { name = "Eurydicé" definition = submarine equipment = { submarine_4 = { amount = 1 owner = NFA version_name = "Ariane Class" } } }
+		ship = { name = "Nymphe" definition = submarine equipment = { submarine_4 = { amount = 1 owner = NFA version_name = "Ariane Class" } } }
+		ship = { name = "Calypso" definition = submarine equipment = { submarine_4 = { amount = 1 owner = NFA version_name = "Ariane Class" } } }
+		ship = { name = "Circé" definition = submarine equipment = { submarine_5 = { amount = 1 owner = NFA version_name = "Circé Class" } } }
+		ship = { name = "Thétis" definition = submarine equipment = { submarine_5 = { amount = 1 owner = NFA version_name = "Circé Class" } } }
+	}
+
+}
+
+air_wings = {
+	459 = {
+		fighter_equipment_0 = {
+			owner = "NFA"
+			amount = 50
+		}
+		tac_bomber_equipment_1 = {
+			owner = "NFA"
+			amount = 25
+		}
+	}
+}
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+		}
+		requested_factories = 4
+		progress = 0.82
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.83
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.44
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_0
+		}
+		requested_factories = 2
+		progress = 0.29
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.12
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = light_tank_equipment_1
+		}
+		requested_factories = 2
+		progress = 0.59
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = tac_bomber_equipment_1
+		}
+		requested_factories = 2
+		progress = 0.48
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = nav_bomber_equipment_1
+		}
+		requested_factories = 2
+		progress = 0.88
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = light_cruiser_4
+			creator = "NFA"
+		}
+		requested_factories = 4
+		progress = 0.85
+		amount = 2
+	}
+}

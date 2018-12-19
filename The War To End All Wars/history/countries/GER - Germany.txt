@@ -1,0 +1,1169 @@
+﻿capital = 64
+
+oob = "GER"
+
+add_ideas = {
+	GER_victors_of_wwi
+	GER_quenched_militarism
+	ZO_idea
+	GER_imperial_pride
+	PROFF_LEG_CITIES
+
+	limited_conscription
+}
+
+# Starting tech
+
+set_technology = {
+	### MOD ###
+	### General ###
+	electronic_mechanical_engineering = 1
+
+	### Navy ###
+	destroyer_one = 1
+	destroyer_two = 1
+	destroyer_three = 1
+	destroyer_four = 1
+	light_cruiser_one = 1
+	light_cruiser_two = 1
+	light_cruiser_three = 1
+	light_cruiser_four = 1
+	light_cruiser_five = 1
+	heavy_cruiser_one = 1
+	heavy_cruiser_two = 1
+	heavy_cruiser_three = 1
+	heavy_cruiser_four = 1
+	battleship_one = 1
+	battleship_two = 1
+	battleship_three = 1
+	battleship_four = 1
+	battleship_five = 1
+	dreadnought_one = 1
+	dreadnought_two = 1
+	dreadnought_three = 1
+	dreadnought_four = 1
+	dreadnought_five = 1
+	dreadnought_six = 1
+	dreadnought_seven = 1
+	carrier_one = 1
+	carrier_two = 1
+	carrier_three = 1
+	submarine_one = 1
+	submarine_two = 1
+	submarine_three = 1
+	submarine_four = 1
+	submarine_five = 1
+	nav_infra_one = 1
+	nav_infra_two = 1
+	nav_infra_three = 1
+	nav_av_one = 1
+	nav_av_two = 1
+	nav_av_three = 1
+	transport = 1
+
+	### Tanks ###
+	gwtank = 1
+	basic_light_tank = 1
+	basic_heavy_tank = 1
+	### INF ###
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	motorised_infantry = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_mountaineers = 1
+	marines = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	### AIR ###
+	early_fighter = 1
+	naval_bomber1 = 1
+	early_bomber = 1
+	cv_early_fighter = 1
+	cv_CAS1 = 1
+	cv_naval_bomber1 = 1
+	fighter1 = 1
+	tactical_bomber1 = 1
+	strategic_bomber1 = 1
+	CAS1 = 1
+}
+
+give_military_access = POL
+give_military_access = DKB
+give_military_access = GEO
+give_military_access = AZB
+give_military_access = OTT
+give_military_access = LEC
+
+give_guarantee = DKB
+give_guarantee = GEO
+give_guarantee = AZB
+give_guarantee = LEC
+
+set_research_slots = 4
+set_convoys = 400
+set_stability = 0.6
+
+set_global_flag = GER_has_oil
+set_country_flag = LEC_profit_for_you
+
+diplomatic_relation = { country = AUS relation = non_aggression_pact }
+
+add_opinion_modifier = { target = ENG modifier = embargo }
+add_opinion_modifier = { target = BHC modifier = embargo }
+add_opinion_modifier = { target = FRA modifier = embargo }
+add_opinion_modifier = { target = CSA modifier = embargo }
+add_opinion_modifier = { target = DEH modifier = embargo }
+add_opinion_modifier = { target = FNG modifier = embargo }
+add_opinion_modifier = { target = SRI modifier = embargo }
+add_opinion_modifier = { target = GEO modifier = embargo }
+add_opinion_modifier = { target = SOV modifier = embargo }
+add_opinion_modifier = { target = SQI modifier = embargo }
+add_opinion_modifier = { target = CNT modifier = embargo }
+add_opinion_modifier = { target = LEC modifier = LEC_member }
+add_opinion_modifier = { target = MAF modifier = colonial_master }
+add_opinion_modifier = { target = AOG modifier = colonial_master }
+add_opinion_modifier = { target = GEA modifier = colonial_master }
+add_opinion_modifier = { target = HAI modifier = HAI_foreign_council }
+
+set_politics = {
+
+	parties = {
+		totalist = {
+			popularity = 1
+		}
+		radical_socialist = {
+			popularity = 3
+		}
+		syndicalist = {
+			popularity = 2
+		}
+		social_democrat = {
+			popularity = 22
+		}
+		social_liberal = {
+			popularity = 6
+		}
+		market_liberal = {
+			popularity = 3
+		}
+		social_conservative = {
+			popularity = 12
+		}
+		authoritarian_democrat = {
+			popularity = 42
+		}
+		paternal_autocrat = {
+			popularity = 7
+		}
+		national_populist = {
+			popularity = 2
+		}
+	}
+
+	ruling_party = authoritarian_democrat
+	last_election = "1932.3.8"
+	election_frequency = 60
+	elections_allowed = yes
+
+}
+
+set_autonomy = {
+	target = BEL
+	autonomous_state = kr_default_puppet
+}
+set_autonomy = {
+	target = LIT
+	autonomous_state = kr_default_puppet
+}
+set_autonomy = {
+	target = BAT
+	autonomous_state = kr_default_puppet
+}
+set_autonomy = {
+	target = WHR
+	autonomous_state = kr_default_puppet
+}
+set_autonomy = {
+	target = MAF
+	autonomous_state = kr_autonomous_puppet
+}
+set_autonomy = {
+	target = AOG
+	autonomous_state = kr_autonomous_puppet
+}
+set_autonomy = {
+	target = GEA
+	autonomous_state = kr_autonomous_puppet
+}
+set_autonomy = {
+	target = MOR
+	autonomous_state = kr_autonomous_puppet
+}
+
+# Resetting all puppet political setups which come earlier in the load order
+BEL = {
+	set_politics = {
+		parties = {
+			totalist = {
+				popularity = 0
+			}
+			radical_socialist = {
+				popularity = 0
+			}
+			syndicalist = {
+				popularity = 2
+			}
+			social_democrat = {
+				popularity = 4
+			}
+			social_liberal = {
+				popularity = 6
+			}
+			market_liberal = {
+				popularity = 8
+			}
+			social_conservative = {
+				popularity = 12
+			}
+			authoritarian_democrat = {
+				popularity = 41
+			}
+			paternal_autocrat = {
+				popularity = 19
+			}
+			national_populist = {
+				popularity = 8
+			}
+		}
+		ruling_party = authoritarian_democrat
+		last_election = "1888.15.6"
+		election_frequency = 48
+		elections_allowed = no
+	}
+}
+BAT = {
+	set_politics = {
+		parties = {
+			totalist = {
+				popularity = 0
+			}
+			radical_socialist = {
+				popularity = 0
+			}
+			syndicalist = {
+				popularity = 0
+			}
+			social_democrat = {
+				popularity = 2
+			}
+			social_liberal = {
+				popularity = 6
+			}
+			market_liberal = {
+				popularity = 6
+			}
+			social_conservative = {
+				popularity = 12
+			}
+			authoritarian_democrat = {
+				popularity = 15
+			}
+			paternal_autocrat = {
+				popularity = 47
+			}
+			national_populist = {
+				popularity = 12
+			}
+		}
+		ruling_party = paternal_autocrat
+		last_election = "1888.15.6"
+		election_frequency = 48
+		elections_allowed = no
+	}
+}
+AOG = {
+	set_politics = {
+		parties = {
+			totalist = {
+				popularity = 0
+			}
+			radical_socialist = {
+				popularity = 0
+			}
+			syndicalist = {
+				popularity = 0
+			}
+			social_democrat = {
+				popularity = 2
+			}
+			social_liberal = {
+				popularity = 6
+			}
+			market_liberal = {
+				popularity = 6
+			}
+			social_conservative = {
+				popularity = 12
+			}
+			authoritarian_democrat = {
+				popularity = 47
+			}
+			paternal_autocrat = {
+				popularity = 15
+			}
+			national_populist = {
+				popularity = 12
+			}
+		}
+		ruling_party = authoritarian_democrat
+		last_election = "1930.11.9"
+		election_frequency = 48
+		elections_allowed = no
+	}
+}
+
+create_faction = Mittelmacht
+
+add_to_faction = GER
+add_to_faction = BEL
+add_to_faction = LIT
+add_to_faction = BAT
+add_to_faction = WHR
+add_to_faction = UKR
+add_to_faction = MOR
+add_to_faction = MAF
+add_to_faction = DEN
+add_to_faction = GEA
+add_to_faction = AOG
+
+
+
+news_event = { id = gerfla.1 days = 238 }
+
+country_event = {
+	id = black.1
+	days = 34
+}
+
+add_namespace = {
+	name = "ger_unit_leader"
+	type = unit_leader
+}
+
+add_ideas = {
+	#medium_economy
+
+	GER_Franz_von_Papen_hog_ade
+	GER_Friedrich_Werner_von_der_Schulenberg_for_ade
+	GER_Hjalmar_Schacht_eco_ade
+	GER_Johann_von_Bernstorff_sec_ade
+
+	GER_August_Von_Mackensen_carm_pau
+	GER_Manfred_Freiherr_von_Richthofen_cair_ade
+	GER_Hans_von_Seeckt_cos_pau
+}
+
+#Trade
+create_import = {
+	resource = oil
+	factories = 3
+	exporter = ROM
+}
+create_import = {
+	resource = oil
+	factories = 1
+	exporter = AZB
+}
+
+create_country_leader = {
+	name = "Rudolf Hess"
+	picture = "Portrait_Germany_Rudolf_Hess.tga"
+	expire = "1965.1.1"
+	ideology = national_populist_subtype
+	traits = {
+
+	}
+}
+
+create_country_leader = {
+	name = "Wilhelm Pieck"
+	picture = "Portrait_Germany_Wilhelm_Pieck_I.tga"
+	expire = "1965.1.1"
+	ideology = totalist_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Ernst Thälmann"
+	picture = "Portrait_Germany_Ernst_Thalmann_I.tga"
+	expire = "1965.1.1"
+	ideology = syndicalist_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Rudolf Rocker"
+	picture = "Portrait_Germany_Rudolf_Rocker_I.tga"
+	expire = "1965.1.1"
+	ideology = radical_socialist_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Erich Koch-Weser"
+	picture = "Portrait_Germany_Erich_Koch_Weser.tga"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+	traits = {
+
+	}
+}
+
+create_country_leader = {
+	name = "Wilhelm II"
+	desc = "POLITICS_WILHELM_II_DESC"
+	picture = "Portrait_Germany_Wilhelm_II.tga"
+	expire = "1965.1.1"
+	ideology = social_conservative_subtype
+	traits = {
+		#wilhelm
+	}
+}
+
+create_country_leader = {
+	name = "Wilhelm II"
+	desc = "POLITICS_WILHELM_II_DESC"
+	picture = "Portrait_Germany_Wilhelm_II.tga"
+	expire = "1965.1.1"
+	ideology = market_liberal_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Wilhelm II"
+	desc = "POLITICS_WILHELM_II_DESC"
+	picture = "Portrait_Germany_Wilhelm_II.tga"
+	expire = "1965.1.1"
+	ideology = social_democrat_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Wilhelm II"
+	desc = "POLITICS_WILHELM_II_DESC"
+	picture = "Portrait_Germany_Wilhelm_II.tga"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Wilhelm II"
+	desc = "POLITICS_WILHELM_II_DESC"
+	picture = "Portrait_Germany_Wilhelm_II.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+	traits = {
+	}
+}
+
+create_field_marshal = {
+	name = "Gerd von Rundstedt"
+	picture = "Portrait_Germany_Gerd_von_Rundstedt_kr.tga"
+	traits = { defensive_doctrine offensive_doctrine }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_field_marshal = {
+	name = "Rupprecht von Bayern"
+	picture = "Portrait_Germany_Rupprecht_Bayern_kr.tga"
+	traits = { trait_cautious inflexible_strategist defensive_doctrine organizer thorough_planner }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_field_marshal = {
+	name = "August von Mackensen"
+	picture = "Portrait_Germany_August_Mackensen_kr.tga"
+	traits = { offensive_doctrine old_guard }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 3
+	id = 983
+}
+
+create_field_marshal = {
+	name = "Wilhelm von Preußen"
+	picture = "Portrait_Germany_Wilhelm_III_field_marshall.tga"
+	traits = { old_guard }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Erich von Manstein"
+	picture = "Portrait_Germany_Erich_von_Manstein_kr.tga"
+	traits = { trickster armor_officer brilliant_strategist trait_engineer }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Erwin Rommel"
+	picture = "Portrait_Germany_Erwin_Rommel_kr.tga"
+	traits = { trickster trait_reckless war_hero armor_officer media_personality }
+	skill = 4
+	attack_skill = 6
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Heinz Guderian"
+	picture = "Portrait_Germany_Heinz_Guderian_kr.tga"
+	traits = { trickster brilliant_strategist panzer_leader armor_officer career_officer }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Walter Model"
+	picture = "Portrait_Germany_Walter_Model_kr.tga"
+	traits = { politically_connected trait_cautious harsh_leader brilliant_strategist trickster }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 5
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Günther von Kluge"
+	picture = "Portrait_Germany_Gunther_Kluge_kr.tga"
+	traits = { career_officer armor_officer }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Erwin von Witzleben"
+	picture = "Portrait_Germany_Erwin_von_Witzleben_kr.tga"
+	traits = { skilled_staffer career_officer }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Wilhelm Ritter von Leeb"
+	picture = "Portrait_Germany_Wilhelm_Ritter_von_Leeb_kr.tga"
+	traits = { skilled_staffer infantry_officer }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Albert Kesselring"
+	picture = "Portrait_Germany_Albert_Kesselring_kr.tga"
+	traits = { inflexible_strategist infantry_officer }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Eberhard von Mackensen"
+	picture = "Portrait_Germany_Eberhard_Mackensen_kr.tga"
+	traits = { cavalry_leader cavalry_officer }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Eduard Dietl"
+	picture = "Portrait_Germany_Eduard_Dietl_kr.tga"
+	traits = { winter_specialist commando }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Erich Hoepner"
+	picture = "Portrait_Germany_Erich_Hoepner_kr.tga"
+	traits = { armor_officer trait_reckless }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Ewald von Kleist"
+	picture = "Portrait_Germany_Ewald_Kleist_kr.tga"
+	traits = { skilled_staffer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Fedor von Bock"
+	picture = "Portrait_Germany_Fedor_Bock_kr.tga"
+	traits = { brilliant_strategist harsh_leader trait_cautious }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Friedrich Paulus"
+	picture = "Portrait_Germany_Friedrich_Paulus_kr.tga"
+	traits = { infantry_officer }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Georg von Küchler"
+	picture = "Portrait_Germany_Georg_Kuchler_kr.tga"
+	traits = { politically_connected career_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Franz Halder"
+	picture = "Portrait_Germany_Franz_Halder_kr.tga"
+	traits = { organizer }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Gotthard Heinrici"
+	picture = "Portrait_Germany_Gotthard_Heinrici_kr.tga"
+	traits = { trait_engineer fortress_buster }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Hermann Hoth"
+	picture = "Portrait_Germany_Hermann_Hoth_kr.tga"
+	traits = { infantry_officer infantry_expert }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Franz von Bayern"
+	picture = "Portrait_Germany_Franz_Bayern_kr.tga"
+	traits = { trait_engineer fortress_buster hill_fighter }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Fritz Bayerlein"
+	picture = "Portrait_Germany_Fritz_Bayerlein_kr.tga"
+	traits = { infantry_officer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+
+
+create_navy_leader = {
+	name = "Karl Dönitz"
+	picture = "Portrait_Germany_Karl_Donitz_kr.tga"
+	traits = { seawolf }
+	skill = 5
+}
+
+create_navy_leader = {
+	name = "Erich Raeder"
+	picture = "Portrait_Germany_Erich_Raeder_kr.tga"
+	traits = { blockade_runner }
+	skill = 4
+}
+
+create_navy_leader = {
+	name = "Lothar von Arnauld de la Perière"
+	picture = "Portrait_Germany_Lothar_Arnauld_Periere_kr.tga"
+	traits = { seawolf }
+	skill = 4
+}
+
+create_navy_leader = {
+	name = "Alfred Saalwächter"
+	picture = "Portrait_Germany_Alfred_Saalwachter_kr.tga"
+	traits = { }
+	skill = 4
+}
+
+create_navy_leader = {
+	name = "Hermann Boehm"
+	picture = "Portrait_Germany_Hermann_Boehm_kr.tga"
+	traits = { superior_tactician }
+	skill = 4
+}
+
+create_navy_leader = {
+	name = "Wilhelm Marschall"
+	picture = "Portrait_Germany_Wilhelm_Marschall_kr.tga"
+	traits = { superior_tactician }
+	skill = 4
+}
+
+create_navy_leader = {
+	name = "Ludwig von Reuter"
+	picture = "Portrait_Germany_Ludwig_Reuter_kr.tga"
+	traits = { ironside superior_tactician old_guard_navy }
+	skill = 4
+}
+
+create_navy_leader = {
+	name = "Wilhelm Souchon"
+	picture = "Portrait_Germany_Wilhelm_Souchon_kr.tga"
+	traits = { superior_tactician old_guard_navy }
+	skill = 4
+}
+
+create_navy_leader = {
+	name = "Max Valentiner"
+	picture = "Portrait_Germany_Max_Valentiner_kr.tga"
+	traits = { seawolf }
+	skill = 4
+}
+
+create_navy_leader = {
+	name = "Rolf Carls"
+	picture = "Portrait_Germany_Rolf_Carls_kr.tga"
+	traits = { blockade_runner old_guard_navy }
+	skill = 4
+}
+
+create_navy_leader = {
+	name = "Günther Lütjens"
+	picture = "Portrait_Germany_Gunther_Lutjens_kr.tga"
+	traits = { superior_tactician }
+	skill = 3
+}
+
+create_navy_leader = {
+	name = "Otto Ciliax"
+	picture = "Portrait_Germany_Otto_Ciliax_kr.tga"
+	traits = { superior_tactician }
+	skill = 3
+}
+
+create_navy_leader = {
+	name = "Bernhard Rogge"
+	picture = "Portrait_Germany_Bernhard_Rogge_kr.tga"
+	traits = { seawolf }
+	skill = 2
+}
+
+### Ship Variants ###
+create_equipment_variant = {
+	name = "Nassau Class" #in service with BAT, NOR, DEN, GEA
+	type = SH_battleship_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Helgoland Class" #in service with FLN, GEA
+	type = SH_battleship_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Kaiser Class" #in service with FLN, GEA
+	type = SH_battleship_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "König Class" #in service with GEA
+	type = SH_battleship_3
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Bayern Class"
+	type = SH_battleship_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Preußen Class"
+	type = SH_battleship_5
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Siegfried Class" #in service with GEA
+	type = SH_battleship_5
+	parent_version = 0
+	upgrades = {
+		h_u_attack_ten = 2
+		h_u_attack_one = 5
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Deutschland Class Dreadnought"
+	type = SH_battleship_6
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Kaiser Wilhelm Class"
+	type = SH_battleship_7
+	parent_version = 0
+	upgrades = {
+		h_u_speed_ten = 1
+	}
+}
+
+create_equipment_variant = {
+	name = "Deutschland Class" #in service with BAT
+	type = SH_battleship_1
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Braunschweig Class" #in service with QIE
+	type = SH_battleship_1
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Maas Class" #in service with GEA
+	type = carrier_3
+	parent_version = 0
+	upgrades = {
+		h_u_air_one = 6
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Mainz Class" #in service with GEA
+	type = carrier_2
+	parent_version = 0
+	upgrades = {
+		h_d_air_ten = 1
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Von Der Tann Class" #in service with GEA
+	type = battleship_1
+	parent_version = 0
+	upgrades = {
+		h_u_armor_ten = 3
+		h_u_relia_ten = 3
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Seydlitz Class"
+	type = battleship_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Moltke Class" #in service with OTT, GEA
+	type = battleship_2
+	parent_version = 0
+	upgrades = {
+		h_u_relia_ten = 3
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Mackensen Class" #in service with GEA
+	type = battleship_3
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Yorck Class"
+	type = battleship_3
+	parent_version = 0
+	upgrades = {
+		h_u_ap_one = 2
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Prinz Adalbert Class" #in service with GEA
+	type = battleship_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "York Class"
+	type = battleship_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Blücher Class"
+	type = battleship_5
+	parent_version = 0
+	upgrades = {
+		ship_reliability_upgrade = 1
+	}
+}
+
+create_equipment_variant = {
+	name = "Prinz Eugen Class" #in service with GEA
+	type = heavy_cruiser_3
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Kolberg Class" #in service with PER
+	type = light_cruiser_1
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Straßburg Class" #in service with OTT
+	type = light_cruiser_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Pillau Class" #in service with GEA
+	type = light_cruiser_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Wiesbaden Class" #in service with GEA
+	type = light_cruiser_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Graudenz Class" #in service with GEA
+	type = light_cruiser_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Brummer Class"
+	type = light_cruiser_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Königsberg Class" #in service with SIA, GEA
+	type = light_cruiser_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Cöln Class" #yes, this is Cöln, not Köln #in service with FLN
+	type = light_cruiser_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Mülhausen Class" #in service with GEA
+	type = light_cruiser_3
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Bremen Class"
+	type = light_cruiser_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Aachen Class" #in service with GEA
+	type = light_cruiser_5
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Osnabrück Class"
+	type = light_cruiser_5
+	parent_version = 0
+	upgrades = {
+		ship_reliability_upgrade = 1
+	}
+}
+
+create_equipment_variant = {
+	name = "V Class" #in service with IRE, LIT
+	type = destroyer_1
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "V1 Class" #in service with PER, ALB
+	type = destroyer_1
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "G7 Class" #in service with OTT
+	type = destroyer_1
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "B97 Class" #in service with IRE
+	type = destroyer_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "S113 Class" #in service with GEA
+	type = destroyer_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "UB-1 Class" #in service wtih BUL
+	type = submarine_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}

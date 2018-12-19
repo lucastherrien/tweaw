@@ -1,0 +1,676 @@
+﻿capital = 4
+
+oob = "AUS"
+
+country_event = austria.1
+
+set_research_slots = 4
+
+set_technology = {
+
+	### Navy ###
+	destroyer_one = 1
+	destroyer_two = 1
+	destroyer_three = 1
+	destroyer_four = 1
+	light_cruiser_one = 1
+	light_cruiser_two = 1
+	light_cruiser_three = 1
+	light_cruiser_four = 1
+	heavy_cruiser_one = 1
+	heavy_cruiser_two = 1
+	heavy_cruiser_three = 1
+	heavy_cruiser_four = 1
+	carrier_one = 1
+	carrier_two = 1
+	battleship_one = 1
+	battleship_two = 1
+	battleship_three = 1
+	battleship_four = 1
+	battleship_five = 1
+	dreadnought_one = 1
+	dreadnought_two = 1
+	dreadnought_three = 1
+	dreadnought_four = 1
+	dreadnought_five = 1
+	submarine_one = 1
+	submarine_two = 1
+	submarine_three = 1
+	submarine_four = 1
+	nav_infra_one = 1
+	nav_infra_two = 1
+	nav_infra_three = 1
+	transport = 1
+	####Tanks ###
+	gwtank = 1
+	basic_light_tank = 1
+	### INF ###
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	motorised_infantry = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	### AIR ###
+	early_fighter = 1
+	naval_bomber1 = 1
+
+}
+
+add_opinion_modifier = { target = ENG modifier = embargo }
+add_opinion_modifier = { target = FRA modifier = embargo }
+add_opinion_modifier = { target = SRI modifier = embargo }
+add_opinion_modifier = { target = LEC modifier = LEC_member }
+give_military_access = LEC
+# diplomatic_relation = { country = LEC relation = non_aggression_pact }
+diplomatic_relation = { country = GER relation = non_aggression_pact }
+diplomatic_relation = { country = ITA relation = non_aggression_pact }
+give_guarantee = ITA
+give_military_access = ITA
+set_country_flag = no_LEC_profit_for_you
+
+country_event = { id = austria.1 days = 1 } # Intro event
+
+set_politics = {
+
+	parties = {
+		totalist = {
+			popularity = 0
+		}
+		syndicalist = {
+			popularity = 0
+		}
+		radical_socialist = {
+			popularity = 4
+		}
+		social_democrat = {
+			popularity = 37
+		}
+		social_liberal = {
+			popularity = 3
+		}
+		market_liberal = {
+			popularity = 4
+		}
+		social_conservative = {
+			popularity = 47
+		}
+		authoritarian_democrat = {
+			popularity = 3
+		}
+		paternal_autocrat = {
+			popularity = 2
+		}
+		national_populist = {
+			popularity = 0
+		}
+	}
+
+	ruling_party = social_conservative
+	last_election = "1930.3.9"
+	election_frequency = 72
+	elections_allowed = yes
+}
+
+set_convoys = 50
+
+set_autonomy = {
+	target = HUN
+	autonomous_state = kr_autonomous_puppet
+}
+set_autonomy = {
+	target = CZE
+	autonomous_state = kr_integrated_puppet
+}
+set_autonomy = {
+	target = CRO
+	autonomous_state = kr_integrated_puppet
+}
+set_autonomy = {
+	target = GAL
+	autonomous_state = kr_integrated_puppet
+}
+
+add_namespace = {
+	name = "ger_unit_leader"
+	type = unit_leader
+
+}
+
+add_ideas = {
+	#medium_economy
+
+	AUS_financial_ties_broken
+	AUS_k_u_k_armee_bonus
+	AUS_vienna_circle
+
+	### Minister
+	AUS_Albert_von_Mensdorff_Pouilly_Dietrichstein_hog_ade
+	AUS_Edmund_Glaise_von_Horstenau_for_ade
+	AUS_Carl_Vaugoin_eco_sco
+	AUS_Richard_Schmitz_sec_sco
+	limited_conscription
+
+}
+
+set_stability = 0.55
+
+create_country_leader = {
+	name = "Karl I von Habsburg-Lothringen"
+	desc = "POLITICS_KARL_DESC"
+	picture = "Portrait_Austria_Karl_I.tga"
+	expire = "1965.1.1"
+	ideology = social_democrat_subtype
+	traits = {
+
+	}
+}
+
+create_country_leader = {
+	name = "Karl I von Habsburg-Lothringen"
+	desc = "POLITICS_KARL_DESC"
+	picture = "Portrait_Austria_Karl_I.tga"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+	traits = {
+
+	}
+}
+
+create_country_leader = {
+	name = "Karl I von Habsburg-Lothringen"
+	desc = "POLITICS_KARL_DESC"
+	picture = "Portrait_Austria_Karl_I.tga"
+	expire = "1965.1.1"
+	ideology = market_liberal_subtype
+	traits = {
+
+	}
+}
+
+create_country_leader = {
+	name = "Karl I von Habsburg-Lothringen"
+	desc = "POLITICS_KARL_DESC"
+	picture = "Portrait_Austria_Karl_I.tga"
+	expire = "1965.1.1"
+	ideology = social_conservative_subtype
+	traits = {
+
+	}
+}
+
+create_country_leader = {
+	name = "Karl I von Habsburg-Lothringen"
+	desc = "POLITICS_KARL_DESC"
+	picture = "Portrait_Austria_Karl_I.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+	traits = {
+
+	}
+}
+
+create_country_leader = {
+	name = "Karl I von Habsburg-Lothringen"
+	desc = "POLITICS_KARL_DESC"
+	picture = "Portrait_Austria_Karl_I.tga"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+	traits = {
+
+	}
+}
+
+###########################
+### Generals & Admirals ###
+###########################
+
+### Field Marshal
+create_field_marshal = {
+	name = "Eduard von Böhm-Ermolli"
+	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Eduard_Bohm_Ermolli.tga"
+	traits = {
+		war_hero
+		old_guard
+		defensive_doctrine
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_field_marshal = {
+	name = "Eugen von Habsburg-Lothringen"
+	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Eugen_Habsburg_Lothringen.tga"
+	traits = {
+		war_hero
+		old_guard
+		offensive_doctrine
+		skilled_staffer
+		expert_delegator
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_field_marshal = {
+	name = "Joseph von Habsburg-Lothringen"
+	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Joseph_Habsburg_Lothringen.tga"
+	traits = {
+		war_hero
+		old_guard
+		logistics_wizard
+		inspirational_leader
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_field_marshal = {
+	name = "Sigismund Schilhawsky"
+	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Sigismund_Schilhawsky.tga"
+	traits = {
+		trait_cautious
+		organisational_leader
+		skilled_staffer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+### Corps Commander
+create_corps_commander = {
+	name = "Erhard Raus"
+	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Erhard_Raus.tga"
+	traits = {
+		armor_officer
+		panzer_leader
+		trickster
+	}
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Lothar Rendulic"
+	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Lothar_Rendulic.tga"
+	traits = {
+		armor_officer
+		panzer_leader
+		commando
+	}
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Karl Eglseer"
+	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Karl_Eglseer.tga"
+	traits = {
+		trait_mountaineer
+		trickster
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Julius Ringel"
+	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Julius_Ringel.tga"
+	traits = {
+		trait_mountaineer
+		commando
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Franz Böhme"
+	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Franz_Bohme.tga"
+	traits = {
+		hill_fighter
+		winter_specialist
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Alfred Jansa"
+	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Alfred_Jansa.tga"
+	traits = {
+		infantry_leader
+		ambusher
+		skilled_staffer
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Eduard Barger"
+	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Eduard_Barger.tga"
+	traits = {
+		trait_engineer
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Friedrich Materna"
+	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Friedrich_Materna.tga"
+	traits = {
+		infantry_officer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Wilhelm Zehner"
+	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Wilhelm_Zehner.tga"
+	traits = {
+		old_guard
+		urban_assault_specialist
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+### Navy Leader
+create_navy_leader = {
+	name = "Georg von Trapp"
+	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Georg_von_Trapp.tga"
+	traits = {
+		seawolf
+	}
+	skill = 3 #naval guy, don't patch
+}
+
+create_navy_leader = {
+	name = "Miklós Horthy"
+	ID = 40000
+	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Miklos_Horthy.tga"
+	traits = {
+		superior_tactician
+	}
+	skill = 3 #naval guy, don't patch
+}
+
+create_navy_leader = {
+	name = "Gottfried von Banfield"
+	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Gottfried_von_Banfield.tga"
+	traits = {
+		superior_tactician
+	}
+	skill = 2 #naval guy, don't patch
+}
+
+create_navy_leader = {
+	name = "Janko Vuković"
+	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Janko_Vukovic.tga"
+	traits = {
+		superior_tactician
+	}
+	skill = 1 #naval guy, don't patch
+}
+
+###Resetting puppets
+CRO = {
+	set_politics = {
+
+		parties = {
+			totalist = {
+				popularity = 1
+			}
+			radical_socialist = {
+				popularity = 4
+			}
+			syndicalist = {
+				popularity = 2
+			}
+			social_democrat = {
+				popularity = 8
+			}
+			social_liberal = {
+				popularity = 34
+			}
+			market_liberal = {
+				popularity = 23
+			}
+			social_conservative = {
+				popularity = 2
+			}
+			authoritarian_democrat = {
+				popularity = 7
+			}
+			paternal_autocrat = {
+				popularity = 16
+			}
+			national_populist = {
+				popularity = 3
+			}
+		}
+
+		ruling_party = social_liberal
+		last_election = "1930.11.9"
+		election_frequency = 48
+		elections_allowed = no
+	}
+}
+
+CZE = {
+	set_politics = {
+
+		parties = {
+			totalist = {
+				popularity = 0
+			}
+			syndicalist = {
+				popularity = 2
+			}
+			radical_socialist = {
+				popularity = 4
+			}
+			social_democrat = {
+				popularity = 12
+			}
+			social_liberal = {
+				popularity = 32
+			}
+			market_liberal = {
+				popularity = 22
+			}
+			social_conservative = {
+				popularity = 9
+			}
+			authoritarian_democrat = {
+				popularity = 6
+			}
+			paternal_autocrat = {
+				popularity = 11
+			}
+			national_populist = {
+				popularity = 2
+			}
+		}
+
+		ruling_party = social_liberal
+		last_election = "1930.11.9"
+		election_frequency = 48
+		elections_allowed = no
+	}
+}
+
+### Ship Variants ###
+create_equipment_variant = {
+	name = "Tegetthoff Class"
+	type = SH_battleship_3
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Hunyadi Class"
+	type = SH_battleship_5
+	parent_version = 0
+	upgrades = {
+		ship_gun_upgrade = 1
+	}
+}
+
+create_equipment_variant = {
+	name = "Erzherzog Karl Class"
+	type = SH_battleship_1
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Radetzky Class"
+	type = SH_battleship_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Kaiser Karl VI Class"
+	type = heavy_cruiser_1
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Sankt Georg Class"
+	type = heavy_cruiser_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Admiral Spaun Class"
+	type = light_cruiser_1
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Helgoland Class"
+	type = light_cruiser_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Admiral Njegovan Class"
+	type = light_cruiser_3
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Custozza Class"
+	type = light_cruiser_4
+	parent_version = 0
+	upgrades = {
+		ship_gun_upgrade = 1
+	}
+}
+
+create_equipment_variant = {
+	name = "Huszár Class"
+	type = destroyer_1
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Tátra Class"
+	type = destroyer_1
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Ersatz Triglav Class"
+	type = destroyer_2
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Turul Class"
+	type = destroyer_3
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Ersatz Huszár Class"
+	type = destroyer_4
+	parent_version = 0
+	upgrades = {  }
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Ersatz Meteor Class"
+	type = destroyer_4
+	parent_version = 0
+	upgrades = {
+		ship_ASW_upgrade = 1
+	}
+}

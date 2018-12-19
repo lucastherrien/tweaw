@@ -1,0 +1,327 @@
+﻿capital = 158
+
+oob = "SRI"
+
+set_research_slots = 3
+
+add_ideas = {
+	#medium_economy
+	SRI_Antonio_Gramsci_hog_syn
+	SRI_Pietro_Nenni_for_syn
+	SRI_Alceste_De_Ambris_eco_syn
+	SRI_Ruggiero_Grieco_sec_syn
+	SRI_divided_nation
+	SRI_red_guards_idea
+}
+
+
+add_opinion_modifier = { target = AST modifier = embargo }
+add_opinion_modifier = { target = AUS modifier = embargo }
+add_opinion_modifier = { target = CZE modifier = embargo }
+add_opinion_modifier = { target = HUN modifier = embargo }
+add_opinion_modifier = { target = CRO modifier = embargo }
+add_opinion_modifier = { target = CAN modifier = embargo }
+add_opinion_modifier = { target = GER modifier = embargo }
+add_opinion_modifier = { target = SAU modifier = embargo }
+add_opinion_modifier = { target = ITA modifier = embargo }
+add_opinion_modifier = { target = LIT modifier = embargo }
+add_opinion_modifier = { target = MAF modifier = embargo }
+add_opinion_modifier = { target = FRP modifier = embargo }
+add_opinion_modifier = { target = OTT modifier = embargo }
+add_opinion_modifier = { target = PRF modifier = embargo }
+add_opinion_modifier = { target = BUL modifier = embargo }
+add_opinion_modifier = { target = UKR modifier = embargo }
+add_opinion_modifier = { target = WHR modifier = embargo }
+add_opinion_modifier = { target = GBR modifier = embargo }
+add_opinion_modifier = { target = BAT modifier = embargo }
+add_opinion_modifier = { target = SWI modifier = embargo }
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	gwtank = 1
+	basic_light_tank = 1
+	early_fighter = 1
+	early_bomber = 1
+	naval_bomber1 = 1
+	CAS1 = 1
+	## Navy 
+	destroyer_one = 1
+	destroyer_two = 1
+	destroyer_three = 1
+	destroyer_four = 1
+	light_cruiser_one = 1
+	light_cruiser_two = 1
+	light_cruiser_three = 1
+	light_cruiser_four = 1
+	heavy_cruiser_one = 1
+	heavy_cruiser_two = 1
+	heavy_cruiser_three = 1
+	battleship_one = 1
+	battleship_two = 1
+	battleship_three = 1
+	battleship_four = 1
+	dreadnought_one = 1
+	dreadnought_two = 1
+	dreadnought_three = 1
+	dreadnought_four = 1
+	submarine_one = 1
+	submarine_two = 1
+	submarine_three = 1
+	submarine_four = 1
+	submarine_five = 1
+	nav_infra_one = 1
+	nav_infra_two = 1
+	transport = 1
+}
+
+
+
+set_convoys = 50
+set_stability = 0.5
+set_war_support = 0.5
+
+country_event = { id = socitaly.1 days = 1 }
+
+set_politics = {
+
+	parties = {
+		totalist = {
+			popularity = 10
+		}
+		radical_socialist = {
+			popularity = 28
+		}
+		syndicalist = {
+			popularity = 47
+		}
+		social_democrat = {
+			popularity = 10
+		}
+		social_liberal = {
+			popularity = 5
+		}
+		market_liberal = {
+			popularity = 0
+		}
+		social_conservative = {
+			popularity = 0
+		}
+		authoritarian_democrat = {
+			popularity = 0
+		}
+		paternal_autocrat = {
+			popularity = 0
+		}
+		national_populist = {
+			popularity = 0
+		}
+	}
+
+	ruling_party = syndicalist
+	last_election = "1930.11.9"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+
+
+create_country_leader = {# Benito Mussolini
+	name = "Benito Mussolini"
+	picture = "Portrait_Italy_Benito_Mussolini.tga"
+	expire = "1965.1.1"
+	ideology = totalist_subtype
+	traits = {
+		warmonger
+	}
+}
+create_country_leader = {# Palmiro Toglitti
+	name = "Palmiro Togliatti"
+	picture = "Portrait_Italy_Palmiro_Togliatti.tga"
+	expire = "1965.1.1"
+	ideology = syndicalist_subtype
+	traits = {}
+}
+create_country_leader = {# Giacomo Matteotti
+	name = "Giacomo Matteotti"
+	picture = "Portrait_SRI_Giacomo_Matteotti.tga"
+	expire = "1965.1.1"
+	ideology = radical_socialist_subtype
+	traits = {}
+}
+
+
+### Field Marshal
+create_field_marshal = {# Randolfo Pacciardi
+	name = "Randolfo Pacciardi"
+	portrait_path = "gfx/leaders/SRI/Portrait_SRI_Randolfo_Pacciardi.tga"
+	traits = {
+		politically_connected
+		trickster
+		guerilla_fighter
+		inspirational_leader
+	}
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 4
+}
+create_field_marshal = {# Edmondo Rossoni
+	name = "Edmondo Rossoni"
+	portrait_path = "gfx/leaders/SRI/Portrait_SRI_Edmondo_Rossoni.tga"
+	traits = {
+		career_officer
+		organisational_leader
+		organizer
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 4
+}
+### Corps Commander
+create_corps_commander = {# Dardano Fenulli
+	name = "Dardano Fenulli"
+	portrait_path = "gfx/leaders/SRI/Portrait_SRI_Dardano_Fenulli.tga"
+	traits = {
+		organizer
+		panzer_leader
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {# Ettore Troilo
+	name = "Ettore Troilo"
+	portrait_path = "gfx/leaders/SRI/Portrait_SRI_Ettore_Troilo.tga"
+	traits = {
+		war_hero
+		trickster
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+create_corps_commander = {# Francesco De Gregori
+	name = "Francesco De Gregori"
+	portrait_path = "gfx/leaders/SRI/Portrait_SRI_Francesco_Gregori.tga"
+	traits = {
+		war_hero
+		trait_mountaineer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {# Giovanni Duca
+	name = "Giovanni Duca"
+	portrait_path = "gfx/leaders/SRI/Portrait_SRI_Giovanni_Duca.tga"
+	traits = { career_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {# Luigi Canali
+	name = "Luigi Canali"
+	portrait_path = "gfx/leaders/SRI/Portrait_SRI_Luigi_Canali.tga"
+	traits = { politically_connected }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {# Mario Pasi
+	name = "Mario Pasi"
+	portrait_path = "gfx/leaders/SRI/Portrait_SRI_Mario_Pasi.tga"
+	traits = { ranger }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {# Michele Moretti
+	name = "Michele Moretti"
+	portrait_path = "gfx/leaders/SRI/Portrait_SRI_Michele_Moretti.tga"
+	traits = {hill_fighter}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {# Cino Moscatelli
+	name = "Cino Moscatelli"
+	portrait_path = "gfx/leaders/SRI/Portrait_SRI_Cino_Moscatelli.tga"
+	traits = {hill_fighter commando}
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
+}
+create_corps_commander = {# Adolfo Zamboni
+	name = "Adolfo Zamboni"
+	portrait_path = "gfx/leaders/SRI/Portrait_SRI_Adolfo_Zamboni.tga"
+	traits = {  }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+### Navy Leader
+create_navy_leader = {# Carlo Avegno
+	name = "Carlo Avegno"
+	portrait_path = "gfx/leaders/SRI/Portrait_SRI_Carlo_Avegno.dds"
+	traits = { superior_tactician }
+	skill = 4 #naval guy, don't patch
+}
+create_navy_leader = {# Domenico Cavagnari
+	name = "Domenico Cavagnari"
+	portrait_path = "gfx/leaders/SRI/Portrait_SRI_Domenico_Cavagnari.tga"
+	traits = {seawolf  }
+	skill = 3 #naval guy, don't patch
+}
+create_navy_leader = {# Inigo Campioni
+	name = "Inigo Campioni"
+	portrait_path = "gfx/leaders/SRI/Portrait_SRI_Inigo_Campioni.dds"
+	traits = { ironside }
+	skill = 3 #naval guy, don't patch
+}
+create_navy_leader = {# Riccardo Formica
+	name = "Riccardo Formica"
+	portrait_path = "gfx/leaders/SRI/Portrait_SRI_Riccardo_Formica.tga"
+	traits = {  }
+	skill = 2 #naval guy, don't patch
+}
+create_navy_leader = {# Riccardo Paladini
+	name = "Riccardo Paladini"
+	portrait_path = "gfx/leaders/SRI/Portrait_SRI_Riccardo_Paladini.tga"
+	traits = { ironside superior_tactician }
+	skill = 4 #naval guy, don't patch
+}
+create_navy_leader = {# Romeo Bernotti
+	name = "Romeo Bernotti"
+	portrait_path = "gfx/leaders/SRI/Portrait_SRI_Romeo_Bernotti.tga"
+	traits = { air_controller }
+	skill = 4 #naval guy, don't patch
+}
+

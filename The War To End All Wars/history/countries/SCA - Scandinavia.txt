@@ -1,0 +1,126 @@
+﻿capital = 141
+OOB = "empty"
+set_convoys = 150
+set_research_slots = 4
+set_technology = {
+### MOD ###
+	### Navy ###
+	destroyer_one = 1
+	destroyer_two = 1
+	destroyer_three = 1
+	destroyer_four = 1
+	light_cruiser_one = 1
+	light_cruiser_two = 1
+	light_cruiser_three = 1
+	heavy_cruiser_one = 1
+	heavy_cruiser_two = 1
+	dreadnought_one = 1
+	dreadnought_two = 1
+	dreadnought_three = 1
+	carrier_one = 1
+	submarine_one = 1
+	submarine_two = 1
+	submarine_three = 1
+	submarine_four = 1
+	nav_infra_one = 1
+	nav_infra_two = 1
+	nav_av_one = 1
+	transport = 1
+	### Tanks ###
+	gwtank = 1
+	### INF ###
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	tech_support = 1
+	### AIR ###
+	early_fighter = 1
+	naval_bomber1 = 1
+	cv_naval_bomber1 = 1
+	early_bomber = 1
+}
+
+
+
+set_politics = {
+
+	parties = {
+		totalist = {
+			popularity = 0
+		}
+		radical_socialist = {
+			popularity = 1
+		}
+		syndicalist = {
+			popularity = 4
+		}
+		social_democrat = {
+			popularity = 30
+		}
+		social_liberal = {
+			popularity = 14
+		}
+		market_liberal = {
+			popularity = 24
+		}
+		social_conservative = {
+			popularity = 6
+		}
+		authoritarian_democrat = {
+			popularity = 19
+		}
+		paternal_autocrat = {
+			popularity = 2
+		}
+		national_populist = {
+			popularity = 0
+		}
+	}
+
+	ruling_party = social_liberal
+	last_election = "1934.4.10"
+	election_frequency = 48
+	elections_allowed = no
+
+}
+
+create_country_leader = {
+	name = "Federal Council"
+	desc = "SCA_FEDERAL_COUNCIL_DESC"
+	picture = "Portrait_Scandinavia_Royal_Council.tga"
+	expire = "1965.1.1"
+	ideology = social_democrat_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Federal Council"
+	desc = "SCA_FEDERAL_COUNCIL_DESC"
+	picture = "Portrait_Scandinavia_Royal_Council.tga"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Federal Council"
+	desc = "SCA_FEDERAL_COUNCIL_DESC"
+	picture = "Portrait_Scandinavia_Royal_Council.tga"
+	expire = "1965.1.1"
+	ideology = market_liberal_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Federal Council"
+	desc = "SCA_FEDERAL_COUNCIL_DESC"
+	picture = "Portrait_Scandinavia_Royal_Council.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+	traits = {
+	}
+}
+

@@ -1,0 +1,93 @@
+﻿l_english:
+
+### Popularity ###
+party_pop_0_00:0 "0-10% Party Popularity"
+party_pop_0_10:0 "10-20% Party Popularity"
+party_pop_0_20:0 "20-30% Party Popularity"
+party_pop_0_30:0 "30-40% Party Popularity"
+party_pop_0_40:0 "40-50% Party Popularity"
+party_pop_0_50:0 "50-60% Party Popularity"
+party_pop_0_60:0 "60-70% Party Popularity"
+party_pop_0_70:0 "70-80% Party Popularity"
+party_pop_0_80:0 "80-90% Party Popularity"
+party_pop_0_90:0 "90-100% Party Popularity"
+
+### Starting Events ###
+kr.political.24.t:0 "Kaiserreich Alpha 0.8.2"
+kr.political.24.d:0 "The Kaiserreich Team proudly present Kaiserreich alpha version 0.8.2 for Hearts of Iron 4! For months now our team has worked from every corner of the world to bring this mod to you. We hope you will enjoy playing it as much as we did making it. You should also be aware that the mod is designed with the assumption that the player will always annex all possible states in peace treaties, so you should make sure to do that!\n\nWe'd also like to remind you this is still Alpha, so expect bugs, crashes and various headaches. If (...when...) you encounter any of these, please report them on our GitHub bug tracker. If you have any other questions, don't hesitate to ask us, but please check the in game FAQ first.\n\nEnjoy!\n                - The KR4 Team, team list found in the credits"
+kr.political.24.a:0 "Thank you Kaiserreich team!"
+kr.political.24.c:0 "Do you guys have a super useful FAQ?"
+kr.political.24.e:0 "Something is missing..."
+
+kr.political.25.t:0 "FAQ"
+kr.political.25.d:0 "How come I can't puppet anything?\nAll puppetting is now done via events or focuses rather than through peace conferences.\n\nWhen will the next patch come out?\nWe aim for one big release every three months and of course hot-fixes wherever needed.\n\nWhy are some of the models black?\nWe use some DLC assets in our mod, so if you don't have that DLC, you will get blank textures, don't worry though, they are just cosmetic errors. We are working on setting up backup textures to avoid this, so keep an eye out for updates.\n\nI want to do bug testing/art/music/coding for KR, where can I sign up?\nWonderful! Head to our discord and check out the #rules_and_recruits channel.\n\nUpdate X broke my saves!\nThat isn't a question, but if you are having issues, try loading the save, saving again straight away without unpausing, then reloading using that new save. Not using ironman can also sometimes also help. If all else fails, remember past version are available for download on the KR4 forums.\n\nAre there any other parts to KR4?\nThe only other part is the music mod, which can be found in the steam workshop description or on the forums. You should definitely go get it."
+kr.political.25.a:0 "Do you have to take that PP away?"
+
+kr.political.26.t:0 "News Events"
+kr.political.26.d:0 "This is the president of the International News Tribune speaking. Kaiserreich is a mod deeply entrenched in lore and storytelling, conveyed through events, national focuses and other means. However, as the player, you might not even realise this, because most of the happenings in foreign countries are unknown to your eyes. Therefore we have created a system of news events that tell you about the major events that happened recently in other countries. They contain titbits of lore to help you understand the meaning and reasons for the events of the world, and they are also pretty and stuff.\n\nHowever, you may be a game tester or have a serious addiction with this being your 1000th game this week, or just a player who doesn't want popups in your face all the time, so you also have the option to turn this feature off entirely or allow only the important news events to fire. It's your choice..."
+kr.political.26.a:0 "I want to know everything, EVERYTHING!"
+kr.political.26.b:0 "Only inform me about major events."
+kr.political.26.c:0 "I want none of this nonsense."
+
+#kr.political.27 moved to _KR_Political_Notice_l_english.yml
+
+kr.political.28.t:0 "Something is missing..."
+kr.political.28.d:0 "Looking for the April fools joke? Looking to remove faction joining limits?\n\nThey are being moved to sub mods! Check out the Kaiserreich collection on the steam workshop, coming soonTM, to get them!"
+kr.political.28.a:0 "Got it!"
+
+### Gamestart Opinion Modifiers ###
+kr.political.40.t:0 "Setting Opinion Modifiers"
+kr.political.40.d:0 "If you can see this, make a bug report!"
+kr.political.40.a:0 "Seriously, report it."
+
+KR_different_ideology:0 "Different Ideology"
+KR_similar_ideology:0 "Similar Ideology"
+KR_same_ideology:0 "Same Ideology"
+same_ruling_party:0 "Base"
+different_party_types:0 "Base"
+KR_ideology_allowed:0 "Minister permitted for the country's ideology"
+KR_factional_rivalry:0 "Factional Rivalry"
+minister_available:0 "Minister is available for this government type"
+KR_is_socialist:0 "Has Totalist, Syndicalist, or Radical Socialist government"
+KR_is_not_socialist:0 "Does §Rnot§! have Totalist, Syndicalist, or Radical Socialist government"
+KR_is_elected:0 "Has a democratic and elected government"
+KR_is_not_elected:0 "Does §Rnot§! have a democratic and elected government"
+KR_is_democratic:0 "Has a democratic government"
+KR_is_not_democratic:0 "Does §Rnot§! have a democratic government"
+KR_is_authoritarian:0 "Has a non-socialist authoritarian government"
+KR_is_not_authoritarian:0 "Does §Rnot§! have a non-socialist authoritarian government"
+KR_is_dictatorship:0 "Has a non-socialist dictatorship government"
+KR_is_not_dictatorship:0 "Does §Rnot§! have a non-socialist dictatorship government"
+has_scripted_peace:0 "We Are At War"
+has_scripted_peace_desc:0 "The country is at war, and is determined to achieve victory - though chances are our resistance is a bit more brittle than it seems. (Note: this exists for wars where a scripted peace event exists, and chances are the event will fire long before this elevated surrender limit is hit, just so you're aware.)"
+
+### Tooltips ###
+KR_improving_stability:0 "Already improving stability"
+KR_improving_popularity:0 "Already improving party popularity"
+has_vg_stability:0 "Has §YVery Good Stability§!"
+KR_improving_popularity_tooltip:0 "We will improve our party popularity by: §Y5%§!\n"
+KR_party_pop_less_than_50:0 "Less than §Y50%§! party popularity"
+KR_party_pop_more_than_75:0 "More than §Y75%§! party popularity"
+
+### Decisions ###
+political_actions:0 "Political Actions"
+annexation_decisions:0 "Annexation Decisions"
+legislate_more_freedoms:0 "Legislate Freedoms"
+legislate_more_freedoms_desc:0 "Perhaps the easiest way to improve our country's stability is to give the people what they want. It will involve some uncomfortable compromises, but ideally these are measures that are only temporary and designed to placate them until order can properly be restored."
+police_crackdown:0 "Police Crackdown"
+police_crackdown_desc:0 "Disorder has become rampant. We must loosen the restrictions on our police forces, and give them the freedom to do their jobs in arresting the worst of the perpetrators."
+send_in_the_army:0 "Send in the Army"
+send_in_the_army_desc:0 "The way to deal with disorder in our nation is to send in the army and suppress it completely. Not everyone will be happy about it, that's true, but sometimes martial law is the only alternative."
+rally_public_support:0 "Rally Public Support"
+rally_public_support_desc:0 "With some political power and some industrial backing, we will rally our supporters to our cause. While this will take time and resources, in the long run this will improve our political standing."
+solidify_control:0 "Solidify Control"
+solidify_control_desc:0 "Some tactful use of political power here and some resources there and we will remove our political obstacles; we may not be all to get rid of all of them, but even getting rid of some will clear our path and improve our political power in the long run."
+
+### Economic Health ###
+boom_economy:0 "WIP" #Boom Economy WIP!!!
+good_economy:0 "WIP" #Good Economy WIP!!!
+medium_economy:0 "WIP" #Medium Economy WIP!!!
+bad_economy:0 "WIP" #Bad Economy WIP!!!
+bust_economy:0 "WIP" #Bust Economy WIP!!!
+crash_economy:0 "WIP" #Crash Economy WIP!!!
+economic_health:0 "Work in progress, don't worry about this" #Economic Health WIP!!!

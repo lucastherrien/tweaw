@@ -1,0 +1,33 @@
+state = {
+	id = 1084
+	name = "STATE_1084"
+	resources = {
+		chromium = 2
+		steel = 30
+	}
+
+	history = {
+		owner = SOV
+		victory_points = {
+			237 30
+		}
+		buildings = {
+			infrastructure = 10
+            arms_factory = 5
+			industrial_complex = 5
+			air_base = 10
+			anti_air_building = 5
+			237 = {
+				bunker = 10
+			}
+		}
+		add_core_of = SOV
+
+	}
+
+	provinces = {
+		237
+	}
+	manpower = 250000
+	state_category = megalopolis
+}

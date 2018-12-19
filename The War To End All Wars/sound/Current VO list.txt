@@ -1,0 +1,93 @@
+### British English Dialect ###
+# ENG CAF CAN ENP GBP GBR
+# IRE SAF SCT WAL ULS ZIM
+
+### Australian English Dialect ###
+# AST NZL
+
+### American English Dialect ###
+# USA CAL CSA NEE TEX HAW
+# PHI LIB
+
+### Chinese Language ###
+# QIE FNG CHI LEP
+# ANQ YUN GXC HNN SHX SQI XSM SIK SZC LEC PRC
+
+### Arabic Language ###
+# SAU JBS EGY JOR LBA MOR ALG TUN PAL SYR PAK TUA LEB OMA IRQ YEM IKH SUD MRT
+
+### Danish Language ###
+# DEN
+
+### Dutch Language ###
+# HOL DEI
+
+### Finnish Language ###
+# FIN
+
+### German Language ###
+# GER MAF GEA GEX AOG AUS BAV GRU NGF WGR SCH DDR
+# LUX SWI BAT
+# GHA AZR BLR BRD CEA KAZ MAG MNT MZB NAM RWA TNZ TOG CNR KAM KEN VIN ZAM NGR KTG
+
+### Japanese Language ###
+# JAP
+
+### Korean Language ###
+# KOR
+
+### Norwegian Language ###
+# NOR
+
+### Swedish Language ###
+# SWE SCA
+
+### Turkish Language ###
+# TUR OTT
+
+### Greek Language ###
+# GRE
+
+### Brazilian Portuguese Dialect ###
+# BRA PIR BAH AMA SPO RJM GRP ISR
+
+### Continental Portuguese Dialect ###
+# POR
+# MOZ ANG CPV COG
+
+### Polish Language ###
+# POL PLC GAL
+
+### Hungarian Language ###
+# HUN
+
+### Czech Language ###
+# CZE
+
+### Romanian Language ###
+# ROM RRM
+
+### Italian Language ###
+# ITA SRD SRI SIC TUS EMI LOM PAP
+# ERT
+
+### French Language ###
+# FRA NFA FRP OCC BRI WLL QUE
+# HAI NER MAL SEN CIV GNE BFA WAD GAB NRM
+
+### Latin American Spanish Dialect ###
+# MEX ARG BOL CHL COL COS CUB DOM ECU ELS FOP GUA HON NIC PAN PAR PRU URG VEN
+
+### European Spanish Dialect ###
+# SPR CAR CNT
+# BAS CAT GLC
+
+### Russian Language ###
+# SOV RUS DKB SIB TRM
+
+### Vietnamese Language ###
+# VIE INC
+
+### Thai Language ###
+# SIA
+# LAO

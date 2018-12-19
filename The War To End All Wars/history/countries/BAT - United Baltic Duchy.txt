@@ -1,0 +1,361 @@
+﻿capital = 12
+
+oob = "BAT"
+
+set_technology = {
+	### MOD ###
+
+	### Navy ###
+	destroyer_one = 1
+	destroyer_two = 1
+	destroyer_three = 1
+	destroyer_four = 1	
+	light_cruiser_one = 1
+	light_cruiser_two = 1
+	light_cruiser_three = 1
+	dreadnought_one = 1	
+	dreadnought_two = 1	
+	dreadnought_three = 1	
+	dreadnought_four = 1		
+	battleship_one = 1
+	battleship_two = 1
+	battleship_three = 1
+	battleship_four = 1	
+	submarine_one = 1
+	submarine_two = 1
+	submarine_three = 1	
+	submarine_four = 1
+	carrier_one = 1
+	carrier_two = 1
+	nav_infra_one = 1
+	nav_infra_two = 1
+	transport = 1 
+	### Tanks ###
+	gwtank = 1
+	basic_light_tank = 1
+
+	### INF ###
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+
+	### AIR ###
+	early_fighter = 1
+	early_bomber = 1
+}
+set_stability = 0.5
+set_war_support = 0.4
+set_research_slots = 3
+set_convoys = 30
+set_variable = {
+	var = germanisation_var
+	value = 0
+}
+set_variable = {
+	var = balts_resistance_var
+	value = 0
+}
+
+add_ideas = {
+	BAT_multi_ling
+	BAT_start_crisis
+	#ZO_idea
+	}
+
+add_opinion_modifier = { target = FRA modifier = embargo }
+add_opinion_modifier = { target = ENG modifier = embargo }
+add_opinion_modifier = { target = SRI modifier = embargo }
+
+set_politics = {
+
+	parties = {
+		totalist = {
+			popularity = 0
+		}
+		radical_socialist = {
+			popularity = 0
+		}
+		syndicalist = {
+			popularity = 0
+		}
+		social_democrat = {
+			popularity = 0
+		}
+		social_liberal = {
+			popularity = 6
+		}
+		market_liberal = {
+			popularity = 15
+		}
+		social_conservative = {
+			popularity = 23
+		}
+		authoritarian_democrat = {
+			popularity = 5
+		}
+		paternal_autocrat = {
+			popularity = 41
+		}
+		national_populist = {
+			popularity = 10
+		}
+	}
+
+	ruling_party = paternal_autocrat
+	last_election = "1888.15.6"
+	election_frequency = 48
+	elections_allowed = no
+
+}
+
+add_ideas = { 
+	#medium_economy
+	extensive_conscription
+	BAT_Andrievs_Niedra_hog_pau
+	BAT_Alfred_Rosenberg_for_npo
+	BAT_Heinrich_Freiherr_von_Stackelberg_eco_pau
+	BAT_Kurt_Georg_Andersen_sec_ade
+}
+
+create_country_leader = {
+	name = "Adolf Friedrich of Mecklenburg"
+	desc = "POLITICS_ADOLF_FRIEDRICH_DESC"
+	picture = "Portrait_Baltic_Adolf_Friedrich.tga"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+	traits = {
+
+	}
+}
+
+create_country_leader = {
+	name = "Viktor Kingissepp"
+	picture = "Portrait_Baltic_Kingiessepp.tga"
+	expire = "1965.1.1"
+	ideology = totalist_subtype
+	traits = {
+
+	}
+}
+
+create_country_leader = {
+	name = "Viktor Kingissepp"
+	picture = "Portrait_Baltic_Kingiessepp.tga"
+	expire = "1965.1.1"
+	ideology = syndicalist_subtype
+	traits = {
+
+	}
+}
+
+create_country_leader = {
+	name = "Augusts Kirhenšteins"
+	picture = "Portrait_Baltic_Kirhensteins.tga"
+	expire = "1965.1.1"
+	ideology = radical_socialist_subtype
+	traits = {
+
+	}
+}
+
+create_country_leader = {
+	name = "Martynas Yčas"
+	picture = "Portrait_Baltic_Kirhensteins.tga"
+	expire = "1965.1.1"
+	ideology = social_democrat_subtype
+	traits = {
+
+	}
+}
+
+create_country_leader = {
+	name = "Kārlis Ulmanis"
+	picture = "Portrait_Baltic_Karlis_Ulmanis.tga"
+	expire = "1965.1.1"
+	ideology = social_conservative_subtype
+	traits = {
+
+	}
+}
+
+create_country_leader = {
+	name = "August Rei"
+	picture = "Portrait_Baltic_August_Rei.tga"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+	traits = {
+
+	}
+}
+
+create_country_leader = {
+	name = "Jaan Tõnisson"
+	picture = "Portrait_Baltic_Jaan_Tonisson.tga"
+	expire = "1965.1.1"
+	ideology = market_liberal_subtype
+	traits = {
+
+	}
+}
+
+create_country_leader = {
+	name = "Alfred Fletcher"
+	picture = "Portrait_Baltic_Alfred_Fletcher.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+	traits = {
+
+	}
+}
+
+create_field_marshal = {
+	name = "Rüdiger von der Goltz"
+	picture = "Portrait_Baltic_Rudiger_von_der_Goltz.tga"
+	traits = { old_guard offensive_doctrine }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+
+}
+
+create_corps_commander = {
+	name = "Alfred von Randow"
+	picture = "Portrait_Baltic_Alfred_von_Randow.tga"
+	traits = { trickster panzer_leader }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 3
+
+}
+
+create_corps_commander = {
+	name = "Johan Laidoner"
+	picture = "Portrait_Baltic_Johan_Laidoner.tga"
+	traits = { winter_specialist }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+
+}
+
+create_corps_commander = {
+	name = "Josef Bischoff"
+	picture = "Portrait_Baltic_Josef_Bischoff.tga"
+	traits = { trickster }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+
+}
+
+create_corps_commander = {
+	name = "Botho-Wendt Graf zu Eulenburg"
+	picture = "Portrait_Baltic_Botho_Wendt_Graf_zu_Eulenburg.tga"
+	traits = { trait_engineer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+
+}
+
+create_corps_commander = {
+	name = "Hermanis Buks"
+	picture = "Portrait_Baltic_Hermanis_Buks.tga"
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+
+}
+
+create_corps_commander = {
+	name = "Karlis Aperats"
+	picture = "Portrait_Baltic_Karlis_Aperats.tga"
+	traits = { commando }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+
+}
+
+create_corps_commander = {
+	name = "Gustav Jonson"
+	picture = "Portrait_Baltic_Gustav_Jonson.tga"
+	traits = { }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+
+}
+
+create_corps_commander = {
+	name = "Heinrich Graf zu Dohna-Schlobitten"
+	picture = "Portrait_Baltic_Heinrich_Graf_zu_Dohna_Schlobitten.tga"
+	traits = { hill_fighter }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+
+}
+
+create_navy_leader = {
+	name = "Alexander von Salza"
+	picture = "Portrait_Baltic_Alexander_von_Salza.tga"
+	traits = { superior_tactician }
+	skill = 3
+}
+
+create_navy_leader = {
+	name = "Archibald von Keyserling"
+	picture = "Portrait_Baltic_Archibald_von_Keyserling.tga"
+	traits = { spotter }
+	skill = 2
+}
+
+create_navy_leader = {
+	name = "Johan Pitka"
+	picture = "Portrait_Baltic_Johan_Pitka.tga"
+	traits = { blockade_runner }
+	skill = 2
+}
+
+### Ship Variants ###
+create_equipment_variant = {
+    name = "Riga Class"
+    type = destroyer_4
+    parent_version = 0
+    upgrades = {
+				ship_ASW_upgrade = 1
+	}
+}
+
+create_equipment_variant = {
+    name = "S100 Class"
+    type = submarine_4
+    parent_version = 0
+    upgrades = {
+				sub_engine_upgrade = 1
+	}
+}

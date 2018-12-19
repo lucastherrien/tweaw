@@ -1,0 +1,324 @@
+technologies = {
+
+	camel_corpse = {
+		on_research_complete = {log = "[GetDateText]: [Root.GetName]: add tech camel_corpse"}
+
+		research_cost = 1
+
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+
+		#OTT_camel_corpse_tooltip
+		cavalry = {
+			desert = {
+				attack = 0.15
+				defence = 0.05
+				movement = 0.03
+			}
+		}
+	}
+
+	tech_ski_infantry = {
+		on_research_complete = {log = "[GetDateText]: [Root.GetName]: add tech tech_ski_infantry"}
+
+		research_cost = 1
+
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+
+		#If you change these
+		#Change the custom tooltip too: tech_ski_infantry_effect
+		infantry = {
+			hills = {
+				attack = 0.05
+				defence = 0.05
+				movement = 0.05
+			}
+			mountain = {
+				attack = 0.05
+				defence = 0.05
+				movement = 0.1
+			}
+		}
+	}
+
+	tech_marine_bonus = {#Added for FRA
+		on_research_complete = {log = "[GetDateText]: [Root.GetName]: add tech tech_marine_bonus"}
+
+		research_cost = 1
+
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+
+		#If you change these
+		#Change the custom tooltip too: tech_marine_bonus_effect
+		marine = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+	}
+
+	jungle_warfare = {#For Siamese NF tree (Also GEA and some others)
+		on_research_complete = {log = "[GetDateText]: [Root.GetName]: add tech jungle_warfare"}
+
+		research_cost = 1
+
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+
+		#If you change these
+		#Change the custom tooltip too: RAJ_jungle_training_effect
+		militia = {
+			jungle = {
+				attack = 0.05
+				defence = 0.03
+				movement = 0.05
+			}
+		}
+		infantry = {
+			jungle = {
+				attack = 0.10
+				defence = 0.05
+				movement = 0.05
+			}
+		}
+		marine = {
+			jungle = {
+				attack = 0.15
+				defence = 0.05
+				movement = 0.1
+			}
+		}
+		mountaineers = {
+			jungle = {
+				attack = 0.15
+				defence = 0.05
+				movement = 0.1
+			}
+		}
+		paratrooper = {
+			jungle = {
+				attack = 0.15
+				defence = 0.05
+				movement = 0.1
+			}
+		}
+	}
+
+	Valkyrie_tech = {#For GEA
+		on_research_complete = {log = "[GetDateText]: [Root.GetName]: add tech Valkyrie_tech"}
+
+		research_cost = 1
+
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+
+		field_hospital = {
+			casualty_trickleback = 0.20
+			experience_loss_factor = -0.10
+		}
+	}
+
+	sapper_tactic_tech = {#INC
+		on_research_complete = {log = "[GetDateText]: [Root.GetName]: add tech sapper_tactic_tech"}
+
+		research_cost = 1
+
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+
+		recon = {
+			recon = 1
+			breakthrough = 1
+		}
+	}
+
+	asymmetrical_warfare = {#For Siamese NF tree
+		on_research_complete = {log = "[GetDateText]: [Root.GetName]: add tech asymmetrical_warfare"}
+
+		research_cost = 1
+
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+
+		#If you change these
+		#Change the custom tooltip too: RAJ_jungle_training_effect
+		militia = {
+			urban = {
+				attack = 0.05
+				defence = 0.03
+				movement = 0.05
+			}
+		}
+		infantry = {
+			urban = {
+				attack = 0.10
+				defence = 0.05
+				movement = 0.05
+			}
+		}
+		marine = {
+			urban = {
+				attack = 0.15
+				defence = 0.05
+				movement = 0.1
+			}
+		}
+		mountaineers = {
+			urban = {
+				attack = 0.15
+				defence = 0.05
+				movement = 0.1
+			}
+		}
+		paratrooper = {
+			urban = {
+				attack = 0.15
+				defence = 0.05
+				movement = 0.1
+			}
+		}
+	}
+
+	desert_warfare = {#For Egypt
+		on_research_complete = {log = "[GetDateText]: [Root.GetName]: add tech desert_warfare"}
+		research_cost = 1
+
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+
+		#If you change these
+		#Change the custom tooltip too: RAJ_jungle_training_effect
+		militia = {
+			desert = {
+				attack = 0.05
+				defence = 0.03
+				movement = 0.05
+			}
+		}
+		infantry = {
+			desert = {
+				attack = 0.10
+				defence = 0.05
+				movement = 0.05
+			}
+		}
+		marine = {
+			desert = {
+				attack = 0.15
+				defence = 0.05
+				movement = 0.1
+			}
+		}
+		mountaineers = {
+			desert = {
+				attack = 0.15
+				defence = 0.05
+				movement = 0.1
+			}
+		}
+		paratrooper = {
+			desert = {
+				attack = 0.15
+				defence = 0.05
+				movement = 0.1
+			}
+		}
+	}
+
+	nav_infra_one = {#For naval tech
+		on_research_complete = {log = "[GetDateText]: [Root.GetName]: add tech nav_infra_one"}
+
+		research_cost = 1
+
+
+		# only from decision!!! #####
+		allow = {
+			always = no
+		}
+	}
+
+	nav_infra_two = {#For naval tech
+		on_research_complete = {log = "[GetDateText]: [Root.GetName]: add tech nav_infra_two"}
+
+		research_cost = 1
+
+
+		# only from decision!!! #####
+		allow = {
+			always = no
+		}
+	}
+
+	nav_infra_three = {#For naval tech
+		on_research_complete = {log = "[GetDateText]: [Root.GetName]: add tech nav_infra_three"}
+
+		research_cost = 1
+
+
+		# only from decision!!! #####
+		allow = {
+			always = no
+		}
+	}
+
+	nav_av_one = {#For naval tech
+		on_research_complete = {log = "[GetDateText]: [Root.GetName]: add tech nav_av_one"}
+
+		research_cost = 1
+
+
+		# only from decision!!! #####
+		allow = {
+			always = no
+		}
+	}
+
+	nav_av_two = {#For naval tech
+		on_research_complete = {log = "[GetDateText]: [Root.GetName]: add tech nav_av_two"}
+
+		research_cost = 1
+
+
+		# only from decision!!! #####
+		allow = {
+			always = no
+		}
+	}
+
+	nav_av_three = {#For naval tech
+		on_research_complete = {log = "[GetDateText]: [Root.GetName]: add tech nav_av_three"}
+
+		research_cost = 1
+
+
+		# only from decision!!! #####
+		allow = {
+			always = no
+		}
+	}
+}

@@ -1,0 +1,874 @@
+﻿division_template = {# USA Militia
+	name = "Loyalist Militia"
+	is_locked = yes
+	division_names_group = USA_GAR_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }
+	}
+	priority = 0
+}
+division_template = {# USA Motorized
+	name = "Loyalist Motorized Guard"
+	division_names_group = USA_GAR_01
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 0 y = 3 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+}
+
+division_template = {# USA Militia
+	name = "Army Loyalists"
+	division_names_group = USA_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 2 y = 3 }
+		artillery_brigade = { x = 2 y = 4 }
+		artillery_brigade = { x = 3 y = 0 }
+		artillery_brigade = { x = 3 y = 1 }
+		artillery_brigade = { x = 3 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+	priority = 2
+}
+
+units = {
+### National Guards ###
+	division = {# Texas
+		name = "Texas Militia"
+		location = 4884
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Texas
+		name = "Texas Militia"
+		location = 1927
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Texas
+		name = "Texas Militia"
+		location = 6798
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Alabama
+		name = "Alabama Militia"
+		location = 8064
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Minnesota
+		name = "Minnesota Militia"
+		location = 1998
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Pennsylvania
+		name = "Pennsylvania Militia"
+		location = 12720
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Pennsylvania
+		name = "Pennsylvania Militia"
+		location = 10867
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Colorado
+		name = "Colorado Militia"
+		location = 2102
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Colorado
+		name = "Colorado Militia"
+		location = 1738
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Virginia
+		name = "Virginia Militia"
+		location = 4586
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Virginia
+		name = "Virginia Militia"
+		location = 10340
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Virginia
+		name = "Virginia Militia"
+		location = 4811
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Virginia
+		name = "Virginia Militia"
+		location = 9802
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+
+	division = {# Junk Unit #01
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10370
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #02
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12463
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #03
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12346
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #04
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4540
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #19
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9786
+		division_template = "Army Loyalists"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #20
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 13628
+		division_template = "Army Loyalists"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #21
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6984
+		division_template = "Army Loyalists"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #22
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6929
+		division_template = "Army Loyalists"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #23
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 951
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+
+	division = {# Junk Unit #24
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6823
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #25
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11873
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #26
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10343
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #27
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1506
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #28
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7558
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #29
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9779
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #30
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12637
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #31
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7547
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #32
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4452
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #33
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1445
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6696
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10727
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Texas
+		name = "Texas Militia"
+		location = 4884
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Texas
+		name = "Texas Militia"
+		location = 1927
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Texas
+		name = "Texas Militia"
+		location = 6798
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Alabama
+		name = "Alabama Militia"
+		location = 8064
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Minnesota
+		name = "Minnesota Militia"
+		location = 1998
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Pennsylvania
+		name = "Pennsylvania Militia"
+		location = 12720
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Pennsylvania
+		name = "Pennsylvania Militia"
+		location = 10867
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Colorado
+		name = "Colorado Militia"
+		location = 2102
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Colorado
+		name = "Colorado Militia"
+		location = 1738
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Virginia
+		name = "Virginia Militia"
+		location = 4586
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Virginia
+		name = "Virginia Militia"
+		location = 10340
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Virginia
+		name = "Virginia Militia"
+		location = 4811
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Virginia
+		name = "Virginia Militia"
+		location = 9802
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+
+	division = {# Junk Unit #01
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10370
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #02
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12463
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #03
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12346
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #04
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4540
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+
+	division = {# Junk Unit #19
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9786
+		division_template = "Army Loyalists"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #20
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 13628
+		division_template = "Army Loyalists"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #21
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6984
+		division_template = "Army Loyalists"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #22
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6929
+		division_template = "Army Loyalists"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #23
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 951
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+
+	division = {# Junk Unit #24
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6823
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #25
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11873
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #26
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10343
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #27
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1506
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #28
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7558
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #29
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9779
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #30
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12637
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #31
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7547
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #32
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4452
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #33
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1445
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6696
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10727
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4740
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4740
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1534
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1534
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4449
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4449
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4569
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4569
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1523
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1523
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7607
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7607
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7449
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7449
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7539
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7539
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10478
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10478
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9910
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9910
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1831
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1831
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10586
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10586
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4402
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+	division = {# Junk Unit #34
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4402
+		division_template = "Loyalist Militia"
+		start_experience_factor = 0.2
+	}
+### DC division ###
+	division = {# Federal
+		name = "5th Motorized"
+		location = 10717
+		division_template = "Loyalist Motorized Guard"
+		start_experience_factor = 0.2
+	}
+	division = {# Colorado
+		name = "7th Motorized"
+		location = 10717
+		division_template = "Loyalist Motorized Guard"
+		start_experience_factor = 0.2
+	}
+	division = {# Colorado
+		name = "8th Motorized"
+		location = 10717
+		division_template = "Loyalist Motorized Guard"
+		start_experience_factor = 0.2
+	}
+	division = {# Colorado
+		name = "9th Motorized"
+		location = 10717
+		division_template = "Loyalist Motorized Guard"
+		start_experience_factor = 0.2
+	}
+	division = {# Colorado
+		name = "10th Motorized"
+		location = 10717
+		division_template = "Loyalist Motorized Guard"
+		start_experience_factor = 0.2
+	}
+	division = {# Colorado
+		name = "11th Motorized"
+		location = 10717
+		division_template = "Loyalist Motorized Guard"
+		start_experience_factor = 0.2
+	}
+}
